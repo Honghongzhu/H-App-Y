@@ -16,7 +16,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RecommendationActivity" />
+        <activity android:name=".RecommendationCSActivity" />
         <activity android:name=".Top10Activity" />
         <activity android:name=".HistoryActivity" />
         <activity android:name=".SavedActivity" />

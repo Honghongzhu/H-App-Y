@@ -1,10 +1,8 @@
 package com.example.h_app_y;
 
-import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -28,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void launchRecommendationActivity(View view) {
-        Intent intent = new Intent(this, RecommendationActivity.class);
+        Intent intent = new Intent(this, RecommendationCSActivity.class);
         startActivity(intent);
     }
 
