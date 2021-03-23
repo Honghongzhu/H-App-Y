@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
     <Button
-        android:id="@+id/button_recommend"
+        android:id="@+id/buttonRecommend"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -18,10 +17,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/button_top10"/>
+        app:layout_constraintBottom_toTopOf="@id/buttonTop10"/>
 
     <Button
-        android:id="@+id/button_top10"
+        android:id="@+id/buttonTop10"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -30,11 +29,11 @@
         android:onClick="launchTop10Activity"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/button_recommend"
-        app:layout_constraintBottom_toTopOf="@id/button_history"/>
+        app:layout_constraintTop_toBottomOf="@id/buttonRecommend"
+        app:layout_constraintBottom_toTopOf="@id/buttonHistory"/>
 
     <Button
-        android:id="@+id/button_history"
+        android:id="@+id/buttonHistory"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -43,11 +42,11 @@
         android:onClick="launchHistoryActivity"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/button_top10"
-        app:layout_constraintBottom_toTopOf="@id/button_saved"/>
+        app:layout_constraintTop_toBottomOf="@id/buttonTop10"
+        app:layout_constraintBottom_toTopOf="@id/buttonSaved"/>
 
     <Button
-        android:id="@+id/button_saved"
+        android:id="@+id/buttonSaved"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -56,11 +55,11 @@
         android:onClick="launchSavedActivity"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/button_history"
-        app:layout_constraintBottom_toTopOf="@id/button_search" />
+        app:layout_constraintTop_toBottomOf="@id/buttonHistory"
+        app:layout_constraintBottom_toTopOf="@id/buttonSearch" />
 
     <Button
-        android:id="@+id/button_search"
+        android:id="@+id/buttonSearch"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -69,6 +68,7 @@
         android:onClick="launchSearchActivity"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/button_saved"
+        app:layout_constraintTop_toBottomOf="@id/buttonSaved"
         app:layout_constraintBottom_toBottomOf="parent"/>
-</android.support.constraint.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
