@@ -1,9 +1,11 @@
 package com.example.happy;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -31,5 +33,10 @@ public class Top10Activity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
         // Give the RecyclerView a default layout manager
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+    }
+
+    public void launchRateActivity(View view) {
+        Intent intent = new Intent(this, RateActivity.class);
+        startActivity(intent);
     }
 }

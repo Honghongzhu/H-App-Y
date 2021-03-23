@@ -6,4 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".CharacterStrengthsSeenActivity">
 
+    <TextView
+        android:id="@+id/enjoyableText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_margin="20dp"
+        android:textSize="25sp"
+        android:textColor="@color/black"
+        android:text="@string/character_strengths_seen"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
 </android.support.constraint.ConstraintLayout>

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Happy</string>
+    <string name="app_name">H_App_Y</string>
     <string name="button_recommend">New recommendation</string>
     <string name="button_top10">Top 10 must see</string>
     <string name="button_history">History</string>
@@ -46,4 +46,5 @@
     <string name="history">History</string>
     <string name="character_strengths_seen">Choose 3 character strengths that you encountered:</string>
     <string name="results">Results for</string>
+    <string name="next">Next</string>
 </resources>
