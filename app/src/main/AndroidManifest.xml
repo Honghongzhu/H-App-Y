@@ -27,11 +27,15 @@
         <activity android:name=".RecommendationCSActivity"
             android:label="Recommendation"
             android:parentActivityName=".MainActivity"></activity>
-        <activity android:name=".RecommendationActivity"></activity>
+        <activity android:name=".RecommendationActivity"
+            android:label="Recommendation"
+            android:parentActivityName=".RecommendationCSActivity"></activity>
         <activity android:name=".RateActivity"
             android:label="Rate the movie"
             android:parentActivityName=".MainActivity"></activity>
-        <activity android:name=".CharacterStrengthsSeenActivity"></activity>
+        <activity android:name=".RateCSActivity"
+            android:label="Rate the movie"
+            android:parentActivityName=".RateActivity"></activity>
         <activity android:name=".HistoryActivity"
             android:label="History"
             android:parentActivityName=".MainActivity"></activity>

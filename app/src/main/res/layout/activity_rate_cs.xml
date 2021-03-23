@@ -4,19 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CharacterStrengthsSeenActivity">
+    tools:context=".RateCSActivity">
 
     <TextView
-        android:id="@+id/enjoyableText"
+        android:id="@+id/rateCSText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         android:layout_margin="20dp"
         android:textSize="25sp"
         android:textColor="@color/black"
-        android:text="@string/character_strengths_seen"
+        android:text="@string/rate_cs"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:id="@+id/buttonConfirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="@string/confirm"
+        android:onClick="launchHistoryActivity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
 </android.support.constraint.ConstraintLayout>

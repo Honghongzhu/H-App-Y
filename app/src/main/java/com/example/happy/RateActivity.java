@@ -14,7 +14,7 @@ public class RateActivity extends AppCompatActivity {
     }
 
     public void launchCharacterStrengthsSeenActivity(View view) {
-        Intent intent = new Intent(this, CharacterStrengthsSeenActivity.class);
+        Intent intent = new Intent(this, RateCSActivity.class);
         startActivity(intent);
     }
 }
