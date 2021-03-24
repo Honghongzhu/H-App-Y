@@ -6,9 +6,9 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.ImageView;
 
 import java.util.LinkedList;
-import java.util.List;
 
 public class Top10Activity extends AppCompatActivity {
     private LinkedList<String> moviesToAdapt = new LinkedList<>();
@@ -20,7 +20,7 @@ public class Top10Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_top10);
 
-        // This is dummy code to display movie names
+        // TODO: This is dummy code to display movie names
         for (int i = 0; i < 10; i++) {
             moviesToAdapt.addLast("Movie " + (i+1));
         }
