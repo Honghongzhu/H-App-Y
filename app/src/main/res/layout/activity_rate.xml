@@ -6,59 +6,79 @@
     android:layout_height="match_parent"
     tools:context=".RateActivity">
 
-    <TextView
-        android:id="@+id/enjoyableText"
+    <LinearLayout
+        android:id="@+id/enjoyableLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginRight="20dp"
-        android:textSize="30sp"
-        android:textColor="@color/black"
-        android:text="@string/rate_enjoyable"
+        android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/enjoyableRating"/>
+        app:layout_constraintBottom_toTopOf="@id/meaningfulLayout">
 
-    <ImageView
-        android:id="@+id/enjoyableRating"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:contentDescription="TODO"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/enjoyableText"
-        app:layout_constraintBottom_toTopOf="@id/meaningfulText"/>
+        <TextView
+            android:id="@+id/enjoyableText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:textSize="30sp"
+            android:textColor="@color/black"
+            android:text="@string/rate_enjoyable"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/enjoyableRating"/>
 
-    <TextView
-        android:id="@+id/meaningfulText"
+        <RatingBar
+            android:id="@+id/enjoyableRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/enjoyableText"
+            app:layout_constraintBottom_toTopOf="@id/meaningfulText"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/meaningfulLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginRight="20dp"
-        android:textSize="30sp"
-        android:textColor="@color/black"
-        android:text="@string/rate_meaningful"
+        android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/enjoyableRating"
-        app:layout_constraintBottom_toTopOf="@id/meaningfulRating"/>
+        app:layout_constraintTop_toBottomOf="@id/enjoyableLayout"
+        app:layout_constraintBottom_toTopOf="@id/buttonNext">
 
-    <ImageView
-        android:id="@+id/meaningfulRating"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:contentDescription="TODO"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/meaningfulText"
-        app:layout_constraintBottom_toTopOf="@id/buttonNext"/>
+        <TextView
+            android:id="@+id/meaningfulText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:textSize="30sp"
+            android:textColor="@color/black"
+            android:text="@string/rate_meaningful"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/enjoyableRating"
+            app:layout_constraintBottom_toTopOf="@id/meaningfulRating"/>
+
+        <RatingBar
+            android:id="@+id/meaningfulRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/meaningfulText"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </LinearLayout>
+
 
     <Button
         android:id="@+id/buttonNext"
