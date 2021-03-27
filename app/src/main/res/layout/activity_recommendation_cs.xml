@@ -31,7 +31,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:columnCount="3">
+            android:columnCount="3"
+            android:rowCount="8">
 
             <Button
                 android:id="@+id/buttonAppreciation"
@@ -67,17 +68,17 @@
                 android:id="@+id/buttonGratitude"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:background="@drawable/movie"/>
+                android:background="@drawable/bravery"/>
             <Button
                 android:id="@+id/buttonHonesty"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:background="@drawable/movie"/>
+                android:background="@drawable/bravery"/>
             <Button
                 android:id="@+id/buttonHope"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:background="@drawable/movie"/>
+                android:background="@drawable/bravery"/>
             <Button
                 android:id="@+id/buttonHumility"
                 android:layout_width="100dp"
