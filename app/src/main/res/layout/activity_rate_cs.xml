@@ -12,8 +12,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:layout_margin="20dp"
-        android:textSize="25sp"
+        android:layout_margin="10dp"
+        android:textSize="20sp"
         android:textColor="@color/white"
         android:text="@string/rate_cs"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,7 +23,7 @@
     <ScrollView
         android:id="@+id/cs_scroll_view"
         android:layout_width="match_parent"
-        android:layout_height="400dp"
+        android:layout_height="500dp"
         app:layout_constraintTop_toBottomOf="@id/rateCSText"
         app:layout_constraintBottom_toTopOf="@id/buttonConfirm">
 
@@ -34,8 +34,23 @@
             android:layout_gravity="center"
             android:columnCount="3">
 
-            <Button
+            <!--<Button
                 android:id="@+id/buttonAppreciation"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/movie"/>-->
+            <Button
+                android:id="@+id/buttonDummy1"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/movie"/>
+            <Button
+                android:id="@+id/buttonDummy2"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/movie"/>
+            <Button
+                android:id="@+id/buttonDummy3"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:background="@drawable/movie"/>
@@ -64,11 +79,11 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:background="@drawable/forgiveness_"/>
-            <Button
+            <!--<Button
                 android:id="@+id/buttonGratitude"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:background="@drawable/movie"/>
+                android:background="@drawable/movie"/>-->
             <Button
                 android:id="@+id/buttonHonesty"
                 android:layout_width="100dp"
@@ -89,41 +104,41 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:background="@drawable/humor"/>
-            <Button
+            <!--<Button
                 android:id="@+id/buttonJudgement"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:background="@drawable/movie"/>
+                android:background="@drawable/movie"/>-->
             <Button
                 android:id="@+id/buttonKindness"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:background="@drawable/kindness"/>
-            <Button
+            <!--<Button
                 android:id="@+id/buttonLeadership"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:background="@drawable/movie"/>
+                android:background="@drawable/movie"/>-->
             <Button
                 android:id="@+id/buttonLove"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:background="@drawable/love"/>
-            <Button
+            <!--<Button
                 android:id="@+id/buttonLearning"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:background="@drawable/movie"/>
+                android:background="@drawable/movie"/>-->
             <Button
                 android:id="@+id/buttonPerseverance"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:background="@drawable/perseverance_"/>
-            <Button
+            <!--<Button
                 android:id="@+id/buttonPerspective"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:background="@drawable/movie"/>
+                android:background="@drawable/movie"/>-->
             <Button
                 android:id="@+id/buttonPrudence"
                 android:layout_width="100dp"
@@ -139,16 +154,16 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:background="@drawable/social_intelligence_"/>
-            <Button
+            <!--<Button
                 android:id="@+id/buttonSpirituality"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:background="@drawable/movie"/>
-            <Button
+                android:background="@drawable/movie"/>-->
+            <!--<Button
                 android:id="@+id/buttonTeamwork"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:background="@drawable/movie"/>
+                android:background="@drawable/movie"/>-->
             <Button
                 android:id="@+id/buttonZest"
                 android:layout_width="100dp"
