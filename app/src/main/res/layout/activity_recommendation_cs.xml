@@ -35,11 +35,11 @@
             android:columnCount="3"
             android:rowCount="8">
 
-            <Button
+            <!--<Button
                 android:id="@+id/buttonAppreciation"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:background="@drawable/movie"/>
+                android:background="@drawable/movie"/>-->
             <Button
                 android:id="@+id/buttonBravery"
                 android:layout_width="100dp"
