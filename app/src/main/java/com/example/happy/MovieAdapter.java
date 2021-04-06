@@ -22,6 +22,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
     }
 
     public class MovieViewHolder extends RecyclerView.ViewHolder{
+        public final TextView movieRank;
         public final ImageView movieImage;
         public final TextView movieText;
         public final ImageView saveImage;
@@ -29,6 +30,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
 
         public MovieViewHolder(View view, MovieAdapter adapter){
             super(view);
+            movieRank = view.findViewById(R.id.rank);
             movieImage = view.findViewById(R.id.moviePhoto);
             movieText = view.findViewById(R.id.movieName);
             saveImage = view.findViewById(R.id.movieSave);
@@ -51,6 +53,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
     @Override
     public void onBindViewHolder(@NonNull final MovieAdapter.MovieViewHolder holder, int position) {
         final Movie movieAtPosition = moviesToAdapt.get(position);
+        holder.movieRank.setText(movieAtPosition.getItemId());
         holder.movieImage.setImageResource(movieAtPosition.getImageDrawableId());
         holder.movieText.setText(movieAtPosition.getName()); //TODO: get from database
 

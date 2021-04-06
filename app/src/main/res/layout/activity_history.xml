@@ -43,6 +43,7 @@
             android:layout_height="75dp"
             android:gravity="center_vertical"
             android:textColor="@color/white"
+            android:textSize="20dp"
             android:text="The Imitation Game (2014)"
             app:layout_constraintStart_toEndOf="@id/moviePhoto"
             app:layout_constraintTop_toTopOf="@id/moviePhoto"

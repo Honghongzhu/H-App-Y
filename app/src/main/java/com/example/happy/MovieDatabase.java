@@ -9,7 +9,7 @@ import java.util.List;
 public class MovieDatabase {
     private static final HashMap<Integer, Movie> movies = new HashMap<>();
 
-    public static Movie getMovieById(int movieId) {
+    public static Movie getMovieById(String movieId) {
         return movies.get(movieId);
     }
 
@@ -30,73 +30,73 @@ public class MovieDatabase {
 
     static {
         movies.put(1, new Movie(
-                1,
+                "1",
                 "The Imitation Game (2014)",
                 R.drawable.the_imitation_game,
                 false
         ));
         movies.put(2, new Movie(
-                2,
+                "2",
                 "The Public (2018)",
                 R.drawable.the_public,
                 false
         ));
         movies.put(3, new Movie(
-                3,
+                "3",
                 "Forrest Gump (1994)",
                 R.drawable.forrest_gump,
                 false
         ));
         movies.put(4, new Movie(
-                4,
+                "4",
                 "Juno (2007)",
                 R.drawable.juno,
                 false
         ));
         movies.put(5, new Movie(
-                5,
+                "5",
                 "Freedom Writers (2007)",
                 R.drawable.freedom_writers,
                 false
         ));
         movies.put(6, new Movie(
-                6,
+                "6",
                 "Rear Window (1954)",
                 R.drawable.rear_window,
                 false
         ));
         movies.put(7, new Movie(
-                7,
+                "7",
                 "Whale Rider (2003)",
                 R.drawable.whale_rider,
                 false
         ));
         movies.put(8, new Movie(
-                8,
+                "8",
                 "Bird Box (2018)",
                 R.drawable.bird_box,
                 false
         ));
         movies.put(9, new Movie(
-                9,
+                "9",
                 " Before Midnight (2013)",
                 R.drawable.before_midnight,
                 false
         ));
         movies.put(10, new Movie(
-                10,
+                "10",
                 "Trolls (2016)",
                 R.drawable.trolls,
                 false
         ));
         movies.put(11, new Movie(
-                11,
+                "11",
                 "The Blind Side (2009)",
                 R.drawable.the_blind_side,
                 false
         ));
         movies.put(12, new Movie(
-                12,
+                "12",
                 "Invictus (2009)",
                 R.drawable.invictus,
                 false

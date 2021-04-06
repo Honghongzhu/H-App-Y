@@ -1,19 +1,19 @@
 package com.example.happy;
 
 public class Movie {
-    private int itemId;
+    private String itemId;
     private String name;
     private int imageDrawableId;
     private boolean saved;
 
-    public Movie(int itemId, String name, int imageDrawableId, boolean saved){
+    public Movie(String itemId, String name, int imageDrawableId, boolean saved){
         this.itemId = itemId;
         this.name = name;
         this.imageDrawableId = imageDrawableId;
         this.saved = saved;
     }
 
-    public int getItemId(){
+    public String getItemId(){
         return itemId;
     }
 
