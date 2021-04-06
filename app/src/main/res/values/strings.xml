@@ -1,11 +1,10 @@
 <resources>
     <string name="app_name">H-App-Y</string>
     <string name="button_recommend">New recommendation</string>
-    <string name="button_top10">Top 10 must see</string>
+    <string name="button_top12">Top 12 must see</string>
     <string name="button_history">History</string>
     <string name="button_saved">Saved for later</string>
     <string name="button_search">Search for a movie</string>
-    <string name="top10">Recommended Top 10:</string>
     <string name="rate">Rate</string>
     <string name="movie1">Movie1</string>
     <string name="movie2">Movie2</string>

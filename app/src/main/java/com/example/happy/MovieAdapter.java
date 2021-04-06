@@ -10,28 +10,33 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.LinkedList;
-import java.util.List;
 
 public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHolder> {
-    private final LinkedList<String> moviesToAdapt;
+    private LinkedList<Movie> moviesToAdapt;
     private final LayoutInflater inflater;
     private Boolean isSaved = false;
 
+    public void setData(LinkedList<Movie> moviesToAdapt){
+        this.moviesToAdapt = moviesToAdapt;
+    }
+
     public class MovieViewHolder extends RecyclerView.ViewHolder{
         //TODO: add the corresponding movie images from database, now it's a default
+        public final ImageView movieImage;
         public final TextView movieText;
         public final ImageView saveImage;
         final MovieAdapter adapter;
 
         public MovieViewHolder(View view, MovieAdapter adapter){
             super(view);
+            movieImage = view.findViewById(R.id.moviePhoto);
             movieText = view.findViewById(R.id.movieName);
             saveImage = view.findViewById(R.id.movieSave);
             this.adapter = adapter;
         }
     }
 
-    public MovieAdapter(Context context, LinkedList<String> moviesToAdapt){
+    public MovieAdapter(Context context, LinkedList<Movie> moviesToAdapt){
         inflater = LayoutInflater.from(context);
         this.moviesToAdapt = moviesToAdapt;
     }
@@ -45,8 +50,9 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
 
     @Override
     public void onBindViewHolder(@NonNull final MovieAdapter.MovieViewHolder holder, int position) {
-        String movieAtPosition = moviesToAdapt.get(position);
-        holder.movieText.setText(movieAtPosition); //TODO: get from database
+        final Movie movieAtPosition = moviesToAdapt.get(position);
+        holder.movieImage.setImageResource(movieAtPosition.getImageDrawableId());
+        holder.movieText.setText(movieAtPosition.getName()); //TODO: get from database
 
         holder.saveImage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,9 +60,11 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
                 if (isSaved){//it was saved and by clicking it is deleted from saved
                     holder.saveImage.setImageResource(R.drawable.heart_border);
                     // TODO: update database
+                    movieAtPosition.setSaved(false);
                 }else{ //it was not saved and by clicking it became saved
                     holder.saveImage.setImageResource(R.drawable.heart_filled);
                     // TODO: update database
+                    movieAtPosition.setSaved(true);
                 }
                 isSaved = !isSaved;
             }

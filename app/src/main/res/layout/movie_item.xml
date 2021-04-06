@@ -19,7 +19,6 @@
             android:layout_height="75dp"
             android:layout_margin="10dp"
             android:contentDescription="TODO"
-            android:background="@drawable/movie"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toStartOf="@id/movieName"
             app:layout_constraintTop_toTopOf="parent"/>
@@ -29,6 +28,7 @@
             android:layout_width="150dp"
             android:layout_height="75dp"
             android:gravity="center_vertical"
+            android:textColor="@color/white"
             app:layout_constraintStart_toEndOf="@id/moviePhoto"
             app:layout_constraintTop_toTopOf="@id/moviePhoto"
             app:layout_constraintBottom_toBottomOf="@id/moviePhoto"/>

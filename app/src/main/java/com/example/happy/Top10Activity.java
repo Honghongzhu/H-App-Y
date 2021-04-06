@@ -8,12 +8,15 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 
 public class Top10Activity extends AppCompatActivity {
-    private LinkedList<String> moviesToAdapt = new LinkedList<>();
+    private LinkedList<Movie> moviesToAdapt;
+    //private LinkedList<String> moviesToAdapt = new LinkedList<>();
     private RecyclerView recyclerView;
     private MovieAdapter adapter;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,9 +24,10 @@ public class Top10Activity extends AppCompatActivity {
         setContentView(R.layout.activity_top10);
 
         // TODO: This is dummy code to display movie names
-        for (int i = 0; i < 10; i++) {
-            moviesToAdapt.addLast("Movie " + (i+1));
-        }
+        //for (int i = 0; i < 10; i++) {
+        //    moviesToAdapt.addLast("Movie " + (i+1));
+        //}
+        moviesToAdapt = MovieDatabase.getAllMovies();
 
         // Get a handle to the RecyclerView
         recyclerView = findViewById(R.id.rv_top10);

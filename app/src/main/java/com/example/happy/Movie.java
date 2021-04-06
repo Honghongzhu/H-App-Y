@@ -29,7 +29,7 @@ public class Movie {
         return saved;
     }
 
-    public void setSaved(){
+    public void setSaved(boolean saved){
         this.saved = saved;
     }
 }

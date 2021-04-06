@@ -16,7 +16,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".Top10Activity"
-            android:label="Top 10 Must See"
+            android:label="Top 12 Must See"
             android:parentActivityName=".MainActivity"></activity>
         <activity android:name=".SearchActivity"
             android:label="Search a Movie"

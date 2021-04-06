@@ -3,6 +3,7 @@ package com.example.happy;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
 
 public class MovieDatabase {
@@ -13,8 +14,8 @@ public class MovieDatabase {
     }
 
     @SuppressWarnings("unchecked")
-    public static ArrayList<Movie> getAllMovies() {
-        return new ArrayList<Movie>((List) Arrays.asList(movies.values().toArray()));
+    public static LinkedList<Movie> getAllMovies() {
+        return new LinkedList<Movie>((List) Arrays.asList(movies.values().toArray()));
     }
 
     public static ArrayList<Movie> getSavedMovies() {
@@ -65,19 +66,19 @@ public class MovieDatabase {
         ));
         movies.put(7, new Movie(
                 7,
-                "Whale Rider",
+                "Whale Rider (2003)",
                 R.drawable.whale_rider,
                 false
         ));
         movies.put(8, new Movie(
                 8,
-                "Bird Box",
+                "Bird Box (2018)",
                 R.drawable.bird_box,
                 false
         ));
         movies.put(9, new Movie(
                 9,
-                " Before Midnight",
+                " Before Midnight (2013)",
                 R.drawable.before_midnight,
                 false
         ));
@@ -89,13 +90,13 @@ public class MovieDatabase {
         ));
         movies.put(11, new Movie(
                 11,
-                "The Blind Side",
+                "The Blind Side (2009)",
                 R.drawable.the_blind_side,
                 false
         ));
         movies.put(12, new Movie(
                 12,
-                "Invictus",
+                "Invictus (2009)",
                 R.drawable.invictus,
                 false
         ));
