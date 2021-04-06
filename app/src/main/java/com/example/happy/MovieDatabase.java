@@ -18,15 +18,14 @@ public class MovieDatabase {
         return new LinkedList<Movie>((List) Arrays.asList(movies.values().toArray()));
     }
 
-    public static ArrayList<Movie> getSavedMovies() {
-        ArrayList<Movie> savedMovies = new ArrayList<>();
+    public static LinkedList<Movie> getSavedMovies() {
+        LinkedList<Movie> savedMovies = new LinkedList<>();
         for(Movie movie : movies.values()){
             if(movie.isSaved())
                 savedMovies.add(movie);
         }
         return savedMovies;
     }
-
 
 
     static {

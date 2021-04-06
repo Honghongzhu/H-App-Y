@@ -28,7 +28,6 @@ public class SearchActivity extends AppCompatActivity {
         searchButton = findViewById(R.id.searchButton);
         recyclerView = findViewById(R.id.rv_search);
 
-
         allMovies = MovieDatabase.getAllMovies();
 
         searchButton.setOnClickListener(new View.OnClickListener() {
@@ -43,7 +42,6 @@ public class SearchActivity extends AppCompatActivity {
                 MovieAdapter adapter = new MovieAdapter(v.getContext(), foundMovies);
                 recyclerView.setAdapter(adapter);
                 recyclerView.setLayoutManager(new LinearLayoutManager(v.getContext()));
-
             }
         });
 
