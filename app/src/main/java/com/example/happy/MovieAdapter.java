@@ -10,13 +10,14 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.LinkedList;
+import java.util.List;
 
 public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHolder> {
-    private LinkedList<Movie> moviesToAdapt;
+    private List<Movie> moviesToAdapt;
     private final LayoutInflater inflater;
     private Boolean isSaved = false;
 
-    public void setData(LinkedList<Movie> moviesToAdapt){
+    public void setData(List<Movie> moviesToAdapt){
         this.moviesToAdapt = moviesToAdapt;
     }
 
