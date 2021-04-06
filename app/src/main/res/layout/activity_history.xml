@@ -7,11 +7,100 @@
     android:layout_height="match_parent"
     tools:context=".HistoryActivity">
 
-    <android.support.v7.widget.RecyclerView
+
+    <!--<android.support.v7.widget.RecyclerView
         android:id="@+id/rv_history"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-    </android.support.v7.widget.RecyclerView>
+    </android.support.v7.widget.RecyclerView>-->
+
+    <!--
+    TODO: change back to recylcer view. This is just for the presentation to show.
+    -->
+
+    <LinearLayout
+        android:id="@+id/photoName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/photo"
+            android:layout_width="75dp"
+            android:layout_height="100dp"
+            android:layout_margin="5dp"
+            android:contentDescription="TODO"
+            android:background="@drawable/the_imitation_game"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/movieName"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="150dp"
+            android:layout_height="75dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/white"
+            android:text="The Imitation Game (2014)"
+            app:layout_constraintStart_toEndOf="@id/moviePhoto"
+            app:layout_constraintTop_toTopOf="@id/moviePhoto"
+            app:layout_constraintBottom_toBottomOf="@id/moviePhoto"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/enjoy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toEndOf="@id/photoName"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/photoName">
+        <TextView
+            android:id="@+id/enjoyment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:textColor="@color/white"
+            android:text="Enjoyment"/>
+        <RatingBar
+            style = "?android:attr/ratingBarStyleSmall"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:numStars = "5"
+            android:rating= "4"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toEndOf="@id/enjoy"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/photoName">
+        <TextView
+            android:id="@+id/meaningful"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:textColor="@color/white"
+            android:text="Meaningful"/>
+        <RatingBar
+            style = "?android:attr/ratingBarStyleSmall"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:numStars = "5"
+            android:rating= "3"/>
+    </LinearLayout>
+
+
 
 
 </android.support.constraint.ConstraintLayout>

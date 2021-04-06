@@ -22,7 +22,6 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
     }
 
     public class MovieViewHolder extends RecyclerView.ViewHolder{
-        //TODO: add the corresponding movie images from database, now it's a default
         public final ImageView movieImage;
         public final TextView movieText;
         public final ImageView saveImage;
