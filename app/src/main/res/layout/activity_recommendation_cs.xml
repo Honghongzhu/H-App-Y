@@ -2,6 +2,7 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorback"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".RecommendationCSActivity">
@@ -13,7 +14,7 @@
         android:gravity="center_horizontal"
         android:layout_margin="20dp"
         android:textSize="25sp"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:text="@string/character_strength"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -43,52 +44,52 @@
                 android:id="@+id/buttonBravery"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:background="@drawable/movie"/>
+                android:background="@drawable/bravery"/>
             <Button
                 android:id="@+id/buttonCreativity"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:background="@drawable/movie"/>
+                android:background="@drawable/creativity"/>
             <Button
                 android:id="@+id/buttonCuriosity"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:background="@drawable/movie"/>
+                android:background="@drawable/curiosity_"/>
             <Button
                 android:id="@+id/buttonFairness"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:background="@drawable/movie"/>
+                android:background="@drawable/fairness_"/>
             <Button
                 android:id="@+id/buttonForgiveness"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:background="@drawable/movie"/>
+                android:background="@drawable/forgiveness_"/>
             <Button
                 android:id="@+id/buttonGratitude"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:background="@drawable/bravery"/>
+                android:background="@drawable/movie"/>
             <Button
                 android:id="@+id/buttonHonesty"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:background="@drawable/bravery"/>
+                android:background="@drawable/honesty"/>
             <Button
                 android:id="@+id/buttonHope"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:background="@drawable/bravery"/>
+                android:background="@drawable/hope"/>
             <Button
                 android:id="@+id/buttonHumility"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:background="@drawable/movie"/>
+                android:background="@drawable/humility"/>
             <Button
                 android:id="@+id/buttonHumor"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:background="@drawable/movie"/>
+                android:background="@drawable/humor"/>
             <Button
                 android:id="@+id/buttonJudgement"
                 android:layout_width="100dp"
@@ -98,7 +99,7 @@
                 android:id="@+id/buttonKindness"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:background="@drawable/movie"/>
+                android:background="@drawable/kindness"/>
             <Button
                 android:id="@+id/buttonLeadership"
                 android:layout_width="100dp"
@@ -108,7 +109,7 @@
                 android:id="@+id/buttonLove"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:background="@drawable/movie"/>
+                android:background="@drawable/love"/>
             <Button
                 android:id="@+id/buttonLearning"
                 android:layout_width="100dp"
@@ -118,7 +119,7 @@
                 android:id="@+id/buttonPerseverance"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:background="@drawable/movie"/>
+                android:background="@drawable/perseverance_"/>
             <Button
                 android:id="@+id/buttonPerspective"
                 android:layout_width="100dp"
@@ -128,17 +129,17 @@
                 android:id="@+id/buttonPrudence"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:background="@drawable/movie"/>
+                android:background="@drawable/prudence_"/>
             <Button
                 android:id="@+id/buttonSelfRegulation"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:background="@drawable/movie"/>
+                android:background="@drawable/self_regulation_"/>
             <Button
                 android:id="@+id/buttonSocialIntelligence"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:background="@drawable/movie"/>
+                android:background="@drawable/social_intelligence_"/>
             <Button
                 android:id="@+id/buttonSpirituality"
                 android:layout_width="100dp"
@@ -153,7 +154,7 @@
                 android:id="@+id/buttonZest"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:background="@drawable/movie"/>
+                android:background="@drawable/zest_2"/>
         </GridLayout>
 
     </ScrollView>
@@ -162,7 +163,9 @@
         android:id="@+id/buttonConfirm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
+        android:textSize="15sp"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@color/white"
         android:text="@string/confirm"
         android:onClick="launchRecommendationActivity"
         app:layout_constraintEnd_toEndOf="parent"
