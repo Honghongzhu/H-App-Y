@@ -1,33 +1,12 @@
 movieId,primaryTitle,originalTitle,startYear,runtimeMinutes,genres,posterUrl
 tt0002199,"From the Manger to the Cross; or, Jesus of Nazareth","From the Manger to the Cross; or, Jesus of Nazareth",1912,60,"Biography,Drama",https://image.tmdb.org/t/p/w92/wsRp6nRPam7F7ShyhRtswBRE283.jpg
-tt0003625,Anna Karenina,Anna Karenina,1914,Unknown,Drama,https://image.tmdb.org/t/p/w92/2xPqYq8fo6Iz5Se6Vq9mhzhktgK.jpg
-tt0003772,Cinderella,Cinderella,1914,52,"Drama,Fantasy",https://image.tmdb.org/t/p/w92/bL1KRxr9lEBETO8pyR6Kxbmc0W0.jpg
-tt0004873,Alice in Wonderland,Alice in Wonderland,1915,52,"Adventure,Family,Fantasy",https://image.tmdb.org/t/p/w92/r785KH6FBjL0RLvbWAuGgvhbc8c.jpg
-tt0007271,Romeo and Juliet,Romeo and Juliet,1916,70,Drama,https://image.tmdb.org/t/p/w92/vq9jkhykDka2Nu7YJCR3XlsHW1E.jpg
 tt0012349,The Kid,The Kid,1921,68,"Comedy,Drama,Family",https://image.tmdb.org/t/p/w92/drgMcyTsySQBnUPGaBThCHGdlWT.jpg
-tt0012730,Stranger Than Fiction,Stranger Than Fiction,1921,Unknown,"Action,Drama",Unknown
-tt0015071,Lilies of the Field,Lilies of the Field,1924,90,Drama,https://image.tmdb.org/t/p/w92/2L0A9iQOM4zVnRIfJQw5ILu7pSA.jpg
-tt0015224,Peter Pan,Peter Pan,1924,105,"Adventure,Family,Fantasy",https://image.tmdb.org/t/p/w92/w4YTrxqX1TAYyKKU5BOyGg7brQm.jpg
-tt0015643,Braveheart,Braveheart,1925,71,Western,https://image.tmdb.org/t/p/w92/jZKXEaDrhIK7lvipDuzMb8LdTfH.jpg
-tt0017750,Chicago,Chicago,1927,118,"Comedy,Crime,Drama",https://image.tmdb.org/t/p/w92/kDustvGoPSaHvY8BsR7XAuoOtF5.jpg
-tt0019186,Moulin Rouge,Moulin Rouge,1928,137,Drama,https://image.tmdb.org/t/p/w92/43dyUPAudmio77g51em8tMMxsij.jpg
-tt0019419,Stand and Deliver,Stand and Deliver,1928,57,"Drama,Romance",Unknown
-tt0020016,Illusion,Illusion,1929,84,"Drama,Music,Romance",https://image.tmdb.org/t/p/w92/dA8Bgr1Ci3PJ3DTOLPudVYmaORl.jpg
 tt0021749,City Lights,City Lights,1931,87,"Comedy,Drama,Romance",https://image.tmdb.org/t/p/w92/bXNvzjULc9jrOVhGfjcc64uKZmZ.jpg
 tt0022111,The Maltese Falcon,The Maltese Falcon,1931,80,"Crime,Drama,Film-Noir",https://image.tmdb.org/t/p/w92/nGYYO0hmpMDFC69bNEXyAoJrCtn.jpg
-tt0023359,Life Is Beautiful,Prostoy sluchay,1930,96,Romance,Unknown
-tt0023369,Rain,Rain,1932,94,Drama,https://image.tmdb.org/t/p/w92/fFEUnX2Gx3LTBfxLhiMLX0kIcoc.jpg
-tt0024874,Beloved,Beloved,1934,85,"Drama,Musical",https://image.tmdb.org/t/p/w92/hKP6KvY4WEsTbFZH4rAoEzl1OUV.jpg
-tt0025504,Million Dollar Baby,Million Dollar Baby,1934,65,"Comedy,Drama,Music",https://image.tmdb.org/t/p/w92/gmPqKUaMfVWdzBpAEP4k9CskEA5.jpg
-tt0026313,Enchanted April,Enchanted April,1935,66,"Comedy,Drama,Romance",https://image.tmdb.org/t/p/w92/ngWIAy3VI8xG25lxzrFN28VixT8.jpg
-tt0027602,Fame,Fame,1936,68,Comedy,Unknown
 tt0027996,Mr. Deeds Goes to Town,Mr. Deeds Goes to Town,1936,115,"Comedy,Drama,Romance",https://image.tmdb.org/t/p/w92/nWPUslg7us6CUjm5XtsnsuuGmNr.jpg
 tt0028691,Captains Courageous,Captains Courageous,1937,117,"Adventure,Drama,Family",https://image.tmdb.org/t/p/w92/xez8YMw0BhIS7bY0f1rxfdzQcX9.jpg
-tt0029054,It Could Happen to You,It Could Happen to You,1937,71,"Adventure,Crime,Drama",https://image.tmdb.org/t/p/w92/q3lZudG5pjcwwZ43WZK4Lq6NcN9.jpg
-tt0029736,To Live,Vivere!,1936,88,Drama,https://image.tmdb.org/t/p/w92/k9KHpfE4bLW4zxd20L0brAMrKVI.jpg
 tt0029843,The Adventures of Robin Hood,The Adventures of Robin Hood,1938,102,"Action,Adventure,Romance",https://image.tmdb.org/t/p/w92/kNJt6jXOiSrFu7jPyyxgFCwVN4u.jpg
 tt0029942,Boys Town,Boys Town,1938,96,"Biography,Drama",https://image.tmdb.org/t/p/w92/j1QxbJCCJb4rMhk0qHJVP7AHOpT.jpg
-tt0030418,Marie Antoinette,Marie Antoinette,1938,149,"Biography,Drama,History",https://image.tmdb.org/t/p/w92/9bPyyVVYCXReqeI9cWGtFWAUBul.jpg
 tt0031210,Dark Victory,Dark Victory,1939,104,"Drama,Romance",https://image.tmdb.org/t/p/w92/1qSATXx81kKvcgSOVPvStbEbA3n.jpg
 tt0031381,Gone with the Wind,Gone with the Wind,1939,238,"Drama,History,Romance",https://image.tmdb.org/t/p/w92/pDXbS9V8ZoF7oiL4LUL5U31T1B5.jpg
 tt0031398,Gunga Din,Gunga Din,1939,117,"Adventure,Comedy,War",https://image.tmdb.org/t/p/w92/45OhDiasKbJuD4hiSmy19ArR6Ni.jpg
@@ -39,70 +18,48 @@ tt0032551,The Grapes of Wrath,The Grapes of Wrath,1940,129,"Drama,History",https
 tt0033891,Meet John Doe,Meet John Doe,1941,135,"Comedy,Drama,Romance",https://image.tmdb.org/t/p/w92/AmbFL6IYyyIMNuwbwCx8qolhAgD.jpg
 tt0034167,Sergeant York,Sergeant York,1941,134,"Biography,Drama,History",https://image.tmdb.org/t/p/w92/npEoqQVeJOieZMkTW2gf7IhcnMb.jpg
 tt0034240,Sullivan's Travels,Sullivan's Travels,1941,90,"Adventure,Comedy,Drama",https://image.tmdb.org/t/p/w92/lHl3HDlqSVyoe7mSq0LATTIuWLy.jpg
-tt0034501,Sleeping Beauty,La bella addormentata,1942,90,Drama,https://image.tmdb.org/t/p/w92/piIianmVnuckLvrHFnpYhpvbyDW.jpg
 tt0034583,Casablanca,Casablanca,1942,102,"Drama,Romance,War",https://image.tmdb.org/t/p/w92/pQjUifS7GXimKOtRwPf8nXWw1bd.jpg
 tt0035093,Mrs. Miniver,Mrs. Miniver,1942,134,"Drama,Romance,War",https://image.tmdb.org/t/p/w92/jGEjvpBplUKBxsaP2Ye11uNL5Fi.jpg
 tt0035211,The Pride of the Yankees,The Pride of the Yankees,1942,128,"Biography,Drama,Romance",https://image.tmdb.org/t/p/w92/4dsg6fcgF2c9FC16YVrSJqJiXrv.jpg
 tt0035575,Yankee Doodle Dandy,Yankee Doodle Dandy,1942,126,"Biography,Drama,Music",https://image.tmdb.org/t/p/w92/cqLLIyJFjLr6jGOxWVEHG11WGzB.jpg
-tt0035665,Batman,Batman,1943,260,"Action,Crime",https://image.tmdb.org/t/p/w92/hyrAiphvDoBRJ6BPy4lLFVwZfQu.jpg
 tt0036126,Madame Curie,Madame Curie,1943,124,"Biography,Drama,Romance",https://image.tmdb.org/t/p/w92/nbOS7mlW8qsKG8uBTZLPg45RGRh.jpg
-tt0036443,Titanic,Titanic,1943,85,"Action,Drama,History",https://image.tmdb.org/t/p/w92/qkMvazIj6s8eQAFCQTenl3OILU6.jpg
-tt0036670,Brazil,Brazil,1944,91,"Comedy,Musical,Romance",https://image.tmdb.org/t/p/w92/lDpqZLKRKv0jmLjJwSflOtKDcc0.jpg
 tt0036868,The Best Years of Our Lives,The Best Years of Our Lives,1946,170,"Drama,Romance,War",https://image.tmdb.org/t/p/w92/yvsWT2WS1pJSifY4f2u4UGo5kHv.jpg
-tt0036910,Henry V,The Chronicle History of King Henry the Fifth with His Battell Fought at Agincourt in France,1944,137,"Biography,Drama,History",https://image.tmdb.org/t/p/w92/eAisr20DvaKJeHvjDN0oHSx0l7u.jpg
 tt0036983,The Keys of the Kingdom,The Keys of the Kingdom,1944,137,"Drama,War",https://image.tmdb.org/t/p/w92/5cjw4opFmuJHHidnxV6TYFCJUza.jpg
 tt0037059,Meet Me in St. Louis,Meet Me in St. Louis,1944,113,"Comedy,Drama,Family",https://image.tmdb.org/t/p/w92/lP8cPv0S1tbRhKDoLe0W5PW3y6h.jpg
 tt0037120,National Velvet,National Velvet,1944,123,"Drama,Family,Sport",https://image.tmdb.org/t/p/w92/iUQfP3s967V3SIAbyomNT8z8MIf.jpg
 tt0038109,Spellbound,Spellbound,1945,111,"Film-Noir,Mystery,Romance",https://image.tmdb.org/t/p/w92/qzqt6aZrCMicCZbCoKa6JNv0aJq.jpg
-tt0038348,Beauty and the Beast,La belle et la bête,1946,96,"Drama,Fantasy,Romance",https://image.tmdb.org/t/p/w92/eDVFP076HkfD2LL29aja6zGh6As.jpg
 tt0038650,It's a Wonderful Life,It's a Wonderful Life,1946,130,"Drama,Family,Fantasy",https://image.tmdb.org/t/p/w92/bSqt9rhDZx1Q7UZ86dBPKdNomp2.jpg
-tt0038687,Let There Be Light,Let There Be Light,1980,58,"Documentary,War",https://image.tmdb.org/t/p/w92/wgcAMb5BLKFANzTDfKwnxeH1kYA.jpg
 tt0039416,Gentleman's Agreement,Gentleman's Agreement,1947,118,"Drama,Romance",https://image.tmdb.org/t/p/w92/hKNpQ8cCbbKJiFrwkXJrM632xvN.jpg
 tt0039628,Miracle on 34th Street,Miracle on 34th Street,1947,96,"Comedy,Drama,Family",https://image.tmdb.org/t/p/w92/v9rDydAqGrhFtXpvMXjVDmw7atZ.jpg
 tt0040522,Bicycle Thieves,Ladri di biciclette,1948,89,Drama,https://image.tmdb.org/t/p/w92/7ZiSTZN5FWsphVmlwFVFfn5EOl.jpg
-tt0040743,Rocky,Rocky,1948,76,Drama,Unknown
-tt0040852,Superman,Superman,1948,244,Sci-Fi,https://image.tmdb.org/t/p/w92/yHVlaxy9sOeYM40d4IkDKKw1s2n.jpg
-tt0041424,Grand Canyon,Grand Canyon,1949,65,"Comedy,Romance,Western",Unknown
 tt0041996,Twelve O'Clock High,Twelve O'Clock High,1949,132,"Drama,War",https://image.tmdb.org/t/p/w92/4D6GlPtBKR3MOxn9W7cpKp75WVZ.jpg
+tt0042332,Cinderella,Cinderella,1950,74,"Animation,Family,Fantasy",https://image.tmdb.org/t/p/w92/4nssBcQUBadCTBjrAkX46mVEKts.jpg
 tt0042546,Harvey,Harvey,1950,104,"Comedy,Drama,Fantasy",https://image.tmdb.org/t/p/w92/dgd82hYmpiXDM1G867HqNaWe8wj.jpg
-tt0042876,Rashomon,Rashômon,1950,88,"Crime,Drama,Mystery",https://image.tmdb.org/t/p/w92/mwNCpjejHwq9KlpNB2gKII2yvbr.jpg
 tt0043265,The African Queen,The African Queen,1951,105,"Adventure,Drama,Romance",https://image.tmdb.org/t/p/w92/nSXgNRzjfqwH9iX25qiuHozGmGB.jpg
-tt0043436,"Cry, the Beloved Country","Cry, the Beloved Country",1951,103,Drama,https://image.tmdb.org/t/p/w92/dAlL0KqgvJKrBiF2SWNmKp9MzR3.jpg
+tt0043274,Alice in Wonderland,Alice in Wonderland,1951,75,"Adventure,Animation,Family",https://image.tmdb.org/t/p/w92/1cbF3s99hCQcFdWG8hrGhKSBles.jpg
 tt0044386,Robinson Crusoe,Robinson Crusoe,1954,90,"Adventure,Drama",https://image.tmdb.org/t/p/w92/1loBnQ2Bl1qzGNvUdtGTmVo8GnV.jpg
-tt0044603,Fargo,Fargo,1952,69,Western,https://image.tmdb.org/t/p/w92/EmLY1Gtf3MEQxqJUYDfiqZbVE7.jpg
 tt0044706,High Noon,High Noon,1952,85,"Drama,Thriller,Western",https://image.tmdb.org/t/p/w92/bc1x6kIO9oF30y3IMFuKMJV2uOj.jpg
-tt0044741,Ikiru,Ikiru,1952,143,Drama,https://image.tmdb.org/t/p/w92/b7QquFirLZeJ02zIXtxbFaiZy7s.jpg
-tt0044907,Les Miserables,Les Miserables,1952,105,"Adventure,Drama,History",https://image.tmdb.org/t/p/w92/9m16eVbKYr0LrftcCA4gNbowNAo.jpg
 tt0045152,Singin' in the Rain,Singin' in the Rain,1952,103,"Comedy,Musical,Romance",https://image.tmdb.org/t/p/w92/62plaLItfJDXKcLUJdOQ35wASms.jpg
 tt0046250,Roman Holiday,Roman Holiday,1953,118,"Comedy,Romance",https://image.tmdb.org/t/p/w92/7W3afdX2eDuRGIBm1YJgGcLJx8q.jpg
 tt0046303,Shane,Shane,1953,118,"Drama,Western",https://image.tmdb.org/t/p/w92/fPCjyrZK1evjm2vocMpsHZ0xFOa.jpg
-tt0046914,Cabaret,Dieses Lied bleibt bei Dir,1954,85,Drama,https://image.tmdb.org/t/p/w92/lm7NhmpYPoDRr4yCCpoYLClAzY1.jpg
 tt0047296,On the Waterfront,On the Waterfront,1954,108,"Crime,Drama,Thriller",https://image.tmdb.org/t/p/w92/v1RtJ1qR4v9nrnfoBVBl6hjTW9.jpg
 tt0047396,Rear Window,Rear Window,1954,112,"Mystery,Thriller",https://image.tmdb.org/t/p/w92/ILVF0eJxHMddjxeQhswFtpMtqx.jpg
-tt0047401,Queen Margot,La reine Margot,1954,106,Drama,https://image.tmdb.org/t/p/w92/41Bkaoamga4zAAkklgpFFyUaWna.jpg
-tt0047478,Seven Samurai,Shichinin no samurai,1954,207,"Action,Adventure,Drama",https://image.tmdb.org/t/p/w92/dCLodUvnee3dxXZRS63dAYfmsJV.jpg
-tt0048272,Dreams,Kvinnodröm,1955,87,Drama,https://image.tmdb.org/t/p/w92/nW0Nuis5HfYaIk1v7rgonhtPw3a.jpg
-tt0048437,Oasis,Oasis,1955,104,Adventure,https://image.tmdb.org/t/p/w92/z30e1W14dMWSW5xR2054a5cJRef.jpg
 tt0048545,Rebel Without a Cause,Rebel Without a Cause,1955,111,Drama,https://image.tmdb.org/t/p/w92/17pPqBv2MhJzwQqCJ7fM4zdNMhe.jpg
 tt0048960,Around the World in 80 Days,Around the World in 80 Days,1956,167,"Adventure,Comedy,Family",https://image.tmdb.org/t/p/w92/5sOJTtPJfOT74sSTABd3E0K5Zmy.jpg
-tt0049268,Glory,Glory,1956,100,Drama,https://image.tmdb.org/t/p/w92/oHki8S9VPAFhfMyv5W579DhkQ0e.jpg
 tt0049833,The Ten Commandments,The Ten Commandments,1956,220,"Adventure,Drama",https://image.tmdb.org/t/p/w92/3Ei59AR64x6dMZfWobPCkZjbqTL.jpg
 tt0049902,A Man Escaped,Un condamné à mort s'est échappé ou Le vent souffle où il veut,1956,101,"Drama,Thriller,War",https://image.tmdb.org/t/p/w92/yPVp405f3FzLyLJW73rcn9FhWyH.jpg
 tt0050083,12 Angry Men,12 Angry Men,1957,96,"Crime,Drama",https://image.tmdb.org/t/p/w92/7bj9HoEWIHfLJ5lc5wv01ALqedJ.jpg
-tt0050086,3:10 to Yuma,3:10 to Yuma,1957,92,"Drama,Thriller,Western",https://image.tmdb.org/t/p/w92/eQMkYcS2o8xuGpkvMHFeKO9URX3.jpg
 tt0050105,An Affair to Remember,An Affair to Remember,1957,115,"Drama,Musical,Romance",https://image.tmdb.org/t/p/w92/jwbWglYHbjqUu8M9DjTYzTOFklt.jpg
 tt0050212,The Bridge on the River Kwai,The Bridge on the River Kwai,1957,161,"Adventure,Drama,War",https://image.tmdb.org/t/p/w92/fuWtWy49Dbzz9UAnIHhKA0Z5LuT.jpg
 tt0050556,Jailhouse Rock,Jailhouse Rock,1957,96,"Drama,Music,Musical",https://image.tmdb.org/t/p/w92/8wb4IYiEO03shWEwbakOwzw1Ap7.jpg
-tt0050762,Nine Lives,Ni liv,1957,96,"Action,Adventure,Biography",https://image.tmdb.org/t/p/w92/dq8y9E3LvbdTmiY1NhJiwE3FLRP.jpg
 tt0050825,Paths of Glory,Paths of Glory,1957,88,"Drama,War",https://image.tmdb.org/t/p/w92/bczBPKNxk1RnLfKZH4slMDwJTjl.jpg
 tt0050976,The Seventh Seal,Det sjunde inseglet,1957,96,"Drama,Fantasy,History",https://image.tmdb.org/t/p/w92/kT0MkoMaJwyyqzpW97m8SPoa64Y.jpg
-tt0050986,Wild Strawberries,Smultronstället,1957,91,"Drama,Romance",https://image.tmdb.org/t/p/w92/lOjO3CrfqaAXEFWTX2B0TDkghTI.jpg
 tt0051003,The Spirit of St. Louis,The Spirit of St. Louis,1957,135,"Adventure,Biography,Drama",https://image.tmdb.org/t/p/w92/tKtfnKMJDEOEH1lpwYC9gB7kH3E.jpg
 tt0052618,Ben-Hur,Ben-Hur,1959,212,"Adventure,Drama,History",https://image.tmdb.org/t/p/w92/m4WQ1dBIrEIHZNCoAjdpxwSKWyH.jpg
 tt0052700,Compulsion,Compulsion,1959,103,"Biography,Crime,Drama",https://image.tmdb.org/t/p/w92/fdYoG4uxbTbQ8Wv4BLxWiP7rrkm.jpg
 tt0052738,The Diary of Anne Frank,The Diary of Anne Frank,1959,180,"Biography,Drama,Family",https://image.tmdb.org/t/p/w92/9oBQj09CuLQmxMeQugXk35TNAYg.jpg
 tt0053198,The 400 Blows,Les quatre cents coups,1959,99,"Crime,Drama",https://image.tmdb.org/t/p/w92/12PuU23kkDLvTd0nb8hMlE3oShB.jpg
-tt0053338,Yesterday,Tegnap,1959,89,Drama,https://image.tmdb.org/t/p/w92/i5IhbIH8YNw0jUV5Y1VBESKJIgi.jpg
+tt0053285,Sleeping Beauty,Sleeping Beauty,1959,75,"Animation,Family,Fantasy",https://image.tmdb.org/t/p/w92/zPwX8SpubDwMyYt2Q3nayUj8KGh.jpg
 tt0054331,Spartacus,Spartacus,1960,197,"Adventure,Biography,Drama",https://image.tmdb.org/t/p/w92/7jIkNQenhZdiGRcwMk8w9KhwFi6.jpg
 tt0054594,The Absent Minded Professor,The Absent Minded Professor,1961,92,"Comedy,Family,Sci-Fi",https://image.tmdb.org/t/p/w92/6Ucn39YgU4qzeYuAPDC2gKzlA2x.jpg
 tt0054698,Breakfast at Tiffany's,Breakfast at Tiffany's,1961,115,"Comedy,Drama,Romance",https://image.tmdb.org/t/p/w92/h3GDLoBUTiVFm4UMrok5tibFwqC.jpg
@@ -115,7 +72,7 @@ tt0056172,Lawrence of Arabia,Lawrence of Arabia,1962,228,"Adventure,Biography,Dr
 tt0056218,The Manchurian Candidate,The Manchurian Candidate,1962,126,"Drama,Thriller",https://image.tmdb.org/t/p/w92/86EJh81aylhncq62OlPnjDCXtTv.jpg
 tt0056241,The Miracle Worker,The Miracle Worker,1962,106,"Biography,Drama",https://image.tmdb.org/t/p/w92/3dI6UVM5W1sz3MU9gNK5nVDcAyQ.jpg
 tt0056592,To Kill a Mockingbird,To Kill a Mockingbird,1962,129,"Crime,Drama",https://image.tmdb.org/t/p/w92/fqIj7oE79qbyqHv5NBjtTI7yXP7.jpg
-tt0057453,Return to Oz,Return to Oz,1964,51,"Animation,Family,Fantasy",https://image.tmdb.org/t/p/w92/9D2rIlHXJOSRAFYinlF2J8U8AJZ.jpg
+tt0057251,Lilies of the Field,Lilies of the Field,1963,94,Drama,https://image.tmdb.org/t/p/w92/gYoVx2m8NP2hTWnEpwNeROIWrQ4.jpg
 tt0057831,Zorba the Greek,Alexis Zorbas,1964,142,"Comedy,Drama",https://image.tmdb.org/t/p/w92/jAYOY38TRDprIgu7vgES0FFJJSl.jpg
 tt0058331,Mary Poppins,Mary Poppins,1964,139,"Comedy,Family,Fantasy",https://image.tmdb.org/t/p/w92/3WVWhlDdWdIAy9ZQGwIJlUjTKB.jpg
 tt0058385,My Fair Lady,My Fair Lady,1964,170,"Drama,Family,Musical",https://image.tmdb.org/t/p/w92/5j7uno9Rh4A52UO6ZNGciq6O0UV.jpg
@@ -123,10 +80,8 @@ tt0058715,The Gospel According to St. Matthew,Il vangelo secondo Matteo,1964,137
 tt0059113,Doctor Zhivago,Doctor Zhivago,1965,197,"Drama,Romance,War",https://image.tmdb.org/t/p/w92/kaXYPAGOrwyeGLEON10qPoKVv6N.jpg
 tt0059245,The Greatest Story Ever Told,The Greatest Story Ever Told,1965,260,"Biography,Drama,History",https://image.tmdb.org/t/p/w92/sGtPyaPeMULx3g59jXz2u7cwbN.jpg
 tt0059742,The Sound of Music,The Sound of Music,1965,172,"Biography,Drama,Family",https://image.tmdb.org/t/p/w92/xvXiJggaxRrU4jLjTXCmqnqEsGd.jpg
-tt0059773,Sylvia,Sylvia,1965,115,Drama,https://image.tmdb.org/t/p/w92/tzwt0YAQbPoyBPvWgxGgRb3av73.jpg
 tt0060164,The Bible: In the Beginning...,The Bible: In the Beginning...,1966,174,"Drama,Family",https://image.tmdb.org/t/p/w92/xb8lDSuUETxbJ1oWNIdcW661omw.jpg
 tt0060665,A Man for All Seasons,A Man for All Seasons,1966,120,"Biography,Drama,History",https://image.tmdb.org/t/p/w92/fKdIMxsxt2PQlHGqmnl8uSS2C54.jpg
-tt0061395,Belle de Jour,Belle de jour,1967,100,"Drama,Romance",https://image.tmdb.org/t/p/w92/6FkuJLX3NPYRYheNIAxuQS8UHl3.jpg
 tt0061512,Cool Hand Luke,Cool Hand Luke,1967,127,"Crime,Drama",https://image.tmdb.org/t/p/w92/tcqzBmAckeDCMHNXoKLYF3ZaZRE.jpg
 tt0061735,Guess Who's Coming to Dinner,Guess Who's Coming to Dinner,1967,108,"Comedy,Drama",https://image.tmdb.org/t/p/w92/mrRVl6ck9v23SjmdblwP8GajVS.jpg
 tt0061809,In Cold Blood,In Cold Blood,1967,134,"Biography,Crime,Drama",https://image.tmdb.org/t/p/w92/9VFk7hyx3Thk8kzChq750rLtrsR.jpg
@@ -134,17 +89,12 @@ tt0061811,In the Heat of the Night,In the Heat of the Night,1967,110,"Crime,Dram
 tt0061834,I Am Curious (Yellow),Jag är nyfiken - en film i gult,1967,121,Drama,https://image.tmdb.org/t/p/w92/4LHJm9hhRaI9k7gAU22BIhKekNb.jpg
 tt0062622,2001: A Space Odyssey,2001: A Space Odyssey,1968,149,"Adventure,Sci-Fi",https://image.tmdb.org/t/p/w92/ve72VxNqjGM69Uky4WTo2bK6rfq.jpg
 tt0062803,Chitty Chitty Bang Bang,Chitty Chitty Bang Bang,1968,144,"Adventure,Family,Fantasy",https://image.tmdb.org/t/p/w92/wjCleA4UHJKwgM5TFVOofXsxJGb.jpg
-tt0063006,Genesis,Genesis,1964,Unknown,Drama,Unknown
-tt0063385,Oliver!,Oliver!,1968,153,"Drama,Family,Musical",https://image.tmdb.org/t/p/w92/1XJgoaOWKrqxkKeBKWLKSigqG8c.jpg
-tt0063493,Reconstruction,Reconstituirea,1968,100,"Comedy,Drama",https://image.tmdb.org/t/p/w92/1Yfea4XRSQA8gMxkjdexThqo86o.jpg
 tt0064665,Midnight Cowboy,Midnight Cowboy,1969,113,Drama,https://image.tmdb.org/t/p/w92/ckklq45UxUkwgHve9xItXqXr06r.jpg
-tt0065234,Z,Z,1969,127,"Crime,Drama,History",https://image.tmdb.org/t/p/w92/cN7A9OODtSQpTgMxC31vFAN8ta.jpg
 tt0066445,"Tell Me That You Love Me, Junie Moon","Tell Me That You Love Me, Junie Moon",1970,113,"Comedy,Drama,Romance",https://image.tmdb.org/t/p/w92/m8gntXfzQGZtjnAc7cixC2khiw7.jpg
-tt0066822,Believe in Me,Believe in Me,1971,86,Drama,Unknown
 tt0067093,Fiddler on the Roof,Fiddler on the Roof,1971,181,"Drama,Family,Musical",https://image.tmdb.org/t/p/w92/v65PHx7Q6Jx0anyNeUOX07SJic9.jpg
 tt0067185,Harold and Maude,Harold and Maude,1971,91,"Comedy,Drama,Romance",https://image.tmdb.org/t/p/w92/9qf5iOYuUUggYST1byTBRFNz5tg.jpg
-tt0067862,Together,Together,1971,72,Drama,https://image.tmdb.org/t/p/w92/mjC75KayooJ6193H9Axp6coF5TZ.jpg
 tt0067992,Willy Wonka & the Chocolate Factory,Willy Wonka & the Chocolate Factory,1971,100,"Family,Fantasy,Musical",https://image.tmdb.org/t/p/w92/6rBduDPMX1ROzoRls8NUYmWedRv.jpg
+tt0068327,Cabaret,Cabaret,1972,124,"Drama,Music,Musical",https://image.tmdb.org/t/p/w92/1RmUfX3LcS897GhUWrWp5nRADo4.jpg
 tt0069303,Sounder,Sounder,1972,105,"Drama,Family",https://image.tmdb.org/t/p/w92/wKwQARV79qobIujRvzIiKjOc4fG.jpg
 tt0070121,Godspell,Godspell: A Musical Based on the Gospel According to St. Matthew,1973,103,"Comedy,Drama,Musical",https://image.tmdb.org/t/p/w92/qhjcjiLcPhB0kniRlQfIoGiILbn.jpg
 tt0070239,Jesus Christ Superstar,Jesus Christ Superstar,1973,106,"Drama,History,Musical",https://image.tmdb.org/t/p/w92/n6plvdTev2B1Mlkni1GVK05TLF0.jpg
@@ -152,21 +102,15 @@ tt0070248,Jonathan Livingston Seagull,Jonathan Livingston Seagull,1973,99,"Drama
 tt0070509,The Paper Chase,The Paper Chase,1973,113,"Comedy,Drama",https://image.tmdb.org/t/p/w92/xqdGdasqPEV1mtWGIA1x8mrWOAe.jpg
 tt0070511,Papillon,Papillon,1973,151,"Biography,Crime,Drama",https://image.tmdb.org/t/p/w92/356oqQpug682OERsWV0bGZ0YxwQ.jpg
 tt0070666,Serpico,Serpico,1973,130,"Biography,Crime,Drama",https://image.tmdb.org/t/p/w92/76rLcn53Fjdh4Dji9EIeJ98aYj1.jpg
-tt0071367,Crash,Crash,1974,90,Drama,https://image.tmdb.org/t/p/w92/5nHqxczWl9HbiAPI7LjVbLIDb5u.jpg
-tt0071853,Monty Python and the Holy Grail,Monty Python and the Holy Grail,1975,91,"Adventure,Comedy,Fantasy",https://image.tmdb.org/t/p/w92/jVztLnCw6F5YNOgEchm3QFydbYZ.jpg
-tt0071941,Once,Once,1973,100,Fantasy,https://image.tmdb.org/t/p/w92/yaGYRt588x6t6RJ0BfjOp7NxtuO.jpg
-tt0072677,Babe,Babe,1975,106,"Biography,Drama,Sport",https://image.tmdb.org/t/p/w92/nYvMnY9TUL9gXGlKCtuE5iOY4tE.jpg
 tt0073486,One Flew Over the Cuckoo's Nest,One Flew Over the Cuckoo's Nest,1975,133,Drama,https://image.tmdb.org/t/p/w92/3jcbDmRFiQ83drXNOvRDeKHxS0C.jpg
-tt0073722,Smile,Smile,1975,113,Comedy,https://image.tmdb.org/t/p/w92/6vsUObu6SQgiurTD4XYRJ6FpE48.jpg
 tt0074119,All the President's Men,All the President's Men,1976,138,"Biography,Drama,History",https://image.tmdb.org/t/p/w92/cPtSHR7D2WGsDBfnC5DxV927hKn.jpg
 tt0074174,The Bad News Bears,The Bad News Bears,1976,102,"Comedy,Drama,Family",https://image.tmdb.org/t/p/w92/kJNXMni0ObOXLth6v9xpUhWbtrp.jpg
-tt0074719,Joshua,Joshua,1976,90,"Drama,Western",https://image.tmdb.org/t/p/w92/k5x1WWvdRBXK4O36mXHDJSPwUIV.jpg
+tt0075148,Rocky,Rocky,1976,120,"Drama,Sport",https://image.tmdb.org/t/p/w92/i5xiwdSsrecBvO7mIfAJixeEDSg.jpg
 tt0075686,Annie Hall,Annie Hall,1977,93,"Comedy,Romance",https://image.tmdb.org/t/p/w92/dEtjPywhDbAXYjoFfhBC4U9unU7.jpg
 tt0075860,Close Encounters of the Third Kind,Close Encounters of the Third Kind,1977,138,"Drama,Sci-Fi",https://image.tmdb.org/t/p/w92/9fab10esBOe3OwarBN531iHwsjF.jpg
 tt0075995,Equus,Equus,1977,137,"Drama,Mystery",https://image.tmdb.org/t/p/w92/qLwbIw7yRRydWrSNeVEpqzk5gm9.jpg
-tt0076202,Intimate Strangers,Intimate Strangers,1977,100,Drama,https://image.tmdb.org/t/p/w92/70uR2823X2bQssXKEZ6sqXiPX6c.jpg
 tt0076299,The Last Wave,The Last Wave,1977,106,"Drama,Fantasy,Mystery",https://image.tmdb.org/t/p/w92/7UwdJ0EMXirUuNFaohfK023Nuyr.jpg
-tt0076759,Star Wars: Episode IV - A New Hope,Star Wars,1977,121,"Action,Adventure,Fantasy",https://image.tmdb.org/t/p/w92/jjV37zLlE4guejPkkhvmHqSGh4u.jpg
+tt0078346,Superman,Superman,1978,143,"Action,Adventure,Drama",https://image.tmdb.org/t/p/w92/axvTpYi18MDngJJ6ruc98P862OM.jpg
 tt0078841,Being There,Being There,1979,130,"Comedy,Drama",https://image.tmdb.org/t/p/w92/yFHi5wiCB45loSa1D1O6KAFMC3A.jpg
 tt0078872,The Black Stallion,The Black Stallion,1979,118,"Adventure,Family,Sport",https://image.tmdb.org/t/p/w92/tiRVhDoxVxPjAdYvSUXOd6ITpJY.jpg
 tt0078902,Breaking Away,Breaking Away,1979,101,"Comedy,Drama,Romance",https://image.tmdb.org/t/p/w92/6fyhA7Imqxm7SftTqd4RGcayWfn.jpg
@@ -174,19 +118,16 @@ tt0079470,Monty Python's Life of Brian,Life of Brian,1979,94,Comedy,https://imag
 tt0079638,Norma Rae,Norma Rae,1979,114,Drama,https://image.tmdb.org/t/p/w92/iBX0F0SbPoj4fA1Sk9FXRTaYDjz.jpg
 tt0080549,Coal Miner's Daughter,Coal Miner's Daughter,1980,124,"Biography,Drama,Music",https://image.tmdb.org/t/p/w92/sNOMyIYP2wz1sFKSJmlKPjYz6ok.jpg
 tt0080595,The Day Christ Died,The Day Christ Died,1980,142,Drama,https://image.tmdb.org/t/p/w92/t0W8gXXfjvE3jdsSsqgYSc9iTE9.jpg
+tt0080716,Fame,Fame,1980,134,"Drama,Music,Musical",https://image.tmdb.org/t/p/w92/k7pKIIWy3jff4P83AFQcjbzaqZK.jpg
 tt0081283,Ordinary People,Ordinary People,1980,124,Drama,https://image.tmdb.org/t/p/w92/kPt2AQiSP39g3I1TtAnjSGQwN9S.jpg
 tt0081353,Popeye,Popeye,1980,114,"Adventure,Comedy,Family",https://image.tmdb.org/t/p/w92/tH8qTYf5iLw6PN3UJymct3BoQfN.jpg
 tt0081534,Somewhere in Time,Somewhere in Time,1980,103,"Drama,Fantasy,Romance",https://image.tmdb.org/t/p/w92/aKGMcizZuTMKMkqmdP9cRECtwyQ.jpg
-tt0081664,Tuck Everlasting,Tuck Everlasting,1981,90,"Drama,Family,Fantasy",https://image.tmdb.org/t/p/w92/2vActFassFbeCzPSxCtkWakrRDN.jpg
 tt0082158,Chariots of Fire,Chariots of Fire,1981,125,"Biography,Drama,Sport",https://image.tmdb.org/t/p/w92/b7iAj7hTmK0djaTc4byG9wQhcqE.jpg
 tt0082783,My Dinner with Andre,My Dinner with Andre,1981,110,"Biography,Comedy,Drama",https://image.tmdb.org/t/p/w92/jLza5FLlGRlF0Py6d0cXP4RP66B.jpg
 tt0082846,On Golden Pond,On Golden Pond,1981,109,Drama,https://image.tmdb.org/t/p/w92/ic4f03J6pnf9cpQmVDABFhUpbCU.jpg
-tt0082912,Pixote,Pixote: A Lei do Mais Fraco,1981,128,"Crime,Drama",https://image.tmdb.org/t/p/w92/zaBtclnYKv2JkgRDQ7OiFtWHm4e.jpg
 tt0082971,Indiana Jones and the Raiders of the Lost Ark,Raiders of the Lost Ark,1981,115,"Action,Adventure",https://image.tmdb.org/t/p/w92/ceG9VzoRAVGwivFU403Wc3AHRys.jpg
 tt0083866,E.T. the Extra-Terrestrial,E.T. the Extra-Terrestrial,1982,115,"Family,Sci-Fi",https://image.tmdb.org/t/p/w92/an0nD6uq6byfxXCfk6lQBzdL2J1.jpg
-tt0083946,Fitzcarraldo,Fitzcarraldo,1982,158,"Adventure,Drama",https://image.tmdb.org/t/p/w92/a3KVPp1oEQwMO7HWpMXiHef6QVL.jpg
 tt0083987,Gandhi,Gandhi,1982,191,"Biography,Drama,History",https://image.tmdb.org/t/p/w92/wo5Ed3Yhejts5FIG48CA2gsWPoN.jpg
-tt0084065,Hero,Hero,1982,92,"Adventure,Drama,Fantasy",https://image.tmdb.org/t/p/w92/gRzReMW6wX5MbpiUQn0ntpCyOD5.jpg
 tt0084434,An Officer and a Gentleman,An Officer and a Gentleman,1982,124,"Drama,Romance",https://image.tmdb.org/t/p/w92/nloIjLT5EFl4PUfbV6acxx4yiH7.jpg
 tt0084707,Sophie's Choice,Sophie's Choice,1982,150,"Drama,Romance",https://image.tmdb.org/t/p/w92/6zayvLCWvF8ImK5UqwRUbETcpVU.jpg
 tt0084855,The Verdict,The Verdict,1982,129,Drama,https://image.tmdb.org/t/p/w92/yjbkiu7NisLYblvXlsYo61aodgl.jpg
@@ -194,70 +135,50 @@ tt0086197,The Right Stuff,The Right Stuff,1983,193,"Adventure,Biography,Drama",h
 tt0086312,Silkwood,Silkwood,1983,131,"Biography,Drama,History",https://image.tmdb.org/t/p/w92/7Piz5R5dB6d7v1OWNaIn9GB4qZg.jpg
 tt0086423,Tender Mercies,Tender Mercies,1983,92,"Drama,Music",https://image.tmdb.org/t/p/w92/kizoUVQKnhN6AjRWrpUkYwLkev5.jpg
 tt0086425,Terms of Endearment,Terms of Endearment,1983,132,"Comedy,Drama",https://image.tmdb.org/t/p/w92/iZiYzBb6nyv2anbpVTV5ba6GSwq.jpg
-tt0086593,Without a Trace,Without a Trace,1983,120,"Drama,Mystery",https://image.tmdb.org/t/p/w92/clxUXfBiFphYVYEINUOolKc2rwX.jpg
 tt0086619,Yentl,Yentl,1983,133,"Drama,Musical,Romance",https://image.tmdb.org/t/p/w92/AcCX4tKqwP5BTfRTQEqZW3qabl3.jpg
 tt0086879,Amadeus,Amadeus,1984,160,"Biography,Drama,History",https://image.tmdb.org/t/p/w92/zBQcRNMHxVtsCSed5NGu88KQ6uj.jpg
 tt0087056,A Christmas Carol,A Christmas Carol,1984,100,"Drama,Family,Fantasy",https://image.tmdb.org/t/p/w92/kGmpIkjVRWHQ97AiEXC0pLt5VtY.jpg
-tt0087166,Door to Door,Door to Door,1984,90,Comedy,https://image.tmdb.org/t/p/w92/33box3FgRWAaP0ME9YSREsLsJvt.jpg
 tt0087469,Indiana Jones and the Temple of Doom,Indiana Jones and the Temple of Doom,1984,118,"Action,Adventure",https://image.tmdb.org/t/p/w92/nHKRa4QqXVMNBuWVH8iFwoajlFG.jpg
-tt0087473,Innocence,Inocência,1983,118,"Drama,Romance",https://image.tmdb.org/t/p/w92/1oDkNOAjHJt5lqpxbahPEJD47hR.jpg
 tt0087538,The Karate Kid,The Karate Kid,1984,126,"Action,Drama,Family",https://image.tmdb.org/t/p/w92/zHBxS1sUPZgHPluSoiPbYcxpOpr.jpg
 tt0087553,The Killing Fields,The Killing Fields,1984,141,"Biography,Drama,History",https://image.tmdb.org/t/p/w92/cPtW4lp8to8jMKHqhUWMMjWPmAG.jpg
 tt0087884,"Paris, Texas","Paris, Texas",1984,145,Drama,https://image.tmdb.org/t/p/w92/tgw3TJTWgNUYCgL5Pa546VVVvSU.jpg
 tt0087921,Places in the Heart,Places in the Heart,1984,111,Drama,https://image.tmdb.org/t/p/w92/yLzhdhPw40SXpsIoUAcYJNEo3ve.jpg
 tt0087980,The Razor's Edge,The Razor's Edge,1984,128,"Drama,Romance,War",https://image.tmdb.org/t/p/w92/yy5Moi2JCbIsasCrL8bk1VsJcKH.jpg
-tt0088701,Always,Always,1985,105,"Drama,Romance",https://image.tmdb.org/t/p/w92/6DSrbCzd4hZWkK8QjUfa8e3lERL.jpg
 tt0088763,Back to the Future,Back to the Future,1985,116,"Adventure,Comedy,Sci-Fi",https://image.tmdb.org/t/p/w92/ayoiQozcSUtM64nFgXpyjaixvge.jpg
-tt0088853,Bridge to Terabithia,Bridge to Terabithia,1985,60,"Drama,Family,Fantasy",Unknown
 tt0088939,The Color Purple,The Color Purple,1985,154,Drama,https://image.tmdb.org/t/p/w92/nvO4QWbOjI3QjUGvhAgzDhlQY0Q.jpg
-tt0089065,Déjà Vu,Déjà Vu,1985,90,Drama,https://image.tmdb.org/t/p/w92/xUGjXE31oBs2t16u2IomD2QRo5h.jpg
 tt0089165,The Fourth Wise Man,The Fourth Wise Man,1985,72,"Adventure,Drama",https://image.tmdb.org/t/p/w92/qB4k09MVJUw4RyNz5izAz4UBdXH.jpg
-tt0089246,Half Nelson,Half Nelson,1985,120,"Comedy,Drama",https://image.tmdb.org/t/p/w92/ppBMnvtfcKiwm5zOvPLYnAL25Tw.jpg
 tt0089755,Out of Africa,Out of Africa,1985,161,"Biography,Drama,Romance",https://image.tmdb.org/t/p/w92/3eLAm1kuVD5QZCOydbiu7j6GAbw.jpg
-tt0090297,Water,Water,1985,115,"Adventure,Comedy,Drama",https://image.tmdb.org/t/p/w92/ydLqiBWCC6QTEA7iM2dlFzYNG25.jpg
-tt0090601,Aladdin,Superfantagenio,1986,96,"Adventure,Comedy,Fantasy",https://image.tmdb.org/t/p/w92/zlnzJd4v8XyW4usXGoKkzRH1n2M.jpg
+tt0089908,Return to Oz,Return to Oz,1985,113,"Adventure,Family,Fantasy",https://image.tmdb.org/t/p/w92/prd9KCTa12RDnKgyfR9hWHbMzBI.jpg
 tt0090605,Aliens,Aliens,1986,137,"Action,Adventure,Sci-Fi",https://image.tmdb.org/t/p/w92/3QU9EP8BFLnTh6w9ycDSCvhqbRU.jpg
 tt0090830,Children of a Lesser God,Children of a Lesser God,1986,119,"Drama,Romance",https://image.tmdb.org/t/p/w92/tWMuw7YWWDpD9Iv652vfKELPZPR.jpg
 tt0091217,Hoosiers,Hoosiers,1986,114,"Drama,Sport",https://image.tmdb.org/t/p/w92/dHpjZQXEdoi1xNLubM1rPmTHJYz.jpg
 tt0091377,The Old Well,Lao jing,1987,130,"Drama,Romance",https://image.tmdb.org/t/p/w92/wTHHVHdd35e071wfV9mXvq8XIub.jpg
-tt0091558,Mother Teresa,Mother Teresa,1986,81,"Biography,Documentary",https://image.tmdb.org/t/p/w92/20GSCmFFRUd0ubZ7T2KsQikqOlh.jpg
 tt0092494,*batteries not included,*batteries not included,1987,106,"Comedy,Family,Fantasy",https://image.tmdb.org/t/p/w92/fihVRWRFJu0XxmvwDmceHmMczml.jpg
 tt0092603,Babette's Feast,Babettes gæstebud,1987,103,Drama,https://image.tmdb.org/t/p/w92/bSH3CNlCDG6sr9NByYYMwPuJ5EG.jpg
-tt0092732,Castaway,Castaway,1986,117,"Adventure,Biography,Drama",https://image.tmdb.org/t/p/w92/k08IlRQ3IzvWFWZhNtDEbGeTL7e.jpg
-tt0092841,Dead Man Walking,Dead Man Walking,1988,90,"Action,Sci-Fi",https://image.tmdb.org/t/p/w92/5dIfCiIa3NhJmoSG3mTROZO7udK.jpg
 tt0093105,"Good Morning, Vietnam","Good Morning, Vietnam",1987,121,"Biography,Comedy,Drama",https://image.tmdb.org/t/p/w92/sreISlFUn5TyR41QNjlfAdX5SEW.jpg
-tt0093166,Heaven,Heaven,1987,80,Documentary,https://image.tmdb.org/t/p/w92/5KujeL2Xqh4xw9rcjbF4jzXG5tB.jpg
-tt0093191,Wings of Desire,Der Himmel über Berlin,1987,128,"Drama,Fantasy,Romance",https://image.tmdb.org/t/p/w92/iZQs2vUeCzvS1KfZJ6uYNCGJBBV.jpg
 tt0093565,Moonstruck,Moonstruck,1987,102,"Comedy,Drama,Romance",https://image.tmdb.org/t/p/w92/ipoFFT1wzrEq60CUDELmbMOaokr.jpg
-tt0093713,Pelle the Conqueror,Pelle erobreren,1987,157,Drama,https://image.tmdb.org/t/p/w92/mormz2yH2WeVqhTZxqGfT17WeYR.jpg
 tt0093779,The Princess Bride,The Princess Bride,1987,98,"Adventure,Family,Fantasy",https://image.tmdb.org/t/p/w92/whF3YddFYSwJNuHEvi5lpsnty2l.jpg
-tt0094269,Vincent,Vincent,1987,105,"Animation,Biography,Drama",https://image.tmdb.org/t/p/w92/sxNNzV3vhDR8sLEkF9zqq3AWuRD.jpg
+tt0094027,Stand and Deliver,Stand and Deliver,1988,103,"Biography,Drama",https://image.tmdb.org/t/p/w92/xy5tWhdcy2cba5w8bQfCJsYdmpQ.jpg
 tt0094715,Beaches,Beaches,1988,123,"Comedy,Drama,Music",https://image.tmdb.org/t/p/w92/vol5TCGHDbi8r0yo0TrIGFiGxJ7.jpg
-tt0094868,Chocolat,Chocolat,1988,105,Drama,https://image.tmdb.org/t/p/w92/7OvXaQOpQhWwpHuJymFQDFfppPM.jpg
-tt0095270,Hairspray,Hairspray,1988,92,"Comedy,Drama,Family",https://image.tmdb.org/t/p/w92/n78VVWG1jsEpMCtcye13wy1RiAx.jpg
 tt0095467,A Short Film About Love,Krótki film o milosci,1988,87,"Drama,Romance",https://image.tmdb.org/t/p/w92/ymx57aOHCwfIvZGmaGQFJ1HD32i.jpg
 tt0095497,The Last Temptation of Christ,The Last Temptation of Christ,1988,164,Drama,https://image.tmdb.org/t/p/w92/2ceH89BPDTeihiiiULV4U86kmxt.jpg
-tt0095765,Cinema Paradiso,Nuovo Cinema Paradiso,1988,155,"Drama,Romance",https://image.tmdb.org/t/p/w92/8SRUfRUi6x4O68n0VCbDNRa6iGL.jpg
 tt0095800,The Bear,L'ours,1988,96,"Adventure,Drama,Family",https://image.tmdb.org/t/p/w92/tzZZ68P93eUK3E1gAJXRjFtnNkZ.jpg
 tt0095801,Bagdad Cafe,Out of Rosenheim,1987,95,"Comedy,Drama",https://image.tmdb.org/t/p/w92/kNF30CWPyMWtihvcrT8014HKcMb.jpg
 tt0095953,Rain Man,Rain Man,1988,133,Drama,https://image.tmdb.org/t/p/w92/8L6EMburnnVx8cvQmhGgC826JNc.jpg
-tt0096028,Salaam Bombay!,Salaam Bombay!,1988,113,"Crime,Drama",https://image.tmdb.org/t/p/w92/eECutr4lseF2dDI7Okfq0CYAhWZ.jpg
 tt0096316,Tucker: The Man and His Dream,Tucker: The Man and His Dream,1988,110,"Biography,Comedy,Drama",https://image.tmdb.org/t/p/w92/vlN4vE8mto1K14Ngv4DVeMWKwIo.jpg
 tt0096463,Working Girl,Working Girl,1988,113,"Comedy,Drama,Romance",https://image.tmdb.org/t/p/w92/9oK70JJZZIAstEsbE5TDqbr95Ge.jpg
+tt0096794,Always,Always,1989,122,"Drama,Fantasy,Romance",https://image.tmdb.org/t/p/w92/igKxOqpwf0cKHhJ07TS8OMXLtyl.jpg
 tt0097165,Dead Poets Society,Dead Poets Society,1989,128,"Comedy,Drama",https://image.tmdb.org/t/p/w92/ai40gM7SUaGA6fthvsd87o8IQq4.jpg
-tt0097195,Why Has Bodhi-Dharma Left for the East?,Dharmaga tongjoguro kan kkadalgun,1989,137,Drama,https://image.tmdb.org/t/p/w92/vkdKLYsfIzr1ImacKMQDJmtScky.jpg
 tt0097216,Do the Right Thing,Do the Right Thing,1989,120,"Comedy,Drama",https://image.tmdb.org/t/p/w92/63rmSDPahrH7C1gEFYzRuIBAN9W.jpg
 tt0097239,Driving Miss Daisy,Driving Miss Daisy,1989,99,Drama,https://image.tmdb.org/t/p/w92/4FB6xnmvtW2vT1t4mKb5vs7JiE.jpg
 tt0097351,Field of Dreams,Field of Dreams,1989,107,"Drama,Family,Fantasy",https://image.tmdb.org/t/p/w92/8PT4sAcneQ7MtZ1Mqoe2EyOJHmZ.jpg
-tt0097383,Francesco,Francesco,1989,157,"Biography,Drama,History",https://image.tmdb.org/t/p/w92/zx3EBQZUaZPqVenjMi823bhbOMN.jpg
+tt0097441,Glory,Glory,1989,122,"Biography,Drama,History",https://image.tmdb.org/t/p/w92/pGDzBjZvzmSCIEduQBfESLMiwtp.jpg
+tt0097499,Henry V,Henry V,1989,137,"Action,Biography,Drama",https://image.tmdb.org/t/p/w92/pSHqyWCpXC9cNwxtdkGmWxhvBql.jpg
 tt0097576,Indiana Jones and the Last Crusade,Indiana Jones and the Last Crusade,1989,127,"Action,Adventure",https://image.tmdb.org/t/p/w92/acgJPtbeXdBaKYAUVdfYLVwKzAC.jpg
-tt0097591,Iris,Iris,1987,90,"Comedy,Drama,Mystery",Unknown
 tt0097635,Jesus of Montreal,Jésus de Montréal,1989,118,Drama,https://image.tmdb.org/t/p/w92/2qCph9yb4jb7xLHLmgsf1aHORfZ.jpg
-tt0097937,My Left Foot,My Left Foot: The Story of Christy Brown,1989,103,"Biography,Drama",https://image.tmdb.org/t/p/w92/GRAAl0bMQFoFIjV3aunc5jsM5u.jpg
 tt0097939,My Name Is Bill W.,My Name Is Bill W.,1989,100,Drama,https://image.tmdb.org/t/p/w92/54Ggd8vaWs7PzGuTKLDsWP38OAv.jpg
 tt0098384,Steel Magnolias,Steel Magnolias,1989,117,"Comedy,Drama,Romance",https://image.tmdb.org/t/p/w92/ycFHkfsh5MbiOc5m04xWbmcwb4u.jpg
 tt0098635,When Harry Met Sally...,When Harry Met Sally...,1989,95,"Comedy,Drama,Romance",https://image.tmdb.org/t/p/w92/3wkbKeowUp1Zpkw1KkBqMWbt0P9.jpg
-tt0098732,Last Images of the Shipwreck,Últimas imágenes del naufragio,1989,131,Drama,https://image.tmdb.org/t/p/w92/sbXDIeWFFOWeCrpBmxQvhf2Dk4Q.jpg
 tt0099077,Awakenings,Awakenings,1990,121,"Biography,Drama",https://image.tmdb.org/t/p/w92/9gztZXuHLG6AJ0fgqGd7Q43cWRI.jpg
 tt0099348,Dances with Wolves,Dances with Wolves,1990,181,"Adventure,Drama,Western",https://image.tmdb.org/t/p/w92/cvaBVpS0GzKqBd63pFT8f1E8OKv.jpg
 tt0099487,Edward Scissorhands,Edward Scissorhands,1990,105,"Drama,Fantasy,Romance",https://image.tmdb.org/t/p/w92/1RFIbuW9Z3eN9Oxw2KaQG5DfLmD.jpg
@@ -268,39 +189,33 @@ tt0099892,Joe Versus the Volcano,Joe Versus the Volcano,1990,102,"Comedy,Romance
 tt0100151,Mindwalk,Mindwalk,1990,112,Drama,https://image.tmdb.org/t/p/w92/6iLaHjCR4mT29BWj9qHy2hPdWW9.jpg
 tt0100405,Pretty Woman,Pretty Woman,1990,119,"Comedy,Romance",https://image.tmdb.org/t/p/w92/hMVMMy1yDUvdufpTl8J8KKNYaZX.jpg
 tt0100873,Vincent & Theo,Vincent & Theo,1990,140,"Biography,Drama",https://image.tmdb.org/t/p/w92/zgCixW0FqpM6GGctn0UYKxqBf3H.jpg
+tt0101414,Beauty and the Beast,Beauty and the Beast,1991,84,"Animation,Family,Fantasy",https://image.tmdb.org/t/p/w92/738LwXpurba93dm0jEDReX98uKm.jpg
 tt0101698,Defending Your Life,Defending Your Life,1991,112,"Comedy,Drama,Fantasy",https://image.tmdb.org/t/p/w92/pkNIdL0fOENFBq3DdTb0M8FB26t.jpg
 tt0101746,The Doctor,The Doctor,1991,122,Drama,https://image.tmdb.org/t/p/w92/rExMpi701EIvEGu49FlOS8I0Kag.jpg
 tt0101889,The Fisher King,The Fisher King,1991,137,"Comedy,Drama,Fantasy",https://image.tmdb.org/t/p/w92/5mb1IV53luUNTRyF3TSC77X1KZs.jpg
 tt0101921,Fried Green Tomatoes,Fried Green Tomatoes,1991,130,Drama,https://image.tmdb.org/t/p/w92/g71l1vbJwyAAYk8zKCkIQQ58qcb.jpg
+tt0101969,Grand Canyon,Grand Canyon,1991,134,"Crime,Drama",https://image.tmdb.org/t/p/w92/gpqLukoUXAXkyMZ0jPSuAbWf5Nx.jpg
 tt0102057,Hook,Hook,1991,142,"Adventure,Comedy,Family",https://image.tmdb.org/t/p/w92/w6SoK7KVC4bzv3Upnk7TWqjYe1S.jpg
-tt0102721,Proof,Proof,1991,86,"Drama,Romance",https://image.tmdb.org/t/p/w92/sDWGe24TVQOHy0ZBQ8yek4P8fZn.jpg
 tt0102798,Robin Hood: Prince of Thieves,Robin Hood: Prince of Thieves,1991,143,"Action,Adventure,Drama",https://image.tmdb.org/t/p/w92/rOdM5PqRLLMjS8DaN5dnsU4b5Fp.jpg
 tt0102926,The Silence of the Lambs,The Silence of the Lambs,1991,118,"Crime,Drama,Thriller",https://image.tmdb.org/t/p/w92/rplLJ2hPcOQmkFhTqUte0MkEaO2.jpg
 tt0103074,Thelma & Louise,Thelma & Louise,1991,130,"Adventure,Crime,Drama",https://image.tmdb.org/t/p/w92/xN0HD9hX5OohZcq0YPwy5HXlwsq.jpg
 tt0103129,Truly Madly Deeply,Truly Madly Deeply,1990,106,"Comedy,Drama,Fantasy",https://image.tmdb.org/t/p/w92/jjLEXLTXfJPYtl31knRS8bjclf0.jpg
 tt0103130,Trust,Trust,1990,107,"Comedy,Drama",https://image.tmdb.org/t/p/w92/xlh6cbXxsDMOBFISUDzWxSGt78C.jpg
+tt0103639,Aladdin,Aladdin,1992,90,"Adventure,Animation,Comedy",https://image.tmdb.org/t/p/w92/cLImG673IasLbMvZ9t5LN2o3qbG.jpg
 tt0103767,Baraka,Baraka,1992,96,Documentary,https://image.tmdb.org/t/p/w92/hVOVhrf1QwEaGE448iOAAZOxzVR.jpg
 tt0103994,Como agua para chocolate,Como agua para chocolate,1992,105,"Drama,Romance",https://image.tmdb.org/t/p/w92/bBToqYouLBaoojtC6AyRNeFcQoV.jpg
 tt0104257,A Few Good Men,A Few Good Men,1992,138,"Drama,Thriller",https://image.tmdb.org/t/p/w92/rLOk4z9zL1tTukIYV56P94aZXKk.jpg
-tt0104346,Gladiator,Gladiator,1992,101,"Action,Drama,Sport",https://image.tmdb.org/t/p/w92/n6nYs6nw4spQxibijb804sWFHKe.jpg
 tt0104694,A League of Their Own,A League of Their Own,1992,128,"Comedy,Drama,Sport",https://image.tmdb.org/t/p/w92/7xpFXAOjgzFPE3vyVerFGfrXhFK.jpg
-tt0104812,Map of the Human Heart,Map of the Human Heart,1992,109,"Adventure,Drama,Romance",https://image.tmdb.org/t/p/w92/ritKJM436bbvFhXlWKbwKzjs8SM.jpg
 tt0104868,The Mighty Ducks,The Mighty Ducks,1992,104,"Comedy,Drama,Family",https://image.tmdb.org/t/p/w92/uKdpLGz0WGRomL8jiwFP4jO9YIv.jpg
 tt0105107,Passion Fish,Passion Fish,1992,135,Drama,https://image.tmdb.org/t/p/w92/u7bjJ30DDsYKeq5bze12mY9TVrc.jpg
 tt0105197,The Story of Qiu Ju,Qiu Ju da guan si,1992,100,"Comedy,Drama",https://image.tmdb.org/t/p/w92/5yYnTVXuLBjFQ91k2FnSWcwNn3x.jpg
 tt0105265,A River Runs Through It,A River Runs Through It,1992,123,Drama,https://image.tmdb.org/t/p/w92/aVP45oS2cBL4WtZ1kB7r8uarruB.jpg
 tt0105450,South Central,South Central,1992,98,"Crime,Drama",https://image.tmdb.org/t/p/w92/i1kpCAxuEeUPe9Ep8r1VUYRfSVX.jpg
-tt0105488,Strictly Ballroom,Strictly Ballroom,1992,94,"Comedy,Drama,Music",https://image.tmdb.org/t/p/w92/9lT3kSASXryJeBaX48kPnLDY9I1.jpg
-tt0105692,Under the Sun,Under the Sun,1992,77,Drama,Unknown
 tt0106611,Cool Runnings,Cool Runnings,1993,98,"Adventure,Comedy,Family",https://image.tmdb.org/t/p/w92/6fXuGEb7EqGmAeUodxm7l5ELPZ.jpg
 tt0106881,Fearless,Fearless,1993,122,"Drama,Thriller",https://image.tmdb.org/t/p/w92/yiCAa85nJJDFiq0LmZ2Fgvu4RgY.jpg
-tt0106966,Strawberry and Chocolate,Fresa y chocolate,1993,108,"Comedy,Drama,Romance",https://image.tmdb.org/t/p/w92/yr3H9EoRXk4jcNDPz4qAPAwdQ3p.jpg
 tt0106977,The Fugitive,The Fugitive,1993,130,"Action,Crime,Drama",https://image.tmdb.org/t/p/w92/g8El0KC8DZ4XaP8lhJipf8a4KDK.jpg
 tt0107048,Groundhog Day,Groundhog Day,1993,101,"Comedy,Fantasy,Romance",https://image.tmdb.org/t/p/w92/gCgt1WARPZaXnq523ySQEUKinCs.jpg
-tt0107209,"Faraway, So Close!","In weiter Ferne, so nah!",1993,144,"Drama,Fantasy,Romance",https://image.tmdb.org/t/p/w92/yTufE8LQsMhyvQZGOZMALhQYp5I.jpg
-tt0107426,Little Buddha,Little Buddha,1993,123,Drama,https://image.tmdb.org/t/p/w92/xy70xtdoKZ3PxlKkakwdhL3UFDQ.jpg
 tt0107617,The Scent of Green Papaya,Mùi du du xanh,1993,104,"Drama,Music,Romance",https://image.tmdb.org/t/p/w92/kDBoo2bPbyYP1Q0wekY16tAmoca.jpg
-tt0107653,Naked,Naked,1993,132,"Comedy,Drama",https://image.tmdb.org/t/p/w92/xOx8xig7zywnLhqEzSdnhzg97va.jpg
 tt0107808,A Perfect World,A Perfect World,1993,138,"Crime,Drama,Thriller",https://image.tmdb.org/t/p/w92/oYxrVbc9jSL71s7R4e0ysVxUccV.jpg
 tt0107818,Philadelphia,Philadelphia,1993,125,Drama,https://image.tmdb.org/t/p/w92/tFe5Yoo5zT495okA49bq1vPPkiV.jpg
 tt0107822,The Piano,The Piano,1993,121,"Drama,Music,Romance",https://image.tmdb.org/t/p/w92/rx8RKXn8OtuS6lqloYsjyrGOUp4.jpg
@@ -310,28 +225,24 @@ tt0108065,Searching for Bobby Fischer,Searching for Bobby Fischer,1993,109,"Biog
 tt0108071,The Secret Garden,The Secret Garden,1993,101,"Drama,Family,Fantasy",https://image.tmdb.org/t/p/w92/2B8yOYHrp0AopX3gk4b7jWH3Q5a.jpg
 tt0108160,Sleepless in Seattle,Sleepless in Seattle,1993,105,"Comedy,Drama,Romance",https://image.tmdb.org/t/p/w92/gCmUrcVr0HhLZmsk0XYcSCKKo3A.jpg
 tt0108551,What's Love Got to Do with It,What's Love Got to Do with It,1993,118,"Biography,Drama,Music",https://image.tmdb.org/t/p/w92/9kGJUujKEVmCQ9dw3t2lwGRkE9K.jpg
-tt0109664,Dream Girls,Dream Girls,1994,50,Documentary,Unknown
 tt0109830,Forrest Gump,Forrest Gump,1994,142,"Drama,Romance",https://image.tmdb.org/t/p/w92/zxzYh2YtgypKrijVE0OuIyEgwdT.jpg
 tt0110099,I.Q.,I.Q.,1994,100,"Comedy,Romance",https://image.tmdb.org/t/p/w92/1dLR9LX4O8DSyaU5OR3N0472IR.jpg
-tt0110116,Immortal Beloved,Immortal Beloved,1994,121,"Biography,Drama,Music",https://image.tmdb.org/t/p/w92/ibpL3BZAo1snVhfMVxNIDtm1NUx.jpg
-tt0110143,Insomnia,Insomnia,1994,85,Comedy,Unknown
+tt0110167,It Could Happen To You,It Could Happen to You,1994,101,"Comedy,Drama,Romance",https://image.tmdb.org/t/p/w92/6UOaeLDOdwwTMQtbl5YL6EGjqy0.jpg
 tt0110357,The Lion King,The Lion King,1994,88,"Adventure,Animation,Drama",https://image.tmdb.org/t/p/w92/b0MxU37dNmMwKtoPVYPKOZSIrIn.jpg
 tt0110877,Il Postino,Il postino,1994,108,"Biography,Comedy,Drama",https://image.tmdb.org/t/p/w92/cUaCpjVDefYShKyLmkcDsiPaBHn.jpg
-tt0110889,Priest,Priest,1994,105,"Drama,Romance",https://image.tmdb.org/t/p/w92/bi1BeQMuPm1HzFfIZX4KHtKdJgy.jpg
 tt0110917,A Pure Formality,Una pura formalità,1994,108,"Crime,Drama,Thriller",https://image.tmdb.org/t/p/w92/yBIc2Mc0Ds5HiYD1YOXGD3xTTUI.jpg
 tt0111001,The Road to Wellville,The Road to Wellville,1994,118,"Comedy,Drama",https://image.tmdb.org/t/p/w92/zh7OVdFMpqpZ027z9RgVIwzxYjZ.jpg
 tt0111112,The Secret of Roan Inish,The Secret of Roan Inish,1994,103,"Drama,Family,Fantasy",https://image.tmdb.org/t/p/w92/knrhzhfMKgTqrDrCy3nBWL5sypa.jpg
 tt0111161,The Shawshank Redemption,The Shawshank Redemption,1994,142,Drama,https://image.tmdb.org/t/p/w92/q6y0Go1tsGEsmtFryDOJo3dEmqu.jpg
-tt0111495,Three Colors: Red,Trois couleurs: Rouge,1994,99,"Drama,Mystery,Romance",https://image.tmdb.org/t/p/w92/5YIzZaQlwYJY5ZEqHRs9dG9DduB.jpg
 tt0112379,Antonia's Line,Antonia,1995,102,"Comedy,Drama",https://image.tmdb.org/t/p/w92/nUCVi6bBIL7LGC61nYaCqikAhIA.jpg
 tt0112384,Apollo 13,Apollo 13,1995,140,"Adventure,Drama,History",https://image.tmdb.org/t/p/w92/cor5NxgNJoEYIawLwTVxvhWQdLo.jpg
+tt0112431,Babe,Babe,1995,91,"Comedy,Drama,Family",https://image.tmdb.org/t/p/w92/16MP5FV7zZqVdky5QVR8NbI2Nc7.jpg
 tt0112471,Before Sunrise,Before Sunrise,1995,101,"Drama,Romance",https://image.tmdb.org/t/p/w92/6KWnXYoV1htDT3TGYdFWucfTt6t.jpg
+tt0112573,Braveheart,Braveheart,1995,178,"Biography,Drama,History",https://image.tmdb.org/t/p/w92/or1gBugydmjToAEq7OZY0owwFk.jpg
 tt0112579,The Bridges of Madison County,The Bridges of Madison County,1995,135,"Drama,Romance",https://image.tmdb.org/t/p/w92/8TfLAfIh5Qxp2J4ZjOafHYhWtDb.jpg
-tt0112637,Carrington,Carrington,1995,121,"Biography,Drama,Romance",https://image.tmdb.org/t/p/w92/8NmeBTkC4UQa8XT2GGsBN2R8Bqo.jpg
 tt0112682,The City of Lost Children,La cité des enfants perdus,1995,112,"Fantasy,Sci-Fi",https://image.tmdb.org/t/p/w92/68LLyfJQa7lkOfIVwOzcgg4YpJH.jpg
 tt0112744,The Crossing Guard,The Crossing Guard,1995,111,"Drama,Thriller",https://image.tmdb.org/t/p/w92/kogaCIIylHmWQo2gJrrdq8Br8b8.jpg
-tt0112883,Don Juan DeMarco,Don Juan DeMarco,1994,97,"Comedy,Drama,Romance",https://image.tmdb.org/t/p/w92/iclhT2tei2H3f9Xxw86I9etkiaX.jpg
-tt0113756,Man of the Year,Man of the Year,1995,86,"Comedy,Romance",https://image.tmdb.org/t/p/w92/jVO3Gvsdqe5C9Jr7cE1fSOtW2Op.jpg
+tt0112818,Dead Man Walking,Dead Man Walking,1995,122,"Crime,Drama",https://image.tmdb.org/t/p/w92/wQmmJi5ypfHH2boXrQBmsep7qb2.jpg
 tt0113862,Mr. Holland's Opus,Mr. Holland's Opus,1995,143,"Drama,Music",https://image.tmdb.org/t/p/w92/kBmwWeSN3ajnYHZ3dSybEobxEPI.jpg
 tt0114113,The Perez Family,The Perez Family,1995,113,"Comedy,Drama,Romance",https://image.tmdb.org/t/p/w92/jxi3UDHf86kDk5hqJxnpEMzVch2.jpg
 tt0114134,The Pillow Book,The Pillow Book,1996,126,Drama,https://image.tmdb.org/t/p/w92/gQlv9t0522IBEOctwJph92amVyG.jpg
@@ -340,38 +251,29 @@ tt0114709,Toy Story,Toy Story,1995,81,"Adventure,Animation,Comedy",https://image
 tt0114808,The Star Maker,L'uomo delle stelle,1995,113,"Drama,Romance",https://image.tmdb.org/t/p/w92/wousyAPimHw7RQVjlvzA8BSr2pt.jpg
 tt0115678,Big Night,Big Night,1996,109,"Drama,Romance",https://image.tmdb.org/t/p/w92/2qJRH6uahwGQNAjHo0Y0P90FM0.jpg
 tt0115738,Box of Moonlight,Box of Moonlight,1996,112,"Comedy,Drama",https://image.tmdb.org/t/p/w92/ibDb9U1JsPXJYycSgq6ssSOz1W4.jpg
-tt0115760,Broken English,Broken English,1996,92,"Drama,Romance",https://image.tmdb.org/t/p/w92/3kFYm4CZgxLVtmkbIP4BjlhXRsE.jpg
 tt0115956,Courage Under Fire,Courage Under Fire,1996,116,"Action,Drama,Mystery",https://image.tmdb.org/t/p/w92/nqMlCYhD19ZvdYxMbUSAXAH4iNO.jpg
 tt0116209,The English Patient,The English Patient,1996,162,"Drama,Romance,War",https://image.tmdb.org/t/p/w92/yqaKkARc9Ku8mIENQt8bGVHaowJ.jpg
-tt0116250,Evita,Evita,1996,135,"Biography,Drama,History",https://image.tmdb.org/t/p/w92/q2uuRK9nq2fk9Azw60jtmuGFRyi.jpg
-tt0116331,Focus,Focus,1996,73,"Crime,Drama",https://image.tmdb.org/t/p/w92/2beMmdeesB0j3FRl5S4GHGmTJfq.jpg
-tt0116790,Kolya,Kolja,1996,105,"Comedy,Drama,Music",https://image.tmdb.org/t/p/w92/fB0cGiEOngfsfyDHXIpFOmEwFgi.jpg
-tt0117040,Microcosmos,Microcosmos: Le peuple de l'herbe,1996,80,Documentary,https://image.tmdb.org/t/p/w92/bRNZ1oBaZofUsLOLEJevsMbtHjv.jpg
-tt0117359,Ponette,Ponette,1996,97,Drama,https://image.tmdb.org/t/p/w92/AaPLbULbjsyjQoWpHeJDbuGSlRu.jpg
-tt0117477,Ridicule,Ridicule,1996,102,"Comedy,Drama,History",https://image.tmdb.org/t/p/w92/hdReIesReikZe5dMLwf8JLBcXAG.jpg
-tt0117631,Shine,Shine,1996,105,"Biography,Drama,Music",https://image.tmdb.org/t/p/w92/fqlc1kdOYnMuR38MjHndsOPeJgp.jpg
+tt0116282,Fargo,Fargo,1996,98,"Crime,Drama,Thriller",https://image.tmdb.org/t/p/w92/rt7cpEr1uP6RTZykBFhBTcRaKvG.jpg
 tt0117791,Surviving Picasso,Surviving Picasso,1996,125,"Biography,Drama,Romance",https://image.tmdb.org/t/p/w92/o9sjZTGUhcy4NXfj7a4le4nb44j.jpg
 tt0118111,Waiting for Guffman,Waiting for Guffman,1996,84,Comedy,https://image.tmdb.org/t/p/w92/iKAHEq9u0EYKzyPNLH0JPvXOxhZ.jpg
 tt0118632,The Apostle,The Apostle,1997,134,Drama,https://image.tmdb.org/t/p/w92/stQsFGP7JsL2wlFX180tc0xrDiw.jpg
 tt0118636,Apt Pupil,Apt Pupil,1998,111,"Crime,Drama,Thriller",https://image.tmdb.org/t/p/w92/tKDcdctEKbFkJiLMj6Pr2VCMYcT.jpg
-tt0118664,Babel,Babel,1999,95,"Adventure,Family,Fantasy",https://image.tmdb.org/t/p/w92/iNMFkUL3iMJiaP7MtsFmedG5eIT.jpg
-tt0118849,Children of Heaven,Bacheha-Ye aseman,1997,89,"Drama,Family,Sport",https://image.tmdb.org/t/p/w92/coUGwSsdWBfRe6mbYQPYTMpnfcM.jpg
 tt0118884,Contact,Contact,1997,150,"Drama,Mystery,Sci-Fi",https://image.tmdb.org/t/p/w92/bCpMIywuNZeWt3i5UMLEIc0VSwM.jpg
+tt0119033,Déjà Vu,Déjà Vu,1997,117,"Drama,Romance",https://image.tmdb.org/t/p/w92/wt28FfZHmSvvWk0TpYaTks1Rjz4.jpg
 tt0119217,Good Will Hunting,Good Will Hunting,1997,126,"Drama,Romance",https://image.tmdb.org/t/p/w92/AlXkMIEjvk2Npc15zyL0r3P4HBH.jpg
 tt0119389,The Island on Bird Street,The Island on Bird Street,1997,107,"Drama,War",https://image.tmdb.org/t/p/w92/pLDlsrOYl0fmFdy4jka0ByJJ70j.jpg
-tt0119448,Character,Karakter,1997,122,"Crime,Drama,Mystery",https://image.tmdb.org/t/p/w92/rXU7gNAAkulPUr0F1XqSHuEhfHL.jpg
 tt0119485,Kundun,Kundun,1997,134,"Biography,Drama,History",https://image.tmdb.org/t/p/w92/yvdFRDoQIQ5PBk4u8x8gJT8NJAw.jpg
 tt0119488,L.A. Confidential,L.A. Confidential,1997,138,"Crime,Drama,Mystery",https://image.tmdb.org/t/p/w92/Rzope4Pk93Rg1Q2Ae8H0FYwa7n.jpg
 tt0119822,As Good as It Gets,As Good as It Gets,1997,139,"Comedy,Drama,Romance",https://image.tmdb.org/t/p/w92/s95jXFmDsCJEcdVnEtXyfZPFpvq.jpg
-tt0120090,Secrets of the Heart,Secretos del corazón,1997,105,Drama,https://image.tmdb.org/t/p/w92/f4h71CyoiXoc1Kf2MipSlTd6XTF.jpg
 tt0120102,Seven Years in Tibet,Seven Years in Tibet,1997,136,"Adventure,Biography,Drama",https://image.tmdb.org/t/p/w92/5YvLX8t62QtJN2T33A2Cm3AYC63.jpg
 tt0120148,Sliding Doors,Sliding Doors,1998,99,"Comedy,Drama,Fantasy",https://image.tmdb.org/t/p/w92/s8VOVTywXZIIHqdEjkCZziH0ebq.jpg
-tt0120265,Taste of Cherry,Ta'm e guilass,1997,95,Drama,https://image.tmdb.org/t/p/w92/vgPwjgbSdbYWrS1ty8TIZtmi6Tn.jpg
 tt0120323,A Thousand Acres,A Thousand Acres,1997,105,Drama,https://image.tmdb.org/t/p/w92/p7tsW4oUi7hHbpNtFZdMQEBj42g.jpg
+tt0120338,Titanic,Titanic,1997,194,"Drama,Romance",https://image.tmdb.org/t/p/w92/9xjZS2rlVxm8SFx8kPC3aIGCOYQ.jpg
 tt0120382,The Truman Show,The Truman Show,1998,103,"Comedy,Drama",https://image.tmdb.org/t/p/w92/dOmxN9xhLITi43j2xGFEcsgv7QM.jpg
 tt0120510,Wide Awake,Wide Awake,1998,88,"Comedy,Drama,Family",https://image.tmdb.org/t/p/w92/xnqLUL2l71KVSaqiz9fbFpXtEFe.jpg
 tt0120586,American History X,American History X,1998,119,Drama,https://image.tmdb.org/t/p/w92/c2gsmSQ2Cqv8zosqKOCwRS0GFBS.jpg
 tt0120595,Babe: Pig in the City,Babe: Pig in the City,1998,97,"Adventure,Comedy,Drama",https://image.tmdb.org/t/p/w92/glO6LcTWUZcbxWT2SB4eRDnFSsP.jpg
+tt0120603,Beloved,Beloved,1998,172,"Drama,History,Horror",https://image.tmdb.org/t/p/w92/f7gZS0J9bPq2v0cANozm6P0Mrux.jpg
 tt0120632,City of Angels,City of Angels,1998,114,"Drama,Fantasy,Romance",https://image.tmdb.org/t/p/w92/iuzxpUjHsbQJXV3kB9ZAdCimM60.jpg
 tt0120633,A Civil Action,A Civil Action,1998,115,Drama,https://image.tmdb.org/t/p/w92/6VsitR71vVKiGEDFPT71dKigbGN.jpg
 tt0120663,Eyes Wide Shut,Eyes Wide Shut,1999,159,"Drama,Mystery,Thriller",https://image.tmdb.org/t/p/w92/a0YOhU3zq0RkOYrVlPXCeE1oFkR.jpg
@@ -380,65 +282,46 @@ tt0120737,The Lord of the Rings: The Fellowship of the Ring,The Lord of the Ring
 tt0120789,Pleasantville,Pleasantville,1998,124,"Comedy,Drama,Fantasy",https://image.tmdb.org/t/p/w92/m1hhYP6OScjKU5Z9iZaWirSn4I6.jpg
 tt0120815,Saving Private Ryan,Saving Private Ryan,1998,169,"Drama,War",https://image.tmdb.org/t/p/w92/dcKfD8xWf8XnS3tHVp7v331wdNT.jpg
 tt0120824,The Shipping News,The Shipping News,2001,111,Drama,https://image.tmdb.org/t/p/w92/6upEibGBdKmFNeFRfJk8t5zkcOD.jpg
-tt0120857,Tea with Mussolini,Un tè con Mussolini,1999,117,"Comedy,Drama,War",https://image.tmdb.org/t/p/w92/ceyJwvchpHNI9Ji36pKX9OcDibS.jpg
 tt0120889,What Dreams May Come,What Dreams May Come,1998,113,"Drama,Fantasy,Romance",https://image.tmdb.org/t/p/w92/t73wtydNOHyXKhwRnmD4WuQApPh.jpg
 tt0120903,X-Men,X-Men,2000,104,"Action,Adventure,Sci-Fi",https://image.tmdb.org/t/p/w92/bRDAc4GogyS9ci3ow7UnInOcriN.jpg
 tt0121164,Corpse Bride,Corpse Bride,2005,77,"Animation,Drama,Family",https://image.tmdb.org/t/p/w92/3ALM0VeZjGUryAqWo6pqohzbLDh.jpg
 tt0122529,Henry Fool,Henry Fool,1997,137,"Comedy,Drama",https://image.tmdb.org/t/p/w92/1Uun13GJi5U0gs303e7BnER6SpG.jpg
 tt0122933,Analyze This,Analyze This,1999,103,"Comedy,Crime",https://image.tmdb.org/t/p/w92/dEmymWoXVZnD5Busuo7LaoICz9S.jpg
 tt0124315,The Cider House Rules,The Cider House Rules,1999,126,"Drama,Romance",https://image.tmdb.org/t/p/w92/xn7skHyWyXcvE37ZiCVD0b39XZI.jpg
-tt0125144,Miracle,Himala,1982,124,Drama,https://image.tmdb.org/t/p/w92/tnstkNB2Um7xlaHAhZoweWhnfez.jpg
-tt0125551,Thirteen,Thirteen,1997,87,Drama,Unknown
 tt0126029,Shrek,Shrek,2001,90,"Adventure,Animation,Comedy",https://image.tmdb.org/t/p/w92/iB64vpL3dIObOtMZgX3RqdVdQDc.jpg
 tt0128251,The Hired Heart,The Hired Heart,1997,90,"Drama,Romance",https://image.tmdb.org/t/p/w92/n1LfwcpN6Y4oQHjwNuCDqJqA7tz.jpg
 tt0129290,Patch Adams,Patch Adams,1998,115,"Biography,Comedy,Drama",https://image.tmdb.org/t/p/w92/xN1aKur5ddWQSXTqvzDPJD2TCxe.jpg
-tt0130827,Run Lola Run,Lola rennt,1998,81,"Crime,Drama,Thriller",https://image.tmdb.org/t/p/w92/49EbTTxTpFFZJtHGuMr2eSOKPx7.jpg
 tt0132477,October Sky,October Sky,1999,108,"Biography,Drama,Family",https://image.tmdb.org/t/p/w92/vjRSVHAqQo6t7faNVQj3WNSJWUv.jpg
 tt0133093,The Matrix,The Matrix,1999,136,"Action,Sci-Fi",https://image.tmdb.org/t/p/w92/f89U3ADr1oiB1s9GkdPOEpXUk5H.jpg
 tt0138097,Shakespeare in Love,Shakespeare in Love,1998,123,"Comedy,Drama,History",https://image.tmdb.org/t/p/w92/iNCTveBiq7jQ4Av4ynWSdWXN6Cc.jpg
 tt0138704,Pi,Pi,1998,84,"Drama,Horror,Mystery",https://image.tmdb.org/t/p/w92/lnZEukSpVPCGrwsysqfQpLgFraF.jpg
-tt0140888,Central Station,Central do Brasil,1998,110,Drama,https://image.tmdb.org/t/p/w92/zJvp7XjQ2LhPbDVYhFXyucs40vR.jpg
 tt0144134,The Cherry Orchard,The Cherry Orchard,1999,141,Drama,https://image.tmdb.org/t/p/w92/mo1TQIRsgmWn8W083NhWDf6tTMF.jpg
-tt0145487,Spider-Man,Spider-Man,2002,121,"Action,Adventure,Sci-Fi",https://image.tmdb.org/t/p/w92/gh4cZbhZxyTbgxQPxD0dOudNPTn.jpg
 tt0145653,Angela's Ashes,Angela's Ashes,1999,145,"Biography,Drama",https://image.tmdb.org/t/p/w92/pDx64U22b64iJy1pYZsgubcuS8O.jpg
 tt0146984,The Legend of Bagger Vance,The Legend of Bagger Vance,2000,126,"Drama,Fantasy,Sport",https://image.tmdb.org/t/p/w92/37Kttgejm5R5XfNCbKezOJ0gT8n.jpg
 tt0154420,The Celebration,Festen,1998,105,Drama,https://image.tmdb.org/t/p/w92/ibWzFsS6Z7cTEKJIE738URYS4Mo.jpg
-tt0156794,Eternity and a Day,Mia aioniotita kai mia mera,1998,137,Drama,https://image.tmdb.org/t/p/w92/x4XhC8ZUaxtzXNe7j9UnDLRCs99.jpg
-tt0158728,Venus,Venus,1998,Unknown,Drama,Unknown
 tt0160916,The Story of Us,The Story of Us,1999,95,"Comedy,Drama,Romance",https://image.tmdb.org/t/p/w92/5c6agrwcPlZI8eBrvF0x1ZTNE8a.jpg
-tt0165078,After Life,Wandafuru raifu,1998,119,"Drama,Fantasy",https://image.tmdb.org/t/p/w92/bs2M1hqAQl5LeAOPPRV4drwouZS.jpg
 tt0166896,The Straight Story,The Straight Story,1999,112,"Biography,Drama",https://image.tmdb.org/t/p/w92/tT9cMiVDdtlcdZxOoFy3VRmEoKk.jpg
 tt0167059,The Book of Life,The Book of Life,1998,63,"Comedy,Fantasy",https://image.tmdb.org/t/p/w92/v2YGWmL4TVlsDiaet321zF28nss.jpg
 tt0167260,The Lord of the Rings: The Return of the King,The Lord of the Rings: The Return of the King,2003,201,"Action,Adventure,Drama",https://image.tmdb.org/t/p/w92/rCzpDGLbOoPwLjy3OAm5NUPOTrC.jpg
 tt0167261,The Lord of the Rings: The Two Towers,The Lord of the Rings: The Two Towers,2002,179,"Action,Adventure,Drama",https://image.tmdb.org/t/p/w92/rrGlNlzFTrXFNGXsD7NNlxq4BPb.jpg
 tt0167404,The Sixth Sense,The Sixth Sense,1999,107,"Drama,Mystery,Thriller",https://image.tmdb.org/t/p/w92/fIssD3w3SvIhPPmVo4WMgZDVLID.jpg
-tt0168629,Dancer in the Dark,Dancer in the Dark,2000,140,"Crime,Drama,Musical",https://image.tmdb.org/t/p/w92/9rsivF4sWfmBzrNr4LPu6TNJhXX.jpg
 tt0168786,Antwone Fisher,Antwone Fisher,2002,120,"Biography,Drama",https://image.tmdb.org/t/p/w92/j9lCK1aFXqMO3hzhGiqCNU8coIX.jpg
 tt0168794,The Five Senses,The Five Senses,1999,106,"Comedy,Drama,Music",https://image.tmdb.org/t/p/w92/qiSElVBmJUu7JoDQx6kCrnTy08V.jpg
-tt0169102,Lagaan: Once Upon a Time in India,Lagaan: Once Upon a Time in India,2001,224,"Drama,Musical,Sport",https://image.tmdb.org/t/p/w92/yNX9lFRAFeNLNRIXdqZK9gYrYKa.jpg
 tt0169547,American Beauty,American Beauty,1999,122,Drama,https://image.tmdb.org/t/p/w92/6MNwC101wSEsDyxTJBGXsgIMlmh.jpg
 tt0170016,Dr. Seuss' How the Grinch Stole Christmas,How the Grinch Stole Christmas,2000,104,"Comedy,Family,Fantasy",https://image.tmdb.org/t/p/w92/1WZbbPApEivA421gCOluuzMMKCk.jpg
 tt0171685,Ratcatcher,Ratcatcher,1999,94,Drama,https://image.tmdb.org/t/p/w92/yNfHk5qKBWTuHmrYTeFP3wevUut.jpg
 tt0172493,"Girl, Interrupted","Girl, Interrupted",1999,127,"Biography,Drama",https://image.tmdb.org/t/p/w92/ssaiAUIpJ2ciOORf6jXYEze7Maf.jpg
-tt0175592,Enchanted,Enchanted,1998,96,Comedy,Unknown
-tt0177749,Enlightenment Guaranteed,Erleuchtung garantiert,1999,109,"Comedy,Drama",https://image.tmdb.org/t/p/w92/HZnaSDHx7F1tbEHbKesb0f9E8U.jpg
-tt0177946,Nothing,Nic,1998,80,Drama,https://image.tmdb.org/t/p/w92/tEP4oogS2dj2oqfshUN9KjlhQEp.jpg
+tt0172495,Gladiator,Gladiator,2000,155,"Action,Adventure,Drama",https://image.tmdb.org/t/p/w92/ehGpN04mLJIrSnxcZBMvHeG0eDc.jpg
 tt0181530,East/West,Est - Ouest,1999,121,"Adventure,Drama,History",https://image.tmdb.org/t/p/w92/c1Uf4HC5WEcssVoOm48Bfzn7Wmk.jpg
 tt0181536,Finding Forrester,Finding Forrester,2000,136,Drama,https://image.tmdb.org/t/p/w92/heHi6n68fDiQoUc7SMletM9Adjz.jpg
 tt0181786,Regret to Inform,Regret to Inform,1998,72,"Documentary,War",Unknown
-tt0182313,Memento,Memento,1967,85,Drama,Unknown
 tt0183659,Pollock,Pollock,2000,122,"Biography,Drama",https://image.tmdb.org/t/p/w92/azsBSw2zw2uNHiCjTnbe9TJVEDB.jpg
-tt0185125,All About My Mother,Todo sobre mi madre,1999,101,Drama,https://image.tmdb.org/t/p/w92/hjQhzhkGYXPNM96k0mOgob6HMmn.jpg
-tt0185778,Never Again,Ya nunca más,1984,Unknown,Drama,https://image.tmdb.org/t/p/w92/fc6gMwUBtjpYFwDSkkG3nBklChm.jpg
-tt0186508,Buena Vista Social Club,Buena Vista Social Club,1999,105,"Documentary,Music",https://image.tmdb.org/t/p/w92/xMEebcZYw8TZl7HZFQQs1EirC7G.jpg
 tt0189584,The Big Kahuna,The Big Kahuna,1999,90,"Comedy,Drama",https://image.tmdb.org/t/p/w92/sMhWWdW6V3HXFanELFA1oHdvboS.jpg
-tt0190332,"Crouching Tiger, Hidden Dragon",Wo hu cang long,2000,120,"Action,Adventure,Fantasy",https://image.tmdb.org/t/p/w92/iNDVBFNz4XyYzM9Lwip6atSTFqf.jpg
 tt0190590,"O Brother, Where Art Thou?","O Brother, Where Art Thou?",2000,107,"Adventure,Comedy,Crime",https://image.tmdb.org/t/p/w92/2YztYilviFCYcEtDAnrOstUWGie.jpg
 tt0191043,The Color of Paradise,Rang-e khoda,1999,90,"Drama,Family",https://image.tmdb.org/t/p/w92/ekURxST2hhoTdVKkvbv4E7aYN6F.jpg
 tt0191636,The Widow of Saint-Pierre,La veuve de Saint-Pierre,2000,112,"Drama,History,Romance",https://image.tmdb.org/t/p/w92/6ZbIpO8639w7MfS9GomK76qD1Gh.jpg
 tt0194322,Rumi: Poet of the Heart,Rumi: Poet of the Heart,1998,58,Documentary,https://image.tmdb.org/t/p/w92/cG9tAPk5a502vsvzgY9zpu9mZh9.jpg
 tt0195685,Erin Brockovich,Erin Brockovich,2000,131,"Biography,Drama",https://image.tmdb.org/t/p/w92/xbMEHLu36LyptPD29FxVTndpYZ1.jpg
-tt0201517,Charisma,Karisuma,1999,104,"Drama,Mystery",https://image.tmdb.org/t/p/w92/tG3efHANnpNCLQRXk2pUzMVljYw.jpg
 tt0201840,The Cup,Phörpa,1999,93,"Comedy,Sport",https://image.tmdb.org/t/p/w92/gyWdTg8Zjos9mxHFETbFL0c0hv9.jpg
 tt0203230,You Can Count on Me,You Can Count on Me,2000,111,Drama,https://image.tmdb.org/t/p/w92/7mGFmij1FZD5eUnNwvUjmpqrDl6.jpg
 tt0203632,The Princess and the Warrior,Der Krieger und die Kaiserin,2000,135,"Drama,Mystery,Romance",https://image.tmdb.org/t/p/w92/z0dMG2C4GvIObHAcOjW9r61WIJF.jpg
@@ -446,12 +329,10 @@ tt0206634,Children of Men,Children of Men,2006,109,"Adventure,Drama,Sci-Fi",http
 tt0206963,My First Mister,My First Mister,2001,109,"Comedy,Drama,Romance",https://image.tmdb.org/t/p/w92/xP2JKtdq77aWWZ1LCGsR68co5Jw.jpg
 tt0208298,The Miracle Maker,The Miracle Maker,2000,90,"Animation,Biography,Drama",https://image.tmdb.org/t/p/w92/kdloDloT8L5UehG5kMpoSTjfmZl.jpg
 tt0208874,The Contender,The Contender,2000,126,"Drama,Thriller",https://image.tmdb.org/t/p/w92/rpjiNEwl8FoCsygYmxrJkohBzWL.jpg
-tt0209189,Not One Less,Yi ge dou bu neng shao,1999,106,Drama,https://image.tmdb.org/t/p/w92/y77YNEQeYld4JG2nF70grpTNk1y.jpg
+tt0209144,Memento,Memento,2000,113,"Mystery,Thriller",https://image.tmdb.org/t/p/w92/nWtySDlffTfwAa0rSfq61o33ZXV.jpg
 tt0209463,The Wind Will Carry Us,Bad ma ra khahad bord,1999,118,Drama,https://image.tmdb.org/t/p/w92/tzrqZungDYA3Djp61NWUm7DtxNI.jpg
-tt0209510,Twin Sisters,Zi mei hua,1934,82,Drama,https://image.tmdb.org/t/p/w92/qr5wNCLwyjS0NrfE03RBsF3oreg.jpg
 tt0210945,Remember the Titans,Remember the Titans,2000,113,"Biography,Drama,Sport",https://image.tmdb.org/t/p/w92/825ohvC4wZ3gCuncCaqkWeQnK8h.jpg
 tt0211915,Amélie,Le fabuleux destin d'Amélie Poulain,2001,122,"Comedy,Romance",https://image.tmdb.org/t/p/w92/slVnvaH6fpF22154vnjQJdXCVZd.jpg
-tt0212712,2046,2046,2004,129,"Drama,Romance,Sci-Fi",https://image.tmdb.org/t/p/w92/jIN65qw0Giplo4CshzMrxz204Wn.jpg
 tt0212910,Delivering Milo,Delivering Milo,2001,94,"Comedy,Drama,Fantasy",https://image.tmdb.org/t/p/w92/oOVxxxY0WHoPBI8hdXxuqKF63LL.jpg
 tt0216787,The Taste of Others,Le goût des autres,2000,112,"Comedy,Drama,Romance",https://image.tmdb.org/t/p/w92/wXrYHBuIO9DN1x9hC0HsT6D0jpL.jpg
 tt0217869,Unbreakable,Unbreakable,2000,106,"Drama,Mystery,Sci-Fi",https://image.tmdb.org/t/p/w92/t2Vvyqs3M7706Da1dUVDwP2bE7d.jpg
@@ -459,36 +340,26 @@ tt0218839,Best in Show,Best in Show,2000,90,Comedy,https://image.tmdb.org/t/p/w9
 tt0218967,The Family Man,The Family Man,2000,125,"Comedy,Drama,Fantasy",https://image.tmdb.org/t/p/w92/9iyQxVjLgFW0ztYKRxnEFtpVTSw.jpg
 tt0223897,Pay It Forward,Pay It Forward,2000,123,Drama,https://image.tmdb.org/t/p/w92/q5xZpLih6L5rAIcT5r6WYB6Os7F.jpg
 tt0224578,The Vertical Ray of the Sun,Mùa hè chieu thang dung,2000,112,Drama,https://image.tmdb.org/t/p/w92/7bSt7bSWtfXCrPFnZrUFLr3oq53.jpg
-tt0228811,St. Francis of Assisi,San Francisco de Asís,1944,119,Drama,https://image.tmdb.org/t/p/w92/b39VENtSK7aO18NFn4lSZP3zIlP.jpg
-tt0233249,Atonement,Atonement,1971,51,Documentary,https://image.tmdb.org/t/p/w92/bJaBCr4jMU6lopa3KreqMJjrvNY.jpg
-tt0233975,Jesus of Nazareth,Jesús de Nazareth,1942,100,"Drama,History",https://image.tmdb.org/t/p/w92/zSsIs2zldC25pFlCHM7UOqNCYzu.jpg
 tt0234215,The Matrix Reloaded,The Matrix Reloaded,2003,138,"Action,Sci-Fi",https://image.tmdb.org/t/p/w92/4ZVnFZUjahpLz7B42mkVjtEl9Wl.jpg
 tt0234853,The Tao of Steve,The Tao of Steve,2000,87,"Comedy,Drama,Romance",https://image.tmdb.org/t/p/w92/4Or87o2LAvgsTlDCrvw9lqECL3D.jpg
 tt0235060,The Road Home,Wo de fu qin mu qin,1999,89,"Drama,History,Romance",https://image.tmdb.org/t/p/w92/AbUmBTtVZDpchPA4Yfq4OpIs46X.jpg
-tt0235658,Paradise Now,Paradise Now,1970,105,Documentary,https://image.tmdb.org/t/p/w92/lTs5xMlIIDoiFRN7Q0N3HnMClrB.jpg
-tt0236640,Prozac Nation,Prozac Nation,2001,95,"Biography,Drama,Romance",https://image.tmdb.org/t/p/w92/4dyCS0BnkZlAw1dBJZFxdQ2fJBT.jpg
 tt0238380,Equilibrium,Equilibrium,2002,107,"Action,Drama,Sci-Fi",https://image.tmdb.org/t/p/w92/q6VzUsHs4Z3myBHkrPAA3avfGwn.jpg
-tt0239512,Juno,Juno,1998,Unknown,Unknown,Unknown
+tt0241303,Chocolat,Chocolat,2000,121,"Drama,Romance",https://image.tmdb.org/t/p/w92/99p3dL5jO202aQ5LfRx8PtGtLUD.jpg
 tt0241527,Harry Potter and the Sorcerer's Stone,Harry Potter and the Sorcerer's Stone,2001,152,"Adventure,Family,Fantasy",https://image.tmdb.org/t/p/w92/qnw9610ojLT0jU3lMSZOAFttt1e.jpg
 tt0242653,The Matrix Revolutions,The Matrix Revolutions,2003,129,"Action,Sci-Fi",https://image.tmdb.org/t/p/w92/xOCeckuZDzqydvt3vLlzftZkef1.jpg
 tt0243017,Waking Life,Waking Life,2001,99,"Animation,Drama,Fantasy",https://image.tmdb.org/t/p/w92/2MRM4PL6H7yraAkwyUEe2EqoQH3.jpg
 tt0243133,The Man Who Wasn't There,The Man Who Wasn't There,2001,116,"Crime,Drama",https://image.tmdb.org/t/p/w92/lrCgt8NNMyFsfmXyXiSSCRXNH4u.jpg
-tt0243135,Happenstance,Le battement d'ailes du papillon,2000,90,"Comedy,Drama,Romance",https://image.tmdb.org/t/p/w92/kS0D6cQ30kt1lz3YuRrBJnfwxzF.jpg
-tt0243862,Italian for Beginners,Italiensk for begyndere,2000,112,"Comedy,Drama,Romance",https://image.tmdb.org/t/p/w92/jzdHexZ4lYVN3kWvEf6gy6cgpXZ.jpg
+tt0244094,Never Again,Never Again,2001,98,"Comedy,Romance",https://image.tmdb.org/t/p/w92/oNPg56hNSdAdr9ttVYwVtxbBIrM.jpg
 tt0245574,Y Tu Mamá También,Y tu mamá también,2001,106,Drama,https://image.tmdb.org/t/p/w92/izw41PkE8y891yraO6fN1tCNmOG.jpg
-tt0246719,Julie Walking Home,Julie Walking Home,2002,118,"Drama,Romance",https://image.tmdb.org/t/p/w92/3W6FnHzC2F9Mmk2zCoE3GkPLy2a.jpg
-tt0246772,Mostly Martha,Bella Martha,2001,109,"Comedy,Drama,Romance",https://image.tmdb.org/t/p/w92/gnmIUzqZ8YW5i0QolN5P2dsiRT0.jpg
+tt0246628,Focus,Focus,2001,106,"Drama,Romance",https://image.tmdb.org/t/p/w92/x0VybfDiQ8U62kqdf4BzDebrCQV.jpg
 tt0247199,The Believer,The Believer,2001,98,Drama,https://image.tmdb.org/t/p/w92/cssKydI0vmsOupCaHifHszd76qu.jpg
-tt0248912,Into the Arms of Strangers: Stories of the Kindertransport,Into the Arms of Strangers: Stories of the Kindertransport,2000,122,"Documentary,History,War",https://image.tmdb.org/t/p/w92/4ECP8ntp49Wd2PosbJyEuv0zfsz.jpg
 tt0249462,Billy Elliot,Billy Elliot,2000,110,"Drama,Music",https://image.tmdb.org/t/p/w92/zUntiKHa8AZHO7YKW0ZfjOLWYbj.jpg
 tt0250274,The Brothers,The Brothers,2001,106,"Comedy,Drama",https://image.tmdb.org/t/p/w92/342I0mOBCNTzx4ls4GvIagfzu2m.jpg
-tt0252444,Rabbit-Proof Fence,Rabbit-Proof Fence,2002,94,"Adventure,Biography,Drama",https://image.tmdb.org/t/p/w92/22eavnbJh8yBYThPS6OBxNfQ8as.jpg
+tt0251141,Innocence,Innocence,2000,94,Drama,https://image.tmdb.org/t/p/w92/dbe6x5foaysc0eWlwV6HKoeCm6I.jpg
 tt0252684,Manic,Manic,2001,100,Drama,https://image.tmdb.org/t/p/w92/af9Ym0HQuChr7e5N34PN9OSfYhu.jpg
 tt0253474,The Pianist,The Pianist,2002,150,"Biography,Drama,Music",https://image.tmdb.org/t/p/w92/3DzePKMbLMIM636S6syCy3cLPqj.jpg
-tt0256259,Pauline and Paulette,Pauline & Paulette,2001,78,"Comedy,Drama",https://image.tmdb.org/t/p/w92/ozk3c0iYrItjprki8wjsqGfbFmi.jpg
 tt0257360,About Schmidt,About Schmidt,2002,125,"Comedy,Drama",https://image.tmdb.org/t/p/w92/tstvsrJHY57hc951lb190alXRQm.jpg
 tt0258463,The Bourne Identity,The Bourne Identity,2002,119,"Action,Mystery,Thriller",https://image.tmdb.org/t/p/w92/vN6jGCuzefysLVFrzK3Vs6xAdu1.jpg
-tt0259393,Lantana,Lantana,2001,121,"Drama,Mystery,Romance",https://image.tmdb.org/t/p/w92/nTEUCdpDsfVDZJ5H0ndP1EmVtj.jpg
 tt0259446,My Big Fat Greek Wedding,My Big Fat Greek Wedding,2002,95,"Comedy,Drama,Romance",https://image.tmdb.org/t/p/w92/wSH8ZNE8sMbvJwetK5DC87bhqd2.jpg
 tt0259711,Vanilla Sky,Vanilla Sky,2001,136,"Fantasy,Mystery,Romance",https://image.tmdb.org/t/p/w92/cAh2pCiNPftsY3aSqJuIOde7uWr.jpg
 tt0260688,Ali Zaoua: Prince of the Streets,"Ali Zaoua, prince de la rue",2000,99,"Crime,Drama",https://image.tmdb.org/t/p/w92/zTg8t5ctkG0MtQSFh957xYv1egj.jpg
@@ -504,74 +375,58 @@ tt0266697,Kill Bill: Vol. 1,Kill Bill: Vol. 1,2003,111,"Action,Crime,Drama",http
 tt0267891,The Ringer,The Ringer,2005,94,"Comedy,Sport",https://image.tmdb.org/t/p/w92/loEZFfMEK3Il2xE4LVqSnVoyB8N.jpg
 tt0268690,Thirteen Conversations About One Thing,Thirteen Conversations About One Thing,2001,104,Drama,https://image.tmdb.org/t/p/w92/mb3mEfzAudrPpQIxRzpLM12aiMV.jpg
 tt0268978,A Beautiful Mind,A Beautiful Mind,2001,135,"Biography,Drama",https://image.tmdb.org/t/p/w92/6zyZ6cauEgSbfii9I7gOvGNyPGv.jpg
+tt0271582,Joshua,Joshua,2002,91,Drama,https://image.tmdb.org/t/p/w92/c4lv9KpNgjahRe0lBj1RcvPxaV8.jpg
 tt0272152,K-PAX,K-PAX,2001,120,"Drama,Mystery,Sci-Fi",https://image.tmdb.org/t/p/w92/c8M0ylYFRpQJaxGwPwm3DKK2ltC.jpg
 tt0272338,Punch-Drunk Love,Punch-Drunk Love,2002,95,"Comedy,Drama,Romance",https://image.tmdb.org/t/p/w92/ni98pJPeHlfaxWQ3XUD0Bm4r9mb.jpg
-tt0273567,In Good Company,Enas & enas,2000,96,Comedy,https://image.tmdb.org/t/p/w92/mBoaKqoLmxsZUnFmGn7E0DhrPR5.jpg
+tt0274468,Door to Door,Door to Door,2002,90,Drama,https://image.tmdb.org/t/p/w92/cXrWdI2rUVqhy6E7w6025ldpFxd.jpg
 tt0274558,The Hours,The Hours,2002,110,"Drama,Romance",https://image.tmdb.org/t/p/w92/qegXA9gw7uJ5AE0Kp4k5dBgw5IJ.jpg
 tt0276919,Dogville,Dogville,2003,178,"Crime,Drama",https://image.tmdb.org/t/p/w92/zzkgeqne5q5V8W9iFHl0KSTiFXJ.jpg
-tt0277766,Jesus,Jesus,1973,121,"Drama,Fantasy,History",https://image.tmdb.org/t/p/w92/5NiBAAUPOsVRYZeiH17UpgziDPA.jpg
-tt0279064,Elling,Elling,2001,89,"Comedy,Drama",https://image.tmdb.org/t/p/w92/i4o9u93vR7setcwVeL87jGwc8CS.jpg
+tt0278504,Insomnia,Insomnia,2002,118,"Drama,Mystery,Thriller",https://image.tmdb.org/t/p/w92/cwB0t4OHX1Pw1Umzc9jPgzalUpS.jpg
 tt0279778,Divine Secrets of the Ya-Ya Sisterhood,Divine Secrets of the Ya-Ya Sisterhood,2002,116,Drama,https://image.tmdb.org/t/p/w92/hI05FJ8wgPROHQgLtfJ4ZuH3l4b.jpg
+tt0280778,Iris,Iris,2001,91,"Biography,Drama,Romance",https://image.tmdb.org/t/p/w92/pqtVPrv3xPLTUayC0bPruRjYWDF.jpg
+tt0282040,On Golden Pond,On Golden Pond,2001,100,Drama,https://image.tmdb.org/t/p/w92/8ipZu6pFvFM7q5XCpWl3KV5GOG5.jpg
+tt0283084,Tuck Everlasting,Tuck Everlasting,2002,90,"Drama,Family,Fantasy",https://image.tmdb.org/t/p/w92/9BXAC4uTHuD37hpiGOmhetqNgnO.jpg
 tt0283139,White Oleander,White Oleander,2002,109,Drama,https://image.tmdb.org/t/p/w92/oGJDrJ9gMSs87iwE0sRZrG6EBhf.jpg
 tt0283448,The Laughing Club of India,The Laughing Club of India,2001,28,Documentary,https://image.tmdb.org/t/p/w92/yx5JO3Qc7c2q4hqE5Lk9OTLsPW6.jpg
 tt0283509,No Man's Land,No Man's Land,2001,98,"Comedy,Drama,War",https://image.tmdb.org/t/p/w92/8DvLzDG9OeDzKdXZjRkCoWfXUcc.jpg
 tt0283530,The Emperor's Club,The Emperor's Club,2002,109,Drama,https://image.tmdb.org/t/p/w92/s7BRKAq0DNcXe8Bphm6Wd5KnvlF.jpg
 tt0284320,Mother Ghost,Mother Ghost,2002,76,"Comedy,Drama",Unknown
-tt0285006,Australian Rules,Australian Rules,2002,95,"Drama,Romance,Sport",https://image.tmdb.org/t/p/w92/49rDsek4spHKqGRCAPQwD3PCPD2.jpg
 tt0285742,Monster's Ball,Monster's Ball,2001,111,"Drama,Romance",https://image.tmdb.org/t/p/w92/s7o0AyOFIYNjTe008pV6EZMI2IP.jpg
 tt0286106,Signs,Signs,2002,106,"Drama,Mystery,Sci-Fi",https://image.tmdb.org/t/p/w92/dDCC5PkUrra8X2Xxqt0EOhAect5.jpg
 tt0286218,Thérèse: The Story of Saint Thérèse of Lisieux,Thérèse: The Story of Saint Thérèse of Lisieux,2004,96,"Biography,Drama",https://image.tmdb.org/t/p/w92/fUvLqlI0OgyipEG50rnjbKhGuLe.jpg
 tt0287986,God Is Great and I'm Not,"Dieu est grand, je suis toute petite",2001,95,"Comedy,Romance",https://image.tmdb.org/t/p/w92/aPJnTgKnPOxhiYxt3WRJzoSLOEk.jpg
-tt0288242,Swimming Pool,Swimming Pool,1976,Unknown,Unknown,https://image.tmdb.org/t/p/w92/m4dyuvhfvxcaXzhrgJlauVY8CDK.jpg
-tt0289054,Warm Water Under a Red Bridge,Akai hashi no shita no nurui mizu,2001,119,"Comedy,Drama,Fantasy",https://image.tmdb.org/t/p/w92/49qMdKUjAhTmYp5jGTpX8YQYsGc.jpg
-tt0290145,Blue Car,Blue Car,2002,96,Drama,https://image.tmdb.org/t/p/w92/6xld6dA6rlctR9mUtcVRigZTfu5.jpg
+tt0290218,Illusion,Illusion,2004,106,"Drama,Romance",https://image.tmdb.org/t/p/w92/3cBnePPy2GFQZeFh1xMyc7iXA4W.jpg
 tt0290334,X2: X-Men United,X2,2003,134,"Action,Sci-Fi,Thriller",https://image.tmdb.org/t/p/w92/mM5qSVdWlGkvALHhNIb6kW6D42Y.jpg
-tt0292542,Son of the Bride,El hijo de la novia,2001,123,"Comedy,Drama",https://image.tmdb.org/t/p/w92/rOe5PKYh4RCRXSHSCqzFlpecZHT.jpg
 tt0293508,The Phantom of the Opera,The Phantom of the Opera,2004,143,"Drama,Musical,Romance",https://image.tmdb.org/t/p/w92/aTsp2VTaCBiGs8w05OTXfD97FRZ.jpg
-tt0293538,Radio,Radyo,2001,95,"Comedy,Thriller",Unknown
 tt0295238,Personal Velocity,Personal Velocity: Three Portraits,2002,86,"Drama,Romance",https://image.tmdb.org/t/p/w92/2Jkt0PQBU2lmSm4zQcyJBWvRGpv.jpg
 tt0295297,Harry Potter and the Chamber of Secrets,Harry Potter and the Chamber of Secrets,2002,161,"Adventure,Family,Fantasy",https://image.tmdb.org/t/p/w92/hYQH148afEHMYZpNdvBu7w4goU6.jpg
 tt0295682,The Warrior,The Warrior,2001,86,"Adventure,Drama",https://image.tmdb.org/t/p/w92/eF6DTVSZJE4zXi5UqAfRc08qyYk.jpg
-tt0296915,Valentin,Valentín,2002,86,"Comedy,Drama,Romance",https://image.tmdb.org/t/p/w92/hwFsPDutd5sM7lHQ5EMSGm55j2Z.jpg
 tt0298148,Shrek 2,Shrek 2,2004,93,"Adventure,Animation,Comedy",https://image.tmdb.org/t/p/w92/oljiDFPyMY437BRRV69AzVDSiKy.jpg
 tt0298203,8 Mile,8 Mile,2002,110,"Drama,Music",https://image.tmdb.org/t/p/w92/7BmQj8qE1FLuLTf7Xjf9sdIHzoa.jpg
-tt0298228,Whale Rider,Whale Rider,2002,101,"Drama,Family",https://image.tmdb.org/t/p/w92/nPk85pIzVetClUwi1QMKhrYmLud.jpg
-tt0298578,Touching Wild Horses,Touching Wild Horses,2002,91,Drama,https://image.tmdb.org/t/p/w92/jhKQslF9qUxCk3KCSvPZGk7WAbF.jpg
 tt0298845,In America,In America,2002,105,Drama,https://image.tmdb.org/t/p/w92/cUhMjWQyyApA0pFinogCsE2wy8g.jpg
-tt0300140,Lilya 4-Ever,Lilja 4-ever,2002,109,"Crime,Drama",https://image.tmdb.org/t/p/w92/9TlvOBioy0qa8k91TDYZWCdzTku.jpg
-tt0300214,Morvern Callar,Morvern Callar,2002,97,Drama,https://image.tmdb.org/t/p/w92/nZqSghdx8C3iHtzZcyxDd2jCWgU.jpg
+tt0299658,Chicago,Chicago,2002,113,"Comedy,Crime,Musical",https://image.tmdb.org/t/p/w92/v1Sg3GuHDz9uhrKqYozOeCMLSpj.jpg
 tt0301555,God Grew Tired of Us,God Grew Tired of Us: The Story of Lost Boys of Sudan,2006,89,Documentary,https://image.tmdb.org/t/p/w92/mrUCcDeCPW3d0s2VCgyTRVoxyKa.jpg
-tt0301727,Winged Migration,Le peuple migrateur,2001,98,Documentary,https://image.tmdb.org/t/p/w92/lvW3YBuUeM9GJpphY0XrNq9P2WB.jpg
 tt0302674,Gerry,Gerry,2002,103,"Adventure,Drama,Mystery",https://image.tmdb.org/t/p/w92/xLmuJJYAgcS0NoY5ITNfvFy8CJk.jpg
 tt0303394,Sister Helen,Sister Helen,2002,90,Documentary,https://image.tmdb.org/t/p/w92/dYlDMHrgyBUOMtlXZzBULkbAb09.jpg
 tt0303860,Changing Hearts,Changing Hearts,2002,92,"Comedy,Drama,Romance",https://image.tmdb.org/t/p/w92/A1xrxVtnxHlkQtEDrXvWwZvBxtP.jpg
 tt0304141,Harry Potter and the Prisoner of Azkaban,Harry Potter and the Prisoner of Azkaban,2004,142,"Adventure,Family,Fantasy",https://image.tmdb.org/t/p/w92/xTm1NVePaSKAypcPTJEM0tnGh6A.jpg
-tt0304229,Japanese Story,Japanese Story,2003,110,"Drama,Romance",https://image.tmdb.org/t/p/w92/bgazOSULGJSF2DNnyfWkOWn74ei.jpg
 tt0304328,Levity,Levity,2003,100,"Crime,Drama",https://image.tmdb.org/t/p/w92/pLmF3LChsgxkF6dCBN0aHJR91Gu.jpg
 tt0304415,Mona Lisa Smile,Mona Lisa Smile,2003,117,Drama,https://image.tmdb.org/t/p/w92/bg0VKsXnLjIZ0cHmZHZLs9gzrvm.jpg
 tt0305178,James' Journey to Jerusalem,Massa'ot James Be'eretz Hakodesh,2003,91,"Comedy,Drama",https://image.tmdb.org/t/p/w92/3AkNInzxFAExO2NihyRSqlBtJXA.jpg
-tt0307385,Rivers and Tides: Andy Goldsworthy Working with Time,Rivers and Tides,2001,90,Documentary,https://image.tmdb.org/t/p/w92/gBQHNCvefVaRFQxQTvl1tGMXILH.jpg
 tt0307453,Shark Tale,Shark Tale,2004,90,"Adventure,Animation,Comedy",https://image.tmdb.org/t/p/w92/r08DpyPyhXcJTfNZAICNGMzcQ8l.jpg
 tt0307901,25th Hour,25th Hour,2002,135,Drama,https://image.tmdb.org/t/p/w92/8AYVa7X4kMlQkn1sC6nVyKnzikV.jpg
-tt0308363,Waiting for Happiness,Heremakono,2002,90,"Drama,Music",https://image.tmdb.org/t/p/w92/zmGW0vR7yaiyo9dAaxD26PuY33n.jpg
 tt0308644,Finding Neverland,Finding Neverland,2004,106,"Biography,Drama,Family",https://image.tmdb.org/t/p/w92/A9jgLICNCEb3lvWdNaIKAG9pRdp.jpg
 tt0310281,A Mighty Wind,A Mighty Wind,2003,91,"Comedy,Music",https://image.tmdb.org/t/p/w92/jF6VEzBIgNaqdZi38CQnxSdM1z8.jpg
 tt0310951,"Ram Dass, Fierce Grace","Ram Dass, Fierce Grace",2001,93,Documentary,https://image.tmdb.org/t/p/w92/saUXJ5Lj9fubkRxSOM8pvkCeF1p.jpg
 tt0311072,En la ciudad sin límites,En la ciudad sin límites,2002,125,Drama,https://image.tmdb.org/t/p/w92/nTNsEIguVk114npcPiEqGQ4O2y0.jpg
 tt0311289,Holes,Holes,2003,117,"Adventure,Comedy,Drama",https://image.tmdb.org/t/p/w92/o2Dm2mcE1qW8vT0bpsJO5OMBbqa.jpg
 tt0311519,The Man Without a Past,Mies vailla menneisyyttä,2002,97,"Comedy,Drama,Romance",https://image.tmdb.org/t/p/w92/cuBnM2yLLvnOAnUKIWVKKSmR1sk.jpg
-tt0312697,Lighthouse Hill,Lighthouse Hill,2004,94,"Adventure,Comedy,Romance",Unknown
 tt0313196,The Crime of Padre Amaro,El crimen del Padre Amaro,2002,118,"Drama,Romance",https://image.tmdb.org/t/p/w92/wqwt2DKcQV6EeSwXuYTk7pkLFii.jpg
 tt0313300,The Blue Butterfly,The Blue Butterfly,2004,97,"Adventure,Drama",https://image.tmdb.org/t/p/w92/cPTV9WCiWGurKF3C87DxsbWnYm3.jpg
 tt0314331,Love Actually,Love Actually,2003,135,"Comedy,Drama,Romance",https://image.tmdb.org/t/p/w92/A3jpXZMwqe8DoGuykyojNIidWNj.jpg
-tt0314412,My Life Without Me,My Life Without Me,2003,106,"Drama,Romance",https://image.tmdb.org/t/p/w92/sFSkn5rrQqXJkRNa2rMWqzmEuhR.jpg
-tt0315327,Bruce Almighty,Bruce Almighty,2003,101,"Comedy,Fantasy",https://image.tmdb.org/t/p/w92/nF9hly6Dk2pcQFSnuxugI34RpCC.jpg
 tt0315983,House of Sand and Fog,House of Sand and Fog,2003,126,"Crime,Drama",https://image.tmdb.org/t/p/w92/oPDcGmhuc44PnPdoJhXRssM10Kj.jpg
-tt0317052,AKA,AKA,2002,123,"Drama,Romance",https://image.tmdb.org/t/p/w92/mvvB4TNeeaG17FMlNKSASELupKu.jpg
-tt0317248,City of God,Cidade de Deus,2002,130,"Crime,Drama",https://image.tmdb.org/t/p/w92/pA70WUs7KHiHltfiBN4XEELOXcS.jpg
+tt0316465,Radio,Radio,2003,109,"Biography,Drama,Sport",https://image.tmdb.org/t/p/w92/uQ6ci4iFHhB6TWB2f4wftR7AEly.jpg
 tt0317705,The Incredibles,The Incredibles,2004,115,"Action,Adventure,Animation",https://image.tmdb.org/t/p/w92/2LqaLgk4Z226KkgPJuiOQ58wvrm.jpg
-tt0318034,Russian Ark,Russkiy kovcheg,2002,99,"Drama,Fantasy,History",https://image.tmdb.org/t/p/w92/73gApdbNUP24wHUiXwcKgRMxbRL.jpg
-tt0318202,To Be and to Have,Être et avoir,2002,104,"Documentary,Family",https://image.tmdb.org/t/p/w92/mqB5QPNCmbF8DgsZqmyGQAGktUE.jpg
 tt0318374,The Cooler,The Cooler,2003,101,"Drama,Romance",https://image.tmdb.org/t/p/w92/lDqBhWhejdt9Umt5tYjqGXYF73O.jpg
 tt0318462,The Motorcycle Diaries,Diarios de motocicleta,2004,126,"Adventure,Biography,Drama",https://image.tmdb.org/t/p/w92/eIuOax8vLiRmmOfOkqYENzVDO2J.jpg
 tt0318761,Thumbsucker,Thumbsucker,2005,96,"Comedy,Drama",https://image.tmdb.org/t/p/w92/fBLjXNRkH0KuC5JEnGBUZx3SQw3.jpg
@@ -583,15 +438,14 @@ tt0325710,The Last Samurai,The Last Samurai,2003,154,"Action,Drama",https://imag
 tt0325805,Matchstick Men,Matchstick Men,2003,116,"Comedy,Crime,Drama",https://image.tmdb.org/t/p/w92/3CiyIA7UpXUVx1zyCWPbM3htmZz.jpg
 tt0327137,Secondhand Lions,Secondhand Lions,2003,111,"Comedy,Drama,Family",https://image.tmdb.org/t/p/w92/wRFyG3C3Uortp2utVHiBbwI3W0Q.jpg
 tt0328097,The Maldonado Miracle,The Maldonado Miracle,2003,99,"Drama,Family",Unknown
+tt0328538,Thirteen,Thirteen,2003,100,Drama,https://image.tmdb.org/t/p/w92/1aipvYwqz65jolPUagMEjTqOYQ5.jpg
 tt0328589,Under the Tuscan Sun,Under the Tuscan Sun,2003,113,"Comedy,Drama,Romance",https://image.tmdb.org/t/p/w92/3vQUQwdtfPt1Sl2GZrIECWWA0dk.jpg
 tt0328802,September 11,11'09''01 - September 11,2002,134,Drama,https://image.tmdb.org/t/p/w92/gbOFmoHalRCZgePhSJLH1ChIn2q.jpg
-tt0329388,Monsieur Ibrahim,Monsieur Ibrahim et les fleurs du Coran,2003,96,"Comedy,Drama",https://image.tmdb.org/t/p/w92/8zMJmgZuOVUFhFoQOi6crV2cF38.jpg
 tt0329575,Seabiscuit,Seabiscuit,2003,140,"Drama,History,Sport",https://image.tmdb.org/t/p/w92/jsXmZRyjDNHj18C76TgnJKGsD9O.jpg
 tt0330373,Harry Potter and the Goblet of Fire,Harry Potter and the Goblet of Fire,2005,157,"Adventure,Family,Fantasy",https://image.tmdb.org/t/p/w92/hBak1pn5pbI4ycAbrgMMn1YI7P1.jpg
 tt0331338,16 Years of Alcohol,16 Years of Alcohol,2003,102,"Crime,Drama",https://image.tmdb.org/t/p/w92/4DU8ZKovtlJ8Ve3cdtxc4TVlaWK.jpg
 tt0332280,The Notebook,The Notebook,2004,123,"Drama,Romance",https://image.tmdb.org/t/p/w92/gFCnDKfsZWzyv9sweizVC4EWn06.jpg
 tt0333766,Garden State,Garden State,2004,102,"Comedy,Drama,Romance",https://image.tmdb.org/t/p/w92/h3iqYiGS6F3y7GxaS4AT8nFxZ2i.jpg
-tt0334725,Wondrous Oblivion,Wondrous Oblivion,2003,106,"Comedy,Drama,Family",https://image.tmdb.org/t/p/w92/duFy4QiIlPAQXQxzkmqVsSq64Al.jpg
 tt0335266,Lost in Translation,Lost in Translation,2003,102,"Comedy,Drama",https://image.tmdb.org/t/p/w92/wkSzJs7oMf8MIr9CQVICsvRfwA7.jpg
 tt0335345,The Passion of the Christ,The Passion of the Christ,2004,127,Drama,https://image.tmdb.org/t/p/w92/eOecgHEmiejyBQ5J2CjGmF8sDFF.jpg
 tt0337721,The Snow Walker,The Snow Walker,2003,103,"Adventure,Drama",https://image.tmdb.org/t/p/w92/lnOYm4qRtSVZFGEfJq6BQOrIp3y.jpg
@@ -603,16 +457,12 @@ tt0338290,Normal,Normal,2003,110,Drama,https://image.tmdb.org/t/p/w92/jIVHUZYRGW
 tt0338427,Shopgirl,Shopgirl,2005,106,"Drama,Romance",https://image.tmdb.org/t/p/w92/mEpnYHytC1MuLECf4N0g4Xql2t8.jpg
 tt0340377,The Station Agent,The Station Agent,2003,89,"Comedy,Drama",https://image.tmdb.org/t/p/w92/kjJg6eJa9I9flfHaJG67ecEv8YX.jpg
 tt0342300,Dopamine,Dopamine,2003,79,"Comedy,Drama,Romance",https://image.tmdb.org/t/p/w92/oF5ItQosgv0izFPq7cv9pSnqbBW.jpg
-tt0342324,Eldra,Eldra,2002,80,Drama,Unknown
 tt0342735,Manderlay,Manderlay,2005,139,Drama,https://image.tmdb.org/t/p/w92/fKNOddxK7y3qUY0ny7v02bmbc1H.jpg
-tt0342804,My Flesh and Blood,My Flesh and Blood,2003,83,Documentary,https://image.tmdb.org/t/p/w92/iCRjWeLdP0jMMvq9H09Yu5rvIVi.jpg
-tt0343663,Eros,Eros,2004,104,"Drama,Romance",https://image.tmdb.org/t/p/w92/76xo36BcBfs4eIGnITVQCPORDH3.jpg
 tt0343818,"I, Robot","I, Robot",2004,115,"Action,Drama,Sci-Fi",https://image.tmdb.org/t/p/w92/u0tUxQQxrbKX3GIfsCYeHrrYPzV.jpg
 tt0344510,A Very Long Engagement,Un long dimanche de fiançailles,2004,133,"Drama,Mystery,Romance",https://image.tmdb.org/t/p/w92/3E1RD1EmGsyFL7X8QPnqfIgmQFG.jpg
-tt0349260,In My Country,Country of My Skull,2004,105,"Drama,Romance",https://image.tmdb.org/t/p/w92/bkuOhlmJJnq6sZfY9WRKQVKRnnJ.jpg
+tt0349825,Miracle,Miracle,2004,135,"Biography,Drama,History",https://image.tmdb.org/t/p/w92/t2JFALx0rF6POaYVrHu5ra23gyX.jpg
 tt0350258,Ray,Ray,2004,152,"Biography,Drama,Music",https://image.tmdb.org/t/p/w92/yAmnu7EZHrCvhG8SWwN4XP3K4fL.jpg
 tt0350261,An Unfinished Life,An Unfinished Life,2005,108,"Drama,Family,Romance",https://image.tmdb.org/t/p/w92/7ugLG1yF1l8HWYhmdmHHSC3kJ8b.jpg
-tt0351461,Noi the Albino,Nói albinói,2003,93,Drama,https://image.tmdb.org/t/p/w92/9k0SBZ0wus0xyh4qdlDdwtIeiJ0.jpg
 tt0352248,Cinderella Man,Cinderella Man,2005,144,"Biography,Drama,History",https://image.tmdb.org/t/p/w92/9qJlfL3fB5d8MotO4kUtDgH4Yr8.jpg
 tt0352277,De-Lovely,De-Lovely,2004,125,"Biography,Drama,Music",https://image.tmdb.org/t/p/w92/QBqiBQW7MGqlDSyvid4fKzS0Xz.jpg
 tt0354595,The Game of Their Lives,The Game of Their Lives,2005,101,"Drama,History,Sport",https://image.tmdb.org/t/p/w92/4kqzg9kRbuOTGyOOoz52JmMlgJU.jpg
@@ -625,21 +475,16 @@ tt0361715,Duma,Duma,2005,100,"Adventure,Drama,Family",https://image.tmdb.org/t/p
 tt0361862,The Machinist,The Machinist,2004,101,"Drama,Thriller",https://image.tmdb.org/t/p/w92/ukMORT211Xi7I8mvtg9aXgzs374.jpg
 tt0362227,The Terminal,The Terminal,2004,128,"Comedy,Drama,Romance",https://image.tmdb.org/t/p/w92/qxFx53QgdD2BXA1nOWNiqUDoYRO.jpg
 tt0362269,Kinsey,Kinsey,2004,118,"Biography,Drama,Romance",https://image.tmdb.org/t/p/w92/cODCjWNRcZkwe4ONQs1GzRqYtRb.jpg
-tt0362590,Employee of the Month,Employee of the Month,2004,97,"Comedy,Drama",https://image.tmdb.org/t/p/w92/9OJGGE1fdLxHGZTporORoxHpJoH.jpg
 tt0363473,Beyond the Sea,Beyond the Sea,2004,118,"Biography,Drama,Music",https://image.tmdb.org/t/p/w92/wIewPJNyyTIMI5rQzcElc23jenW.jpg
 tt0363771,"The Chronicles of Narnia: The Lion, the Witch and the Wardrobe","The Chronicles of Narnia: The Lion, the Witch and the Wardrobe",2005,143,"Adventure,Family,Fantasy",https://image.tmdb.org/t/p/w92/y9WMcPeguI4pmwULmB6LqzPyj1v.jpg
-tt0364271,Click,Click,2003,105,Unknown,Unknown
 tt0365885,The Upside of Anger,The Upside of Anger,2005,118,"Comedy,Drama",https://image.tmdb.org/t/p/w92/8GBWdqEUFAmFR9Jbk8DnTUpNtik.jpg
 tt0366548,Happy Feet,Happy Feet,2006,108,"Adventure,Animation,Comedy",https://image.tmdb.org/t/p/w92/za41IHkj6LnkilfTzv5B2qmthKD.jpg
 tt0367089,The Squid and the Whale,The Squid and the Whale,2005,81,"Comedy,Drama",https://image.tmdb.org/t/p/w92/9NbXn1NMdfGM491V3EFjZADR9SX.jpg
 tt0367594,Charlie and the Chocolate Factory,Charlie and the Chocolate Factory,2005,115,"Adventure,Comedy,Family",https://image.tmdb.org/t/p/w92/wfGfxtBkhBzQfOZw4S8IQZgrH0a.jpg
-tt0368264,Shakespeare Behind Bars,Shakespeare Behind Bars,2005,93,Documentary,https://image.tmdb.org/t/p/w92/7sLJaT9BmvuO1mSe41HqA0AfPOP.jpg
 tt0368411,Virgin,Virgin,2003,116,Drama,https://image.tmdb.org/t/p/w92/loZZElyLgs9R1iuL6WE31uZXIHx.jpg
 tt0368794,I'm Not There,I'm Not There,2007,135,"Biography,Drama,Music",https://image.tmdb.org/t/p/w92/xhUWSLP1FvoZSDOvVN8veIWtX6h.jpg
 tt0369702,The Sea Inside,Mar adentro,2004,126,"Biography,Drama",https://image.tmdb.org/t/p/w92/tQkEMFZxv03Ik6gxIZ6LIU9imR2.jpg
-tt0370617,Before Sunset,Haeddeoleojigi jeone,1960,85,"Drama,Thriller",Unknown
 tt0371246,Spanglish,Spanglish,2004,131,"Comedy,Drama,Romance",https://image.tmdb.org/t/p/w92/dkA4yVXUGIUFzaGlm5opeq9OFj4.jpg
-tt0371280,Crimson Gold,Talaye sorkh,2003,97,"Crime,Drama,Thriller",https://image.tmdb.org/t/p/w92/vaD2OuSqFD0XjXX8JDFJD8lxnV4.jpg
 tt0371724,The Hitchhiker's Guide to the Galaxy,The Hitchhiker's Guide to the Galaxy,2005,109,"Adventure,Comedy,Sci-Fi",https://image.tmdb.org/t/p/w92/vOnXZOjipDTelrK9Wteo2kzrOsz.jpg
 tt0372183,The Bourne Supremacy,The Bourne Supremacy,2004,108,"Action,Mystery,Thriller",https://image.tmdb.org/t/p/w92/7IYGiDrquvX3q7e9PV6Pejs6b2g.jpg
 tt0372784,Batman Begins,Batman Begins,2005,140,"Action,Adventure",https://image.tmdb.org/t/p/w92/6yMWU1vWkOBbNRIwOxhetd2aHhO.jpg
@@ -650,45 +495,47 @@ tt0373889,Harry Potter and the Order of the Phoenix,Harry Potter and the Order o
 tt0374102,Open Water,Open Water,2003,79,"Adventure,Drama,Horror",https://image.tmdb.org/t/p/w92/nQ6dccxakKV4u8ePr9Kfxh2gPVJ.jpg
 tt0374546,"Spring, Summer, Fall, Winter... and Spring",Bom Yeoareum Gaeul Gyeoul Geurigo Bom,2003,103,"Drama,Romance",https://image.tmdb.org/t/p/w92/mZReLUhge4XCkxSafLOX0rOXOlh.jpg
 tt0375063,Sideways,Sideways,2004,127,"Comedy,Drama,Romance",https://image.tmdb.org/t/p/w92/zOsaxYLgvZVU7cJBpPn8CuE0MrP.jpg
+tt0375679,Crash,Crash,2004,112,"Crime,Drama,Thriller",https://image.tmdb.org/t/p/w92/86BdPC6RDX88NC880pLidKn2LCj.jpg
 tt0376968,The Return,Vozvrashchenie,2003,110,Drama,https://image.tmdb.org/t/p/w92/7V8iHBs34cPYw7ohpLqliF9x8Gv.jpg
 tt0376994,X-Men: The Last Stand,X-Men: The Last Stand,2006,104,"Action,Adventure,Sci-Fi",https://image.tmdb.org/t/p/w92/9JGPYfd8BAXi7eMaDBbqgkyliQq.jpg
+tt0377107,Proof,Proof,2005,100,"Drama,Mystery",https://image.tmdb.org/t/p/w92/e541TarICWGYAhgsbpCQ2yFifA7.jpg
 tt0377471,Be Cool,Be Cool,2005,118,"Comedy,Crime,Music",https://image.tmdb.org/t/p/w92/ekKCH7Zkb5ZTr1f1AczZY23FH.jpg
 tt0377800,Don't Come Knocking,Don't Come Knocking,2005,122,"Drama,Music",https://image.tmdb.org/t/p/w92/loads61QBk8cpzqFXJXhZm0mThK.jpg
 tt0377992,The Visual Bible: The Gospel of John,The Visual Bible: The Gospel of John,2003,180,"Biography,Drama,History",https://image.tmdb.org/t/p/w92/k97rk4SshSgr5xk5X1gpuAoiASi.jpg
 tt0378194,Kill Bill: Vol. 2,Kill Bill: Vol. 2,2004,137,"Action,Crime,Thriller",https://image.tmdb.org/t/p/w92/2yhg0mZQMhDyvUQ4rG1IZ4oIA8L.jpg
-tt0378906,Travelers and Magicians,Travellers & Magicians,2003,108,"Adventure,Drama",https://image.tmdb.org/t/p/w92/rVXiPoXzeoyExzepxdv4eQQMERa.jpg
 tt0379322,Indigo,Indigo,2003,89,Drama,https://image.tmdb.org/t/p/w92/senV37JA7hE61njO7CF7a7cjmAJ.jpg
 tt0379557,Touching the Void,Touching the Void,2003,106,"Adventure,Documentary,Drama",https://image.tmdb.org/t/p/w92/fsydA5H8FSDaYlYWddfMpMpDUX.jpg
-tt0379577,Vodka Lemon,Vodka Lemon,2003,90,"Comedy,Drama",https://image.tmdb.org/t/p/w92/gC4mDkgM8MJrtyaH87qeQk3GikQ.jpg
 tt0379593,The Yes Men,The Yes Men,2003,83,"Comedy,Documentary",https://image.tmdb.org/t/p/w92/lbwXEMe4fz6hj3ySwgstRJx38Wz.jpg
 tt0379725,Capote,Capote,2005,114,"Biography,Crime,Drama",https://image.tmdb.org/t/p/w92/aK2gT13bT953YaXxNLbiD6HiY2Z.jpg
 tt0379926,People Say I'm Crazy,People Say I'm Crazy,2003,84,Documentary,Unknown
 tt0380615,Paper Clips,Paper Clips,2004,82,"Documentary,War",https://image.tmdb.org/t/p/w92/62E1tAw370MbsXWeTR10bg5VX5N.jpg
 tt0381006,America's Heart & Soul,America's Heart & Soul,2004,84,Documentary,https://image.tmdb.org/t/p/w92/2shqALEQtGgqsd3V9wFR4zAhveu.jpg
+tt0381681,Before Sunset,Before Sunset,2004,80,"Drama,Romance",https://image.tmdb.org/t/p/w92/gycdE1ARByGQcK4fYR2mgpU6OO.jpg
+tt0381849,3:10 to Yuma,3:10 to Yuma,2007,122,"Action,Crime,Drama",https://image.tmdb.org/t/p/w92/voMB69AsLnPNmtfbrBl0lbeFKDH.jpg
 tt0382625,The Da Vinci Code,The Da Vinci Code,2006,149,"Mystery,Thriller",https://image.tmdb.org/t/p/w92/6jexEWBXepwB1ZLpCEllI04Agrb.jpg
 tt0383534,Noel,Noel,2004,96,Drama,https://image.tmdb.org/t/p/w92/pPYlVwLF8mRFxCiXFxHeFN0d4ON.jpg
-tt0383694,Vera Drake,Vera Drake,2004,125,"Crime,Drama",https://image.tmdb.org/t/p/w92/x0m8LN5y5X2SCrlnUmk0Y8ulsyU.jpg
 tt0384680,The Weather Man,The Weather Man,2005,102,"Comedy,Drama",https://image.tmdb.org/t/p/w92/oQilVzOxLPxvBn9hAuvGpKTpONM.jpg
-tt0385004,House of Flying Daggers,Shi mian mai fu,2004,119,"Action,Adventure,Drama",https://image.tmdb.org/t/p/w92/unwvBq1MjoT1wbVqu8hpIt3B2iZ.jpg
 tt0385056,Lonesome Jim,Lonesome Jim,2005,95,"Comedy,Drama",https://image.tmdb.org/t/p/w92/2KVCKlIWwKwLdAUyuYHM4dJEv81.jpg
+tt0385267,In Good Company,In Good Company,2004,110,"Comedy,Drama,Romance",https://image.tmdb.org/t/p/w92/9u8MAGTAAhIdqZfhNsHcLcRNnra.jpg
 tt0385726,Glory Road,Glory Road,2006,118,"Biography,Drama,Sport",https://image.tmdb.org/t/p/w92/bGRSV5tStxDNPRLCewnOeeiZzrY.jpg
 tt0385752,The Golden Compass,The Golden Compass,2007,113,"Adventure,Family,Fantasy",https://image.tmdb.org/t/p/w92/tAcPIX5GQy8XAhG2nqTQHmBLksI.jpg
-tt0386651,Mountain Patrol,Kekexili,2004,85,"Action,Drama",https://image.tmdb.org/t/p/w92/cPwpHuwvKthGXD0VXwCnPdUfpZn.jpg
 tt0387059,Bee Season,Bee Season,2005,104,"Drama,Family",https://image.tmdb.org/t/p/w92/xeUOz7tYY8YuARrwAQL54DThscu.jpg
 tt0387131,The Constant Gardener,The Constant Gardener,2005,129,"Drama,Mystery,Romance",https://image.tmdb.org/t/p/w92/nkXq7V7mmJVbvwZGr3nxkHo7HkS.jpg
 tt0387412,Metallica: Some Kind of Monster,Metallica: Some Kind of Monster,2004,141,"Documentary,Music",https://image.tmdb.org/t/p/w92/uPsaq0Lwj6y9Mnuc6hhRcDRqGWj.jpg
 tt0387514,Prime,Prime,2005,105,"Comedy,Drama,Romance",https://image.tmdb.org/t/p/w92/m8LkGxSLS4n6zghXpnF1P8sPegp.jpg
 tt0388789,Born Into Brothels: Calcutta's Red Light Kids,Born Into Brothels: Calcutta's Red Light Kids,2004,85,"Biography,Documentary,News",https://image.tmdb.org/t/p/w92/e7OWmWptBRCnUKj6MJ2qbxj5ZY5.jpg
+tt0389860,Click,Click,2006,107,"Comedy,Drama,Fantasy",https://image.tmdb.org/t/p/w92/oL0k5JA53PyoHSZqKb3cNkhwBCE.jpg
 tt0390022,Friday Night Lights,Friday Night Lights,2004,118,"Action,Drama,Sport",https://image.tmdb.org/t/p/w92/8HIqpOgqShRc3TAleabnYispDl1.jpg
 tt0390221,Maria Full of Grace,Maria Full of Grace,2004,101,"Crime,Drama",https://image.tmdb.org/t/p/w92/piF1bDCR5kXrapCuJM5mQyzRCGK.jpg
 tt0390521,Super Size Me,Super Size Me,2004,100,Documentary,https://image.tmdb.org/t/p/w92/wf4Wf8tPcPGxVqMW4WVy8loFneO.jpg
 tt0393162,Coach Carter,Coach Carter,2005,136,"Biography,Drama,Sport",https://image.tmdb.org/t/p/w92/y3HOTTyM5nLsdUzXFtFCohG28qj.jpg
 tt0395169,Hotel Rwanda,Hotel Rwanda,2004,121,"Biography,Drama,History",https://image.tmdb.org/t/p/w92/p3pHw85UMZPegfMZBA6dZ06yarm.jpg
 tt0395972,North Country,North Country,2005,126,Drama,https://image.tmdb.org/t/p/w92/upxUN4zmX79o49mBW9htKZDeNq7.jpg
+tt0397103,Smile,Smile,2005,107,"Adventure,Drama",https://image.tmdb.org/t/p/w92/zcJ2qHPB61E40mUADc4MTiL9tdq.jpg
 tt0397313,Eight Below,Eight Below,2006,120,"Adventure,Drama,Family",https://image.tmdb.org/t/p/w92/fxxTJudctuBVm7XoJeJvkxJKaLK.jpg
 tt0397535,Memoirs of a Geisha,Memoirs of a Geisha,2005,145,"Drama,Romance",https://image.tmdb.org/t/p/w92/9dR59OOcCCWq5pS32HLnP63hbWL.jpg
 tt0398165,The Longest Yard,The Longest Yard,2005,113,"Comedy,Crime,Sport",https://image.tmdb.org/t/p/w92/nbKcVBcxF96ARW2oKHqDYAcLdu.jpg
-tt0398830,Cape of Good Hope,Cape of Good Hope,2004,107,"Comedy,Drama,Romance",Unknown
+tt0398808,Bridge to Terabithia,Bridge to Terabithia,2007,96,"Drama,Family,Fantasy",https://image.tmdb.org/t/p/w92/3xFxGodKPMFLheS8rujFSmLfcq4.jpg
 tt0398842,The Celestine Prophecy,The Celestine Prophecy,2006,99,"Adventure,Drama",https://image.tmdb.org/t/p/w92/79QfNCYInNmp1BuHyZPl6PQz1Ph.jpg
 tt0399146,A History of Violence,A History of Violence,2005,96,"Drama,Thriller",https://image.tmdb.org/t/p/w92/keHREQ9jRiHp7ja1SM8xmDCo6vI.jpg
 tt0401383,The Diving Bell and the Butterfly,Le scaphandre et le papillon,2007,112,"Biography,Drama",https://image.tmdb.org/t/p/w92/3MJUo4bCPai5r9zrw7nTS8sVzQ7.jpg
@@ -700,16 +547,14 @@ tt0402399,The New World,The New World,2005,135,"Biography,Drama,History",https:/
 tt0402492,Seoul Train,Seoul Train,2004,54,Documentary,Unknown
 tt0404030,Everything Is Illuminated,Everything Is Illuminated,2005,106,"Comedy,Drama",https://image.tmdb.org/t/p/w92/5MCSLcO58NcLBwvYiJc1fXkOhqE.jpg
 tt0405094,The Lives of Others,Das Leben der Anderen,2006,137,"Drama,Mystery,Thriller",https://image.tmdb.org/t/p/w92/5BCyeLJHPcRwhu0YaRqUzw00JJ4.jpg
-tt0405422,The 40-Year-Old Virgin,The 40 Year Old Virgin,2005,116,"Comedy,Romance",https://image.tmdb.org/t/p/w92/vR8zYLWpl8sjRfp3RQ0ZkiWAPu5.jpg
-tt0406098,Something Like Happiness,Stestí,2005,102,Drama,https://image.tmdb.org/t/p/w92/je5yBCtf4AkCVtIxB2WMimR3jEV.jpg
+tt0405159,Million Dollar Baby,Million Dollar Baby,2004,132,"Drama,Sport",https://image.tmdb.org/t/p/w92/7yWwlgq12qZ4nMLQHhEf8ITaggn.jpg
+tt0405422,The 40-Year-Old Virgin,The 40 Year Old Virgin,2005,116,"Comedy,Romance",https://image.tmdb.org/t/p/w92/lSpnzNpnbG1hxVhEm5rFiiRW39h.jpg
 tt0406158,"The Prize Winner of Defiance, Ohio","The Prize Winner of Defiance, Ohio",2005,99,"Biography,Drama",https://image.tmdb.org/t/p/w92/wBAxyz9LTvyRlQ6wcMA2La2rYgX.jpg
 tt0407265,Transamerica,Transamerica,2005,103,"Adventure,Comedy,Drama",https://image.tmdb.org/t/p/w92/85pG3LAnhL9DHZd4p7jlsYbF6nN.jpg
 tt0407342,À Tout de Suite,À tout de suite,2004,95,"Crime,Drama,Romance",https://image.tmdb.org/t/p/w92/9Llai6U6vLawKzR46zWm2Euk4eK.jpg
-tt0408664,Nobody Knows,Dare mo shiranai,2004,141,Drama,https://image.tmdb.org/t/p/w92/deR9dplFVFCfMP0YxLMPDKV9sp.jpg
 tt0408790,Flightplan,Flightplan,2005,98,"Drama,Mystery,Thriller",https://image.tmdb.org/t/p/w92/hlZ8tWZzMYWOwFmExSBohZHXcrf.jpg
 tt0410097,Hustle & Flow,Hustle & Flow,2005,116,"Crime,Drama,Music",https://image.tmdb.org/t/p/w92/mpPDQblSI38cFScBBv2REzKyp9s.jpg
 tt0410297,The Lake House,The Lake House,2006,99,"Drama,Fantasy,Romance",https://image.tmdb.org/t/p/w92/tHpc1118dYWLnHZleGhwZxRbpae.jpg
-tt0411195,Breakfast on Pluto,Breakfast on Pluto,2005,128,"Comedy,Drama",https://image.tmdb.org/t/p/w92/14tmdb1PiLNDZf3VD29S2nUKVV0.jpg
 tt0411291,Dirty Filthy Love,Dirty Filthy Love,2004,120,"Drama,Romance",https://image.tmdb.org/t/p/w92/ztefdcjZ5QWnApU74abE14PDBCZ.jpg
 tt0412019,Broken Flowers,Broken Flowers,2005,106,"Comedy,Drama,Mystery",https://image.tmdb.org/t/p/w92/xDjCNGmDOesm8UenVrCBkUv38VT.jpg
 tt0412080,The World's Fastest Indian,The World's Fastest Indian,2005,127,"Biography,Drama,Sport",https://image.tmdb.org/t/p/w92/32HgyVYmXDep9aqSBMuDKGrTtkS.jpg
@@ -726,29 +571,30 @@ tt0417791,Rory O'Shea Was Here,Inside I'm Dancing,2004,104,"Comedy,Drama",https:
 tt0418763,Jarhead,Jarhead,2005,125,"Action,Biography,Drama",https://image.tmdb.org/t/p/w92/5V5DMgwjJ5x40xbL4zbP3t9ex1H.jpg
 tt0418773,Junebug,Junebug,2005,106,"Comedy,Drama",https://image.tmdb.org/t/p/w92/asC6UOPrR6OlNMiyXbeXWu08SOG.jpg
 tt0419198,The Tiger and the Snow,La tigre e la neve,2005,114,"Comedy,Drama,Romance",https://image.tmdb.org/t/p/w92/5eAZtRedkBFFy0lNJWBQWCdXzaI.jpg
+tt0419491,Believe in Me,Believe in Me,2006,131,"Drama,Sport",https://image.tmdb.org/t/p/w92/nJjCrSnBLBySvOiNHlRNXVkXB0U.jpg
 tt0419887,The Kite Runner,The Kite Runner,2007,128,Drama,https://image.tmdb.org/t/p/w92/dom2esWWW8C9jS2v7dOhW48LwHh.jpg
+tt0420015,Nine Lives,Nine Lives,2005,115,Drama,https://image.tmdb.org/t/p/w92/vs3hapL3V5Q2UZkT6FfEgfoALhf.jpg
 tt0420087,A Prairie Home Companion,A Prairie Home Companion,2006,105,"Comedy,Drama,Music",https://image.tmdb.org/t/p/w92/yN1KV4H5Y6M0T5N0HiqplUTvCgY.jpg
-tt0420835,Opal Dream,Opal Dream,2006,85,"Drama,Family",https://image.tmdb.org/t/p/w92/xlwt6qcETBcMy6319C4RGOiKTqt.jpg
+tt0420223,Stranger Than Fiction,Stranger Than Fiction,2006,113,"Comedy,Drama,Fantasy",https://image.tmdb.org/t/p/w92/9wxMkSc89zDUJR5quu8ThhjbhMD.jpg
 tt0422093,Diary Of A Mad Black Woman,Diary of a Mad Black Woman,2005,116,"Comedy,Drama,Romance",https://image.tmdb.org/t/p/w92/vud8kfgaNXF1CXi7kBOb06pJuce.jpg
+tt0422720,Marie Antoinette,Marie Antoinette,2006,123,"Biography,Drama,History",https://image.tmdb.org/t/p/w92/cybXGmv8Rjd5Os8Xml6YxMBQ0Zt.jpg
 tt0422783,Music Within,Music Within,2007,94,"Biography,Comedy,Drama",https://image.tmdb.org/t/p/w92/9KwG84rESQbWjnY3nuQ7vVleC6Q.jpg
 tt0422861,The Oh in Ohio,The Oh in Ohio,2006,88,"Comedy,Drama,Romance",https://image.tmdb.org/t/p/w92/6UNjCz9wn7DzYzPu90NLZkzBDFs.jpg
 tt0423169,Sherrybaby,Sherrybaby,2006,96,Drama,https://image.tmdb.org/t/p/w92/j97X0h6JTN4owVc4le7fOUj54Rx.jpg
 tt0423310,The Syrian Bride,The Syrian Bride,2004,97,"Comedy,Drama",https://image.tmdb.org/t/p/w92/paUPdUgUmwItY15YuHT6gu4NQcq.jpg
 tt0423360,Heaven's Bookstore,Tengoku no honya - koibi,2004,111,"Drama,Romance",https://image.tmdb.org/t/p/w92/yz2m3YKmFGty26OiFdjA8mE1pqb.jpg
 tt0423510,Warm Springs,Warm Springs,2005,121,"Biography,Drama",https://image.tmdb.org/t/p/w92/ieSu2e0yBZ34IwEzgNPnliHALNo.jpg
-tt0423866,3-Iron,Bin-jip,2004,88,"Crime,Drama,Romance",https://image.tmdb.org/t/p/w92/oKg7VIc4oNYsyzqjljPQVg8ND3b.jpg
-tt0424205,Joyeux Noel,Joyeux Noël,2005,116,"Drama,History,Music",https://image.tmdb.org/t/p/w92/9Ka8lKCIiWjnZiMslPQeakS5UhW.jpg
 tt0424565,The Wild Parrots of Telegraph Hill,The Wild Parrots of Telegraph Hill,2003,83,Documentary,https://image.tmdb.org/t/p/w92/6jUBQUXpnfmCwPJGMVAAQYccqE9.jpg
+tt0424993,Employee of the Month,Employee of the Month,2006,103,"Comedy,Romance",https://image.tmdb.org/t/p/w92/jyPtb3SA0mq4FGJJOGxz3sYnPPc.jpg
 tt0426931,August Rush,August Rush,2007,114,"Drama,Music",https://image.tmdb.org/t/p/w92/uuhBeK0bNdPKNjXLeb08p7KARR2.jpg
 tt0427309,The Great Debaters,The Great Debaters,2007,126,"Biography,Drama,Romance",https://image.tmdb.org/t/p/w92/pikfybjZNMh5MYsrmgWtyxkstmi.jpg
 tt0427312,Grizzly Man,Grizzly Man,2005,103,"Biography,Documentary",https://image.tmdb.org/t/p/w92/zuZWpcuye25rpsiZ4XzsAvmLDHG.jpg
+tt0427327,Hairspray,Hairspray,2007,117,"Comedy,Drama,Musical",https://image.tmdb.org/t/p/w92/aBIziGdvDFBapaL5KvP0RothlrI.jpg
 tt0427969,Hollywoodland,Hollywoodland,2006,126,"Biography,Crime,Drama",https://image.tmdb.org/t/p/w92/fhLRUXpVGBsDL2dMWkOwuPNzlrq.jpg
 tt0428446,The Darwin Awards,The Darwin Awards,2006,94,"Adventure,Comedy,Romance",https://image.tmdb.org/t/p/w92/6reChYRqaglz563iX2JgiK8eFS9.jpg
-tt0428803,March of the Penguins,La marche de l'empereur,2005,80,"Documentary,Family",https://image.tmdb.org/t/p/w92/pMcPDZjoYVCjxT75PzqzA0pVZpJ.jpg
 tt0433116,Looking for Comedy in the Muslim World,Looking for Comedy in the Muslim World,2005,98,Comedy,https://image.tmdb.org/t/p/w92/vtdtF2mAnUo80c8ZpPzqrQVb6VO.jpg
 tt0433383,"Good Night, and Good Luck.","Good Night, and Good Luck.",2005,93,"Biography,Drama,History",https://image.tmdb.org/t/p/w92/rHcPtJcZVd1VpxA0NQn0a3llNd1.jpg
 tt0433416,The Namesake,The Namesake,2006,122,Drama,https://image.tmdb.org/t/p/w92/hxrf7HDwh0nIX4xXE06BdpEKW1V.jpg
-tt0433426,Peace One Day,Peace One Day,2004,80,Documentary,Unknown
 tt0434139,The Last Kiss,The Last Kiss,2006,115,"Comedy,Drama,Romance",https://image.tmdb.org/t/p/w92/9NVvNUQ0OkaRmvTss0IxbhdErIe.jpg
 tt0434409,V for Vendetta,V for Vendetta,2005,132,"Action,Drama,Sci-Fi",https://image.tmdb.org/t/p/w92/kxekpqZUpO5W65QT12goucFvyx9.jpg
 tt0435623,Conversations with Other Women,Conversations with Other Women,2005,84,"Comedy,Drama,Romance",https://image.tmdb.org/t/p/w92/5iA72q3avmveCiOtx1Uaj22pgXI.jpg
@@ -761,13 +607,14 @@ tt0438315,Peaceful Warrior,Peaceful Warrior,2006,120,"Drama,Romance,Sport",https
 tt0438427,Side Effects,Side Effects,2005,90,"Comedy,Drama,Romance",https://image.tmdb.org/t/p/w92/qhQiaAEChJTHyfDE39cIDOLsfgW.jpg
 tt0440963,The Bourne Ultimatum,The Bourne Ultimatum,2007,115,"Action,Mystery,Thriller",https://image.tmdb.org/t/p/w92/d4DuphCHCjVUyffExnK5nLbn39K.jpg
 tt0441909,Volver,Volver,2006,121,"Comedy,Drama",https://image.tmdb.org/t/p/w92/ljRPzuI1xybiFUGU1uCRdx68h0K.jpg
-tt0443518,The Girl in the Café,The Girl in the Café,2005,94,"Drama,Romance",https://image.tmdb.org/t/p/w92/gVq4Vk7OUDMOJ2s5VpRlH8G2NJZ.jpg
+tt0443489,Dreamgirls,Dreamgirls,2006,130,"Drama,Music,Musical",https://image.tmdb.org/t/p/w92/sG5JyOj8Spe13QkNJMH8b5kzQUh.jpg
+tt0443518,The Girl in the Café,The Girl in the Café,2005,94,"Drama,Romance",https://image.tmdb.org/t/p/w92/pCVOVGetB96QBklRFgVYSZK0uKq.jpg
 tt0443543,The Illusionist,The Illusionist,2006,110,"Drama,Fantasy,Mystery",https://image.tmdb.org/t/p/w92/4I1oOPHNrHLcvz3wTMuETJLws9z.jpg
 tt0445922,Across the Universe,Across the Universe,2007,133,"Drama,Fantasy,History",https://image.tmdb.org/t/p/w92/447c8Te3DXC46rQvDEixKGO4dS6.jpg
 tt0446345,The Ground Truth,The Ground Truth: After the Killing Ends,2006,72,"Documentary,War",https://image.tmdb.org/t/p/w92/qi4IhP8KQfNoiojuIDHQYmWgonQ.jpg
 tt0447016,Emmanuel's Gift,Emmanuel's Gift,2005,80,Documentary,Unknown
 tt0449059,Little Miss Sunshine,Little Miss Sunshine,2006,101,"Comedy,Drama",https://image.tmdb.org/t/p/w92/tFnTds88mCuLcLPBseK1kF2E3qv.jpg
-tt0450188,La Vie En Rose,La Môme,2007,140,"Biography,Drama,Music",https://image.tmdb.org/t/p/w92/thD71NvrSQwo45iFjnfPziJPVnj.jpg
+tt0449467,Babel,Babel,2006,143,Drama,https://image.tmdb.org/t/p/w92/uGj7NH3rFsUOmSBiPxsv4EBqHk5.jpg
 tt0450232,16 Blocks,16 Blocks,2006,102,"Action,Crime,Drama",https://image.tmdb.org/t/p/w92/tbWd6N4ORhDJxlMVO4vxRNEZtib.jpg
 tt0450259,Blood Diamond,Blood Diamond,2006,143,"Adventure,Drama,Thriller",https://image.tmdb.org/t/p/w92/m6rZ3dmqjcTvVNKtqwQ6hxYQ9nk.jpg
 tt0450450,The Italian,Italyanets,2005,90,Drama,https://image.tmdb.org/t/p/w92/mAUmyc1UMigbIM6SOfazsv0cV2J.jpg
@@ -775,39 +622,40 @@ tt0454921,The Pursuit of Happyness,The Pursuit of Happyness,2006,117,"Biography,
 tt0455590,The Last King of Scotland,The Last King of Scotland,2006,123,"Biography,Drama,History",https://image.tmdb.org/t/p/w92/sXS96Tzh0FFnVPvyHgFw17dNTaG.jpg
 tt0457430,Pan's Labyrinth,El laberinto del fauno,2006,118,"Drama,Fantasy,War",https://image.tmdb.org/t/p/w92/Ao83nMqYIYUsD2Q3lNsz6176MlC.jpg
 tt0457939,The Holiday,The Holiday,2006,136,"Comedy,Romance",https://image.tmdb.org/t/p/w92/6fbqG49Q7IWBWdyJ7asNTcNbnG6.jpg
+tt0461770,Enchanted,Enchanted,2007,107,"Animation,Comedy,Family",https://image.tmdb.org/t/p/w92/8KCNzCArLlvLdQoHx6npua2VSVc.jpg
 tt0461804,Mongolian Ping Pong,Lü cao di,2005,102,"Comedy,Drama",https://image.tmdb.org/t/p/w92/yVzn3We2n1rNgYhQVKLWCqLnUNX.jpg
 tt0462200,Black Snake Moan,Black Snake Moan,2006,116,"Drama,Music",https://image.tmdb.org/t/p/w92/3mhgrPbSq0XHXqMcWuTgL0rA17a.jpg
 tt0463998,Freedom Writers,Freedom Writers,2007,123,"Biography,Crime,Drama",https://image.tmdb.org/t/p/w92/bffP9cAgOHsMNnc55zIXrDnz7QD.jpg
 tt0465538,Michael Clayton,Michael Clayton,2007,119,"Crime,Drama,Mystery",https://image.tmdb.org/t/p/w92/xC1zIfZ7DsI4ainuqnOBy3WiE4y.jpg
 tt0465624,My Super Ex-Girlfriend,My Super Ex-Girlfriend,2006,96,"Comedy,Romance,Sci-Fi",https://image.tmdb.org/t/p/w92/vs4jcY5NQA24zFGihY2EiqEA5hI.jpg
-tt0468565,Tsotsi,Tsotsi,2005,95,"Crime,Drama",https://image.tmdb.org/t/p/w92/2IvOOtxyOJFXoJ2jVjltQAlsQgz.jpg
+tt0467406,Juno,Juno,2007,96,"Comedy,Drama",https://image.tmdb.org/t/p/w92/jNIn2tVhpvFD6P9IojldI3mNYcn.jpg
+tt0468489,Half Nelson,Half Nelson,2006,106,Drama,https://image.tmdb.org/t/p/w92/rBhlJP9NJvlpjahCSBNBiRgF31z.jpg
 tt0469263,The Astronaut Farmer,The Astronaut Farmer,2006,104,"Adventure,Drama,Sci-Fi",https://image.tmdb.org/t/p/w92/y8OVJxxnbng01gU5jeoohf80jpd.jpg
 tt0469641,World Trade Center,World Trade Center,2006,129,"Drama,History,Thriller",https://image.tmdb.org/t/p/w92/7cM6wGgRRdWsrh7hzLznzPKSx8G.jpg
 tt0470765,For Your Consideration,For Your Consideration,2006,86,Comedy,https://image.tmdb.org/t/p/w92/kTw9UHDHf5hc7Fg41VCdICAbPZ3.jpg
 tt0471697,Farther Than the Eye Can See,Farther Than the Eye Can See,2003,75,Documentary,Unknown
 tt0472471,The Meaning of Monty Python's Meaning of Life,The Meaning of Monty Python's Meaning of Life,1983,29,Documentary,Unknown
-tt0472832,Johanna,Johanna,2005,86,"Drama,Musical",https://image.tmdb.org/t/p/w92/jVFb2uQnbg8dsBgCl4sRPCuFP5c.jpg
 tt0473215,The Hobart Shakespeareans,The Hobart Shakespeareans,2005,Unknown,Documentary,Unknown
 tt0473308,Waitress,Waitress,2007,108,"Comedy,Drama,Romance",https://image.tmdb.org/t/p/w92/ux3SPTHHmJytSjWEaV7xlo9nbOZ.jpg
 tt0475276,United 93,United 93,2006,111,"Action,Drama,History",https://image.tmdb.org/t/p/w92/aahr1uIPrEej8q4baE1RYXOXwFB.jpg
 tt0476563,Kumbh Mela: Songs of the River,Kumbh Mela: Songs of the River,2004,60,Documentary,Unknown
-tt0478160,Into Great Silence,Die große Stille,2005,169,Documentary,https://image.tmdb.org/t/p/w92/5Ih9VWrwwT4RiarFQxGJccIstYr.jpg
 tt0479143,Rocky Balboa,Rocky Balboa,2006,102,"Action,Drama,Sport",https://image.tmdb.org/t/p/w92/bgheMOLFVkpiZ3KhG3PGrMAPdXn.jpg
 tt0482571,The Prestige,The Prestige,2006,130,"Drama,Mystery,Sci-Fi",https://image.tmdb.org/t/p/w92/37Fr7lY4QBHsuxlLJIfTNxW6nGW.jpg
 tt0482629,The Ultimate Gift,The Ultimate Gift,2006,118,"Drama,Family,Romance",https://image.tmdb.org/t/p/w92/8BdVk1u110lwHFELTEO9HrPrIDa.jpg
 tt0482641,Yellow Brick Road,Yellow Brick Road,2005,114,Documentary,https://image.tmdb.org/t/p/w92/c0DjwX6uX5WioI41wWZBmEfJGY6.jpg
+tt0483726,Man of the Year,Man of the Year,2006,115,"Comedy,Drama,Romance",https://image.tmdb.org/t/p/w92/lWMH9B7XA6O2CC02QCxdotC8djh.jpg
 tt0486358,Jesus Camp,Jesus Camp,2006,84,Documentary,https://image.tmdb.org/t/p/w92/6ueSRBYaicEYvR2sFHVvptKNaxI.jpg
 tt0489682,Conversations with God,Conversations with God,2006,109,"Adventure,Drama",https://image.tmdb.org/t/p/w92/1JYNHj83ELXg38427fnAc02auBV.jpg
 tt0490204,Reign Over Me,Reign Over Me,2007,124,Drama,https://image.tmdb.org/t/p/w92/gGpXdHRuxlA9kmTttY5jFQb0gNd.jpg
-tt0491747,Away from Her,Away from Her,2006,110,Drama,https://image.tmdb.org/t/p/w92/mRr8QTzkXMFLbE0cTBrTh0EO33a.jpg
 tt0497116,An Inconvenient Truth,An Inconvenient Truth,2006,96,"Documentary,News",https://image.tmdb.org/t/p/w92/xgxVyBK0ZSAvWDi88KtPMBf4teo.jpg
 tt0499596,What the Bleep!?: Down the Rabbit Hole,What the Bleep!?: Down the Rabbit Hole,2006,156,"Documentary,Drama",https://image.tmdb.org/t/p/w92/vpteDvJJ4YiaiP9PhfjuaTqtQ5Z.jpg
-tt0499603,10 Items or Less,10 Items or Less,2006,82,"Comedy,Drama",https://image.tmdb.org/t/p/w92/2MBxFTeRe4m7DC49PmIkMXMjMEO.jpg
 tt0758758,Into the Wild,Into the Wild,2007,148,"Adventure,Biography,Drama",https://image.tmdb.org/t/p/w92/2MSGZEE6XZd2r4ODNziwAw7Hpw0.jpg
 tt0758794,We Are Marshall,We Are Marshall,2006,131,"Drama,Sport",https://image.tmdb.org/t/p/w92/5PSiExbg6Fm8MiPJOikBCOcZFnd.jpg
 tt0762111,Jonestown: The Life and Death of Peoples Temple,Jonestown: The Life and Death of Peoples Temple,2006,86,"Documentary,History",https://image.tmdb.org/t/p/w92/5c9aoJ1LbcAYp6cWF3rZCVtrQ1W.jpg
-tt0762121,The Nativity Story,The Nativity Story,2006,101,"Adventure,Drama,Family",https://image.tmdb.org/t/p/w92/zohczuXnvnQi2R0FHZ3sREooBWn.jpg
+tt0762121,The Nativity Story,The Nativity Story,2006,101,"Adventure,Drama,Family",https://image.tmdb.org/t/p/w92/vB55RLWmO2NYdGwL0XG30769cPO.jpg
+tt0772157,Broken English,Broken English,2007,97,"Comedy,Drama,Romance",https://image.tmdb.org/t/p/w92/nzRi0qkBsRDKIXPGJJ5BJ5WtFSv.jpg
 tt0775529,The Savages,The Savages,2007,114,"Comedy,Drama",https://image.tmdb.org/t/p/w92/nY54gSmTOmSXlQpWDB7DWp4u8a7.jpg
+tt0783233,Atonement,Atonement,2007,123,"Drama,Mystery,Romance",https://image.tmdb.org/t/p/w92/bTwkpeOMChZtxDUPtbaQg1AbE5B.jpg
 tt0800027,Feast of Love,Feast of Love,2007,97,"Drama,Romance",https://image.tmdb.org/t/p/w92/4X25kpfz6GuBS796zSXGvPOzKOD.jpg
 tt0805564,Lars and the Real Girl,Lars and the Real Girl,2007,106,"Comedy,Drama,Romance",https://image.tmdb.org/t/p/w92/nkAt4a7KIPc7Fi1BhxNHhYYbe2b.jpg
 tt0819354,10 Questions for the Dalai Lama,10 Questions for the Dalai Lama,2006,86,Documentary,https://image.tmdb.org/t/p/w92/cT1bJwoBPTEoQYJKk4CwelZRyoi.jpg
@@ -821,6 +669,3 @@ tt0988102,Darfur Now,Darfur Now,2007,98,Documentary,https://image.tmdb.org/t/p/w
 tt1018785,The Sisterhood of the Traveling Pants 2,The Sisterhood of the Traveling Pants 2,2008,119,"Comedy,Drama,Romance",https://image.tmdb.org/t/p/w92/bAdkVOD91jCHos4163qyVu1TFua.jpg
 tt1023504,Mitch Albom's For One More Day,Mitch Albom's For One More Day,2007,120,"Drama,Fantasy",https://image.tmdb.org/t/p/w92/6Po4W6w3lWw79x8Xxn97Q4C4v4q.jpg
 tt1201607,Harry Potter and the Deathly Hallows: Part 2,Harry Potter and the Deathly Hallows: Part 2,2011,130,"Adventure,Drama,Fantasy",https://image.tmdb.org/t/p/w92/alQOPmKEPHkH4BLMEla1vTNYrUr.jpg
-tt2259968,Aviator,Piloto,2016,87,"Action,Drama,Thriller",https://image.tmdb.org/t/p/w92/yYcV5jtIKPgSColm8aNRERILX9F.jpg
-tt2393730,"Far Away, So Close",Tooku de zutto soba ni iru,2013,108,"Drama,Romance",https://image.tmdb.org/t/p/w92/b226fsqwzZxfcV0sW50azCujKIs.jpg
-tt5327410,One Last Thing,One Last Thing,2018,91,Drama,https://image.tmdb.org/t/p/w92/ee7j1rBFXnAb7hEJJKSbfSAzWgt.jpg
