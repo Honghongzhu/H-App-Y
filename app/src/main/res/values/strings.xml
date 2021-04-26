@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">H-App-Y</string>
+    <string name="app_name">Meaningful Movies</string>
     <string name="button_recommend">New recommendation</string>
     <string name="button_top12">Top 12 must see</string>
     <string name="button_history">History</string>
