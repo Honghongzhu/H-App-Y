@@ -1,5 +1,8 @@
 package com.example.happy;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Movie {
     private String itemId;
     private String name;

@@ -13,12 +13,12 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHolder> {
-    private List<Movie> moviesToAdapt;
+    private List<Movie> mMovieList;
     private final LayoutInflater inflater;
     private Boolean isSaved = false;
 
-    public void setData(List<Movie> moviesToAdapt){
-        this.moviesToAdapt = moviesToAdapt;
+    public void setData(List<Movie> mMovieList){
+        this.mMovieList = mMovieList;
     }
 
     public class MovieViewHolder extends RecyclerView.ViewHolder{
@@ -38,9 +38,9 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
         }
     }
 
-    public MovieAdapter(Context context, LinkedList<Movie> moviesToAdapt){
+    public MovieAdapter(Context context, LinkedList<Movie> mMovieList){
         inflater = LayoutInflater.from(context);
-        this.moviesToAdapt = moviesToAdapt;
+        this.mMovieList = mMovieList;
     }
 
     @NonNull
@@ -52,7 +52,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
 
     @Override
     public void onBindViewHolder(@NonNull final MovieAdapter.MovieViewHolder holder, int position) {
-        final Movie movieAtPosition = moviesToAdapt.get(position);
+        final Movie movieAtPosition = mMovieList.get(position);
         holder.movieRank.setText(movieAtPosition.getItemId());
         holder.movieImage.setImageResource(movieAtPosition.getImageDrawableId());
         holder.movieText.setText(movieAtPosition.getName()); //TODO: get from database
@@ -76,8 +76,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
 
     @Override
     public int getItemCount() {
-        return moviesToAdapt.size();
+        return mMovieList.size();
     }
-
 
 }
