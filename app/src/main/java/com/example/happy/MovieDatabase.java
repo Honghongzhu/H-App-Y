@@ -67,8 +67,8 @@ public class MovieDatabase {
         ));
         movies.put(7, new Movie(
                 "7",
-                "Whale Rider (2003)",
-                R.drawable.whale_rider,
+                "Inside Out (2015)",
+                R.drawable.inside_out,
                 false
         ));
         movies.put(8, new Movie(

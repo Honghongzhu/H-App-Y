@@ -164,7 +164,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintStart_toEndOf="@id/enjoy"
+        app:layout_constraintStart_toEndOf="@id/enjoy2"
         app:layout_constraintTop_toBottomOf="@id/forrestGump"
         app:layout_constraintBottom_toBottomOf="@id/Trolls">
         <TextView
@@ -182,6 +182,89 @@
             android:numStars = "5"
             android:rating= "2.5"/>
     </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Inside_out"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Trolls">
+        <ImageView
+            android:id="@+id/photo3"
+            android:layout_width="75dp"
+            android:layout_height="100dp"
+            android:layout_margin="5dp"
+            android:contentDescription="TODO"
+            android:background="@drawable/inside_out"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/name"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/name3"
+            android:layout_width="150dp"
+            android:layout_height="75dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:text="Inside Out (2015)"
+            app:layout_constraintStart_toEndOf="@id/photo3"
+            app:layout_constraintTop_toTopOf="@id/photo3"
+            app:layout_constraintBottom_toBottomOf="@id/photo3"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/enjoy3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toEndOf="@id/Inside_out"
+        app:layout_constraintTop_toBottomOf="@id/Trolls"
+        app:layout_constraintBottom_toBottomOf="@id/Inside_out">
+        <TextView
+            android:id="@+id/enjoyment3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:textColor="@color/white"
+            android:text="Enjoyment"/>
+        <RatingBar
+            style = "?android:attr/ratingBarStyleSmall"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:numStars = "5"
+            android:rating= "5"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toEndOf="@id/enjoy3"
+        app:layout_constraintTop_toBottomOf="@id/Trolls"
+        app:layout_constraintBottom_toBottomOf="@id/Inside_out">
+        <TextView
+            android:id="@+id/meaningful3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:textColor="@color/white"
+            android:text="Meaningful"/>
+        <RatingBar
+            style = "?android:attr/ratingBarStyleSmall"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:numStars = "5"
+            android:rating= "5"/>
+    </LinearLayout>
+
 
 
 
