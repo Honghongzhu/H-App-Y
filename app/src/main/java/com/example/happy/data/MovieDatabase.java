@@ -1,6 +1,7 @@
-package com.example.happy;
+package com.example.happy.data;
 
-import java.util.ArrayList;
+import com.example.happy.R;
+
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -27,79 +28,102 @@ public class MovieDatabase {
         return savedMovies;
     }
 
+    //TODO: this function is hard-coded for usability study
+    public static LinkedList<Movie> getCreativityMovies() {
+        LinkedList<Movie> creativityMovies = new LinkedList<>();
+        for(Movie movie : movies.values()){
+            if(movie.getCs().toLowerCase().contains("creativity"))
+                creativityMovies.add(movie);
+        }
+        return creativityMovies;
+    }
+
 
     static {
         movies.put(1, new Movie(
                 "1",
                 "The Imitation Game (2014)",
                 R.drawable.the_imitation_game,
-                false
+                false,
+                "curiosity"
         ));
         movies.put(2, new Movie(
                 "2",
                 "The Public (2018)",
                 R.drawable.the_public,
-                false
+                false,
+                "love_of_learning"
         ));
         movies.put(3, new Movie(
                 "3",
                 "Forrest Gump (1994)",
                 R.drawable.forrest_gump,
-                false
+                false,
+                "self_regulation"
         ));
         movies.put(4, new Movie(
                 "4",
                 "Juno (2007)",
                 R.drawable.juno,
-                false
+                false,
+                "social_intelligence"
         ));
         movies.put(5, new Movie(
                 "5",
                 "Freedom Writers (2007)",
                 R.drawable.freedom_writers,
-                false
+                false,
+                "creativity"
         ));
         movies.put(6, new Movie(
                 "6",
-                "Rear Window (1954)",
-                R.drawable.rear_window,
-                false
+                "Return to Oz (1985)",
+                R.drawable.return_to_oz,
+                false,
+                "creativity"
         ));
         movies.put(7, new Movie(
                 "7",
                 "Inside Out (2015)",
                 R.drawable.inside_out,
-                false
+                false,
+                "love"
         ));
         movies.put(8, new Movie(
                 "8",
                 "Bird Box (2018)",
                 R.drawable.bird_box,
-                false
+                false,
+                "perseverance"
         ));
         movies.put(9, new Movie(
                 "9",
                 " Before Midnight (2013)",
                 R.drawable.before_midnight,
-                false
+                false,
+                "honesty"
         ));
         movies.put(10, new Movie(
                 "10",
                 "Trolls (2016)",
                 R.drawable.trolls,
-                false
+                false,
+                "zest"
         ));
         movies.put(11, new Movie(
                 "11",
-                "The Blind Side (2009)",
-                R.drawable.the_blind_side,
-                false
+                "The Aviator (2004)",
+                R.drawable.aviator,
+                false,
+                "creativity"
         ));
         movies.put(12, new Movie(
                 "12",
                 "Invictus (2009)",
                 R.drawable.invictus,
-                false
+                false,
+                "leadership"
+
         ));
     }
 }

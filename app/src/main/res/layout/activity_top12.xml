@@ -5,7 +5,7 @@
     android:background="@color/colorback"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Top10Activity">
+    tools:context=".screens.Top12Activity">
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rv_top12"

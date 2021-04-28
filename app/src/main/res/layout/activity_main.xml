@@ -5,7 +5,7 @@
     android:background="@color/colorback"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".screens.MainActivity">
 
     <Button
         android:id="@+id/buttonSearch"
@@ -46,7 +46,7 @@
         android:background="@color/colorPrimaryDark"
         android:textColor="@color/white"
         android:text="@string/button_top12"
-        android:onClick="launchTop10Activity"
+        android:onClick="launchTop12Activity"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/buttonRecommendCS"

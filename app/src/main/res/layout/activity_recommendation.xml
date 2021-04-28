@@ -5,7 +5,7 @@
     android:background="@color/colorback"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RecommendationActivity">
+    tools:context=".screens.RecommendationActivity">
 
     <TextView
         android:id="@+id/recommendText"

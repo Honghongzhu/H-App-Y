@@ -1,4 +1,4 @@
-package com.example.happy;
+package com.example.happy.screens;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -6,15 +6,16 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class RecommendationCSActivity extends AppCompatActivity {
+import com.example.happy.R;
+
+public class RateCSActivity extends AppCompatActivity {
     Button appreciation,bravery,creativity,curiosity,fairness,forgiveness,gratitude,honesty,hope,humility,humor,judgement,kindness,leadership,love,learning,perseverance,perspective,prudence,selfregulation,socialintelligence,spirituality,teamwork,zest;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_recommendation_cs);
-
+        setContentView(R.layout.activity_rate_cs);
         appreciation=(Button)findViewById(R.id.buttonAppreciation);
         bravery=(Button)findViewById(R.id.buttonBravery);
         creativity=(Button)findViewById(R.id.buttonCreativity);
@@ -425,11 +426,10 @@ public class RecommendationCSActivity extends AppCompatActivity {
 
         });
 
-
     }
 
-    public void launchRecommendationActivity(View view) {
-        Intent intent = new Intent(this, RecommendationActivity.class);
+    public void launchHistoryActivity(View view) {
+        Intent intent = new Intent(this, HistoryActivity.class);
         startActivity(intent);
     }
 }

@@ -1,5 +1,6 @@
-package com.example.happy;
+package com.example.happy.screens;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -7,6 +8,12 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+
+import com.example.happy.R;
+import com.example.happy.adapters.MovieAdapter;
+import com.example.happy.data.Movie;
+import com.example.happy.data.MovieDatabase;
+
 import java.util.LinkedList;
 
 public class SearchActivity extends AppCompatActivity {
@@ -43,5 +50,10 @@ public class SearchActivity extends AppCompatActivity {
                 mRecyclerView.setLayoutManager(new LinearLayoutManager(v.getContext()));
             }
         });
+    }
+
+    public void launchRateActivity(View view) {
+        Intent intent = new Intent(this, RateActivity.class);
+        startActivity(intent);
     }
 }

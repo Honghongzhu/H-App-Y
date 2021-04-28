@@ -1,11 +1,11 @@
-package com.example.happy;
+package com.example.happy.screens;
 
 import android.content.Intent;
-import android.media.Rating;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.RatingBar;
+
+import com.example.happy.R;
 
 public class RateActivity extends AppCompatActivity {
 

@@ -1,7 +1,9 @@
-package com.example.happy;
+package com.example.happy.screens;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.example.happy.R;
 
 public class HistoryActivity extends AppCompatActivity {
 

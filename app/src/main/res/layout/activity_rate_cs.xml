@@ -4,7 +4,7 @@
     android:background="@color/colorback"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RateCSActivity">
+    tools:context=".screens.RateCSActivity">
     <ScrollView
         android:id="@+id/cs_scroll_view"
         android:layout_width="fill_parent"

@@ -1,4 +1,4 @@
-package com.example.happy;
+package com.example.happy.screens;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -7,9 +7,14 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
+import com.example.happy.R;
+import com.example.happy.adapters.RankAdapter;
+import com.example.happy.data.Movie;
+import com.example.happy.data.MovieDatabase;
+
 import java.util.LinkedList;
 
-public class Top10Activity extends AppCompatActivity {
+public class Top12Activity extends AppCompatActivity {
     private LinkedList<Movie> movieList;
     private RecyclerView recyclerView;
     private RankAdapter adapter;
@@ -18,7 +23,7 @@ public class Top10Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_top10);
+        setContentView(R.layout.activity_top12);
 
         movieList = MovieDatabase.getAllMovies();
 

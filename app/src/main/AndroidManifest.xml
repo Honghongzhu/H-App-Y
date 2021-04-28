@@ -9,36 +9,36 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".screens.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Top10Activity"
+        <activity android:name=".screens.Top12Activity"
             android:label="Top 12 Must See"
-            android:parentActivityName=".MainActivity"></activity>
-        <activity android:name=".SearchActivity"
+            android:parentActivityName=".screens.MainActivity"></activity>
+        <activity android:name=".screens.SearchActivity"
             android:label="Search a Movie"
-            android:parentActivityName=".MainActivity"></activity>
-        <activity android:name=".SavedActivity"
+            android:parentActivityName=".screens.MainActivity"></activity>
+        <activity android:name=".screens.SavedActivity"
             android:label="Saved Movies"
-            android:parentActivityName=".MainActivity"></activity>
-        <activity android:name=".RecommendationCSActivity"
+            android:parentActivityName=".screens.MainActivity"></activity>
+        <activity android:name=".screens.RecommendationCSActivity"
             android:label="Recommendation"
-            android:parentActivityName=".MainActivity"></activity>
-        <activity android:name=".RecommendationActivity"
+            android:parentActivityName=".screens.MainActivity"></activity>
+        <activity android:name=".screens.RecommendationActivity"
             android:label="Recommendation"
-            android:parentActivityName=".RecommendationCSActivity"></activity>
-        <activity android:name=".RateActivity"
+            android:parentActivityName=".screens.RecommendationCSActivity"></activity>
+        <activity android:name=".screens.RateActivity"
             android:label="Rate the movie"
-            android:parentActivityName=".MainActivity"></activity>
-        <activity android:name=".RateCSActivity"
+            android:parentActivityName=".screens.MainActivity"></activity>
+        <activity android:name=".screens.RateCSActivity"
             android:label="Rate the movie"
-            android:parentActivityName=".RateActivity"></activity>
-        <activity android:name=".HistoryActivity"
+            android:parentActivityName=".screens.RateActivity"></activity>
+        <activity android:name=".screens.HistoryActivity"
             android:label="History"
-            android:parentActivityName=".MainActivity"></activity>
+            android:parentActivityName=".screens.MainActivity"></activity>
     </application>
 
 </manifest>
