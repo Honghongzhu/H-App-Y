@@ -4,20 +4,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.text.Editable;
-import android.text.TextWatcher;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ListView;
-import android.widget.SearchView;
-
-import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.List;
 
 public class SearchActivity extends AppCompatActivity {
     private RecyclerView mRecyclerView;
@@ -36,9 +26,8 @@ public class SearchActivity extends AppCompatActivity {
         allMovies = MovieDatabase.getAllMovies();
 
         mRecyclerView = findViewById(R.id.rv_search);
-        searchButton = findViewById(R.id.searchButton);
         searchText = findViewById(R.id.searchBar);
-
+        searchButton = findViewById(R.id.searchButton);
         searchButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

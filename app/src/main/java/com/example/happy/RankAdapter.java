@@ -12,7 +12,7 @@ import android.widget.TextView;
 import java.util.LinkedList;
 import java.util.List;
 
-public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHolder> {
+public class RankAdapter extends RecyclerView.Adapter<RankAdapter.RankViewHolder> {
     private List<Movie> mMovieList;
     private final LayoutInflater inflater;
     private Boolean isSaved = false;
@@ -21,38 +21,41 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
         this.mMovieList = mMovieList;
     }
 
-    public class MovieViewHolder extends RecyclerView.ViewHolder{
+    public class RankViewHolder extends RecyclerView.ViewHolder{
+        public final TextView movieRank;
         public final ImageView movieImage;
         public final TextView movieText;
         public final ImageView saveImage;
-        final MovieAdapter adapter;
+        final RankAdapter adapter;
 
-        public MovieViewHolder(View view, MovieAdapter adapter){
+        public RankViewHolder(View view, RankAdapter adapter){
             super(view);
-            movieImage = view.findViewById(R.id.moviePhoto);
-            movieText = view.findViewById(R.id.movieName);
-            saveImage = view.findViewById(R.id.movieSave);
+            movieRank = view.findViewById(R.id.rank);
+            movieImage = view.findViewById(R.id.rankedMoviePhoto);
+            movieText = view.findViewById(R.id.rankedMovieName);
+            saveImage = view.findViewById(R.id.rankedMovieSave);
             this.adapter = adapter;
         }
     }
 
-    public MovieAdapter(Context context, LinkedList<Movie> mMovieList){
+    public RankAdapter(Context context, LinkedList<Movie> mMovieList){
         inflater = LayoutInflater.from(context);
         this.mMovieList = mMovieList;
     }
 
     @NonNull
     @Override
-    public MovieAdapter.MovieViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = inflater.inflate(R.layout.movie_item, parent, false);
-        return new MovieViewHolder(view, this);
+    public RankAdapter.RankViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = inflater.inflate(R.layout.movie_item_ranked, parent, false);
+        return new RankViewHolder(view, this);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull final MovieAdapter.MovieViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull final RankAdapter.RankViewHolder holder, int position) {
         final Movie movieAtPosition = mMovieList.get(position);
+        holder.movieRank.setText(movieAtPosition.getItemId());
         holder.movieImage.setImageResource(movieAtPosition.getImageDrawableId());
-        holder.movieText.setText(movieAtPosition.getName()); //TODO: get from database
+        holder.movieText.setText(movieAtPosition.getName());
 
         holder.saveImage.setOnClickListener(new View.OnClickListener() {
             @Override

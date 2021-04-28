@@ -13,7 +13,7 @@ public class RecommendationActivity extends AppCompatActivity {
 
     private LinkedList<Movie> moviesToAdapt;
     private RecyclerView recyclerView;
-    private MovieAdapter adapter;
+    private RankAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +22,7 @@ public class RecommendationActivity extends AppCompatActivity {
 
         moviesToAdapt = MovieDatabase.getAllMovies();
         recyclerView = findViewById(R.id.rv_recommendation);
-        adapter = new MovieAdapter(this, moviesToAdapt);
+        adapter = new RankAdapter(this, moviesToAdapt);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }

@@ -5,49 +5,60 @@
     android:background="@color/colorback"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <TextView
+        android:id="@+id/rank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_marginLeft="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/moviePhotoName"/>
+
     <LinearLayout
         android:id="@+id/moviePhotoName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@id/rank"
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/moviePhoto"
+            android:id="@+id/rankedMoviePhoto"
             android:layout_width="75dp"
             android:layout_height="75dp"
             android:layout_margin="10dp"
             android:contentDescription="TODO"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/movieName"
+            app:layout_constraintEnd_toStartOf="@id/rankedMovieName"
             app:layout_constraintTop_toTopOf="parent"/>
 
         <TextView
-            android:id="@+id/movieName"
+            android:id="@+id/rankedMovieName"
             android:layout_width="150dp"
             android:layout_height="75dp"
             android:gravity="center_vertical"
             android:textColor="@color/white"
-            android:textSize="20dp"
-            app:layout_constraintStart_toEndOf="@id/moviePhoto"
-            app:layout_constraintTop_toTopOf="@id/moviePhoto"
-            app:layout_constraintBottom_toBottomOf="@id/moviePhoto"/>
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@id/rankedMoviePhoto"
+            app:layout_constraintTop_toTopOf="@id/rankedMoviePhoto"
+            app:layout_constraintBottom_toBottomOf="@id/rankedMoviePhoto"/>
     </LinearLayout>
 
     <ImageView
-        android:id="@+id/movieSave"
+        android:id="@+id/rankedMovieSave"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:background="@drawable/heart_border"
         android:contentDescription="TODO"
         app:layout_constraintStart_toEndOf="@id/moviePhotoName"
-        app:layout_constraintEnd_toStartOf="@id/buttonRate"
+        app:layout_constraintEnd_toStartOf="@id/rankedButtonRate"
         app:layout_constraintTop_toTopOf="@id/moviePhotoName"
         app:layout_constraintBottom_toBottomOf="@id/moviePhotoName"/>
 
     <Button
-        android:id="@+id/buttonRate"
+        android:id="@+id/rankedButtonRate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
