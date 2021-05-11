@@ -11,7 +11,7 @@
   <!-- Defines the path to access this Servlet -->
   <servlet-mapping>
     <servlet-name>meaningfulMoviesServlet</servlet-name>
-    <url-pattern>/movies</url-pattern>
+    <url-pattern>/query</url-pattern>
   </servlet-mapping>
 
   <welcome-file-list>

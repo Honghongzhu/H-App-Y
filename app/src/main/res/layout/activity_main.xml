@@ -82,6 +82,13 @@
         app:layout_constraintTop_toBottomOf="@id/buttonSaved"
         app:layout_constraintBottom_toBottomOf="parent"/>
 
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="311dp"
+        android:layout_height="40dp"
+        android:textColor="@color/white"
+        tools:layout_editor_absoluteX="50dp"
+        tools:layout_editor_absoluteY="30dp" />
 
 
 </android.support.constraint.ConstraintLayout>
