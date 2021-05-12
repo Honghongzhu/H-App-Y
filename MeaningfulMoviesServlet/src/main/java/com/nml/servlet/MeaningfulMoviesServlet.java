@@ -7,13 +7,11 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.Statement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
+import java.util.*;
+import javax.servlet.*;
+import javax.servlet.http.*;
 import java.io.*;
-import java.lang.Class;
 
 /**
  * Servlet implementation class MeaningfulMoviesServlet
@@ -37,56 +35,64 @@ public class MeaningfulMoviesServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		// response.getWriter().append("Served at: ").append(request.getContextPath());
 		
-		// JDBC driver name and database URL		
-	    final String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";  
-	    final String DB_URL="jdbc:mysql://localhost:3306/moviedb";
+		// JDBC driver name and database URL
+	    final String JDBC_DRIVER = "com.mysql.jdbc.Driver";  
+	    final String DB_URL="jdbc:mysql://localhost/moviedb";
 	    
 	    //  Database credentials
 	    final String USER = "moviedb";
 	    final String PASS = "s4796268";
 		
 	    // Set response content type
-	    response.setContentType("text/html");
+	    response.setContentType("application/json");
 	    PrintWriter out = response.getWriter();
-	    String title = "Database Result";
       
-	    String docType =
-         "<!doctype html public \"-//w3c//dtd html 4.0 " + "transitional//en\">\n";
-      
-	    out.println(docType +
-         "<html>\n" +
-         "<head><title>" + title + "</title></head>\n" +
-         "<body bgcolor = \"#f0f0f0\">\n" +
-         "<h1 align = \"center\">" + title + "</h1>\n");
-	    
-	    Statement stmt = null;
-	    Connection conn = null;
+//	    String docType =
+//         "<!doctype html public \"-//w3c//dtd html 4.0 " + "transitional//en\">\n";
+//      
+//	    out.println(docType +
+//         "<html>\n" +
+//         "<head><title>" + "</title></head>\n" +
+//         "<body bgcolor = \"#f0f0f0\">\n");
 	    
 	    try {
-	         // Register JDBC driver (this is currently unnecessary)
-	         //Class.forName(JDBC_DRIVER);
+	         // Register JDBC driver
+	         Class.forName("com.mysql.jdbc.Driver");
 
 	         // Open a connection
-	         conn = DriverManager.getConnection(DB_URL, USER, PASS);
+	         Connection conn = DriverManager.getConnection(DB_URL, USER, PASS);
 
 	         // Execute SQL query
-	         stmt = conn.createStatement();
+	         Statement stmt = conn.createStatement();
 	         String sql;
 	         sql = "SELECT movie_id, primary_title FROM movie_info WHERE start_year = 1939";
-
 	         ResultSet rs = stmt.executeQuery(sql);
 
+	         boolean first = true;
+	         
+	         out.print("[");
+	         
 	         // Extract data from result set
 	         while(rs.next()){
+	        	 
+	        	if (!first) {
+	        		out.print(",");
+	        	} else {
+	        		first = false;
+	        	}
+	        	
 	            //Retrieve by column name
 	            String movie_id = rs.getString("movie_id");
 	            String primary_title = rs.getString("primary_title");
 
+	            String strJson = String.format("{ \"movieId\": \"%s\", \"primaryTitle\": \"%s\"}", movie_id, primary_title);
+	            
 	            //Display values
-	            out.println(", Movie id: " + movie_id + "<br>");
-	            out.println(", Primary title: " + primary_title + "<br>");
+	            out.print(strJson);
 	         }
-	         out.println("</body></html>");
+	         
+	         out.print("]");
+//	         out.println("</body></html>");
 
 	         // Clean-up environment
 	         rs.close();
@@ -100,17 +106,17 @@ public class MeaningfulMoviesServlet extends HttpServlet {
 	         e.printStackTrace();
 	      } finally {
 	         //finally block used to close resources
-	         try {
-	            if(stmt!=null)
-	               stmt.close();
-	         } catch(SQLException se2) {
-	         } // nothing we can do
-	         try {
-	            if(conn!=null)
-	            conn.close();
-	         } catch(SQLException se) {
-	            se.printStackTrace();
-	         } //end finally try
+//	         try {
+//	            if(stmt!=null)
+//	               stmt.close();
+//	         } catch(SQLException se2) {
+//	         } // nothing we can do
+//	         try {
+//	            if(conn!=null)
+//	            conn.close();
+//	         } catch(SQLException se) {
+//	            se.printStackTrace();
+//	         } //end finally try
 	      } //end try
 	    
 		// The output stream to send data to user's browser
