@@ -1,0 +1,624 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorback"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".screens.InfoCSActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="326dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp">
+
+                <ImageView
+                    android:id="@+id/appreciation_image"
+                    android:layout_width="134.5dp"
+                    android:layout_height="130dp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/appreciation_dark"
+                    tools:layout_editor_absoluteX="40dp"
+                    tools:layout_editor_absoluteY="25dp" />
+
+                <TextView
+                    android:id="@+id/appreciation_text"
+                    android:layout_width="177dp"
+                    android:layout_height="148dp"
+                    android:gravity="center"
+                    android:text="@string/appreciation"
+                    android:textColor="@color/white"
+                    tools:layout_editor_absoluteX="153dp"
+                    tools:layout_editor_absoluteY="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp">
+
+                <ImageView
+                    android:id="@+id/bravery_image"
+                    android:layout_width="134.5dp"
+                    android:layout_height="130dp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/bravery_dark"
+                    tools:layout_editor_absoluteX="40dp"
+                    tools:layout_editor_absoluteY="25dp" />
+
+                <TextView
+                    android:id="@+id/bravery_text"
+                    android:layout_width="177dp"
+                    android:layout_height="148dp"
+                    android:gravity="center"
+                    android:text="@string/bravery"
+                    android:textColor="@color/white"
+                    tools:layout_editor_absoluteX="153dp"
+                    tools:layout_editor_absoluteY="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp">
+
+                <ImageView
+                    android:id="@+id/creativity_image"
+                    android:layout_width="134.5dp"
+                    android:layout_height="130dp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/creativity_dark"
+                    tools:layout_editor_absoluteX="40dp"
+                    tools:layout_editor_absoluteY="25dp" />
+
+                <TextView
+                    android:id="@+id/creativity_text"
+                    android:layout_width="177dp"
+                    android:layout_height="148dp"
+                    android:gravity="center"
+                    android:text="@string/creativity"
+                    android:textColor="@color/white"
+                    tools:layout_editor_absoluteX="153dp"
+                    tools:layout_editor_absoluteY="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp">
+
+                <ImageView
+                    android:id="@+id/curiosity_image"
+                    android:layout_width="134.5dp"
+                    android:layout_height="130dp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/curiosity_dark"
+                    tools:layout_editor_absoluteX="40dp"
+                    tools:layout_editor_absoluteY="25dp" />
+
+                <TextView
+                    android:id="@+id/curisoity_text"
+                    android:layout_width="177dp"
+                    android:layout_height="148dp"
+                    android:gravity="center"
+                    android:text="@string/curiosity"
+                    android:textColor="@color/white"
+                    tools:layout_editor_absoluteX="153dp"
+                    tools:layout_editor_absoluteY="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp">
+
+                <ImageView
+                    android:id="@+id/fairness_image"
+                    android:layout_width="134.5dp"
+                    android:layout_height="130dp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/fairness_dark"
+                    tools:layout_editor_absoluteX="40dp"
+                    tools:layout_editor_absoluteY="25dp" />
+
+                <TextView
+                    android:id="@+id/fairness_text"
+                    android:layout_width="177dp"
+                    android:layout_height="148dp"
+                    android:gravity="center"
+                    android:text="@string/fairness"
+                    android:textColor="@color/white"
+                    tools:layout_editor_absoluteX="153dp"
+                    tools:layout_editor_absoluteY="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp">
+
+                <ImageView
+                    android:id="@+id/forgiveness_image"
+                    android:layout_width="134.5dp"
+                    android:layout_height="130dp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/forgiveness_dark"
+                    tools:layout_editor_absoluteX="40dp"
+                    tools:layout_editor_absoluteY="25dp" />
+
+                <TextView
+                    android:id="@+id/forgiveness_text"
+                    android:layout_width="177dp"
+                    android:layout_height="148dp"
+                    android:gravity="center"
+                    android:text="@string/forgiveness"
+                    android:textColor="@color/white"
+                    tools:layout_editor_absoluteX="153dp"
+                    tools:layout_editor_absoluteY="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp">
+
+                <ImageView
+                    android:id="@+id/gratitude_image"
+                    android:layout_width="134.5dp"
+                    android:layout_height="130dp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/gratitude_dark"
+                    tools:layout_editor_absoluteX="40dp"
+                    tools:layout_editor_absoluteY="25dp" />
+
+                <TextView
+                    android:id="@+id/gratitude_text"
+                    android:layout_width="177dp"
+                    android:layout_height="148dp"
+                    android:gravity="center"
+                    android:text="@string/gratitude"
+                    android:textColor="@color/white"
+                    tools:layout_editor_absoluteX="153dp"
+                    tools:layout_editor_absoluteY="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp">
+
+                <ImageView
+                    android:id="@+id/honesty_image"
+                    android:layout_width="134.5dp"
+                    android:layout_height="130dp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/honesty_dark"
+                    tools:layout_editor_absoluteX="40dp"
+                    tools:layout_editor_absoluteY="25dp" />
+
+                <TextView
+                    android:id="@+id/honesty_text"
+                    android:layout_width="177dp"
+                    android:layout_height="148dp"
+                    android:gravity="center"
+                    android:text="@string/honesty"
+                    android:textColor="@color/white"
+                    tools:layout_editor_absoluteX="153dp"
+                    tools:layout_editor_absoluteY="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp">
+
+                <ImageView
+                    android:id="@+id/hope_image"
+                    android:layout_width="134.5dp"
+                    android:layout_height="130dp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/hope_dark"
+                    tools:layout_editor_absoluteX="40dp"
+                    tools:layout_editor_absoluteY="25dp" />
+
+                <TextView
+                    android:id="@+id/hope_text"
+                    android:layout_width="177dp"
+                    android:layout_height="148dp"
+                    android:gravity="center"
+                    android:text="@string/hope"
+                    android:textColor="@color/white"
+                    tools:layout_editor_absoluteX="153dp"
+                    tools:layout_editor_absoluteY="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp">
+
+                <ImageView
+                    android:id="@+id/humility_image"
+                    android:layout_width="134.5dp"
+                    android:layout_height="130dp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/humility_dark"
+                    tools:layout_editor_absoluteX="40dp"
+                    tools:layout_editor_absoluteY="25dp" />
+
+                <TextView
+                    android:id="@+id/humility_text"
+                    android:layout_width="177dp"
+                    android:layout_height="148dp"
+                    android:gravity="center"
+                    android:text="@string/humility"
+                    android:textColor="@color/white"
+                    tools:layout_editor_absoluteX="153dp"
+                    tools:layout_editor_absoluteY="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp">
+
+                <ImageView
+                    android:id="@+id/humor_image"
+                    android:layout_width="134.5dp"
+                    android:layout_height="130dp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/humor_dark"
+                    tools:layout_editor_absoluteX="40dp"
+                    tools:layout_editor_absoluteY="25dp" />
+
+                <TextView
+                    android:id="@+id/humor_text"
+                    android:layout_width="177dp"
+                    android:layout_height="148dp"
+                    android:gravity="center"
+                    android:text="@string/humor"
+                    android:textColor="@color/white"
+                    tools:layout_editor_absoluteX="153dp"
+                    tools:layout_editor_absoluteY="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp">
+
+                <ImageView
+                    android:id="@+id/judgement_image"
+                    android:layout_width="134.5dp"
+                    android:layout_height="130dp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/judgement_dark"
+                    tools:layout_editor_absoluteX="40dp"
+                    tools:layout_editor_absoluteY="25dp" />
+
+                <TextView
+                    android:id="@+id/judgement_text"
+                    android:layout_width="177dp"
+                    android:layout_height="148dp"
+                    android:gravity="center"
+                    android:text="@string/judgement"
+                    android:textColor="@color/white"
+                    tools:layout_editor_absoluteX="153dp"
+                    tools:layout_editor_absoluteY="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp">
+
+                <ImageView
+                    android:id="@+id/kindness_image"
+                    android:layout_width="134.5dp"
+                    android:layout_height="130dp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/kindness_dark"
+                    tools:layout_editor_absoluteX="40dp"
+                    tools:layout_editor_absoluteY="25dp" />
+
+                <TextView
+                    android:id="@+id/kindness_text"
+                    android:layout_width="177dp"
+                    android:layout_height="148dp"
+                    android:gravity="center"
+                    android:text="@string/kindness"
+                    android:textColor="@color/white"
+                    tools:layout_editor_absoluteX="153dp"
+                    tools:layout_editor_absoluteY="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp">
+
+                <ImageView
+                    android:id="@+id/leadership_image"
+                    android:layout_width="134.5dp"
+                    android:layout_height="130dp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/leadership_dark"
+                    tools:layout_editor_absoluteX="40dp"
+                    tools:layout_editor_absoluteY="25dp" />
+
+                <TextView
+                    android:id="@+id/leadership_text"
+                    android:layout_width="177dp"
+                    android:layout_height="148dp"
+                    android:gravity="center"
+                    android:text="@string/leadership"
+                    android:textColor="@color/white"
+                    tools:layout_editor_absoluteX="153dp"
+                    tools:layout_editor_absoluteY="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp">
+
+                <ImageView
+                    android:id="@+id/love_image"
+                    android:layout_width="134.5dp"
+                    android:layout_height="130dp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/love_dark"
+                    tools:layout_editor_absoluteX="40dp"
+                    tools:layout_editor_absoluteY="25dp" />
+
+                <TextView
+                    android:id="@+id/love_text"
+                    android:layout_width="177dp"
+                    android:layout_height="148dp"
+                    android:gravity="center"
+                    android:text="@string/love"
+                    android:textColor="@color/white"
+                    tools:layout_editor_absoluteX="153dp"
+                    tools:layout_editor_absoluteY="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp">
+
+                <ImageView
+                    android:id="@+id/learning_image"
+                    android:layout_width="134.5dp"
+                    android:layout_height="130dp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/lol_dark"
+                    tools:layout_editor_absoluteX="40dp"
+                    tools:layout_editor_absoluteY="25dp" />
+
+                <TextView
+                    android:id="@+id/learning_text"
+                    android:layout_width="177dp"
+                    android:layout_height="148dp"
+                    android:gravity="center"
+                    android:text="@string/learning"
+                    android:textColor="@color/white"
+                    tools:layout_editor_absoluteX="153dp"
+                    tools:layout_editor_absoluteY="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp">
+
+                <ImageView
+                    android:id="@+id/perseverance_image"
+                    android:layout_width="134.5dp"
+                    android:layout_height="130dp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/perseverance_dark"
+                    tools:layout_editor_absoluteX="40dp"
+                    tools:layout_editor_absoluteY="25dp" />
+
+                <TextView
+                    android:id="@+id/perseverance_text"
+                    android:layout_width="177dp"
+                    android:layout_height="148dp"
+                    android:gravity="center"
+                    android:text="@string/perseverance"
+                    android:textColor="@color/white"
+                    tools:layout_editor_absoluteX="153dp"
+                    tools:layout_editor_absoluteY="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp">
+
+                <ImageView
+                    android:id="@+id/perspective_image"
+                    android:layout_width="134.5dp"
+                    android:layout_height="130dp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/perspective_dark"
+                    tools:layout_editor_absoluteX="40dp"
+                    tools:layout_editor_absoluteY="25dp" />
+
+                <TextView
+                    android:id="@+id/perspective_text"
+                    android:layout_width="177dp"
+                    android:layout_height="148dp"
+                    android:gravity="center"
+                    android:text="@string/perspective"
+                    android:textColor="@color/white"
+                    tools:layout_editor_absoluteX="153dp"
+                    tools:layout_editor_absoluteY="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp">
+
+                <ImageView
+                    android:id="@+id/prudence_image"
+                    android:layout_width="134.5dp"
+                    android:layout_height="130dp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/prudence_dark"
+                    tools:layout_editor_absoluteX="40dp"
+                    tools:layout_editor_absoluteY="25dp" />
+
+                <TextView
+                    android:id="@+id/prudence_text"
+                    android:layout_width="177dp"
+                    android:layout_height="148dp"
+                    android:gravity="center"
+                    android:text="@string/prudence"
+                    android:textColor="@color/white"
+                    tools:layout_editor_absoluteX="153dp"
+                    tools:layout_editor_absoluteY="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp">
+
+                <ImageView
+                    android:id="@+id/self_regulation_image"
+                    android:layout_width="134.5dp"
+                    android:layout_height="130dp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/self_dark"
+                    tools:layout_editor_absoluteX="40dp"
+                    tools:layout_editor_absoluteY="25dp" />
+
+                <TextView
+                    android:id="@+id/self_regulation_text"
+                    android:layout_width="177dp"
+                    android:layout_height="148dp"
+                    android:gravity="center"
+                    android:text="@string/self_regulation"
+                    android:textColor="@color/white"
+                    tools:layout_editor_absoluteX="153dp"
+                    tools:layout_editor_absoluteY="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp">
+
+                <ImageView
+                    android:id="@+id/social_intelligence_image"
+                    android:layout_width="134.5dp"
+                    android:layout_height="130dp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/social_dark"
+                    tools:layout_editor_absoluteX="40dp"
+                    tools:layout_editor_absoluteY="25dp" />
+
+                <TextView
+                    android:id="@+id/social_intelligence_text"
+                    android:layout_width="177dp"
+                    android:layout_height="148dp"
+                    android:gravity="center"
+                    android:text="@string/social_intelligence"
+                    android:textColor="@color/white"
+                    tools:layout_editor_absoluteX="153dp"
+                    tools:layout_editor_absoluteY="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp">
+
+                <ImageView
+                    android:id="@+id/spirituality_image"
+                    android:layout_width="134.5dp"
+                    android:layout_height="130dp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/spirituality_dark"
+                    tools:layout_editor_absoluteX="40dp"
+                    tools:layout_editor_absoluteY="25dp" />
+
+                <TextView
+                    android:id="@+id/spirituality_text"
+                    android:layout_width="177dp"
+                    android:layout_height="148dp"
+                    android:gravity="center"
+                    android:text="@string/spirituality"
+                    android:textColor="@color/white"
+                    tools:layout_editor_absoluteX="153dp"
+                    tools:layout_editor_absoluteY="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp">
+
+                <ImageView
+                    android:id="@+id/teamwork_image"
+                    android:layout_width="134.5dp"
+                    android:layout_height="130dp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/teamwork_dark"
+                    tools:layout_editor_absoluteX="40dp"
+                    tools:layout_editor_absoluteY="25dp" />
+
+                <TextView
+                    android:id="@+id/teamwork_text"
+                    android:layout_width="177dp"
+                    android:layout_height="148dp"
+                    android:gravity="center"
+                    android:text="@string/teamwork"
+                    android:textColor="@color/white"
+                    tools:layout_editor_absoluteX="153dp"
+                    tools:layout_editor_absoluteY="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="375dp"
+                android:layout_height="150dp"
+                android:layout_margin="5dp">
+
+                <ImageView
+                    android:id="@+id/zest_image"
+                    android:layout_width="134.5dp"
+                    android:layout_height="130dp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/zest_dark"
+                    tools:layout_editor_absoluteX="40dp"
+                    tools:layout_editor_absoluteY="25dp" />
+
+                <TextView
+                    android:id="@+id/zest_text"
+                    android:layout_width="177dp"
+                    android:layout_height="148dp"
+                    android:gravity="center"
+                    android:text="@string/zest"
+                    android:textColor="@color/white"
+                    tools:layout_editor_absoluteX="153dp"
+                    tools:layout_editor_absoluteY="5dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</android.support.constraint.ConstraintLayout>
