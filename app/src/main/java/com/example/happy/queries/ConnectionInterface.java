@@ -8,6 +8,6 @@ import retrofit2.http.Body;
 public interface ConnectionInterface {
 
     @POST("query")
+    //Call<List<MovieInfo>> getMovieInfo(@Body QueryObject queryObject);
     Call<List<MovieInfo>> getMovieInfo(@Body QueryObject queryObject);
-
 }

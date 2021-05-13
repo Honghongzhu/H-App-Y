@@ -29,53 +29,6 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView result;
 
-    public void getQuery(QueryObject queryObject) {
-
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://elara.science.ru.nl/MeaningfulMovies1.7/")
-                //.addConverterFactory(ScalarsConverterFactory.create())
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
-
-        ConnectionInterface connectionInterface = retrofit.create(ConnectionInterface.class);
-
-        Call<List<MovieInfo>> call = connectionInterface.getMovieInfo(queryObject);
-
-        call.enqueue(new Callback<List<MovieInfo>>() {
-            @Override
-            public void onResponse(Call<List<MovieInfo>> call, Response<List<MovieInfo>> response) {
-
-                if (!response.isSuccessful()){
-                    Toast.makeText(MainActivity.this, "Code: " + response.code(), Toast.LENGTH_SHORT).show();
-                    return;
-                }
-
-                List<MovieInfo> results = response.body();
-
-                String content = "";
-
-                for (MovieInfo result : results) {
-
-                    content += "ID: " + result.getMovieId() + "\n";
-                    content += "primaryTitle: " + result.getPrimaryTitle()+ "\n";
-                    content += "originalTitle: " + result.getOriginalTitle() + "\n";
-                    content += "year: " + result.getStartYear() + "\n";
-                    content += "runtime: " + result.getRuntime() + "\n";
-                    content += "genres: " + result.getGenres() + "\n";
-                    content += "posterUrl: " + result.getPosterUrl() + "\n\n";
-                }
-
-                Toast.makeText(MainActivity.this, content, Toast.LENGTH_SHORT).show();
-
-            }
-
-            @Override
-            public void onFailure(Call<List<MovieInfo>> call, Throwable t) {
-                Toast.makeText(MainActivity.this, t.getMessage(), Toast.LENGTH_SHORT).show();
-            }
-        });
-    }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -83,9 +36,15 @@ public class MainActivity extends AppCompatActivity {
 
         TextView textViewResult = findViewById(R.id.result);
 
-        QueryObject query = new QueryObject("movie_id, primary_title, original_title, start_year, runtime, genres, poster_url", "movie_info");
+        QueryObject query;
+        query = new QueryObject(
+                "*",
+                "movie_info",
+                "",
+                ""
+        );
 
-        getQuery(query);
+        query.getQuery(MainActivity.this);
 
     }
 
