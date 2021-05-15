@@ -1,8 +1,6 @@
 package com.example.happy.queries;
 
 public class MovieInfo {
-    private String columns;
-    private String table;
 
     private String movieId;
     private String primaryTitle;
@@ -27,6 +25,7 @@ public class MovieInfo {
     public String getStartYear() {
         return startYear;
     }
+
 
     public String getRuntime() {
         return runtime;

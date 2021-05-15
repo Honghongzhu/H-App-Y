@@ -31,7 +31,7 @@ public class QueryObject {
     public void getQuery(final Context screen) {
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://elara.science.ru.nl/MeaningfulMovies1.23/")
+                .baseUrl("http://elara.science.ru.nl/MeaningfulMovies1.49/")
                 //.addConverterFactory(ScalarsConverterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
@@ -48,16 +48,6 @@ public class QueryObject {
                     return;
                 }
 
-                List<MovieInfo> result = response.body();
-
-                Toast.makeText(screen, "id:" + result.get(0).getMovieId()
-                        + "title:" + result.get(0).getPrimaryTitle()
-                        + "runtime:" + result.get(0).getRuntime()
-                        + "genres:" + result.get(0).getGenres()
-                        , Toast.LENGTH_LONG).show();
-
-
-                /*
                 List<MovieInfo> results = response.body();
 
                 String content = "";
@@ -74,7 +64,7 @@ public class QueryObject {
                 }
 
                 Toast.makeText(screen, content, Toast.LENGTH_LONG).show();
-                */
+
             }
 
             @Override
