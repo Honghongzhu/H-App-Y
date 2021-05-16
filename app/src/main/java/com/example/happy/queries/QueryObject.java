@@ -31,8 +31,7 @@ public class QueryObject {
     public void getQuery(final Context screen) {
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://elara.science.ru.nl/MeaningfulMovies1.49/")
-                //.addConverterFactory(ScalarsConverterFactory.create())
+                .baseUrl("http://elara.science.ru.nl/MeaningfulMovies1.61/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 

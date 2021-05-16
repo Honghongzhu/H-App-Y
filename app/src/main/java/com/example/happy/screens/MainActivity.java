@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
                 "*",
                 "movie_info",
                 "WHERE",
-                "start_year = 2010"
+                "start_year=2010"
         );
 
         query.getQuery(MainActivity.this);
