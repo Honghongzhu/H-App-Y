@@ -17,6 +17,7 @@ public class RecommendationCSActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recommendation_cs);
 
+
         appreciation=(Button)findViewById(R.id.buttonAppreciation);
         bravery=(Button)findViewById(R.id.buttonBravery);
         creativity=(Button)findViewById(R.id.buttonCreativity);
@@ -432,6 +433,11 @@ public class RecommendationCSActivity extends AppCompatActivity {
 
     public void launchRecommendationActivity(View view) {
         Intent intent = new Intent(this, RecommendationActivity.class);
+        startActivity(intent);
+    }
+
+    public void launchInfoCSActivity(View view) {
+        Intent intent = new Intent(this, InfoCSActivity.class);
         startActivity(intent);
     }
 }
