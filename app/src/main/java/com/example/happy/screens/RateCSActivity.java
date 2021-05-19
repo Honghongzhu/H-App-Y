@@ -432,4 +432,9 @@ public class RateCSActivity extends AppCompatActivity {
         Intent intent = new Intent(this, HistoryActivity.class);
         startActivity(intent);
     }
+
+    public void launchInfoCSActivity(View view) {
+        Intent intent = new Intent(this, InfoCSActivity.class);
+        startActivity(intent);
+    }
 }

@@ -18,30 +18,46 @@
             <RelativeLayout
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent">
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="80dp"
-                    android:orientation="vertical"
-                    android:gravity="center">
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
                     <TextView
                         android:id="@+id/rateCSText"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:gravity="center_horizontal"
                         android:layout_margin="10dp"
-                        android:textSize="22sp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/rate_cs"
                         android:textColor="@color/white"
-                        android:text="@string/rate_cs"/>
+                        android:textSize="22sp" />
+
+                    <Button
+                        android:id="@+id/buttonInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorPrimaryDark"
+                        android:onClick="launchInfoCSActivity"
+                        android:text="@string/info"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+
+
                 </LinearLayout>
+
                 <LinearLayout
                     android:id="@+id/cs_grid"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="80dp"
+                    android:layout_marginTop="120dp"
                     android:orientation="vertical"
                     android:layout_marginLeft="1dp"
                     android:layout_marginRight="1dp"
                     >
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="135dp"
@@ -81,6 +97,7 @@
                                     android:layout_width="134.5dp"
                                     android:layout_height="130dp"
                                     android:background="@drawable/bravery_dark" />
+
                             </RelativeLayout>
 
                         </android.support.v7.widget.CardView>
@@ -546,21 +563,25 @@
                     android:layout_below="@id/cs_grid"
                     android:orientation="vertical"
                     android:gravity="center">
-                    <Button
-                        android:id="@+id/buttonConfirm"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="15sp"
-                        android:background="@color/colorPrimaryDark"
-                        android:textColor="@color/white"
-                        android:text="@string/confirm"
-                        android:onClick="launchHistoryActivity"
-                        />
+
 
                 </LinearLayout>
             </RelativeLayout>
         </LinearLayout>
     </ScrollView>
+
+    <Button
+        android:id="@+id/buttonConfirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimaryDark"
+        android:onClick="launchRecommendationActivity"
+        android:text="@string/confirm"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+
 
 </RelativeLayout>
 
