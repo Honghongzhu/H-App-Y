@@ -577,7 +577,7 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         android:background="@color/colorPrimaryDark"
-        android:onClick="launchRecommendationActivity"
+        android:onClick="launchHistoryActivity"
         android:text="@string/confirm"
         android:textColor="@color/white"
         android:textSize="15sp" />
