@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
             List<MovieInfo> result = Utils.executeQuery(
                     MovieInfo.class,
                     MainActivity.this,
+                    "select",
                     "*",
                     "movie_info",
                     "where",

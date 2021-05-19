@@ -7,13 +7,13 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.Statement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+
+import java.sql.*;
+import java.util.*;
+import java.util.stream.Collectors;
+import javax.servlet.*;
+import javax.servlet.http.*;
 import java.io.*;
-import java.lang.Class;
 
 /**
  * Servlet implementation class MeaningfulMoviesServlet
@@ -35,11 +35,9 @@ public class MeaningfulMoviesServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		// response.getWriter().append("Served at: ").append(request.getContextPath());
 		
-		// JDBC driver name and database URL		
-	    final String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";  
-	    final String DB_URL="jdbc:mysql://localhost:3306/moviedb";
+		//Database URL
+	    final String DB_URL="jdbc:mysql://localhost/moviedb";
 	    
 	    //  Database credentials
 	    final String USER = "moviedb";
@@ -48,56 +46,101 @@ public class MeaningfulMoviesServlet extends HttpServlet {
 	    // Set response content type
 	    response.setContentType("text/html");
 	    PrintWriter out = response.getWriter();
-	    String title = "Database Result";
-      
-	    String docType =
-         "<!doctype html public \"-//w3c//dtd html 4.0 " + "transitional//en\">\n";
-      
-	    out.println(docType +
-         "<html>\n" +
-         "<head><title>" + title + "</title></head>\n" +
-         "<body bgcolor = \"#f0f0f0\">\n" +
-         "<h1 align = \"center\">" + title + "</h1>\n");
 	    
-	    Statement stmt = null;
 	    Connection conn = null;
+	    Statement stmt = null;
+	    
+	    String requestBody = request.getReader().lines().collect(Collectors.joining(System.lineSeparator()));
+	    
+	    String STATE_DELIM = "\"statement\":";
+	    String COL_DELIM = "\"columns\":";
+	    String COND_DELIM = "\"condition\":";
+	    String TABLE_DELIM = "\"table\":";
+	    String WHERE_DELIM = "\"whereStatement\":";
+	    
+	    // I DO THIS BECAUSE WE CANNOT USE GSON PACKAGE AS IT IS NOT PRESENT IN RUNTIME (FRANK'S TOMCAT)  
+	    String statement = requestBody.substring(requestBody.indexOf(STATE_DELIM)+STATE_DELIM.length(), requestBody.indexOf(COL_DELIM)-2).replace("\"", "");
+	    String columns = requestBody.substring(requestBody.indexOf(COL_DELIM)+COL_DELIM.length(), requestBody.indexOf(TABLE_DELIM)-2).replace("\"", "");
+	    String table = requestBody.substring(requestBody.indexOf(TABLE_DELIM)+TABLE_DELIM.length(), requestBody.indexOf(WHERE_DELIM)-2).replace("\"", "");
+	    String whereStatement = requestBody.substring(requestBody.indexOf(WHERE_DELIM)+WHERE_DELIM.length(), requestBody.indexOf(COND_DELIM)-2).replace("\"", "");
+	    String condition = requestBody.substring(requestBody.indexOf(COND_DELIM)+COND_DELIM.length(), requestBody.length()-1).replace("\"", "");   
 	    
 	    try {
-	         // Register JDBC driver (this is currently unnecessary)
-	         //Class.forName(JDBC_DRIVER);
+	         // Register JDBC driver
+	    	Class.forName("com.mysql.jdbc.Driver");
 
 	         // Open a connection
 	         conn = DriverManager.getConnection(DB_URL, USER, PASS);
-
-	         // Execute SQL query
-	         stmt = conn.createStatement();
-	         String sql;
-	         sql = "SELECT movie_id, primary_title FROM movie_info WHERE start_year = 1939";
-
+	         
+	         String sql = "<statement> <columns> FROM <table> <where> <condition>";
+	         
+	         sql = sql.replace("<statement>", statement);
+	         sql = sql.replace("<columns>", columns);
+	         sql = sql.replace("<table>", table);
+	         sql = sql.replace("<where>", whereStatement);
+	         sql = sql.replace("<condition>", condition);
+	         sql = sql.trim();
+    	 
+        	 stmt = conn.createStatement();
+        	 
 	         ResultSet rs = stmt.executeQuery(sql);
-
+	         
+	         boolean first = true;
+	         
+	         String output = "";
+	         output += "[";
+	         
 	         // Extract data from result set
 	         while(rs.next()){
-	            //Retrieve by column name
-	            String movie_id = rs.getString("movie_id");
-	            String primary_title = rs.getString("primary_title");
+	        	 
+	        	if (first) {
+	        		first = false;
+	        	} else {
+	        		output += ",";
+	        	}
+	        	
+	        	//Retrieve by column name
+	            String movieId = rs.getString("movie_id");
+	            String primaryTitle = rs.getString("primary_title");
+	            String originalTitle = rs.getString("original_title");
+	            String startYear = rs.getString("start_year");
+	            String runtime = rs.getString("runtime");
+	            String genres = rs.getString("genres");
+	            String posterUrl = rs.getString("poster_url");
 
-	            //Display values
-	            out.println(", Movie id: " + movie_id + "<br>");
-	            out.println(", Primary title: " + primary_title + "<br>");
+	            output += String.format(
+	            		"{ movieId: %s,"
+	            		+ " primaryTitle: \"%s\","
+	            		+ " originalTitle: \"%s\","
+	            		+ " startYear: %s,"
+	            		+ " runtime: %s,"
+	            		+ " genres: \"%s\","
+	            		+ " posterUrl: \"%s\""
+	            		+ " }", 
+	            		movieId, 
+	            		primaryTitle,
+	            		originalTitle,
+	            		startYear,
+	            		runtime,
+	            		genres,
+	            		posterUrl);
 	         }
-	         out.println("</body></html>");
+	         
+	         output += "]";
+	         
+	         out.print(output);
 
 	         // Clean-up environment
 	         rs.close();
 	         stmt.close();
-	         conn.close();
+	         conn.close();         
+	      
 	      } catch(SQLException se) {
 	         //Handle errors for JDBC
-	         se.printStackTrace();
+	         out.println(se + " FIRST");
 	      } catch(Exception e) {
 	         //Handle errors for Class.forName
-	         e.printStackTrace();
+	         out.println(e);
 	      } finally {
 	         //finally block used to close resources
 	         try {
@@ -109,23 +152,9 @@ public class MeaningfulMoviesServlet extends HttpServlet {
 	            if(conn!=null)
 	            conn.close();
 	         } catch(SQLException se) {
-	            se.printStackTrace();
+	        	 out.println(se + " SECOND");
 	         } //end finally try
-	      } //end try
-	    
-		// The output stream to send data to user's browser
-//		ServletOutputStream out = response.getOutputStream();
-//        
-//		out.println("<html>");
-//		out.println("<head><title>Hello Servlet</title></head>");
-//        
-//		out.println("<body>");
-//		out.println("<h3>Hello World</h3>");
-//		out.println("This is my first Servlet");
-//		out.println("</body>");
-//		out.println("<html>");
-		
-		
+	      } //end try 
 	}
 
 	/**
