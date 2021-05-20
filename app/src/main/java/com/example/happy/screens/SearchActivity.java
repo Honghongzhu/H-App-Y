@@ -8,13 +8,18 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.happy.R;
 import com.example.happy.adapters.MovieAdapter;
 import com.example.happy.data.Movie;
 import com.example.happy.data.MovieDatabase;
+import com.example.happy.queries.Users;
+import com.example.happy.queries.Utils;
 
 import java.util.LinkedList;
+import java.util.List;
+import java.util.concurrent.ExecutionException;
 
 public class SearchActivity extends AppCompatActivity {
     private RecyclerView mRecyclerView;
@@ -29,6 +34,26 @@ public class SearchActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
+
+        try {
+            List<Users> result = Utils.executeQuery(
+                    Users.class,
+                    SearchActivity.this,
+                    "select",
+                    "*",
+                    "users",
+                    "where",
+                    "user_id=0"
+            );
+
+            if(result.toString() != "[]"){
+                Toast.makeText(SearchActivity.this, result.get(0).getAndroidId(), Toast.LENGTH_LONG).show();
+            }
+        } catch (ExecutionException e) {
+            Toast.makeText(SearchActivity.this, e.toString(), Toast.LENGTH_LONG).show();
+        } catch (InterruptedException e) {
+            Toast.makeText(SearchActivity.this, e.toString(), Toast.LENGTH_LONG).show();
+        }
 
         allMovies = MovieDatabase.getAllMovies();
 

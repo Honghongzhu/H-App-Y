@@ -23,25 +23,25 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        try {
-            List<Users> result = Utils.executeQuery(
-                    Users.class,
-                    MainActivity.this,
-                    "select",
-                    "*",
-                    "users",
-                    "where",
-                    "user_id=0"
-            );
-
-            if(result.toString() != "[]"){
-                Toast.makeText(MainActivity.this, result.get(0).getAndroidId(), Toast.LENGTH_LONG).show();
-            }
-        } catch (ExecutionException e) {
-            Toast.makeText(MainActivity.this, e.toString(), Toast.LENGTH_LONG).show();
-        } catch (InterruptedException e) {
-            Toast.makeText(MainActivity.this, e.toString(), Toast.LENGTH_LONG).show();
-        }
+//        try {
+//            List<Users> result = Utils.executeQuery(
+//                    Users.class,
+//                    MainActivity.this,
+//                    "select",
+//                    "*",
+//                    "users",
+//                    "where",
+//                    "user_id=0"
+//            );
+//
+//            if(result.toString() != "[]"){
+//                Toast.makeText(MainActivity.this, result.get(0).getAndroidId(), Toast.LENGTH_LONG).show();
+//            }
+//        } catch (ExecutionException e) {
+//            Toast.makeText(MainActivity.this, e.toString(), Toast.LENGTH_LONG).show();
+//        } catch (InterruptedException e) {
+//            Toast.makeText(MainActivity.this, e.toString(), Toast.LENGTH_LONG).show();
+//        }
 
     }
 
