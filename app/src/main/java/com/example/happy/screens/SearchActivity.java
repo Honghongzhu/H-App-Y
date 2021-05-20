@@ -12,9 +12,7 @@ import android.widget.Toast;
 
 import com.example.happy.R;
 import com.example.happy.adapters.MovieAdapter;
-import com.example.happy.data.Movie;
-import com.example.happy.data.MovieDatabase;
-import com.example.happy.queries.Users;
+import com.example.happy.queries.MovieInfo;
 import com.example.happy.queries.Utils;
 
 import java.util.LinkedList;
@@ -23,57 +21,49 @@ import java.util.concurrent.ExecutionException;
 
 public class SearchActivity extends AppCompatActivity {
     private RecyclerView mRecyclerView;
-    private LinkedList<Movie> allMovies;
-    private LinkedList<Movie> foundMovies;
+    private LinkedList<MovieInfo> foundMovies;
     private Button searchButton;
     private EditText searchText;
     private String search;
     private MovieAdapter mAdapter;
+    private List<MovieInfo> allMovies;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
 
+        mRecyclerView = findViewById(R.id.rv_search);
+        searchText = findViewById(R.id.searchBar);
+        searchButton = findViewById(R.id.searchButton);
+
         try {
-            List<Users> result = Utils.executeQuery(
-                    Users.class,
+            allMovies = Utils.executeQuery(
+                    MovieInfo.class,
                     SearchActivity.this,
                     "select",
                     "*",
-                    "users",
-                    "where",
-                    "user_id=0"
+                    "movie_info",
+                    "",
+                    ""
             );
-
-            if(result.toString() != "[]"){
-                Toast.makeText(SearchActivity.this, result.get(0).getAndroidId(), Toast.LENGTH_LONG).show();
-            }
         } catch (ExecutionException e) {
             Toast.makeText(SearchActivity.this, e.toString(), Toast.LENGTH_LONG).show();
         } catch (InterruptedException e) {
             Toast.makeText(SearchActivity.this, e.toString(), Toast.LENGTH_LONG).show();
         }
 
-        allMovies = MovieDatabase.getAllMovies();
-
-        mRecyclerView = findViewById(R.id.rv_search);
-        searchText = findViewById(R.id.searchBar);
-        searchButton = findViewById(R.id.searchButton);
-        searchButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                foundMovies = new LinkedList<>();
-                search = searchText.getText().toString();
-                for(Movie movie : allMovies){
-                    if(movie.getName().toLowerCase().contains(search.toLowerCase())){
-                        foundMovies.add(movie);
-                    }
+        searchButton.setOnClickListener(v -> {
+            foundMovies = new LinkedList<>();
+            search = searchText.getText().toString();
+            for (MovieInfo movie : allMovies){
+                if(movie.getPrimaryTitle().toLowerCase().contains(search.toLowerCase())){
+                    foundMovies.add(movie);
                 }
-                mAdapter = new MovieAdapter(v.getContext(), foundMovies);
-                mRecyclerView.setAdapter(mAdapter);
-                mRecyclerView.setLayoutManager(new LinearLayoutManager(v.getContext()));
             }
+            mAdapter = new MovieAdapter(v.getContext(), foundMovies);
+            mRecyclerView.setAdapter(mAdapter);
+            mRecyclerView.setLayoutManager(new LinearLayoutManager(v.getContext()));
         });
     }
 

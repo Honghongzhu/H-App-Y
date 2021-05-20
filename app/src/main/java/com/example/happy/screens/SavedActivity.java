@@ -11,11 +11,12 @@ import com.example.happy.R;
 import com.example.happy.adapters.MovieAdapter;
 import com.example.happy.data.Movie;
 import com.example.happy.data.MovieDatabase;
+import com.example.happy.queries.MovieInfo;
 
 import java.util.LinkedList;
 
 public class SavedActivity extends AppCompatActivity {
-    private LinkedList<Movie> moviesSaved;
+    private LinkedList<MovieInfo> moviesSaved;
     private RecyclerView recyclerView;
     private MovieAdapter adapter;
 
@@ -24,12 +25,12 @@ public class SavedActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_saved);
 
-        moviesSaved = MovieDatabase.getSavedMovies();
+//        moviesSaved = MovieDatabase.getSavedMovies();
 
-        recyclerView = findViewById(R.id.rv_saved);
-        adapter = new MovieAdapter(this, moviesSaved);
-        recyclerView.setAdapter(adapter);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+//        recyclerView = findViewById(R.id.rv_saved);
+//        adapter = new MovieAdapter(this, moviesSaved);
+//        recyclerView.setAdapter(adapter);
+//        recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
 
     public void launchRateActivity(View view) {

@@ -12,12 +12,13 @@ import com.example.happy.adapters.MovieAdapter;
 import com.example.happy.adapters.RankAdapter;
 import com.example.happy.data.Movie;
 import com.example.happy.data.MovieDatabase;
+import com.example.happy.queries.MovieInfo;
 
 import java.util.LinkedList;
 
 public class RecommendationActivity extends AppCompatActivity {
 
-    private LinkedList<Movie> moviesToAdapt;
+    private LinkedList<MovieInfo> moviesToAdapt;
     private RecyclerView recyclerView;
     private MovieAdapter adapter;
 
@@ -26,11 +27,11 @@ public class RecommendationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recommendation);
 
-        moviesToAdapt = MovieDatabase.getCreativityMovies();
-        recyclerView = findViewById(R.id.rv_recommendation);
-        adapter = new MovieAdapter(this, moviesToAdapt);
-        recyclerView.setAdapter(adapter);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+//        moviesToAdapt = MovieDatabase.getCreativityMovies();
+//        recyclerView = findViewById(R.id.rv_recommendation);
+//        adapter = new MovieAdapter(this, moviesToAdapt);
+//        recyclerView.setAdapter(adapter);
+//        recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
 
     public void launchRateActivity(View view) {
