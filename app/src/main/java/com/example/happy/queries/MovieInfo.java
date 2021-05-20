@@ -26,7 +26,6 @@ public class MovieInfo {
         return startYear;
     }
 
-
     public String getRuntime() {
         return runtime;
     }

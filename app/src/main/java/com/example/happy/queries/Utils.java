@@ -27,20 +27,20 @@ class Result <currentClass> implements Callable<List<currentClass>> {
 
     private Class classType;
     private Activity currentActivity;
-    private String statement;
+    private String firstStatement;
     private String columns;
     private String table;
-    private String whereStatement;
+    private String secondStatement;
     private String condition;
 
     // Using a constructor is the only way to pass arguments to this class
     public Result(Class classType, Activity currentActivity, String statement, String columns, String table, String whereStatement, String condition) {
         this.classType = classType;
         this.currentActivity = currentActivity;
-        this.statement = statement;
+        this.firstStatement = statement;
         this.columns = columns;
         this.table = table;
-        this.whereStatement = whereStatement;
+        this.secondStatement = whereStatement;
         this.condition = condition;
     }
 
@@ -51,7 +51,7 @@ class Result <currentClass> implements Callable<List<currentClass>> {
         try{
             URL url = null;
             try {
-                url = new URL("http://elara.science.ru.nl/MeaningfulMovies1.65/query");
+                url = new URL("http://elara.science.ru.nl/MeaningfulMovies2.22/query");
             } catch (MalformedURLException e) {
                 e.printStackTrace();
             }
@@ -59,10 +59,10 @@ class Result <currentClass> implements Callable<List<currentClass>> {
             //gb.disableHtmlEscaping();
             //String jsonWhatever = gb.create().toJson(query, QueryObject.class);
             String jsonInputString = Utils.getQueryString(
-                    statement,
+                    firstStatement,
                     columns,
                     table,
-                    whereStatement,
+                    secondStatement,
                     condition
             );
 
@@ -108,23 +108,23 @@ class Result <currentClass> implements Callable<List<currentClass>> {
 
 public class Utils {
 
-    public static String getQueryString(String statement, String columns, String table, String whereStatement, String condition){
-        return String.format("{ \"statement\":\"%s\", \"columns\":\"%s\", \"table\":\"%s\"," +
-                        "\"whereStatement\":\"%s\", \"condition\":\"%s\"}",
-                statement,
+    public static String getQueryString(String firstStatement, String columns, String table, String secondStatement, String condition){
+        return String.format("{\"firstStatement\":\"%s\", \"columns\":\"%s\", \"table\":\"%s\"," +
+                        "\"secondStatement\":\"%s\", \"condition\":\"%s\"}",
+                firstStatement,
                 columns,
                 table,
-                whereStatement,
+                secondStatement,
                 condition
         );
     }
 
     public static <currentClass> List<currentClass> executeQuery(Class<currentClass> currentClass,
                                                                  Activity currentActivity,
-                                                                 String statement,
+                                                                 String firstStatement,
                                                                  String columns,
                                                                  String table,
-                                                                 String whereStatement,
+                                                                 String secondStatement,
                                                                  String condition
     ) throws ExecutionException, InterruptedException {
 
@@ -133,10 +133,10 @@ public class Utils {
         Future<List<currentClass>> futureCall = executor.submit(new Result(
                 currentClass,
                 currentActivity,
-                statement,
+                firstStatement,
                 columns,
                 table,
-                whereStatement,
+                secondStatement,
                 condition
         ));
         return futureCall.get(); // Here the thread will be blocked until it gets the result
