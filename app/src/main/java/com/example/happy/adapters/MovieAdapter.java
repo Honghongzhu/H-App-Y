@@ -11,16 +11,18 @@ import android.widget.TextView;
 
 import com.example.happy.data.Movie;
 import com.example.happy.R;
+import com.example.happy.queries.MovieInfo;
+import com.squareup.picasso.Picasso;
 
 import java.util.LinkedList;
 import java.util.List;
 
 public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHolder> {
-    private List<Movie> mMovieList;
+    private List<MovieInfo> mMovieList;
     private final LayoutInflater inflater;
     private Boolean isSaved = false;
 
-    public void setData(List<Movie> mMovieList){
+    public void setData(List<MovieInfo> mMovieList){
         this.mMovieList = mMovieList;
     }
 
@@ -39,7 +41,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
         }
     }
 
-    public MovieAdapter(Context context, LinkedList<Movie> mMovieList){
+    public MovieAdapter(Context context, LinkedList<MovieInfo> mMovieList){
         inflater = LayoutInflater.from(context);
         this.mMovieList = mMovieList;
     }
@@ -53,25 +55,27 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
 
     @Override
     public void onBindViewHolder(@NonNull final MovieAdapter.MovieViewHolder holder, int position) {
-        final Movie movieAtPosition = mMovieList.get(position);
-        holder.movieImage.setImageResource(movieAtPosition.getImageDrawableId());
-        holder.movieText.setText(movieAtPosition.getName()); //TODO: get from database
+        final MovieInfo movieAtPosition = mMovieList.get(position);
+        String imgURL = movieAtPosition.getPosterUrl();
+        Picasso.get().load(imgURL).into(holder.movieImage);
+//        holder.movieImage.setImageResource(movieAtPosition.getImageDrawableId());
+        holder.movieText.setText(movieAtPosition.getPrimaryTitle() + " (" + movieAtPosition.getStartYear() + ")"); //TODO: get from database
 
-        holder.saveImage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (isSaved){//it was saved and by clicking it is deleted from saved
-                    holder.saveImage.setImageResource(R.drawable.heart_border);
-                    // TODO: update database
-                    movieAtPosition.setSaved(false);
-                }else{ //it was not saved and by clicking it became saved
-                    holder.saveImage.setImageResource(R.drawable.heart_filled);
-                    // TODO: update database
-                    movieAtPosition.setSaved(true);
-                }
-                isSaved = !isSaved;
-            }
-        });
+//        holder.saveImage.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                if (isSaved){//it was saved and by clicking it is deleted from saved
+//                    holder.saveImage.setImageResource(R.drawable.heart_border);
+//                    // TODO: update database
+//                    movieAtPosition.setSaved(false);
+//                }else{ //it was not saved and by clicking it became saved
+//                    holder.saveImage.setImageResource(R.drawable.heart_filled);
+//                    // TODO: update database
+//                    movieAtPosition.setSaved(true);
+//                }
+//                isSaved = !isSaved;
+//            }
+//        });
     }
 
     @Override
