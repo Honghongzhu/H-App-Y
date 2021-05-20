@@ -37,6 +37,7 @@ public class SearchActivity extends AppCompatActivity {
         searchText = findViewById(R.id.searchBar);
         searchButton = findViewById(R.id.searchButton);
 
+        // Query all movies
         try {
             allMovies = Utils.executeQuery(
                     MovieInfo.class,
@@ -53,6 +54,7 @@ public class SearchActivity extends AppCompatActivity {
             Toast.makeText(SearchActivity.this, e.toString(), Toast.LENGTH_LONG).show();
         }
 
+        // After clicking on search button, it will go through all movies and compare the user input with the primary_title
         searchButton.setOnClickListener(v -> {
             foundMovies = new LinkedList<>();
             search = searchText.getText().toString();
