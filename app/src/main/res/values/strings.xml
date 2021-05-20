@@ -16,7 +16,7 @@
     <string name="movie8">Movie8</string>
     <string name="movie9">Movie9</string>
     <string name="movie10">Movie10</string>
-    <string name="character_strength">Choose up to 3 character strengths:</string>
+    <string name="character_strength">Choose up to 4 character strengths:</string>
     <string name="recommendation">Based on your chosen strengths, we recommend the following movies:</string>
     <string name="rate_movie">Rate the movie</string>
     <string name="rate_enjoyable">How enjoyable was the movie for you?</string>
