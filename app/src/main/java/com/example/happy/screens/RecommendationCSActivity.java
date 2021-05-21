@@ -12,12 +12,9 @@ import android.widget.Toast;
 import com.example.happy.R;
 import com.example.happy.queries.MovieInfo;
 import com.example.happy.queries.MovieRatings;
-import com.example.happy.queries.Utils;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.ExecutionException;
 
 public class RecommendationCSActivity extends AppCompatActivity {
 
@@ -32,40 +29,6 @@ public class RecommendationCSActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recommendation_cs);
         countCS = 0; // Reset count
-
-        // Query all movieInfo
-        try {
-            allMovieInfo = Utils.executeQuery(
-                    MovieInfo.class,
-                    RecommendationCSActivity.this,
-                    "select",
-                    "*",
-                    "movie_info",
-                    "",
-                    ""
-            );
-        } catch (ExecutionException e) {
-            Toast.makeText(RecommendationCSActivity.this, e.toString(), Toast.LENGTH_LONG).show();
-        } catch (InterruptedException e) {
-            Toast.makeText(RecommendationCSActivity.this, e.toString(), Toast.LENGTH_LONG).show();
-        }
-
-        // Query all movieRatings
-        try {
-            allMovieRatings = Utils.executeQuery(
-                    MovieRatings.class,
-                    RecommendationCSActivity.this,
-                    "select",
-                    "*",
-                    "movie_ratings",
-                    "",
-                    ""
-            );
-        } catch (ExecutionException e) {
-            Toast.makeText(RecommendationCSActivity.this, e.toString(), Toast.LENGTH_LONG).show();
-        } catch (InterruptedException e) {
-            Toast.makeText(RecommendationCSActivity.this, e.toString(), Toast.LENGTH_LONG).show();
-        }
 
         // Create onClickListeners for the buttons to change background
         setUpButton(R.id.buttonAppreciation, "appreciation_beauty_excellence", R.drawable.appreciation_light, R.drawable.appreciation_dark);
@@ -121,13 +84,13 @@ public class RecommendationCSActivity extends AppCompatActivity {
                 else{
                     Toast.makeText(RecommendationCSActivity.this, "You've reached the maximum of 4 character strengths", Toast.LENGTH_LONG).show();
                 }
-
             }
         });
     }
 
     public void launchRecommendationActivity(View view) {
         Intent intent = new Intent(this, RecommendationActivity.class);
+        intent.putExtra("chosenCS", chosenCS);
         startActivity(intent);
     }
 
