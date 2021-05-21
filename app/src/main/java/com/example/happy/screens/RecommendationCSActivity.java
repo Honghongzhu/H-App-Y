@@ -67,22 +67,21 @@ public class RecommendationCSActivity extends AppCompatActivity {
             @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
             @Override
             public void onClick(View view) {
-                if(countCS < maxNrCS){
-                    if(check==1){ // Add CS
-                        Toast.makeText(RecommendationCSActivity.this, csName, Toast.LENGTH_LONG).show();
+                if(check==1){ // Add CS
+                    if(countCS < maxNrCS) {
                         chosenCS.add(csName);
-                        buttonCS.setBackgroundResource(light);
                         countCS++;
-                        check=0;
-                    }else { // Remove CS
-                        buttonCS.setBackgroundResource(dark);
-                        chosenCS.remove(csName);
-                        countCS--;
-                        check=1;
+                        buttonCS.setBackgroundResource(light);
+                        check = 0;
                     }
-                }
-                else{
-                    Toast.makeText(RecommendationCSActivity.this, "You've reached the maximum of 4 character strengths", Toast.LENGTH_LONG).show();
+                    else {
+                        Toast.makeText(RecommendationCSActivity.this, "You've reached the maximum of 4 character strengths", Toast.LENGTH_LONG).show();
+                    }
+                }else { // Remove CS
+                    chosenCS.remove(csName);
+                    countCS--;
+                    buttonCS.setBackgroundResource(dark);
+                    check=1;
                 }
             }
         });
