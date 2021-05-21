@@ -14,6 +14,8 @@ import com.example.happy.queries.MovieInfo;
 import com.example.happy.queries.MovieRatings;
 import com.example.happy.queries.Utils;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 
@@ -21,7 +23,7 @@ public class RecommendationCSActivity extends AppCompatActivity {
 
     private List<MovieInfo> allMovieInfo;
     private List<MovieRatings> allMovieRatings;
-    private List<String> chosenCS;
+    private ArrayList<String> chosenCS = new ArrayList<>();
     private final int maxNrCS = 4;
     private int countCS = 0;
 
@@ -29,6 +31,7 @@ public class RecommendationCSActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recommendation_cs);
+        countCS = 0; // Reset count
 
         // Query all movieInfo
         try {
@@ -89,30 +92,34 @@ public class RecommendationCSActivity extends AppCompatActivity {
         setUpButton(R.id.buttonSpirituality, "spirituality", R.drawable.spirituality_light, R.drawable.spirituality_dark);
         setUpButton(R.id.buttonTeamwork, "teamwork", R.drawable.teamwork_light, R.drawable.teamwork_dark);
         setUpButton(R.id.buttonZest, "zest", R.drawable.zest_light, R.drawable.zest_dark);
-
+        
     }
 
     // Helper function to change the background of the buttons
-    public void setUpButton(int id, String tag, int light, int dark) {
-        Button buttoncs = findViewById(id);
-        buttoncs.setTag(tag);
+    public void setUpButton(int id, String csName, int light, int dark) {
+        Button buttonCS = findViewById(id);
 
-        buttoncs.setOnClickListener(new View.OnClickListener() {
+        buttonCS.setOnClickListener(new View.OnClickListener() {
             int check=1;
             @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
             @Override
             public void onClick(View view) {
-                if(maxNrCS<5){
+                if(countCS < maxNrCS){
                     if(check==1){ // Add CS
-                        Toast.makeText(RecommendationCSActivity.this, (String)view.getTag(), Toast.LENGTH_LONG).show();
-                        buttoncs.setBackgroundResource(light);
+                        Toast.makeText(RecommendationCSActivity.this, csName, Toast.LENGTH_LONG).show();
+                        chosenCS.add(csName);
+                        buttonCS.setBackgroundResource(light);
                         countCS++;
                         check=0;
                     }else { // Remove CS
-                        buttoncs.setBackgroundResource(dark);
+                        buttonCS.setBackgroundResource(dark);
+                        chosenCS.remove(csName);
                         countCS--;
                         check=1;
                     }
+                }
+                else{
+                    Toast.makeText(RecommendationCSActivity.this, "You've reached the maximum of 4 character strengths", Toast.LENGTH_LONG).show();
                 }
 
             }
