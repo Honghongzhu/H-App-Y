@@ -100,7 +100,7 @@ public class MeaningfulMoviesServlet extends HttpServlet {
 		        	break;
 	         	case 3: // insert
 	         		op = "into";
-		        	sql = "<first> <op> <table> <columns> <secondStatement> <condition>";
+		        	sql = "<firstStatement> <op> <table> <columns> <secondStatement> <condition>";
 		        	break;
 	         	case 0: // error
 	         		out.println(String.format("The first statement %s is not valid.", firstStatement));
@@ -149,7 +149,7 @@ public class MeaningfulMoviesServlet extends HttpServlet {
 		         		perseverance, love, kindness, socialIntelligence,teamwork, fairness, leadership,
 		         		forgiveness, humility, prudence, selfRegulation, appreciationBeautyExcellence,
 		         		gratitude, hope, humor, spirituality, ratingId, userId, enjoymentRating,
-		         		meaningRating, androidId;
+		         		meaningRating, androidId, savedId;
         	 		
         	 		// Extract data from result set
         	 		while(rs.next()){
@@ -387,6 +387,23 @@ public class MeaningfulMoviesServlet extends HttpServlet {
 		    	            		userId,
 		    	            		androidId
 		    	            		);
+		    	            
+			        	} else if (table.equals("saved_movies")) {
+			        		
+			        		savedId = rs.getString("saved_id");
+			        		userId = rs.getString("user_id");
+			        		movieId = rs.getString("movie_id");
+			        		
+			        		output += String.format(
+		    	            		"{ savedId: %s,"
+		    	            		+ " userId: %s,"
+		    	            		+ " movieId: \"%s\""
+		    	            		+ " }", 
+		    	            		savedId,
+		    	            		userId,
+		    	            		movieId
+		    	            		);
+			        		
 			        	}
 			        } //end while
 		         
@@ -394,11 +411,11 @@ public class MeaningfulMoviesServlet extends HttpServlet {
 			        break;
 		         
         	 	case 2:
-        	 		output += String.format("%s rows were modified by UPDATE statement", result);
+        	 		output += String.format("[{ result: \"%s rows were modified by UPDATE statement\"}]", result);
         	 		break;
         	 		
         	 	case 3:
-        	 		output += String.format("%s rows were modified by INSERT statement", result);
+        	 		output +=String.format("[{ result: \"%s rows were modified by INSERT statement\"}]", result);
         	 		break;
 		         
         	 } // end switch
@@ -406,7 +423,9 @@ public class MeaningfulMoviesServlet extends HttpServlet {
         	 out.print(output);
         	 
 	         // Clean-up environment
-	         rs.close();
+        	 if (rs != null) {
+        		 rs.close();
+        	 }
 	         stmt.close();
 	         conn.close();         
 	      
