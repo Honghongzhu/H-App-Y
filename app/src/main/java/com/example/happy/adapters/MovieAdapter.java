@@ -65,11 +65,11 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
 //            @Override
 //            public void onClick(View v) {
 //                if (isSaved){//it was saved and by clicking it is deleted from saved
-//                    holder.saveImage.setImageResource(R.drawable.heart_border);
+//                     holder.saveImage.setBackgroundResource(R.drawable.save_button_dark_fixedsize);
 //                    // TODO: update database
 //                    movieAtPosition.setSaved(false);
 //                }else{ //it was not saved and by clicking it became saved
-//                    holder.saveImage.setImageResource(R.drawable.heart_filled);
+//                    holder.saveImage.setBackgroundResource(R.drawable.save_button_light_fixedsize);
 //                    // TODO: update database
 //                    movieAtPosition.setSaved(true);
 //                }
