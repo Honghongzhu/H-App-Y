@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.example.happy.data.Movie;
 import com.example.happy.R;
+import com.example.happy.queries.MovieInfo;
 
 import java.util.LinkedList;
 import java.util.List;
