@@ -65,11 +65,11 @@ public class RankAdapter extends RecyclerView.Adapter<RankAdapter.RankViewHolder
             @Override
             public void onClick(View v) {
                 if (isSaved){//it was saved and by clicking it is deleted from saved
-                    holder.saveImage.setBackgroundResource(R.drawable.save_button_dark_fixedsize);
+                    holder.saveImage.setImageResource(R.drawable.heart_border);
                     // TODO: update database
                     movieAtPosition.setSaved(false);
                 }else{ //it was not saved and by clicking it became saved
-                    holder.saveImage.setBackgroundResource(R.drawable.save_button_light_fixedsize);
+                    holder.saveImage.setImageResource(R.drawable.heart_filled);
                     // TODO: update database
                     movieAtPosition.setSaved(true);
                 }
