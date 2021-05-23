@@ -72,6 +72,7 @@ public class RecommendationCSActivity extends AppCompatActivity {
                         chosenCS.add(csName);
                         countCS++;
                         buttonCS.setBackgroundResource(light);
+                        Toast.makeText(RecommendationCSActivity.this, csName, Toast.LENGTH_LONG).show();
                         check = 0;
                     }
                     else {
