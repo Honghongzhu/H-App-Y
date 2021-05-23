@@ -65,7 +65,7 @@ public class SavedActivity extends AppCompatActivity {
             moviesSaved.add(movie);
         }
         mRecyclerView = findViewById(R.id.rv_saved);
-        mAdapter = new MovieAdapter(this, moviesSaved);
+        mAdapter = new MovieAdapter(this, moviesSaved, currentUserId);
         mRecyclerView.setAdapter(mAdapter);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
@@ -73,8 +73,8 @@ public class SavedActivity extends AppCompatActivity {
 
     }
 
-    public void launchRateActivity(View view) {
-        Intent intent = new Intent(this, RateActivity.class);
-        startActivity(intent);
-    }
+//    public void launchRateActivity(View view) {
+//        Intent intent = new Intent(this, RateActivity.class);
+//        startActivity(intent);
+//    }
 }

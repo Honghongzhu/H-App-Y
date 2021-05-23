@@ -38,6 +38,7 @@ public class Top12Activity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private MovieAdapter mAdapter;
     volatile List<MovieInfo> movieRecommendations = new ArrayList<>();
+    private int currentUserId = -1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,13 +51,12 @@ public class Top12Activity extends AppCompatActivity {
         // Get a handle to the RecyclerView
         recyclerView = findViewById(R.id.rv_top12);
         // Create an adapter and supply the data to be displayed
-        mAdapter = new MovieAdapter(this, movieList);
+        mAdapter = new MovieAdapter(this, movieList, currentUserId);
 
         TextView textview = (TextView)findViewById(R.id.notEnoughMoviesTextView);
         textview.setVisibility(View.GONE);
 
         // Retrieve the current user of the app
-        int currentUserId = -1;
 
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
@@ -75,24 +75,24 @@ public class Top12Activity extends AppCompatActivity {
                     String.format("user_id=%s", currentUserId)
             );
 
+            // if the user hasn't rated at least 3 movies
             if (currentUserRatings.toString().equals("[]") || currentUserRatings.size() < 3){
                 loadingIcon.setVisibility(View.GONE);
                 textview.setVisibility(View.VISIBLE);
-                //Toast.makeText(Top12Activity.this, "Please rate at least 3 movies to get a recommendation", Toast.LENGTH_LONG).show();
                 runThread = false;
             }
 
             // if the user has enough movies to get a recommendation
             if(runThread){
-                // Get the info of every movie
+                // Get the info of every movie excluding the ones already rated
                 List<MovieRatings> movieInfoTable = Utils.executeQuery(
                         MovieRatings.class,
                         Top12Activity.this,
                         "select",
                         "*",
                         "movie_ratings",
-                        "",
-                        ""
+                        "where",
+                        String.format("movie_id not in (select movie_id from user_ratings where user_id=%s", currentUserId)
                 );
 
                 String userRatingsJson = new Gson().toJson(currentUserRatings);
@@ -168,8 +168,9 @@ public class Top12Activity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
 
-    public void launchRateActivity(View view) {
-        Intent intent = new Intent(this, RateActivity.class);
-        startActivity(intent);
-    }
+//    public void launchRateActivity(View view) {
+//        Intent intent = new Intent(this, RateActivity.class);
+//        intent.putExtra("CURRENT_USER_ID", currentUserId);
+//        startActivity(intent);
+//    }
 }

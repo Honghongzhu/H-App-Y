@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
                     String.format("android_id=\'%s\'", androidId)
             );
 
-            setCurrentUserId(usersTable.get(0).getUserId());
+            //setCurrentUserId(usersTable.get(0).getUserId());
 
         } catch (ExecutionException e) {
             Toast.makeText(MainActivity.this, e.toString(), Toast.LENGTH_LONG).show();
