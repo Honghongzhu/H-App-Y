@@ -61,7 +61,7 @@ public class RecommendationActivity extends AppCompatActivity {
         }
 
         // Get the first 12 movies
-        //top12Movies = resultMovieRatings.stream().limit(12).collect(Collectors.toList());
+        top12Movies = resultMovieRatings.stream().limit(12).collect(Collectors.toList());
 
         Toast.makeText(RecommendationActivity.this, top12Movies.get(0).getMovieId() + " " + top12Movies.get(0).getAverageEnjoyment(), Toast.LENGTH_LONG).show();
 
