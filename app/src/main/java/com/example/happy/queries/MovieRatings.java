@@ -6,7 +6,6 @@ public class MovieRatings {
             loveOfLearning, perspective, bravery, honesty,zest, perseverance, love, kindness, socialIntelligence,
             teamwork, fairness, leadership, forgiveness, humility, prudence, selfRegulation,
             appreciationBeautyExcellence, gratitude, hope, humor, spirituality;
-    private int csCount, votesCount;
 
     public String getMovieId() {
         return movieId;
@@ -124,23 +123,7 @@ public class MovieRatings {
         return spirituality;
     }
 
-    public int getCsCount(){
-        return csCount;
-    }
-
-    public void setCsCount(int count) {
-        csCount = count;
-    }
-
-    public int getVotesCount() {
-        return votesCount;
-    }
-
-    public void setVotesCount(int votesCount) {
-        this.votesCount = votesCount;
-    }
-
-    public MovieRatings(String movieId, String votesEnjoyment, String averageEnjoyment, String votesMeaning, String averageMeaning, String creativity, String curiosity, String judgement, String loveOfLearning, String perspective, String bravery, String honesty, String zest, String perseverance, String love, String kindness, String socialIntelligence, String teamwork, String fairness, String leadership, String forgiveness, String humility, String prudence, String selfRegulation, String appreciationBeautyExcellence, String gratitude, String hope, String humor, String spirituality, int csCount, int votesCount) {
+    public MovieRatings(String movieId, String votesEnjoyment, String averageEnjoyment, String votesMeaning, String averageMeaning, String creativity, String curiosity, String judgement, String loveOfLearning, String perspective, String bravery, String honesty, String zest, String perseverance, String love, String kindness, String socialIntelligence, String teamwork, String fairness, String leadership, String forgiveness, String humility, String prudence, String selfRegulation, String appreciationBeautyExcellence, String gratitude, String hope, String humor, String spirituality) {
         this.movieId = movieId;
         this.votesEnjoyment = votesEnjoyment;
         this.averageEnjoyment = averageEnjoyment;
@@ -170,7 +153,5 @@ public class MovieRatings {
         this.hope = hope;
         this.humor = humor;
         this.spirituality = spirituality;
-        this.csCount = csCount;
-        this.votesCount = votesCount;
     }
 }

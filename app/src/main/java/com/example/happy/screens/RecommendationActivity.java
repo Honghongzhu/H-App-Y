@@ -21,6 +21,7 @@ import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
+import java.util.stream.Collectors;
 
 public class RecommendationActivity extends AppCompatActivity {
 
@@ -38,8 +39,9 @@ public class RecommendationActivity extends AppCompatActivity {
         setContentView(R.layout.activity_recommendation);
         ArrayList<String> chosenCS = (ArrayList<String>) getIntent().getSerializableExtra("chosenCS");
         String listCS = String.join(", ", chosenCS);
+        String listSumCS = String.join(" + ", chosenCS);
 
-        Toast.makeText(RecommendationActivity.this, listCS, Toast.LENGTH_LONG).show();
+        //Toast.makeText(RecommendationActivity.this, listCS, Toast.LENGTH_LONG).show();
 
         // Query all movieRatings with the requested CS of the user
         try {
@@ -47,10 +49,10 @@ public class RecommendationActivity extends AppCompatActivity {
                     MovieRatings.class,
                     RecommendationActivity.this,
                     "select",
-                    "movie_id, average_meaning, " + listCS,
+                    String.format("movie_id, average_enjoyment, average_meaning, %s, SUM(%s)", listCS, listSumCS),
                     "movie_ratings",
-                    "",
-                    ""
+                    "GROUP BY",
+                    String.format("movie_id HAVING SUM(%s) >0 ORDER BY SUM(%s) DESC, average_meaning DESC, average_enjoyment DESC", listSumCS, listSumCS)
             );
         } catch (ExecutionException e) {
             Toast.makeText(RecommendationActivity.this, e.toString(), Toast.LENGTH_LONG).show();
@@ -58,26 +60,11 @@ public class RecommendationActivity extends AppCompatActivity {
             Toast.makeText(RecommendationActivity.this, e.toString(), Toast.LENGTH_LONG).show();
         }
 
-        for(MovieRatings mr : resultMovieRatings) {
-            int countCS = 0;
-            int countVotes = 0;
-            for(String cs : chosenCS) {
-                if( getCsValue(cs, mr) > 0 );
-                countCS++;
-                countVotes += getCsValue(cs, mr);
-            }
-            mr.setCsCount(countCS);
-            mr.setVotesCount(countVotes);
-        }
-
-        // Sort the movies based
-        resultMovieRatings.sort(Comparator.comparing(MovieRatings::getCsCount)
-                                    .thenComparing(MovieRatings::getVotesCount)
-                                    .thenComparing(MovieRatings::getAverageMeaning)
-                                    .thenComparing(MovieRatings::getAverageEnjoyment));
-
         // Get the first 12 movies
-        //top12Movies = resultMovieRatings.stream().limit()
+        //top12Movies = resultMovieRatings.stream().limit(12).collect(Collectors.toList());
+
+        Toast.makeText(RecommendationActivity.this, top12Movies.get(0).getMovieId() + " " + top12Movies.get(0).getAverageEnjoyment(), Toast.LENGTH_LONG).show();
+
 
         // Query all movieInfo
 //        try {
@@ -98,7 +85,6 @@ public class RecommendationActivity extends AppCompatActivity {
 
 
 
-
 //        recyclerView = findViewById(R.id.rv_recommendation);
 //        adapter = new MovieAdapter(this, allMovieInfo);
 //        recyclerView.setAdapter(adapter);
@@ -109,84 +95,5 @@ public class RecommendationActivity extends AppCompatActivity {
     public void launchRateActivity(View view) {
         Intent intent = new Intent(this, RateActivity.class);
         startActivity(intent);
-    }
-
-    public int getCsValue(String cs, MovieRatings mr) {
-        int csvalue = 0;
-        switch(cs) {
-            case "appreciation":
-                csvalue = Integer.parseInt(mr.getAppreciationBeautyExcellence());
-                break;
-            case "bravery":
-                csvalue = Integer.parseInt(mr.getBravery());
-                break;
-            case "creativity":
-                csvalue = Integer.parseInt(mr.getCreativity());
-                break;
-            case "curiosity":
-                csvalue = Integer.parseInt(mr.getCuriosity());
-                break;
-            case "fairness":
-                csvalue = Integer.parseInt(mr.getFairness());
-                break;
-            case "forgiveness":
-                csvalue = Integer.parseInt(mr.getForgiveness());
-                break;
-            case "gratitude":
-                csvalue = Integer.parseInt(mr.getGratitude());
-                break;
-            case "honesty":
-                csvalue = Integer.parseInt(mr.getHonesty());
-                break;
-            case "hope":
-                csvalue = Integer.parseInt(mr.getHope());
-                break;
-            case "humility":
-                csvalue = Integer.parseInt(mr.getHumility());
-                break;
-            case "humor":
-                csvalue = Integer.parseInt(mr.getHumor());
-                break;
-            case "judgement":
-                csvalue = Integer.parseInt(mr.getJudgement());
-                break;
-            case "kindness":
-                csvalue = Integer.parseInt(mr.getKindness());
-                break;
-            case "leadership":
-                csvalue = Integer.parseInt(mr.getLeadership());
-                break;
-            case "love":
-                csvalue = Integer.parseInt(mr.getLove());
-                break;
-            case "learning":
-                csvalue = Integer.parseInt(mr.getLoveOfLearning());
-                break;
-            case "perseverance":
-                csvalue = Integer.parseInt(mr.getPerseverance());
-                break;
-            case "perspective":
-                csvalue = Integer.parseInt(mr.getPerspective());
-                break;
-            case "prudence":
-                csvalue = Integer.parseInt(mr.getPrudence());
-                break;
-            case "selfregulation":
-                csvalue = Integer.parseInt(mr.getSelfRegulation());
-                break;
-            case "socialintelligence":
-                csvalue = Integer.parseInt(mr.getSocialIntelligence());
-                break;
-            case "spirituality":
-                csvalue = Integer.parseInt(mr.getSpirituality());
-                break;
-            case "teamwork":
-                csvalue = Integer.parseInt(mr.getTeamwork());
-                break;
-            case "zest":
-                csvalue = Integer.parseInt(mr.getZest());
-                break;
-        }
-        return csvalue;
     }
 }
