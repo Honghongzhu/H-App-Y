@@ -6,31 +6,71 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.Toast;
 
 import com.example.happy.R;
 import com.example.happy.adapters.MovieAdapter;
 import com.example.happy.data.Movie;
 import com.example.happy.data.MovieDatabase;
 import com.example.happy.queries.MovieInfo;
+import com.example.happy.queries.SavedMovies;
+import com.example.happy.queries.Utils;
 
 import java.util.LinkedList;
+import java.util.List;
+import java.util.concurrent.ExecutionException;
 
 public class SavedActivity extends AppCompatActivity {
     private LinkedList<MovieInfo> moviesSaved;
-    private RecyclerView recyclerView;
-    private MovieAdapter adapter;
+    private RecyclerView mRecyclerView;
+    private MovieAdapter mAdapter;
+    private List<MovieInfo> allSaved;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_saved);
 
-//        moviesSaved = MovieDatabase.getSavedMovies();
+        // Retrieve the current user of the app
+        int currentUserId = -1;
 
-//        recyclerView = findViewById(R.id.rv_saved);
-//        adapter = new MovieAdapter(this, moviesSaved);
-//        recyclerView.setAdapter(adapter);
-//        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            currentUserId = extras.getInt("CURRENT_USER_ID", -1);
+        }
+
+        try{
+            allSaved = Utils.executeQuery(
+                    MovieInfo.class,
+                    SavedActivity.this,
+                    "select",
+                    "*",
+                    "movie_info",
+                    "INNER JOIN",
+                    String.format("saved_movies ON saved_movies.movie_id = movie_info.movie_id WHERE user_id = %s", currentUserId)
+            );
+
+            // check for the right columns, do we need to change this?
+
+           // Toast.makeText(SavedActivity.this, allSaved.get(0).getMovieId(), Toast.LENGTH_LONG).show();
+        } catch (ExecutionException e) {
+            Toast.makeText(SavedActivity.this, e.toString(), Toast.LENGTH_LONG).show();
+        } catch (InterruptedException e) {
+            Toast.makeText(SavedActivity.this, e.toString(), Toast.LENGTH_LONG).show();
+        }
+
+        moviesSaved = new LinkedList<>();
+        for (MovieInfo movie: allSaved){
+            moviesSaved.add(movie);
+        }
+        mRecyclerView = findViewById(R.id.rv_saved);
+        mAdapter = new MovieAdapter(this, moviesSaved);
+        mRecyclerView.setAdapter(mAdapter);
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+
+
     }
 
     public void launchRateActivity(View view) {
