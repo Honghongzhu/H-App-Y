@@ -7,6 +7,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.chaquo.python.PyException;
@@ -44,13 +45,15 @@ public class Top12Activity extends AppCompatActivity {
         setContentView(R.layout.activity_top12);
         View loadingIcon = findViewById(R.id.loadingPanel);
 
-        //List<MovieInfo> movieRecommendations = null;
+        boolean runThread = true;
 
         // Get a handle to the RecyclerView
         recyclerView = findViewById(R.id.rv_top12);
         // Create an adapter and supply the data to be displayed
         mAdapter = new MovieAdapter(this, movieList);
 
+        TextView textview = (TextView)findViewById(R.id.notEnoughMoviesTextView);
+        textview.setVisibility(View.GONE);
 
         // Retrieve the current user of the app
         int currentUserId = -1;
@@ -69,77 +72,87 @@ public class Top12Activity extends AppCompatActivity {
                     "*",
                     "user_ratings",
                     "where",
-                    String.format("user_id=%s", 0)
+                    String.format("user_id=%s", currentUserId)
             );
 
-            // Get the info of every movie
-            List<MovieRatings> movieInfoTable = Utils.executeQuery(
-                    MovieRatings.class,
-                    Top12Activity.this,
-                    "select",
-                    "*",
-                    "movie_ratings",
-                    "",
-                    ""
-            );
+            if (currentUserRatings.toString().equals("[]") || currentUserRatings.size() < 3){
+                loadingIcon.setVisibility(View.GONE);
+                textview.setVisibility(View.VISIBLE);
+                //Toast.makeText(Top12Activity.this, "Please rate at least 3 movies to get a recommendation", Toast.LENGTH_LONG).show();
+                runThread = false;
+            }
 
-            String userRatingsJson = new Gson().toJson(currentUserRatings);
-            String movieInfoJson = new Gson().toJson(movieInfoTable);
+            // if the user has enough movies to get a recommendation
+            if(runThread){
+                // Get the info of every movie
+                List<MovieRatings> movieInfoTable = Utils.executeQuery(
+                        MovieRatings.class,
+                        Top12Activity.this,
+                        "select",
+                        "*",
+                        "movie_ratings",
+                        "",
+                        ""
+                );
 
-            // Now we call the python script that will return a string with ordered movie ids
-            // We create a new thread because otherwise the app "isn't responding" but actually
-            // it is just taking long.
-            Thread executeScript = new Thread(new Runnable() {
-                public void run() {
+                String userRatingsJson = new Gson().toJson(currentUserRatings);
+                String movieInfoJson = new Gson().toJson(movieInfoTable);
 
-                    // start python
-                    if (!Python.isStarted()) {
-                        Python.start(new AndroidPlatform(Top12Activity.this));
-                    }
+                // Now we call the python script that will return a string with ordered movie ids
+                // We create a new thread because otherwise the app "isn't responding" but actually
+                // it is just taking long.
+                Thread executeScript = new Thread(new Runnable() {
+                    public void run() {
 
-                    // create new python instance
-                    Python py = Python.getInstance();
-                    PyObject pyObj = py.getModule("recommendation");
-
-                    PyObject obj = pyObj.callAttr("get_user_recommendations", movieInfoJson, userRatingsJson);
-
-                    String recomOutput = obj.toString();
-                    String recomIds = "(" + recomOutput.split("]")[0].substring(2) + ")";
-
-
-                    // Get the info of every movie
-                    try {
-                        movieRecommendations = Utils.executeQuery(
-                                MovieInfo.class,
-                                Top12Activity.this,
-                                "select",
-                                "*",
-                                "movie_info",
-                                "where",
-                                String.format("movie_id in %s", recomIds)
-                        );
-                    } catch (ExecutionException e) {
-                        e.printStackTrace();
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-
-                    if (movieRecommendations != null) {
-                        for (MovieInfo movie : movieRecommendations){
-                            movieList.add(movie);
+                        // start python
+                        if (!Python.isStarted()) {
+                            Python.start(new AndroidPlatform(Top12Activity.this));
                         }
+
+                        // create new python instance
+                        Python py = Python.getInstance();
+                        PyObject pyObj = py.getModule("recommendation");
+
+                        PyObject obj = pyObj.callAttr("get_user_recommendations", movieInfoJson, userRatingsJson);
+
+                        String recomOutput = obj.toString();
+                        String recomIds = "(" + recomOutput.split("]")[0].substring(2) + ")";
+
+
+                        // Get the info of every movie
+                        try {
+                            movieRecommendations = Utils.executeQuery(
+                                    MovieInfo.class,
+                                    Top12Activity.this,
+                                    "select",
+                                    "*",
+                                    "movie_info",
+                                    "where",
+                                    String.format("movie_id in %s", recomIds)
+                            );
+                        } catch (ExecutionException e) {
+                            e.printStackTrace();
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+
+                        if (movieRecommendations != null) {
+                            for (MovieInfo movie : movieRecommendations){
+                                movieList.add(movie);
+                            }
+                        }
+
+                        Top12Activity.this.runOnUiThread(
+                                new Runnable() {
+                                    public void run() {
+                                        loadingIcon.setVisibility(View.GONE);
+                                        mAdapter.notifyDataSetChanged();
+                                    }});
                     }
+                });
 
-                    Top12Activity.this.runOnUiThread(
-                            new Runnable() {
-                                public void run() {
-                                    loadingIcon.setVisibility(View.GONE);
-                                    mAdapter.notifyDataSetChanged();
-                                }});
-                }
-            });
-
-            executeScript.start();
+                executeScript.start();
+            }
 
         } catch (ExecutionException e) {
             Toast.makeText(Top12Activity.this, e.toString(), Toast.LENGTH_LONG).show();
