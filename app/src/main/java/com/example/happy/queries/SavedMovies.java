@@ -2,19 +2,23 @@ package com.example.happy.queries;
 
 public class SavedMovies {
 
-    private int savedId;
-    private int userId;
+    private String savedId;
+    private String userId;
     private String movieId;
 
-    public int getSavedId() { return savedId; }
+    public String getSavedId() {
+        return savedId;
+    }
 
-    public int getUserId() { return userId; }
+    public String getUserId() {
+        return userId;
+    }
 
     public String getMovieId() {
         return movieId;
     }
 
-    public SavedMovies(int userId, String androidId) {
+    public SavedMovies(String savedId, String userId, String movieId) {
         this.savedId = savedId;
         this.userId = userId;
         this.movieId = movieId;

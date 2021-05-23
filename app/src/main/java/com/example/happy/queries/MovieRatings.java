@@ -3,152 +3,152 @@ package com.example.happy.queries;
 public class MovieRatings {
 
     private String movieId;
-    private int votesEnjoyment;
-    private float averageEnjoyment;
-    private int votesMeaning;
-    private float averageMeaning;
-    private int creativity;
-    private int curiosity;
-    private int judgement;
-    private int loveOfLearning;
-    private int perspective;
-    private int bravery;
-    private int honesty;
-    private int zest;
-    private int perseverance;
-    private int love;
-    private int kindness;
-    private int socialIntelligence;
-    private int teamwork;
-    private int fairness;
-    private int leadership;
-    private int forgiveness;
-    private int humility;
-    private int prudence;
-    private int selfRegulation;
-    private int appreciationBeautyExcellence;
-    private int gratitude;
-    private int hope;
-    private int humor;
-    private int spirituality;
+    private String votesEnjoyment;
+    private String averageEnjoyment;
+    private String votesMeaning;
+    private String averageMeaning;
+    private String creativity;
+    private String curiosity;
+    private String judgement;
+    private String loveOfLearning;
+    private String perspective;
+    private String bravery;
+    private String honesty;
+    private String zest;
+    private String perseverance;
+    private String love;
+    private String kindness;
+    private String socialIntelligence;
+    private String teamwork;
+    private String fairness;
+    private String leadership;
+    private String forgiveness;
+    private String humility;
+    private String prudence;
+    private String selfRegulation;
+    private String appreciationBeautyExcellence;
+    private String gratitude;
+    private String hope;
+    private String humor;
+    private String spirituality;
 
     public String getMovieId() {
         return movieId;
     }
 
-    public int getVotesEnjoyment() {
+    public String getVotesEnjoyment() {
         return votesEnjoyment;
     }
 
-    public float getAverageEnjoyment() {
+    public String getAverageEnjoyment() {
         return averageEnjoyment;
     }
 
-    public int getVotesMeaning() {
+    public String getVotesMeaning() {
         return votesMeaning;
     }
 
-    public float getAverageMeaning() {
+    public String getAverageMeaning() {
         return averageMeaning;
     }
 
-    public int getCreativity() {
+    public String getCreativity() {
         return creativity;
     }
 
-    public int getCuriosity() {
+    public String getCuriosity() {
         return curiosity;
     }
 
-    public int getJudgement() {
+    public String getJudgement() {
         return judgement;
     }
 
-    public int getLoveOfLearning() {
+    public String getLoveOfLearning() {
         return loveOfLearning;
     }
 
-    public int getPerspective() {
+    public String getPerspective() {
         return perspective;
     }
 
-    public int getBravery() {
+    public String getBravery() {
         return bravery;
     }
 
-    public int getHonesty() {
+    public String getHonesty() {
         return honesty;
     }
 
-    public int getZest() {
+    public String getZest() {
         return zest;
     }
 
-    public int getPerseverance() {
+    public String getPerseverance() {
         return perseverance;
     }
 
-    public int getLove() {
+    public String getLove() {
         return love;
     }
 
-    public int getKindness() {
+    public String getKindness() {
         return kindness;
     }
 
-    public int getSocialIntelligence() {
+    public String getSocialIntelligence() {
         return socialIntelligence;
     }
 
-    public int getTeamwork() {
+    public String getTeamwork() {
         return teamwork;
     }
 
-    public int getFairness() {
+    public String getFairness() {
         return fairness;
     }
 
-    public int getLeadership() {
+    public String getLeadership() {
         return leadership;
     }
 
-    public int getForgiveness() {
+    public String getForgiveness() {
         return forgiveness;
     }
 
-    public int getHumility() {
+    public String getHumility() {
         return humility;
     }
 
-    public int getPrudence() {
+    public String getPrudence() {
         return prudence;
     }
 
-    public int getSelfRegulation() {
+    public String getSelfRegulation() {
         return selfRegulation;
     }
 
-    public int getAppreciationBeautyExcellence() {
+    public String getAppreciationBeautyExcellence() {
         return appreciationBeautyExcellence;
     }
 
-    public int getGratitude() {
+    public String getGratitude() {
         return gratitude;
     }
 
-    public int getHope() {
+    public String getHope() {
         return hope;
     }
 
-    public int getHumor() {
+    public String getHumor() {
         return humor;
     }
 
-    public int getSpirituality() {
+    public String getSpirituality() {
         return spirituality;
     }
 
-    public MovieRatings(String movieId, int votesEnjoyment, float averageEnjoyment, int votesMeaning, float averageMeaning, int creativity, int curiosity, int judgement, int loveOfLearning, int perspective, int bravery, int honesty, int zest, int perseverance, int love, int kindness, int socialIntelligence, int teamwork, int fairness, int leadership, int forgiveness, int humility, int prudence, int selfRegulation, int appreciationBeautyExcellence, int gratitude, int hope, int humor, int spirituality) {
+    public MovieRatings(String movieId, String votesEnjoyment, String averageEnjoyment, String votesMeaning, String averageMeaning, String creativity, String curiosity, String judgement, String loveOfLearning, String perspective, String bravery, String honesty, String zest, String perseverance, String love, String kindness, String socialIntelligence, String teamwork, String fairness, String leadership, String forgiveness, String humility, String prudence, String selfRegulation, String appreciationBeautyExcellence, String gratitude, String hope, String humor, String spirituality) {
         this.movieId = movieId;
         this.votesEnjoyment = votesEnjoyment;
         this.averageEnjoyment = averageEnjoyment;

@@ -20,13 +20,13 @@ import java.util.concurrent.ExecutionException;
 
 public class MainActivity extends AppCompatActivity {
 
-    private int currentUserId;
+    private String currentUserId;
 
-    public int getCurrentUserId() {
+    public String getCurrentUserId() {
         return this.currentUserId;
     }
 
-    public void setCurrentUserId (int currentUserId) {
+    public void setCurrentUserId (String currentUserId) {
         this.currentUserId = currentUserId;
     }
 

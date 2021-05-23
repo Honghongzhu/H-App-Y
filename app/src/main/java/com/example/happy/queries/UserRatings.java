@@ -2,41 +2,41 @@ package com.example.happy.queries;
 
 public class UserRatings {
 
-    private int ratingId;
-    private int userId;
+    private String ratingId;
+    private String userId;
     private String movieId;
-    private float enjoymentRating;
-    private float meaningRating;
-    private byte creativity;
-    private byte curiosity;
-    private byte judgement;
-    private byte loveOfLearning;
-    private byte perspective;
-    private byte bravery;
-    private byte honesty;
-    private byte zest;
-    private byte perseverance;
-    private byte love;
-    private byte kindness;
-    private byte socialIntelligence;
-    private byte teamwork;
-    private byte fairness;
-    private byte leadership;
-    private byte forgiveness;
-    private byte humility;
-    private byte prudence;
-    private byte selfRegulation;
-    private byte appreciationBeautyExcellence;
-    private byte gratitude;
-    private byte hope;
-    private byte humor;
-    private byte spirituality;
+    private String enjoymentRating;
+    private String meaningRating;
+    private String creativity;
+    private String curiosity;
+    private String judgement;
+    private String loveOfLearning;
+    private String perspective;
+    private String bravery;
+    private String honesty;
+    private String zest;
+    private String perseverance;
+    private String love;
+    private String kindness;
+    private String socialIntelligence;
+    private String teamwork;
+    private String fairness;
+    private String leadership;
+    private String forgiveness;
+    private String humility;
+    private String prudence;
+    private String selfRegulation;
+    private String appreciationBeautyExcellence;
+    private String gratitude;
+    private String hope;
+    private String humor;
+    private String spirituality;
 
-    public int getRatingId() {
+    public String getRatingId() {
         return ratingId;
     }
 
-    public int getUserId() {
+    public String getUserId() {
         return userId;
     }
 
@@ -44,111 +44,111 @@ public class UserRatings {
         return movieId;
     }
 
-    public float getEnjoymentRating() {
+    public String getEnjoymentRating() {
         return enjoymentRating;
     }
 
-    public float getMeaningRating() {
+    public String getMeaningRating() {
         return meaningRating;
     }
 
-    public byte getCreativity() {
+    public String getCreativity() {
         return creativity;
     }
 
-    public byte getCuriosity() {
+    public String getCuriosity() {
         return curiosity;
     }
 
-    public byte getJudgement() {
+    public String getJudgement() {
         return judgement;
     }
 
-    public byte getLoveOfLearning() {
+    public String getLoveOfLearning() {
         return loveOfLearning;
     }
 
-    public byte getPerspective() {
+    public String getPerspective() {
         return perspective;
     }
 
-    public byte getBravery() {
+    public String getBravery() {
         return bravery;
     }
 
-    public byte getHonesty() {
+    public String getHonesty() {
         return honesty;
     }
 
-    public byte getZest() {
+    public String getZest() {
         return zest;
     }
 
-    public byte getPerseverance() {
+    public String getPerseverance() {
         return perseverance;
     }
 
-    public byte getLove() {
+    public String getLove() {
         return love;
     }
 
-    public byte getKindness() {
+    public String getKindness() {
         return kindness;
     }
 
-    public byte getSocialIntelligence() {
+    public String getSocialIntelligence() {
         return socialIntelligence;
     }
 
-    public byte getTeamwork() {
+    public String getTeamwork() {
         return teamwork;
     }
 
-    public byte getFairness() {
+    public String getFairness() {
         return fairness;
     }
 
-    public byte getLeadership() {
+    public String getLeadership() {
         return leadership;
     }
 
-    public byte getForgiveness() {
+    public String getForgiveness() {
         return forgiveness;
     }
 
-    public byte getHumility() {
+    public String getHumility() {
         return humility;
     }
 
-    public byte getPrudence() {
+    public String getPrudence() {
         return prudence;
     }
 
-    public byte getSelfRegulation() {
+    public String getSelfRegulation() {
         return selfRegulation;
     }
 
-    public byte getAppreciationBeautyExcellence() {
+    public String getAppreciationBeautyExcellence() {
         return appreciationBeautyExcellence;
     }
 
-    public byte getGratitude() {
+    public String getGratitude() {
         return gratitude;
     }
 
-    public byte getHope() {
+    public String getHope() {
         return hope;
     }
 
-    public byte getHumor() {
+    public String getHumor() {
         return humor;
     }
 
-    public byte getSpirituality() {
+    public String getSpirituality() {
         return spirituality;
     }
 
-    public UserRatings(int ratingId, int userId, String movieId, float enjoymentRating, float meaningRating, byte creativity, byte curiosity, byte judgement, byte loveOfLearning, byte perspective, byte bravery, byte honesty, byte zest, byte perseverance, byte love, byte kindness, byte socialIntelligence, byte teamwork, byte fairness, byte leadership, byte forgiveness, byte humility, byte prudence, byte selfRegulation, byte appreciationBeautyExcellence, byte gratitude, byte hope, byte humor, byte spirituality) {
+    public UserRatings(String ratingId, String userId, String movieId, String enjoymentRating, String meaningRating, String creativity, String curiosity, String judgement, String loveOfLearning, String perspective, String bravery, String honesty, String zest, String perseverance, String love, String kindness, String socialIntelligence, String teamwork, String fairness, String leadership, String forgiveness, String humility, String prudence, String selfRegulation, String appreciationBeautyExcellence, String gratitude, String hope, String humor, String spirituality) {
         this.ratingId = ratingId;
         this.userId = userId;
         this.movieId = movieId;
