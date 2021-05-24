@@ -1,6 +1,8 @@
 package com.example.happy.screens;
 
 import android.content.Intent;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -12,10 +14,17 @@ import com.example.happy.queries.MovieRatings;
 import com.example.happy.queries.NoResult;
 import com.example.happy.queries.Utils;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 
 public class RateCSActivity extends AppCompatActivity {
+
+    String characterStrengths = "creativity," +
+            "curiosity, judgement, love_of_learning, perspective, bravery, honesty, zest," +
+            "perseverance, love, kindness, social_intelligence, teamwork, fairness, leadership," +
+            "forgiveness, humility, prudence, self_regulation, appreciation_beauty_excellence," +
+            "gratitude, hope, humor, spirituality";
 
     Button appreciation, bravery, creativity, curiosity, fairness, forgiveness, gratitude,
             honesty, hope, humility, humor, judgement, kindness, leadership, love, learning,
@@ -51,6 +60,8 @@ public class RateCSActivity extends AppCompatActivity {
     float enjoyRating = -1;
     float meaningRating = -1;
     String movieToRate = "";
+
+    ArrayList<String> pickedCS = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -90,296 +101,235 @@ public class RateCSActivity extends AppCompatActivity {
             movieToRate = extras.getString("SELECTED_MOVIE_ID", "");
         }
 
-        appreciation.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(appreciationClicked == 1){
-                    appreciation.setBackgroundResource(R.drawable.appreciation_dark);
-                    appreciationClicked = 0;
-                }else {
-                    appreciation.setBackgroundResource(R.drawable.appreciation_light);
-                    appreciationClicked = 1;
-                }
+        appreciation.setOnClickListener(view -> {
+            if(appreciationClicked == 1){
+                appreciation.setBackgroundResource(R.drawable.appreciation_dark);
+                appreciationClicked = 0;
+            }else {
+                appreciation.setBackgroundResource(R.drawable.appreciation_light);
+                appreciationClicked = 1;
             }
         });
-        bravery.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(braveryClicked == 1){
-                    bravery.setBackgroundResource(R.drawable.bravery_dark);
-                    braveryClicked = 0;
-                }else {
-                    bravery.setBackgroundResource(R.drawable.bravery_light);
-                    braveryClicked = 1;
-                }
+        bravery.setOnClickListener(view -> {
+            if(braveryClicked == 1){
+                bravery.setBackgroundResource(R.drawable.bravery_dark);
+                braveryClicked = 0;
+            }else {
+                bravery.setBackgroundResource(R.drawable.bravery_light);
+                braveryClicked = 1;
             }
         });
-        creativity.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(creativityClicked == 1){
-                    creativity.setBackgroundResource(R.drawable.creativity_dark);
-                    creativityClicked = 0;
-                }else {
-                    creativity.setBackgroundResource(R.drawable.creativity_light);
-                    creativityClicked = 1;
-                }
+        creativity.setOnClickListener(view -> {
+            if(creativityClicked == 1){
+                creativity.setBackgroundResource(R.drawable.creativity_dark);
+                creativityClicked = 0;
+            }else {
+                creativity.setBackgroundResource(R.drawable.creativity_light);
+                creativityClicked = 1;
             }
         });
-        curiosity.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(curiosityClicked == 1){
-                    curiosity.setBackgroundResource(R.drawable.curiosity_dark);
-                    curiosityClicked = 0;
-                }else {
-                    curiosity.setBackgroundResource(R.drawable.curiosity_light);
-                    curiosityClicked = 1;
-                }
+        curiosity.setOnClickListener(view -> {
+            if(curiosityClicked == 1){
+                curiosity.setBackgroundResource(R.drawable.curiosity_dark);
+                curiosityClicked = 0;
+            }else {
+                curiosity.setBackgroundResource(R.drawable.curiosity_light);
+                curiosityClicked = 1;
             }
         });
-        fairness.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(fairnessClicked == 1){
-                    fairness.setBackgroundResource(R.drawable.fairness_dark);
-                    fairnessClicked = 0;
-                }else {
-                    fairness.setBackgroundResource(R.drawable.fairness_light);
-                    fairnessClicked = 1;
-                }
+        fairness.setOnClickListener(view -> {
+            if(fairnessClicked == 1){
+                fairness.setBackgroundResource(R.drawable.fairness_dark);
+                fairnessClicked = 0;
+            }else {
+                fairness.setBackgroundResource(R.drawable.fairness_light);
+                fairnessClicked = 1;
             }
         });
-        forgiveness.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(forgivenessClicked == 1){
-                    forgiveness.setBackgroundResource(R.drawable.forgiveness_dark);
-                    forgivenessClicked = 0;
-                }else {
-                    forgiveness.setBackgroundResource(R.drawable.forgiveness_light);
-                    forgivenessClicked = 1;
-                }
+        forgiveness.setOnClickListener(view -> {
+            if(forgivenessClicked == 1){
+                forgiveness.setBackgroundResource(R.drawable.forgiveness_dark);
+                forgivenessClicked = 0;
+            }else {
+                forgiveness.setBackgroundResource(R.drawable.forgiveness_light);
+                forgivenessClicked = 1;
             }
         });
-        gratitude.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(gratitudeClicked == 1){
-                    gratitude.setBackgroundResource(R.drawable.gratitude_dark);
-                    gratitudeClicked = 0;
-                }else {
-                    gratitude.setBackgroundResource(R.drawable.gratitude_light);
-                    gratitudeClicked = 1;
-                }
+        gratitude.setOnClickListener(view -> {
+            if(gratitudeClicked == 1){
+                gratitude.setBackgroundResource(R.drawable.gratitude_dark);
+                gratitudeClicked = 0;
+            }else {
+                gratitude.setBackgroundResource(R.drawable.gratitude_light);
+                gratitudeClicked = 1;
             }
         });
-        honesty.setOnClickListener(new View.OnClickListener() {;
-            @Override
-            public void onClick(View view) {
-                if(honestyClicked == 1){
-                    honesty.setBackgroundResource(R.drawable.honesty_dark);
-                    honestyClicked = 0;
-                }else {
-                    honesty.setBackgroundResource(R.drawable.honesty_light);
-                    honestyClicked = 1;
-                }
+        honesty.setOnClickListener(view -> {
+            if(honestyClicked == 1){
+                honesty.setBackgroundResource(R.drawable.honesty_dark);
+                honestyClicked = 0;
+            }else {
+                honesty.setBackgroundResource(R.drawable.honesty_light);
+                honestyClicked = 1;
             }
         });
-        hope.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(hopeClicked == 1){
-                    hope.setBackgroundResource(R.drawable.hope_dark);
-                    hopeClicked = 0;
-                }else {
-                    hope.setBackgroundResource(R.drawable.hope_light);
-                    hopeClicked = 1;
-                }
+        hope.setOnClickListener(view -> {
+            if(hopeClicked == 1){
+                hope.setBackgroundResource(R.drawable.hope_dark);
+                hopeClicked = 0;
+            }else {
+                hope.setBackgroundResource(R.drawable.hope_light);
+                hopeClicked = 1;
             }
         });
-        humility.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(humilityClicked == 1){
-                    humility.setBackgroundResource(R.drawable.humility_dark);
-                    humilityClicked = 0;
-                }else {
-                    humility.setBackgroundResource(R.drawable.humility_light);
-                    humilityClicked = 1;
-                }
+        humility.setOnClickListener(view -> {
+            if(humilityClicked == 1){
+                humility.setBackgroundResource(R.drawable.humility_dark);
+                humilityClicked = 0;
+            }else {
+                humility.setBackgroundResource(R.drawable.humility_light);
+                humilityClicked = 1;
             }
         });
-        humor.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(humorClicked == 1){
-                    humor.setBackgroundResource(R.drawable.humor_dark);
-                    humorClicked = 0;
-                }else {
-                    humor.setBackgroundResource(R.drawable.humor_light);
-                    humorClicked = 1;
-                }
+        humor.setOnClickListener(view -> {
+            if(humorClicked == 1){
+                humor.setBackgroundResource(R.drawable.humor_dark);
+                humorClicked = 0;
+            }else {
+                humor.setBackgroundResource(R.drawable.humor_light);
+                humorClicked = 1;
             }
         });
-        judgement.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(judgementClicked == 1){
-                    judgement.setBackgroundResource(R.drawable.judgement_dark);
-                    judgementClicked = 0;
-                }else {
-                    judgement.setBackgroundResource(R.drawable.judgement_light);
-                    judgementClicked = 1;
-                }
+        judgement.setOnClickListener(view -> {
+            if(judgementClicked == 1){
+                judgement.setBackgroundResource(R.drawable.judgement_dark);
+                judgementClicked = 0;
+            }else {
+                judgement.setBackgroundResource(R.drawable.judgement_light);
+                judgementClicked = 1;
             }
         });
-        kindness.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(kindnessClicked == 1){
-                    kindness.setBackgroundResource(R.drawable.kindness_dark);
-                    kindnessClicked = 0;
-                }else {
-                    kindness.setBackgroundResource(R.drawable.kindness_light);
-                    kindnessClicked = 1;
-                }
+        kindness.setOnClickListener(view -> {
+            if(kindnessClicked == 1){
+                kindness.setBackgroundResource(R.drawable.kindness_dark);
+                kindnessClicked = 0;
+            }else {
+                kindness.setBackgroundResource(R.drawable.kindness_light);
+                kindnessClicked = 1;
             }
         });
-        leadership.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(leadershipClicked == 1){
-                    leadership.setBackgroundResource(R.drawable.leadership_dark);
-                    leadershipClicked = 0;
-                }else {
-                    leadership.setBackgroundResource(R.drawable.leadership_light);
-                    leadershipClicked = 1;
-                }
+        leadership.setOnClickListener(view -> {
+            if(leadershipClicked == 1){
+                leadership.setBackgroundResource(R.drawable.leadership_dark);
+                leadershipClicked = 0;
+            }else {
+                leadership.setBackgroundResource(R.drawable.leadership_light);
+                leadershipClicked = 1;
             }
         });
-        love.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(loveClicked == 1){
-                    love.setBackgroundResource(R.drawable.love_dark);
-                    loveClicked = 0;
-                }else {
-                    love.setBackgroundResource(R.drawable.love_light);
-                    loveClicked = 1;
-                }
+        love.setOnClickListener(view -> {
+            if(loveClicked == 1){
+                love.setBackgroundResource(R.drawable.love_dark);
+                loveClicked = 0;
+            }else {
+                love.setBackgroundResource(R.drawable.love_light);
+                loveClicked = 1;
             }
         });
-        learning.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(learningClicked == 1){
-                    learning.setBackgroundResource(R.drawable.lol_dark);
-                    learningClicked = 0;
-                }else {
-                    learning.setBackgroundResource(R.drawable.lol_light);
-                    learningClicked = 1;
-                }
+        learning.setOnClickListener(view -> {
+            if(learningClicked == 1){
+                learning.setBackgroundResource(R.drawable.lol_dark);
+                learningClicked = 0;
+            }else {
+                learning.setBackgroundResource(R.drawable.lol_light);
+                learningClicked = 1;
             }
         });
-        perseverance.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(perseveranceClicked == 1){
-                    perseverance.setBackgroundResource(R.drawable.perseverance_dark);
-                    perseveranceClicked = 0;
-                }else {
-                    perseverance.setBackgroundResource(R.drawable.perseverance_light);
-                    perseveranceClicked = 1;
-                }
+        perseverance.setOnClickListener(view -> {
+            if(perseveranceClicked == 1){
+                perseverance.setBackgroundResource(R.drawable.perseverance_dark);
+                perseveranceClicked = 0;
+            }else {
+                perseverance.setBackgroundResource(R.drawable.perseverance_light);
+                perseveranceClicked = 1;
             }
         });
-        perspective.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(perspectiveClicked == 1){
-                    perspective.setBackgroundResource(R.drawable.perspective_dark);
-                    perspectiveClicked = 0;
-                }else {
-                    perspective.setBackgroundResource(R.drawable.perspective_light);
-                    perspectiveClicked = 1;
-                }
+        perspective.setOnClickListener(view -> {
+            if(perspectiveClicked == 1){
+                perspective.setBackgroundResource(R.drawable.perspective_dark);
+                perspectiveClicked = 0;
+            }else {
+                perspective.setBackgroundResource(R.drawable.perspective_light);
+                perspectiveClicked = 1;
             }
         });
-        prudence.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(prudenceClicked == 1){
-                    prudence.setBackgroundResource(R.drawable.prudence_dark);
-                    prudenceClicked = 0;
-                }else {
-                    prudence.setBackgroundResource(R.drawable.prudence_light);
-                    prudenceClicked = 1;
-                }
+        prudence.setOnClickListener(view -> {
+            if(prudenceClicked == 1){
+                prudence.setBackgroundResource(R.drawable.prudence_dark);
+                prudenceClicked = 0;
+            }else {
+                prudence.setBackgroundResource(R.drawable.prudence_light);
+                prudenceClicked = 1;
             }
         });
-        selfRegulation.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(selfRegulationClicked == 1){
-                    selfRegulation.setBackgroundResource(R.drawable.self_dark);
-                    selfRegulationClicked = 0;
-                }else {
-                    selfRegulation.setBackgroundResource(R.drawable.self_light);
-                    selfRegulationClicked = 1;
-                }
+        selfRegulation.setOnClickListener(view -> {
+            if(selfRegulationClicked == 1){
+                selfRegulation.setBackgroundResource(R.drawable.self_dark);
+                selfRegulationClicked = 0;
+            }else {
+                selfRegulation.setBackgroundResource(R.drawable.self_light);
+                selfRegulationClicked = 1;
             }
         });
-        socialIntelligence.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(socialIntelligenceClicked == 1){
-                    socialIntelligence.setBackgroundResource(R.drawable.social_dark);
-                    socialIntelligenceClicked = 0;
-                }else {
-                    socialIntelligence.setBackgroundResource(R.drawable.social_light);
-                    socialIntelligenceClicked = 1;
-                }
+        socialIntelligence.setOnClickListener(view -> {
+            if(socialIntelligenceClicked == 1){
+                socialIntelligence.setBackgroundResource(R.drawable.social_dark);
+                socialIntelligenceClicked = 0;
+            }else {
+                socialIntelligence.setBackgroundResource(R.drawable.social_light);
+                socialIntelligenceClicked = 1;
             }
         });
-        spirituality.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(spiritualityClicked == 1){
-                    spirituality.setBackgroundResource(R.drawable.spirituality_dark);
-                    spiritualityClicked = 0;
-                }else {
-                    spirituality.setBackgroundResource(R.drawable.spirituality_light);
-                    spiritualityClicked = 1;
-                }
+        spirituality.setOnClickListener(view -> {
+            if(spiritualityClicked == 1){
+                spirituality.setBackgroundResource(R.drawable.spirituality_dark);
+                spiritualityClicked = 0;
+            }else {
+                spirituality.setBackgroundResource(R.drawable.spirituality_light);
+                spiritualityClicked = 1;
             }
         });
-        teamwork.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(teamworkClicked == 1){
-                    teamwork.setBackgroundResource(R.drawable.teamwork_dark);
-                    teamworkClicked = 0;
-                }else {
-                    teamwork.setBackgroundResource(R.drawable.teamwork_light);
-                    teamworkClicked = 1;
-                }
+        teamwork.setOnClickListener(view -> {
+            if(teamworkClicked == 1){
+                teamwork.setBackgroundResource(R.drawable.teamwork_dark);
+                teamworkClicked = 0;
+            }else {
+                teamwork.setBackgroundResource(R.drawable.teamwork_light);
+                teamworkClicked = 1;
             }
         });
-        zest.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(zestClicked == 1){
-                    zest.setBackgroundResource(R.drawable.zest_dark);
-                    zestClicked = 0;
-                }else {
-                    zest.setBackgroundResource(R.drawable.zest_light);
-                    zestClicked = 1;
-                }
+        zest.setOnClickListener(view -> {
+            if(zestClicked == 1){
+                zest.setBackgroundResource(R.drawable.zest_dark);
+                zestClicked = 0;
+            }else {
+                zest.setBackgroundResource(R.drawable.zest_light);
+                zestClicked = 1;
             }
         });
     }
 
+    public ArrayList getColumns(int... args) {
+        ArrayList<String> pickedCS = new ArrayList<>();
+        for (int i=0; i < args.length; i++) {
+            if (args[i] == 1){
+                pickedCS.add(characterStrengths.split(",")[i]);
+            }
+        }
+        return pickedCS;
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.O)
     public void launchHistoryActivity(View view) {
 
         String columns = "(user_id, movie_id, enjoyment_rating, meaning_rating, creativity," +
@@ -388,8 +338,8 @@ public class RateCSActivity extends AppCompatActivity {
                 "forgiveness, humility, prudence, self_regulation, appreciation_beauty_excellence," +
                 "gratitude, hope, humor, spirituality)";
 
-        String unformatted = "(" + new String(new char[27]).replace("\0", "\'%s\', ") +
-                "\'%s\')";
+        String unformatted = "(" + new String(new char[27]).replace("\0", "'%s', ") +
+                "'%s')";
 
         try {
 
@@ -401,10 +351,10 @@ public class RateCSActivity extends AppCompatActivity {
                     "*",
                     "movie_ratings",
                     "where",
-                    String.format("movie_id=%s)", movieToRate)
+                    String.format("movie_id='%s'", movieToRate)
             );
 
-            // update the average and votes for enjoyment and meaningfulness
+            //update the average and votes for enjoyment and meaningfulness
             MovieRatings currentMovieRating = currentMovieRatingsTable.get(0);
             int oldVotesEnjoyment = Integer.parseInt(currentMovieRating.getVotesEnjoyment());
             int oldVotesMeaning = Integer.parseInt(currentMovieRating.getVotesMeaning());
@@ -416,6 +366,13 @@ public class RateCSActivity extends AppCompatActivity {
 
             int newVotesMeaning = oldVotesMeaning + 1;
             float newAverageMeaning = (oldAverageMeaning * oldVotesMeaning + meaningRating)/newVotesMeaning;
+
+            // need to save same order as variable characterStrengths
+            pickedCS = getColumns(creativityClicked, curiosityClicked, judgementClicked, learningClicked, perspectiveClicked, braveryClicked, honestyClicked, zestClicked, perseveranceClicked, loveClicked, kindnessClicked, socialIntelligenceClicked, teamworkClicked, fairnessClicked, leadershipClicked, forgivenessClicked, humilityClicked, prudenceClicked, selfRegulationClicked, appreciationClicked, gratitudeClicked, hopeClicked, humorClicked, spiritualityClicked);
+
+            String onesToAdd = new String(new char[pickedCS.size()]).replace("\0", ", 1");
+
+            Toast.makeText(RateCSActivity.this, String.join(", ", pickedCS), Toast.LENGTH_LONG).show();
 
             //update statement
             List<NoResult> updateResult = Utils.executeQuery(
