@@ -20,15 +20,7 @@ import java.util.concurrent.ExecutionException;
 
 public class MainActivity extends AppCompatActivity {
 
-    private String currentUserId;
-
-    public String getCurrentUserId() {
-        return this.currentUserId;
-    }
-
-    public void setCurrentUserId (String currentUserId) {
-        this.currentUserId = currentUserId;
-    }
+    private int currentUserId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
                     String.format("android_id=\'%s\'", androidId)
             );
 
-            //setCurrentUserId(usersTable.get(0).getUserId());
+            currentUserId = Integer.parseInt(usersTable.get(0).getUserId());
 
         } catch (ExecutionException e) {
             Toast.makeText(MainActivity.this, e.toString(), Toast.LENGTH_LONG).show();
@@ -86,31 +78,31 @@ public class MainActivity extends AppCompatActivity {
 
     public void launchRecommendationCSActivity(View view) {
         Intent intent = new Intent(this, RecommendationCSActivity.class);
-        intent.putExtra("CURRENT_USER_ID", getCurrentUserId());
+        intent.putExtra("CURRENT_USER_ID", currentUserId);
         startActivity(intent);
     }
 
     public void launchTop12Activity(View view) {
         Intent intent = new Intent(this, Top12Activity.class);
-        intent.putExtra("CURRENT_USER_ID", getCurrentUserId());
+        intent.putExtra("CURRENT_USER_ID", currentUserId);
         startActivity(intent);
     }
 
     public void launchHistoryActivity(View view) {
         Intent intent = new Intent(this, HistoryActivity.class);
-        intent.putExtra("CURRENT_USER_ID", getCurrentUserId());
+        intent.putExtra("CURRENT_USER_ID", currentUserId);
         startActivity(intent);
     }
 
     public void launchSavedActivity(View view) {
         Intent intent = new Intent(this, SavedActivity.class);
-        intent.putExtra("CURRENT_USER_ID", getCurrentUserId());
+        intent.putExtra("CURRENT_USER_ID", currentUserId);
         startActivity(intent);
     }
 
     public void launchSearchActivity(View view) {
         Intent intent = new Intent(this, SearchActivity.class);
-        intent.putExtra("CURRENT_USER_ID", getCurrentUserId());
+        intent.putExtra("CURRENT_USER_ID", currentUserId);
         startActivity(intent);
     }
 
