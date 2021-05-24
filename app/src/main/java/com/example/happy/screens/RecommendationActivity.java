@@ -43,6 +43,11 @@ public class RecommendationActivity extends AppCompatActivity {
         ArrayList<String> chosenCS = (ArrayList<String>) getIntent().getSerializableExtra("chosenCS");
         String listCS = String.join(", ", chosenCS);
         String listSumCS = String.join(" + ", chosenCS);
+        StringBuilder listCountCS = new StringBuilder();
+        for(String cs: chosenCS) {
+            listCountCS.append(String.format("(CASE WHEN SUM(%s)>0 THEN 1 ELSE 0 END)+", cs));
+        }
+        listCountCS.delete(listCountCS.length()-1, listCountCS.length());
 
         // Query all movieRatings with the requested CS of the user
         try {
@@ -50,10 +55,10 @@ public class RecommendationActivity extends AppCompatActivity {
                     MovieRatings.class,
                     RecommendationActivity.this,
                     "select",
-                    String.format("movie_id, average_enjoyment, average_meaning, %s, SUM(%s)", listCS, listSumCS),
+                    String.format("movie_id, average_enjoyment, average_meaning, %s, SUM(%s) AS COUNTVOTES, %s AS COUNTCS", listCS, listSumCS, listCountCS.toString()),
                     "movie_ratings",
                     "GROUP BY",
-                    String.format("movie_id HAVING SUM(%s) >0 ORDER BY SUM(%s) DESC, average_meaning DESC, average_enjoyment DESC", listSumCS, listSumCS)
+                    "movie_id HAVING COUNTVOTES>0 ORDER BY COUNTCS DESC, COUNTVOTES DESC, average_meaning DESC, average_enjoyment DESC"
             );
         } catch (ExecutionException e) {
             Toast.makeText(RecommendationActivity.this, e.toString(), Toast.LENGTH_LONG).show();
