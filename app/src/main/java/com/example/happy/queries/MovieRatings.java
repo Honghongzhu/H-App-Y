@@ -2,7 +2,6 @@ package com.example.happy.queries;
 
 public class MovieRatings {
 
-
     private String movieId, votesEnjoyment, averageEnjoyment, votesMeaning, averageMeaning, 
             creativity, curiosity, judgement, loveOfLearning, perspective, bravery, honesty,
             zest, perseverance, love, kindness, socialIntelligence, teamwork, fairness, leadership, 

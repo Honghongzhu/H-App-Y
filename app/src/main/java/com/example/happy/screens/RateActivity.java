@@ -3,10 +3,8 @@ package com.example.happy.screens;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.RatingBar;
-import android.widget.Toast;
 
 import com.example.happy.R;
 
@@ -28,21 +26,11 @@ public class RateActivity extends AppCompatActivity {
             movieToRate = extras.getString("SELECTED_MOVIE_ID", "");
         }
 
-        RatingBar enjoyBar = (RatingBar) findViewById(R.id.enjoyableRating);
-        enjoyBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
-            @Override
-            public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
-                enjoyRating = rating;
-            }
-        });
+        RatingBar enjoyBar = findViewById(R.id.enjoyableRating);
+        enjoyBar.setOnRatingBarChangeListener((ratingBar, rating, fromUser) -> enjoyRating = rating);
 
-        RatingBar meaningBar = (RatingBar) findViewById(R.id.meaningfulRating);
-        meaningBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
-            @Override
-            public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
-                meaningRating = rating;
-            }
-        });
+        RatingBar meaningBar = findViewById(R.id.meaningfulRating);
+        meaningBar.setOnRatingBarChangeListener((ratingBar, rating, fromUser) -> meaningRating = rating);
     }
 
     public void launchCharacterStrengthsSeenActivity(View view) {

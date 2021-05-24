@@ -10,7 +10,6 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.happy.R;
-import com.example.happy.queries.MovieInfo;
 import com.example.happy.queries.MovieRatings;
 import com.example.happy.queries.NoResult;
 import com.example.happy.queries.SavedMovies;

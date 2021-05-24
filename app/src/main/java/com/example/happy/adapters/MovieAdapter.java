@@ -11,7 +11,6 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.happy.data.Movie;
 import com.example.happy.R;
 import com.example.happy.queries.MovieInfo;
 import com.example.happy.screens.RateActivity;
@@ -22,14 +21,14 @@ import java.util.List;
 
 public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHolder> {
 
-    private List<MovieInfo> mMovieList;
+    private final List<MovieInfo> mMovieList;
     private final LayoutInflater inflater;
-    private Boolean isSaved = false;
+    private final Boolean isSaved = false;
     private String selectedMovieId = "";
     private int currentUserId = -1;
-    private Context context;
+    private final Context context;
 
-    public class MovieViewHolder extends RecyclerView.ViewHolder{
+    public static class MovieViewHolder extends RecyclerView.ViewHolder{
         public final ImageView movieImage;
         public final TextView movieText;
         public final ImageView saveImage;
@@ -67,15 +66,12 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
         String imgURL = movieAtPosition.getPosterUrl();
         Picasso.get().load(imgURL).into(holder.movieImage);
         holder.movieText.setText(movieAtPosition.getPrimaryTitle() + " (" + movieAtPosition.getStartYear() + ")");
-        holder.rateButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                selectedMovieId = movieAtPosition.getMovieId();
-                Intent intent = new Intent(holder.adapter.context, RateActivity.class);
-                intent.putExtra("SELECTED_MOVIE_ID", selectedMovieId);
-                intent.putExtra("CURRENT_USER_ID", holder.adapter.currentUserId);
-                context.startActivity(intent);
-            }
+        holder.rateButton.setOnClickListener(v -> {
+            selectedMovieId = movieAtPosition.getMovieId();
+            Intent intent = new Intent(holder.adapter.context, RateActivity.class);
+            intent.putExtra("SELECTED_MOVIE_ID", selectedMovieId);
+            intent.putExtra("CURRENT_USER_ID", holder.adapter.currentUserId);
+            context.startActivity(intent);
         });
 
 //        holder.saveImage.setOnClickListener(new View.OnClickListener() {

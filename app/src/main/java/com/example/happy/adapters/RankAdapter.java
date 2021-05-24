@@ -27,7 +27,7 @@ public class RankAdapter extends RecyclerView.Adapter<RankAdapter.RankViewHolder
     private int currentUserId = -1;
     private final Context context;
 
-    public class RankViewHolder extends RecyclerView.ViewHolder{
+    public static class RankViewHolder extends RecyclerView.ViewHolder{
         public final TextView movieRank;
         public final ImageView movieImage;
         public final TextView movieText;
