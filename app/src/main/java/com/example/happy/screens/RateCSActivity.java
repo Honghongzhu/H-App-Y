@@ -10,8 +10,10 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.happy.R;
+import com.example.happy.queries.MovieInfo;
 import com.example.happy.queries.MovieRatings;
 import com.example.happy.queries.NoResult;
+import com.example.happy.queries.SavedMovies;
 import com.example.happy.queries.Utils;
 
 import java.util.ArrayList;
@@ -68,30 +70,30 @@ public class RateCSActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_rate_cs);
-        appreciation=(Button)findViewById(R.id.buttonAppreciation);
-        bravery=(Button)findViewById(R.id.buttonBravery);
-        creativity=(Button)findViewById(R.id.buttonCreativity);
-        curiosity=(Button)findViewById(R.id.buttonCuriosity);
-        fairness=(Button)findViewById(R.id.buttonFairness);
-        forgiveness=(Button)findViewById(R.id.buttonForgiveness);
-        gratitude=(Button)findViewById(R.id.buttonGratitude);
-        honesty=(Button)findViewById(R.id.buttonHonesty);
-        hope=(Button)findViewById(R.id.buttonHope);
-        humility=(Button)findViewById(R.id.buttonHumility);
-        humor=(Button)findViewById(R.id.buttonHumor);
-        judgement=(Button)findViewById(R.id.buttonJudgement);
-        kindness=(Button)findViewById(R.id.buttonKindness);
-        leadership=(Button)findViewById(R.id.buttonLeadership);
-        love=(Button)findViewById(R.id.buttonLove);
-        learning=(Button)findViewById(R.id.buttonLearning);
-        perseverance=(Button)findViewById(R.id.buttonPerseverance);
-        perspective=(Button)findViewById(R.id.buttonPerspective);
-        prudence=(Button)findViewById(R.id.buttonPrudence);
-        selfRegulation=(Button)findViewById(R.id.buttonSelfRegulation);
-        socialIntelligence=(Button)findViewById(R.id.buttonSocialIntelligence);
-        spirituality=(Button)findViewById(R.id.buttonSpirituality);
-        teamwork=(Button)findViewById(R.id.buttonTeamwork);
-        zest=(Button)findViewById(R.id.buttonZest);
+        appreciation = findViewById(R.id.buttonAppreciation);
+        bravery = findViewById(R.id.buttonBravery);
+        creativity = findViewById(R.id.buttonCreativity);
+        curiosity = findViewById(R.id.buttonCuriosity);
+        fairness = findViewById(R.id.buttonFairness);
+        forgiveness = findViewById(R.id.buttonForgiveness);
+        gratitude = findViewById(R.id.buttonGratitude);
+        honesty = findViewById(R.id.buttonHonesty);
+        hope = findViewById(R.id.buttonHope);
+        humility = findViewById(R.id.buttonHumility);
+        humor = findViewById(R.id.buttonHumor);
+        judgement = findViewById(R.id.buttonJudgement);
+        kindness = findViewById(R.id.buttonKindness);
+        leadership = findViewById(R.id.buttonLeadership);
+        love = findViewById(R.id.buttonLove);
+        learning = findViewById(R.id.buttonLearning);
+        perseverance = findViewById(R.id.buttonPerseverance);
+        perspective = findViewById(R.id.buttonPerspective);
+        prudence = findViewById(R.id.buttonPrudence);
+        selfRegulation = findViewById(R.id.buttonSelfRegulation);
+        socialIntelligence = findViewById(R.id.buttonSocialIntelligence);
+        spirituality = findViewById(R.id.buttonSpirituality);
+        teamwork = findViewById(R.id.buttonTeamwork);
+        zest = findViewById(R.id.buttonZest);
 
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
@@ -330,6 +332,68 @@ public class RateCSActivity extends AppCompatActivity {
     }
 
     @RequiresApi(api = Build.VERSION_CODES.O)
+    public String getValues(MovieRatings movie, ArrayList<String> pickedCS){
+
+        ArrayList<String> finalValues = new ArrayList<>();
+        String[] chStrs = characterStrengths.split(",");
+
+        for(String cs : pickedCS) {
+            if (cs.equals(chStrs[0])){
+                finalValues.add(cs + "=" + Integer.toString(Integer.parseInt(movie.getCreativity()) + 1));
+            }else if (cs.equals(chStrs[1])) {
+                finalValues.add(cs + "=" + Integer.toString(Integer.parseInt(movie.getCuriosity()) + 1));
+            }else if (cs.equals(chStrs[2])) {
+                finalValues.add(cs + "=" + Integer.toString(Integer.parseInt(movie.getJudgement()) + 1));
+            }else if (cs.equals(chStrs[3])) {
+                finalValues.add(cs + "=" + Integer.toString(Integer.parseInt(movie.getLoveOfLearning()) + 1));
+            }else if (cs.equals(chStrs[4])) {
+                finalValues.add(cs + "=" + Integer.toString(Integer.parseInt(movie.getPerspective()) + 1));
+            }else if (cs.equals(chStrs[5])) {
+                finalValues.add(cs + "=" + Integer.toString(Integer.parseInt(movie.getBravery()) + 1));
+            }else if (cs.equals(chStrs[6])) {
+                finalValues.add(cs + "=" + Integer.toString(Integer.parseInt(movie.getHonesty()) + 1));
+            }else if (cs.equals(chStrs[7])) {
+                finalValues.add(cs + "=" + Integer.toString(Integer.parseInt(movie.getZest()) + 1));
+            }else if (cs.equals(chStrs[8])) {
+                finalValues.add(cs + "=" + Integer.toString(Integer.parseInt(movie.getPerseverance()) + 1));
+            }else if (cs.equals(chStrs[9])) {
+                finalValues.add(cs + "=" + Integer.toString(Integer.parseInt(movie.getLove()) + 1));
+            }else if (cs.equals(chStrs[10])) {
+                finalValues.add(cs + "=" + Integer.toString(Integer.parseInt(movie.getKindness()) + 1));
+            }else if (cs.equals(chStrs[11])) {
+                finalValues.add(cs + "=" + Integer.toString(Integer.parseInt(movie.getSocialIntelligence()) + 1));
+            }else if (cs.equals(chStrs[12])) {
+                finalValues.add(cs + "=" + Integer.toString(Integer.parseInt(movie.getTeamwork()) + 1));
+            }else if (cs.equals(chStrs[13])) {
+                finalValues.add(cs + "=" + Integer.toString(Integer.parseInt(movie.getFairness()) + 1));
+            }else if (cs.equals(chStrs[14])) {
+                finalValues.add(cs + "=" + Integer.toString(Integer.parseInt(movie.getLeadership()) + 1));
+            }else if (cs.equals(chStrs[15])) {
+                finalValues.add(cs + "=" + Integer.toString(Integer.parseInt(movie.getForgiveness()) + 1));
+            }else if (cs.equals(chStrs[16])) {
+                finalValues.add(cs + "=" + Integer.toString(Integer.parseInt(movie.getHumility()) + 1));
+            }else if (cs.equals(chStrs[17])) {
+                finalValues.add(cs + "=" + Integer.toString(Integer.parseInt(movie.getPrudence()) + 1));
+            }else if (cs.equals(chStrs[18])) {
+                finalValues.add(cs + "=" + Integer.toString(Integer.parseInt(movie.getSelfRegulation()) + 1));
+            }else if (cs.equals(chStrs[19])) {
+                finalValues.add(cs + "=" + Integer.toString(Integer.parseInt(movie.getAppreciationBeautyExcellence()) + 1));
+            }else if (cs.equals(chStrs[20])) {
+                finalValues.add(cs + "=" + Integer.toString(Integer.parseInt(movie.getGratitude()) + 1));
+            }else if (cs.equals(chStrs[21])) {
+                finalValues.add(cs + "=" + Integer.toString(Integer.parseInt(movie.getHope()) + 1));
+            }else if (cs.equals(chStrs[22])) {
+                finalValues.add(cs + "=" + Integer.toString(Integer.parseInt(movie.getHumor()) + 1));
+            }else if (cs.equals(chStrs[23])) {
+                finalValues.add(cs + "=" + Integer.toString(Integer.parseInt(movie.getSpirituality()) + 1));
+            }
+        } // end for
+
+        return String.join(", ", finalValues);
+    }
+
+
+    @RequiresApi(api = Build.VERSION_CODES.O)
     public void launchHistoryActivity(View view) {
 
         String columns = "(user_id, movie_id, enjoyment_rating, meaning_rating, creativity," +
@@ -370,26 +434,23 @@ public class RateCSActivity extends AppCompatActivity {
             // need to save same order as variable characterStrengths
             pickedCS = getColumns(creativityClicked, curiosityClicked, judgementClicked, learningClicked, perspectiveClicked, braveryClicked, honestyClicked, zestClicked, perseveranceClicked, loveClicked, kindnessClicked, socialIntelligenceClicked, teamworkClicked, fairnessClicked, leadershipClicked, forgivenessClicked, humilityClicked, prudenceClicked, selfRegulationClicked, appreciationClicked, gratitudeClicked, hopeClicked, humorClicked, spiritualityClicked);
 
-            String onesToAdd = new String(new char[pickedCS.size()]).replace("\0", ", 1");
-
-            Toast.makeText(RateCSActivity.this, String.join(", ", pickedCS), Toast.LENGTH_LONG).show();
+            String valuesToAdd = getValues(currentMovieRating, pickedCS);
 
             //update statement
             List<NoResult> updateResult = Utils.executeQuery(
                     NoResult.class,
                     RateCSActivity.this,
                     "update",
-                    "(votes_enjoyment, average_enjoyment, votes_meaning, average_meaning)",
-                    "movie_ratings",
-                    "values",
-                    String.format(("(%s, %s, %s, %s)"),
+                    String.format("votes_enjoyment=%s, average_enjoyment=%s, votes_meaning=%s, average_meaning=%s, %s",
                             newVotesEnjoyment,
                             newAverageEnjoyment,
                             newVotesMeaning,
-                            newAverageMeaning)
+                            newAverageMeaning,
+                            valuesToAdd),
+                    "movie_ratings",
+                    "where",
+                    String.format("movie_id='%s'", movieToRate)
             );
-
-            Toast.makeText(RateCSActivity.this, updateResult.get(0).getResult(), Toast.LENGTH_LONG).show();
 
             List<NoResult> insertResult = Utils.executeQuery(
                     NoResult.class,
@@ -428,6 +489,39 @@ public class RateCSActivity extends AppCompatActivity {
                             humorClicked,
                             spiritualityClicked)
             );
+
+            //remove from saved when rated
+            List<SavedMovies> savedByUserTable = Utils.executeQuery(
+                    SavedMovies.class,
+                    RateCSActivity.this,
+                    "select",
+                    "*",
+                    "saved_movies",
+                    "where",
+                    String.format("user_id=%s", currentUserId)
+            );
+
+            //if not empty
+            if (!savedByUserTable.toString().equals("[]")) {
+                ArrayList<String> savedMovieId = new ArrayList<>();
+                for (SavedMovies savedMovie: savedByUserTable){
+                    savedMovieId.add(savedMovie.getMovieId());
+                }
+                // if the movie to rate is in the saved table
+                if(savedMovieId.contains(movieToRate)){
+                    List<NoResult> deleteResult = Utils.executeQuery(
+                            NoResult.class,
+                            RateCSActivity.this,
+                            "delete",
+                            "",
+                            "saved_movies",
+                            "where",
+                            String.format("movie_id='%s' and user_id=%s", movieToRate, currentUserId)
+                    );
+                }
+            }
+
+
         } catch (ExecutionException e) {
             Toast.makeText(RateCSActivity.this, e.toString(), Toast.LENGTH_LONG).show();
         } catch (InterruptedException e) {

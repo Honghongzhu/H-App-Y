@@ -97,6 +97,8 @@ public class MeaningfulMoviesServlet extends HttpServlet {
 	        	 OPERATION = 2;
 	         } else if (firstStatement.equals("insert")) {
 	        	 OPERATION = 3;
+	         } else if (firstStatement.equals("delete")) {
+	        	 OPERATION = 4;
 	         }
 	         
 	         switch(OPERATION) {
@@ -111,6 +113,10 @@ public class MeaningfulMoviesServlet extends HttpServlet {
 	         	case 3: // insert
 	         		op = "into";
 		        	sql = "<firstStatement> <op> <table> <columns> <secondStatement> <condition>";
+		        	break;
+	         	case 4: // delete
+	         		op = "from";
+		        	sql = "<firstStatement> <op> <table> <secondStatement> <condition> <columns>";
 		        	break;
 	         	case 0: // error
 	         		out.println(String.format("The first statement %s is not valid.", firstStatement));
@@ -137,6 +143,9 @@ public class MeaningfulMoviesServlet extends HttpServlet {
         	 		result = stmt.executeUpdate(sql);
         	 		break;
         	 	case 3:
+        	 		result = stmt.executeUpdate(sql);
+        	 		break;
+        	 	case 4:
         	 		result = stmt.executeUpdate(sql);
         	 		break;
         	 }
@@ -427,6 +436,10 @@ public class MeaningfulMoviesServlet extends HttpServlet {
         	 		
         	 	case 3:
         	 		output +=String.format("[{ result: \"%s rows were modified by INSERT statement\"}]", result);
+        	 		break;
+        	 	
+        	 	case 4:
+        	 		output +=String.format("[{ result: \"%s rows were modified by DELETE statement\"}]", result);
         	 		break;
 		         
         	 } // end switch
