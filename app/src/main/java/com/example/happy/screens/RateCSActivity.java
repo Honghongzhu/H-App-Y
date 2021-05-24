@@ -394,20 +394,45 @@ public class RateCSActivity extends AppCompatActivity {
         try {
 
             // first get the data to update in movie_ratings
-//            List<MovieRatings> currentMovieRatingsTable = Utils.executeQuery(
-//                    MovieRatings.class,
-//                    RateCSActivity.this,
-//                    "select",
-//                    "*",
-//                    "movie_ratings",
-//                    "where",
-//                    String.format("movie_id not in (select movie_id from user_ratings where user_id=%s)", currentUserId)
-//            );
+            List<MovieRatings> currentMovieRatingsTable = Utils.executeQuery(
+                    MovieRatings.class,
+                    RateCSActivity.this,
+                    "select",
+                    "*",
+                    "movie_ratings",
+                    "where",
+                    String.format("movie_id=%s)", movieToRate)
+            );
 
+            // update the average and votes for enjoyment and meaningfulness
+            MovieRatings currentMovieRating = currentMovieRatingsTable.get(0);
+            int oldVotesEnjoyment = Integer.parseInt(currentMovieRating.getVotesEnjoyment());
+            int oldVotesMeaning = Integer.parseInt(currentMovieRating.getVotesMeaning());
+            float oldAverageEnjoyment = Float.parseFloat(currentMovieRating.getAverageEnjoyment());
+            float oldAverageMeaning = Float.parseFloat(currentMovieRating.getAverageMeaning());
 
+            int newVotesEnjoyment = oldVotesEnjoyment + 1;
+            float newAverageEnjoyment = (oldAverageEnjoyment * oldVotesEnjoyment + enjoyRating)/newVotesEnjoyment;
 
+            int newVotesMeaning = oldVotesMeaning + 1;
+            float newAverageMeaning = (oldAverageMeaning * oldVotesMeaning + meaningRating)/newVotesMeaning;
 
+            //update statement
+            List<NoResult> updateResult = Utils.executeQuery(
+                    NoResult.class,
+                    RateCSActivity.this,
+                    "update",
+                    "(votes_enjoyment, average_enjoyment, votes_meaning, average_meaning)",
+                    "movie_ratings",
+                    "values",
+                    String.format(("(%s, %s, %s, %s)"),
+                            newVotesEnjoyment,
+                            newAverageEnjoyment,
+                            newVotesMeaning,
+                            newAverageMeaning)
+            );
 
+            Toast.makeText(RateCSActivity.this, updateResult.get(0).getResult(), Toast.LENGTH_LONG).show();
 
             List<NoResult> insertResult = Utils.executeQuery(
                     NoResult.class,

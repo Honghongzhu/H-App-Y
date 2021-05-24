@@ -35,7 +35,7 @@ public class MeaningfulMoviesServlet extends HttpServlet {
     	if(columns.contains(column) || columns.equals("*")) {
     		result = rs.getString(column); 
     	} else {
-    		result = "";
+    		result = "$";
     	}
     	return result;
     }
