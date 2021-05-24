@@ -2,10 +2,10 @@ package com.example.happy.queries;
 
 public class Users {
 
-    private int userId;
+    private String userId;
     private String androidId;
 
-    public int getUserId() {
+    public String getUserId() {
         return userId;
     }
 
@@ -13,7 +13,7 @@ public class Users {
         return androidId;
     }
 
-    public Users(int userId, String androidId) {
+    public Users(String userId, String androidId) {
         this.userId = userId;
         this.androidId = androidId;
     }

@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.example.happy.data.Movie;
 import com.example.happy.R;
+import com.example.happy.queries.MovieInfo;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -64,11 +65,11 @@ public class RankAdapter extends RecyclerView.Adapter<RankAdapter.RankViewHolder
             @Override
             public void onClick(View v) {
                 if (isSaved){//it was saved and by clicking it is deleted from saved
-                    holder.saveImage.setImageResource(R.drawable.heart_border);
+                    holder.saveImage.setBackgroundResource(R.drawable.save_button_dark_fixedsize);
                     // TODO: update database
                     movieAtPosition.setSaved(false);
                 }else{ //it was not saved and by clicking it became saved
-                    holder.saveImage.setImageResource(R.drawable.heart_filled);
+                    holder.saveImage.setBackgroundResource(R.drawable.save_button_light_fixedsize);
                     // TODO: update database
                     movieAtPosition.setSaved(true);
                 }

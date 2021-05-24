@@ -1,14 +1,31 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.chaquo.python'
 
 android {
     compileSdkVersion 28
     defaultConfig {
-        applicationId "com.example.happy"
-        minSdkVersion 15
+        applicationId "com.example.meaningfulmovies"
+        minSdkVersion 16
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        ndk {
+            abiFilters "armeabi-v7a", "x86"
+        }
+        python {
+            buildPython System.getProperty("user.home") + "/AppData/Local/Programs/Python/Python39/python.exe";
+
+            pip {
+                install "numpy"
+                install "pandas"
+            }
+        }
+        sourceSets {
+            main {
+                python.srcDir "src/main/python"
+            }
+        }
     }
     buildTypes {
         release {

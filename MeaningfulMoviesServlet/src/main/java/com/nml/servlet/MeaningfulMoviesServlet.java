@@ -29,6 +29,16 @@ public class MeaningfulMoviesServlet extends HttpServlet {
         super();
         // TODO Auto-generated constructor stub
     }
+    
+    public String getColumnContent(ResultSet rs, String columns, String column) throws SQLException {
+    	String result = null;
+    	if(columns.contains(column) || columns.equals("*")) {
+    		result = rs.getString(column); 
+    	} else {
+    		result = "";
+    	}
+    	return result;
+    }
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
@@ -100,7 +110,7 @@ public class MeaningfulMoviesServlet extends HttpServlet {
 		        	break;
 	         	case 3: // insert
 	         		op = "into";
-		        	sql = "<first> <op> <table> <columns> <secondStatement> <condition>";
+		        	sql = "<firstStatement> <op> <table> <columns> <secondStatement> <condition>";
 		        	break;
 	         	case 0: // error
 	         		out.println(String.format("The first statement %s is not valid.", firstStatement));
@@ -149,7 +159,8 @@ public class MeaningfulMoviesServlet extends HttpServlet {
 		         		perseverance, love, kindness, socialIntelligence,teamwork, fairness, leadership,
 		         		forgiveness, humility, prudence, selfRegulation, appreciationBeautyExcellence,
 		         		gratitude, hope, humor, spirituality, ratingId, userId, enjoymentRating,
-		         		meaningRating, androidId;
+		         		meaningRating, androidId, savedId;
+
         	 		
         	 		// Extract data from result set
         	 		while(rs.next()){
@@ -162,13 +173,13 @@ public class MeaningfulMoviesServlet extends HttpServlet {
 		        	
 			        	if(table.equals("movie_info")) {
 		        			
-				            movieId = rs.getString("movie_id");
-				            primaryTitle = rs.getString("primary_title");
-				            originalTitle = rs.getString("original_title");
-				            startYear = rs.getString("start_year");
-				            runtime = rs.getString("runtime");
-				            genres = rs.getString("genres");
-				            posterUrl = rs.getString("poster_url");
+			        		movieId = getColumnContent(rs, columns, "movie_id");
+			        		primaryTitle = getColumnContent(rs, columns, "primary_title");
+			        		originalTitle = getColumnContent(rs, columns, "original_title");
+			        		startYear = getColumnContent(rs, columns, "start_year");
+			        		runtime = getColumnContent(rs, columns, "runtime");
+			        		genres = getColumnContent(rs, columns, "genres");
+			        		posterUrl = getColumnContent(rs, columns, "poster_url");
 			
 				            output += String.format(
 				            		"{ movieId: %s,"
@@ -189,35 +200,35 @@ public class MeaningfulMoviesServlet extends HttpServlet {
 		    	           
 			        	} else if (table.equals("movie_ratings")) {
 		        			
-		        			movieId = rs.getString("movie_id");
-		    	            votesEnjoyment = rs.getString("votes_enjoyment");
-		    	            averageEnjoyment = rs.getString("average_enjoyment");
-		    	            votesMeaning = rs.getString("votes_meaning");
-		    	            averageMeaning = rs.getString("average_meaning");
-		    	            creativity = rs.getString("creativity");
-		    	            curiosity = rs.getString("curiosity");
-		    	            judgement = rs.getString("judgement");
-		    	            loveOfLearning = rs.getString("love_of_learning");
-		    	            perspective = rs.getString("perspective");
-		    	            bravery = rs.getString("bravery");
-		    	            honesty = rs.getString("honesty");
-		    	            zest = rs.getString("zest");
-		    	            perseverance = rs.getString("perseverance");
-		    	            love = rs.getString("love");
-		    	            kindness = rs.getString("kindness");
-		    	            socialIntelligence = rs.getString("social_intelligence");
-		    	            teamwork = rs.getString("teamwork");
-		    	            fairness = rs.getString("fairness");
-		    	            leadership = rs.getString("leadership");
-		    	            forgiveness = rs.getString("forgiveness");
-		    	            humility = rs.getString("humility");
-		    	            prudence = rs.getString("prudence");
-		    	            selfRegulation = rs.getString("self_regulation");
-		    	            appreciationBeautyExcellence = rs.getString("appreciation_beauty_excellence");
-		    	            gratitude = rs.getString("gratitude");
-		    	            hope = rs.getString("hope");
-		    	            humor = rs.getString("humor");
-		    	            spirituality = rs.getString("spirituality");
+		        			movieId = getColumnContent(rs, columns, "movie_id");
+		    	            votesEnjoyment = getColumnContent(rs, columns, "votes_enjoyment");
+		    	            averageEnjoyment = getColumnContent(rs, columns, "average_enjoyment");
+		    	            votesMeaning = getColumnContent(rs, columns, "votes_meaning");
+		    	            averageMeaning = getColumnContent(rs, columns, "average_meaning");
+		    	            creativity = getColumnContent(rs, columns, "creativity");
+		    	            curiosity = getColumnContent(rs, columns, "curiosity");
+		    	            judgement = getColumnContent(rs, columns, "judgement");
+		    	            loveOfLearning = getColumnContent(rs, columns, "love_of_learning");
+		    	            perspective = getColumnContent(rs, columns, "perspective");
+		    	            bravery = getColumnContent(rs, columns, "bravery");
+		    	            honesty = getColumnContent(rs, columns, "honesty");
+		    	            zest = getColumnContent(rs, columns, "zest");
+		    	            perseverance = getColumnContent(rs, columns, "perseverance");
+		    	            love = getColumnContent(rs, columns, "love");
+		    	            kindness = getColumnContent(rs, columns, "kindness");
+		    	            socialIntelligence = getColumnContent(rs, columns, "social_intelligence");
+		    	            teamwork = getColumnContent(rs, columns, "teamwork");
+		    	            fairness = getColumnContent(rs, columns, "fairness");
+		    	            leadership = getColumnContent(rs, columns, "leadership");
+		    	            forgiveness = getColumnContent(rs, columns, "forgiveness");
+		    	            humility = getColumnContent(rs, columns, "humility");
+		    	            prudence = getColumnContent(rs, columns, "prudence");
+		    	            selfRegulation = getColumnContent(rs, columns, "self_regulation");
+		    	            appreciationBeautyExcellence = getColumnContent(rs, columns, "appreciation_beauty_excellence");
+		    	            gratitude = getColumnContent(rs, columns, "gratitude");
+		    	            hope = getColumnContent(rs, columns, "hope");
+		    	            humor = getColumnContent(rs, columns, "humor");
+		    	            spirituality = getColumnContent(rs, columns, "spirituality");
 		    	            
 		    	            output += String.format(
 		    	            		"{ movieId: %s,"
@@ -283,35 +294,35 @@ public class MeaningfulMoviesServlet extends HttpServlet {
 		        		
 			        	} else if (table.equals("user_ratings")) {
 		        			
-		        			ratingId = rs.getString("rating_id");
-		    	            userId = rs.getString("user_id");
-		    	            movieId = rs.getString("movie_id");
-		    	            enjoymentRating = rs.getString("enjoyment_rating");
-		    	            meaningRating = rs.getString("meaning_rating");
-		    	            creativity = rs.getString("creativity");
-		    	            curiosity = rs.getString("curiosity");
-		    	            judgement = rs.getString("judgement");
-		    	            loveOfLearning = rs.getString("love_of_learning");
-		    	            perspective = rs.getString("perspective");
-		    	            bravery = rs.getString("bravery");
-		    	            honesty = rs.getString("honesty");
-		    	            zest = rs.getString("zest");
-		    	            perseverance = rs.getString("perseverance");
-		    	            love = rs.getString("love");
-		    	            kindness = rs.getString("kindness");
-		    	            socialIntelligence = rs.getString("social_intelligence");
-		    	            teamwork = rs.getString("teamwork");
-		    	            fairness = rs.getString("fairness");
-		    	            leadership = rs.getString("leadership");
-		    	            forgiveness = rs.getString("forgiveness");
-		    	            humility = rs.getString("humility");
-		    	            prudence = rs.getString("prudence");
-		    	            selfRegulation = rs.getString("self_regulation");
-		    	            appreciationBeautyExcellence = rs.getString("appreciation_beauty_excellence");
-		    	            gratitude = rs.getString("gratitude");
-		    	            hope = rs.getString("hope");
-		    	            humor = rs.getString("humor");
-		    	            spirituality = rs.getString("spirituality");
+		        			ratingId = getColumnContent(rs, columns, "rating_id");
+		    	            userId = getColumnContent(rs, columns, "user_id");
+		    	            movieId = getColumnContent(rs, columns, "movie_id");
+		    	            enjoymentRating = getColumnContent(rs, columns, "enjoyment_rating");
+		    	            meaningRating = getColumnContent(rs, columns, "meaning_rating");
+		    	            creativity = getColumnContent(rs, columns, "creativity");
+		    	            curiosity = getColumnContent(rs, columns, "curiosity");
+		    	            judgement = getColumnContent(rs, columns, "judgement");
+		    	            loveOfLearning = getColumnContent(rs, columns, "love_of_learning");
+		    	            perspective = getColumnContent(rs, columns, "perspective");
+		    	            bravery = getColumnContent(rs, columns, "bravery");
+		    	            honesty = getColumnContent(rs, columns, "honesty");
+		    	            zest = getColumnContent(rs, columns, "zest");
+		    	            perseverance = getColumnContent(rs, columns, "perseverance");
+		    	            love = getColumnContent(rs, columns, "love");
+		    	            kindness = getColumnContent(rs, columns, "kindness");
+		    	            socialIntelligence = getColumnContent(rs, columns, "social_intelligence");
+		    	            teamwork = getColumnContent(rs, columns, "teamwork");
+		    	            fairness = getColumnContent(rs, columns, "fairness");
+		    	            leadership = getColumnContent(rs, columns, "leadership");
+		    	            forgiveness = getColumnContent(rs, columns, "forgiveness");
+		    	            humility = getColumnContent(rs, columns, "humility");
+		    	            prudence = getColumnContent(rs, columns, "prudence");
+		    	            selfRegulation = getColumnContent(rs, columns, "self_regulation");
+		    	            appreciationBeautyExcellence = getColumnContent(rs, columns, "appreciation_beauty_excellence");
+		    	            gratitude = getColumnContent(rs, columns, "gratitude");
+		    	            hope = getColumnContent(rs, columns, "hope");
+		    	            humor = getColumnContent(rs, columns, "humor");
+		    	            spirituality = getColumnContent(rs, columns, "spirituality");
 		    	            
 		    	            output += String.format(
 		    	            		"{ ratingId: %s,"
@@ -377,8 +388,8 @@ public class MeaningfulMoviesServlet extends HttpServlet {
 		        			
 			        	} else if (table.equals("users")) {
 		        		
-		        			userId = rs.getString("user_id");
-		        			androidId = rs.getString("android_id");
+		        			userId = getColumnContent(rs, columns, "user_id");
+		        			androidId = getColumnContent(rs, columns, "android_id");
 		    	            
 		    	            output += String.format(
 		    	            		"{ userId: %s,"
@@ -387,6 +398,23 @@ public class MeaningfulMoviesServlet extends HttpServlet {
 		    	            		userId,
 		    	            		androidId
 		    	            		);
+		    	            
+			        	} else if (table.equals("saved_movies")) {
+			        		
+			        		savedId = getColumnContent(rs, columns, "saved_id");
+			        		userId = getColumnContent(rs, columns, "user_id");
+			        		movieId = getColumnContent(rs, columns, "movie_id");
+			        		
+			        		output += String.format(
+		    	            		"{ savedId: %s,"
+		    	            		+ " userId: %s,"
+		    	            		+ " movieId: \"%s\""
+		    	            		+ " }", 
+		    	            		savedId,
+		    	            		userId,
+		    	            		movieId
+		    	            		);
+			        		
 			        	}
 			        } //end while
 		         
@@ -394,11 +422,11 @@ public class MeaningfulMoviesServlet extends HttpServlet {
 			        break;
 		         
         	 	case 2:
-        	 		output += String.format("%s rows were modified by UPDATE statement", result);
+        	 		output += String.format("[{ result: \"%s rows were modified by UPDATE statement\"}]", result);
         	 		break;
         	 		
         	 	case 3:
-        	 		output += String.format("%s rows were modified by INSERT statement", result);
+        	 		output +=String.format("[{ result: \"%s rows were modified by INSERT statement\"}]", result);
         	 		break;
 		         
         	 } // end switch
@@ -406,7 +434,9 @@ public class MeaningfulMoviesServlet extends HttpServlet {
         	 out.print(output);
         	 
 	         // Clean-up environment
-	         rs.close();
+        	 if (rs != null) {
+        		 rs.close();
+        	 }
 	         stmt.close();
 	         conn.close();         
 	      

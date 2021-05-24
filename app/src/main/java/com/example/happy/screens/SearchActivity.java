@@ -27,11 +27,17 @@ public class SearchActivity extends AppCompatActivity {
     private String search;
     private MovieAdapter mAdapter;
     private List<MovieInfo> allMovies;
+    private int currentUserId = -1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
+
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            currentUserId = extras.getInt("CURRENT_USER_ID", -1);
+        }
 
         mRecyclerView = findViewById(R.id.rv_search);
         searchText = findViewById(R.id.searchBar);
@@ -63,14 +69,15 @@ public class SearchActivity extends AppCompatActivity {
                     foundMovies.add(movie);
                 }
             }
-            mAdapter = new MovieAdapter(v.getContext(), foundMovies);
+            mAdapter = new MovieAdapter(v.getContext(), foundMovies, currentUserId);
             mRecyclerView.setAdapter(mAdapter);
             mRecyclerView.setLayoutManager(new LinearLayoutManager(v.getContext()));
         });
     }
 
-    public void launchRateActivity(View view) {
-        Intent intent = new Intent(this, RateActivity.class);
-        startActivity(intent);
-    }
+//    public void launchRateActivity(View view) {
+//        Intent intent = new Intent(this, RateActivity.class);
+//        intent.putExtra("CURRENT_USER_ID", currentUserId);
+//        startActivity(intent);
+//    }
 }

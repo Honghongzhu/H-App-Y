@@ -22,7 +22,7 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="101dp"
+                    android:layout_height="match_parent"
                     android:gravity="center"
                     android:orientation="vertical">
 
@@ -51,21 +51,13 @@
                     android:id="@+id/cs_grid"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="80dp"
+                    android:layout_marginTop="100dp"
                     android:orientation="vertical"
                     android:layout_marginLeft="1dp"
                     android:layout_marginRight="1dp"
                     >
 
-                    <Button
-                        android:id="@+id/buttonConfirm"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@color/colorPrimaryDark"
-                        android:onClick="launchRecommendationActivity"
-                        android:text="@string/confirm"
-                        android:textColor="@color/white"
-                        android:textSize="15sp" />
+
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -579,5 +571,17 @@
             </RelativeLayout>
         </LinearLayout>
     </ScrollView>
+
+    <Button
+        android:id="@+id/buttonConfirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimaryDark"
+        android:onClick="launchRecommendationActivity"
+        android:text="@string/confirm"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
 
 </RelativeLayout>
