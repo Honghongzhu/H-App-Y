@@ -26,17 +26,22 @@ public class RecommendationActivity extends AppCompatActivity {
 
     private List<MovieRatings> resultMovieRatings;
     private List<MovieInfo> allMovieInfo;
+    private int currentUserId = -1;
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recommendation);
+
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            currentUserId = extras.getInt("CURRENT_USER_ID", -1);
+        }
+
         ArrayList<String> chosenCS = (ArrayList<String>) getIntent().getSerializableExtra("chosenCS");
         String listCS = String.join(", ", chosenCS);
         String listSumCS = String.join(" + ", chosenCS);
-
-        //Toast.makeText(RecommendationActivity.this, listCS, Toast.LENGTH_LONG).show();
 
         // Query all movieRatings with the requested CS of the user
         try {
@@ -88,7 +93,7 @@ public class RecommendationActivity extends AppCompatActivity {
         LinkedList<MovieInfo> moviesSaved = new LinkedList<>(allMovieInfo);
 
         RecyclerView recyclerView = findViewById(R.id.rv_recommendation);
-        MovieAdapter adapter = new MovieAdapter(this, moviesSaved);
+        MovieAdapter adapter = new MovieAdapter(this, moviesSaved, currentUserId);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
