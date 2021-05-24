@@ -17,6 +17,7 @@
             android:layout_height="wrap_content"
             android:textColor="@color/white"
             android:textSize="20sp"
+            android:layout_gravity="center_vertical"
             android:layout_marginLeft="5dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -57,30 +58,30 @@
         android:orientation="vertical"
         android:layout_gravity="center">
         <ImageView
-        android:id="@+id/rankedMovieSave"
-        android:layout_width="90dp"
-        android:layout_height="45dp"
-        android:background="@drawable/save_button_dark_fixedsize"
+            android:id="@+id/rankedMovieSave"
+            android:layout_width="90dp"
+            android:layout_height="45dp"
+            android:background="@drawable/save_button_dark_fixedsize"
             android:layout_gravity="center"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
             android:contentDescription="TODO"
-        app:layout_constraintStart_toEndOf="@id/moviePhotoName"
-        app:layout_constraintEnd_toStartOf="@id/rankedButtonRate"
-        app:layout_constraintTop_toTopOf="@id/moviePhotoName"
-        app:layout_constraintBottom_toBottomOf="@id/moviePhotoName"/>
+            app:layout_constraintStart_toEndOf="@id/moviePhotoName"
+            app:layout_constraintEnd_toStartOf="@id/rankedButtonRate"
+            app:layout_constraintTop_toTopOf="@id/moviePhotoName"
+            app:layout_constraintBottom_toBottomOf="@id/moviePhotoName"/>
         <Button
-        android:id="@+id/rankedButtonRate"
-        android:layout_width="90dp"
-        android:layout_height="45dp"
+            android:id="@+id/rankedButtonRate"
+            android:layout_width="90dp"
+            android:layout_height="45dp"
             android:layout_gravity="center"
             android:layout_margin="5dp"
             android:background="@drawable/rate_button"
-        android:onClick="launchRateActivity"
-        app:layout_constraintStart_toEndOf="@id/rankedMovieSave"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/moviePhotoName"
-        app:layout_constraintBottom_toBottomOf="@id/moviePhotoName"/>
+            android:onClick="launchRateActivity"
+            app:layout_constraintStart_toEndOf="@id/rankedMovieSave"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/moviePhotoName"
+            app:layout_constraintBottom_toBottomOf="@id/moviePhotoName"/>
     </LinearLayout>
 
     </LinearLayout>

@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import com.example.happy.R;
 import com.example.happy.adapters.MovieAdapter;
+import com.example.happy.adapters.RankAdapter;
 import com.example.happy.queries.MovieInfo;
 import com.example.happy.queries.MovieRatings;
 import com.example.happy.queries.Utils;
@@ -93,7 +94,7 @@ public class RecommendationActivity extends AppCompatActivity {
         LinkedList<MovieInfo> moviesSaved = new LinkedList<>(allMovieInfo);
 
         RecyclerView recyclerView = findViewById(R.id.rv_recommendation);
-        MovieAdapter adapter = new MovieAdapter(this, moviesSaved, currentUserId);
+        RankAdapter adapter = new RankAdapter(this, moviesSaved, currentUserId);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
