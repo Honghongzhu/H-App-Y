@@ -29,10 +29,6 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
     private int currentUserId = -1;
     private Context context;
 
-    public void setData(List<MovieInfo> mMovieList){
-        this.mMovieList = mMovieList;
-    }
-
     public class MovieViewHolder extends RecyclerView.ViewHolder{
         public final ImageView movieImage;
         public final TextView movieText;
@@ -70,8 +66,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
         final MovieInfo movieAtPosition = mMovieList.get(position);
         String imgURL = movieAtPosition.getPosterUrl();
         Picasso.get().load(imgURL).into(holder.movieImage);
-//        holder.movieImage.setImageResource(movieAtPosition.getImageDrawableId());
-        holder.movieText.setText(movieAtPosition.getPrimaryTitle() + " (" + movieAtPosition.getStartYear() + ")"); //TODO: get from database
+        holder.movieText.setText(movieAtPosition.getPrimaryTitle() + " (" + movieAtPosition.getStartYear() + ")");
         holder.rateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
