@@ -47,6 +47,12 @@ public class Top12Activity extends AppCompatActivity {
         View loadingIcon = findViewById(R.id.loadingPanel);
 
         boolean runThread = true;
+        // Retrieve the current user of the app
+
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            currentUserId = extras.getInt("CURRENT_USER_ID", -1);
+        }
 
         // Get a handle to the RecyclerView
         recyclerView = findViewById(R.id.rv_top12);
@@ -55,13 +61,6 @@ public class Top12Activity extends AppCompatActivity {
 
         TextView textview = (TextView)findViewById(R.id.notEnoughMoviesTextView);
         textview.setVisibility(View.GONE);
-
-        // Retrieve the current user of the app
-
-        Bundle extras = getIntent().getExtras();
-        if (extras != null) {
-            currentUserId = extras.getInt("CURRENT_USER_ID", -1);
-        }
 
         try {
             // Get the movies rated by the user
@@ -145,7 +144,6 @@ public class Top12Activity extends AppCompatActivity {
                         Top12Activity.this.runOnUiThread(
                                 new Runnable() {
                                     public void run() {
-                                        Toast.makeText(Top12Activity.this, recomScores, Toast.LENGTH_LONG).show();
                                         loadingIcon.setVisibility(View.GONE);
                                         mAdapter.notifyDataSetChanged();
                                     }});

@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.happy.R;
+import com.example.happy.queries.MovieRatings;
 import com.example.happy.queries.NoResult;
 import com.example.happy.queries.Utils;
 
@@ -89,20 +90,14 @@ public class RateCSActivity extends AppCompatActivity {
             movieToRate = extras.getString("SELECTED_MOVIE_ID", "");
         }
 
-        Toast.makeText(RateCSActivity.this, String.valueOf(currentUserId) +
-                String.valueOf(enjoyRating) +
-                String.valueOf(meaningRating) +
-                String.valueOf(movieToRate)
-                , Toast.LENGTH_LONG).show();
-
         appreciation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if(appreciationClicked == 1){
-                    appreciation.setBackgroundResource(R.drawable.appreciation_light);
+                    appreciation.setBackgroundResource(R.drawable.appreciation_dark);
                     appreciationClicked = 0;
                 }else {
-                    appreciation.setBackgroundResource(R.drawable.appreciation_dark);
+                    appreciation.setBackgroundResource(R.drawable.appreciation_light);
                     appreciationClicked = 1;
                 }
             }
@@ -111,10 +106,10 @@ public class RateCSActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(braveryClicked == 1){
-                    bravery.setBackgroundResource(R.drawable.bravery_light);
+                    bravery.setBackgroundResource(R.drawable.bravery_dark);
                     braveryClicked = 0;
                 }else {
-                    bravery.setBackgroundResource(R.drawable.bravery_dark);
+                    bravery.setBackgroundResource(R.drawable.bravery_light);
                     braveryClicked = 1;
                 }
             }
@@ -123,10 +118,10 @@ public class RateCSActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(creativityClicked == 1){
-                    creativity.setBackgroundResource(R.drawable.creativity_light);
+                    creativity.setBackgroundResource(R.drawable.creativity_dark);
                     creativityClicked = 0;
                 }else {
-                    creativity.setBackgroundResource(R.drawable.creativity_dark);
+                    creativity.setBackgroundResource(R.drawable.creativity_light);
                     creativityClicked = 1;
                 }
             }
@@ -135,10 +130,10 @@ public class RateCSActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(curiosityClicked == 1){
-                    curiosity.setBackgroundResource(R.drawable.curiosity_light);
+                    curiosity.setBackgroundResource(R.drawable.curiosity_dark);
                     curiosityClicked = 0;
                 }else {
-                    curiosity.setBackgroundResource(R.drawable.curiosity_dark);
+                    curiosity.setBackgroundResource(R.drawable.curiosity_light);
                     curiosityClicked = 1;
                 }
             }
@@ -147,10 +142,10 @@ public class RateCSActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(fairnessClicked == 1){
-                    fairness.setBackgroundResource(R.drawable.fairness_light);
+                    fairness.setBackgroundResource(R.drawable.fairness_dark);
                     fairnessClicked = 0;
                 }else {
-                    fairness.setBackgroundResource(R.drawable.fairness_dark);
+                    fairness.setBackgroundResource(R.drawable.fairness_light);
                     fairnessClicked = 1;
                 }
             }
@@ -159,10 +154,10 @@ public class RateCSActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(forgivenessClicked == 1){
-                    forgiveness.setBackgroundResource(R.drawable.forgiveness_light);
+                    forgiveness.setBackgroundResource(R.drawable.forgiveness_dark);
                     forgivenessClicked = 0;
                 }else {
-                    forgiveness.setBackgroundResource(R.drawable.forgiveness_dark);
+                    forgiveness.setBackgroundResource(R.drawable.forgiveness_light);
                     forgivenessClicked = 1;
                 }
             }
@@ -171,10 +166,10 @@ public class RateCSActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(gratitudeClicked == 1){
-                    gratitude.setBackgroundResource(R.drawable.gratitude_light);
+                    gratitude.setBackgroundResource(R.drawable.gratitude_dark);
                     gratitudeClicked = 0;
                 }else {
-                    gratitude.setBackgroundResource(R.drawable.gratitude_dark);
+                    gratitude.setBackgroundResource(R.drawable.gratitude_light);
                     gratitudeClicked = 1;
                 }
             }
@@ -183,10 +178,10 @@ public class RateCSActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(honestyClicked == 1){
-                    honesty.setBackgroundResource(R.drawable.honesty_light);
+                    honesty.setBackgroundResource(R.drawable.honesty_dark);
                     honestyClicked = 0;
                 }else {
-                    honesty.setBackgroundResource(R.drawable.honesty_dark);
+                    honesty.setBackgroundResource(R.drawable.honesty_light);
                     honestyClicked = 1;
                 }
             }
@@ -195,10 +190,10 @@ public class RateCSActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(hopeClicked == 1){
-                    hope.setBackgroundResource(R.drawable.hope_light);
+                    hope.setBackgroundResource(R.drawable.hope_dark);
                     hopeClicked = 0;
                 }else {
-                    hope.setBackgroundResource(R.drawable.hope_dark);
+                    hope.setBackgroundResource(R.drawable.hope_light);
                     hopeClicked = 1;
                 }
             }
@@ -207,10 +202,10 @@ public class RateCSActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(humilityClicked == 1){
-                    humility.setBackgroundResource(R.drawable.humility_light);
+                    humility.setBackgroundResource(R.drawable.humility_dark);
                     humilityClicked = 0;
                 }else {
-                    humility.setBackgroundResource(R.drawable.humility_dark);
+                    humility.setBackgroundResource(R.drawable.humility_light);
                     humilityClicked = 1;
                 }
             }
@@ -219,10 +214,10 @@ public class RateCSActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(humorClicked == 1){
-                    humor.setBackgroundResource(R.drawable.humor_light);
+                    humor.setBackgroundResource(R.drawable.humor_dark);
                     humorClicked = 0;
                 }else {
-                    humor.setBackgroundResource(R.drawable.humor_dark);
+                    humor.setBackgroundResource(R.drawable.humor_light);
                     humorClicked = 1;
                 }
             }
@@ -231,10 +226,10 @@ public class RateCSActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(judgementClicked == 1){
-                    judgement.setBackgroundResource(R.drawable.judgement_light);
+                    judgement.setBackgroundResource(R.drawable.judgement_dark);
                     judgementClicked = 0;
                 }else {
-                    judgement.setBackgroundResource(R.drawable.judgement_dark);
+                    judgement.setBackgroundResource(R.drawable.judgement_light);
                     judgementClicked = 1;
                 }
             }
@@ -243,10 +238,10 @@ public class RateCSActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(kindnessClicked == 1){
-                    kindness.setBackgroundResource(R.drawable.kindness_light);
+                    kindness.setBackgroundResource(R.drawable.kindness_dark);
                     kindnessClicked = 0;
                 }else {
-                    kindness.setBackgroundResource(R.drawable.kindness_dark);
+                    kindness.setBackgroundResource(R.drawable.kindness_light);
                     kindnessClicked = 1;
                 }
             }
@@ -255,10 +250,10 @@ public class RateCSActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(leadershipClicked == 1){
-                    leadership.setBackgroundResource(R.drawable.leadership_light);
+                    leadership.setBackgroundResource(R.drawable.leadership_dark);
                     leadershipClicked = 0;
                 }else {
-                    leadership.setBackgroundResource(R.drawable.leadership_dark);
+                    leadership.setBackgroundResource(R.drawable.leadership_light);
                     leadershipClicked = 1;
                 }
             }
@@ -267,10 +262,10 @@ public class RateCSActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(loveClicked == 1){
-                    love.setBackgroundResource(R.drawable.love_light);
+                    love.setBackgroundResource(R.drawable.love_dark);
                     loveClicked = 0;
                 }else {
-                    love.setBackgroundResource(R.drawable.love_dark);
+                    love.setBackgroundResource(R.drawable.love_light);
                     loveClicked = 1;
                 }
             }
@@ -279,10 +274,10 @@ public class RateCSActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(learningClicked == 1){
-                    learning.setBackgroundResource(R.drawable.lol_light);
+                    learning.setBackgroundResource(R.drawable.lol_dark);
                     learningClicked = 0;
                 }else {
-                    learning.setBackgroundResource(R.drawable.lol_dark);
+                    learning.setBackgroundResource(R.drawable.lol_light);
                     learningClicked = 1;
                 }
             }
@@ -291,10 +286,10 @@ public class RateCSActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(perseveranceClicked == 1){
-                    perseverance.setBackgroundResource(R.drawable.perseverance_light);
+                    perseverance.setBackgroundResource(R.drawable.perseverance_dark);
                     perseveranceClicked = 0;
                 }else {
-                    perseverance.setBackgroundResource(R.drawable.perseverance_dark);
+                    perseverance.setBackgroundResource(R.drawable.perseverance_light);
                     perseveranceClicked = 1;
                 }
             }
@@ -303,10 +298,10 @@ public class RateCSActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(perspectiveClicked == 1){
-                    perspective.setBackgroundResource(R.drawable.perspective_light);
+                    perspective.setBackgroundResource(R.drawable.perspective_dark);
                     perspectiveClicked = 0;
                 }else {
-                    perspective.setBackgroundResource(R.drawable.perspective_dark);
+                    perspective.setBackgroundResource(R.drawable.perspective_light);
                     perspectiveClicked = 1;
                 }
             }
@@ -315,10 +310,10 @@ public class RateCSActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(prudenceClicked == 1){
-                    prudence.setBackgroundResource(R.drawable.prudence_light);
+                    prudence.setBackgroundResource(R.drawable.prudence_dark);
                     prudenceClicked = 0;
                 }else {
-                    prudence.setBackgroundResource(R.drawable.prudence_dark);
+                    prudence.setBackgroundResource(R.drawable.prudence_light);
                     prudenceClicked = 1;
                 }
             }
@@ -327,10 +322,10 @@ public class RateCSActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(selfRegulationClicked == 1){
-                    selfRegulation.setBackgroundResource(R.drawable.self_light);
+                    selfRegulation.setBackgroundResource(R.drawable.self_dark);
                     selfRegulationClicked = 0;
                 }else {
-                    selfRegulation.setBackgroundResource(R.drawable.self_dark);
+                    selfRegulation.setBackgroundResource(R.drawable.self_light);
                     selfRegulationClicked = 1;
                 }
             }
@@ -339,10 +334,10 @@ public class RateCSActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(socialIntelligenceClicked == 1){
-                    socialIntelligence.setBackgroundResource(R.drawable.social_light);
+                    socialIntelligence.setBackgroundResource(R.drawable.social_dark);
                     socialIntelligenceClicked = 0;
                 }else {
-                    socialIntelligence.setBackgroundResource(R.drawable.social_dark);
+                    socialIntelligence.setBackgroundResource(R.drawable.social_light);
                     socialIntelligenceClicked = 1;
                 }
             }
@@ -351,10 +346,10 @@ public class RateCSActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(spiritualityClicked == 1){
-                    spirituality.setBackgroundResource(R.drawable.spirituality_light);
+                    spirituality.setBackgroundResource(R.drawable.spirituality_dark);
                     spiritualityClicked = 0;
                 }else {
-                    spirituality.setBackgroundResource(R.drawable.spirituality_dark);
+                    spirituality.setBackgroundResource(R.drawable.spirituality_light);
                     spiritualityClicked = 1;
                 }
             }
@@ -363,10 +358,10 @@ public class RateCSActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(teamworkClicked == 1){
-                    teamwork.setBackgroundResource(R.drawable.teamwork_light);
+                    teamwork.setBackgroundResource(R.drawable.teamwork_dark);
                     teamworkClicked = 0;
                 }else {
-                    teamwork.setBackgroundResource(R.drawable.teamwork_dark);
+                    teamwork.setBackgroundResource(R.drawable.teamwork_light);
                     teamworkClicked = 1;
                 }
             }
@@ -375,10 +370,10 @@ public class RateCSActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(zestClicked == 1){
-                    zest.setBackgroundResource(R.drawable.zest_light);
+                    zest.setBackgroundResource(R.drawable.zest_dark);
                     zestClicked = 0;
                 }else {
-                    zest.setBackgroundResource(R.drawable.zest_dark);
+                    zest.setBackgroundResource(R.drawable.zest_light);
                     zestClicked = 1;
                 }
             }
@@ -397,6 +392,23 @@ public class RateCSActivity extends AppCompatActivity {
                 "\'%s\')";
 
         try {
+
+            // first get the data to update in movie_ratings
+//            List<MovieRatings> currentMovieRatingsTable = Utils.executeQuery(
+//                    MovieRatings.class,
+//                    RateCSActivity.this,
+//                    "select",
+//                    "*",
+//                    "movie_ratings",
+//                    "where",
+//                    String.format("movie_id not in (select movie_id from user_ratings where user_id=%s)", currentUserId)
+//            );
+
+
+
+
+
+
             List<NoResult> insertResult = Utils.executeQuery(
                     NoResult.class,
                     RateCSActivity.this,
