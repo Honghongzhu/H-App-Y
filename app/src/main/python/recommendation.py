@@ -12,6 +12,11 @@ def json_to_df(movie_json, user_json):
         cols.insert(0, cols.pop(cols.index(col)))
 
     movie_ratings_df = movie_ratings_df[cols]
+    # change the type from string
+    movie_ratings_df = movie_ratings_df.astype({'averageMeaning': 'float64', 'votesMeaning': 'int64', 'averageEnjoyment': 'float64', 'votesEnjoyment': 'int64'})
+
+    for i in range(5, len(movie_ratings_df.columns)):
+        movie_ratings_df[movie_ratings_df.columns.tolist()[i]] = movie_ratings_df[movie_ratings_df.columns.tolist()[i]].astype('int64')
 
     user_ratings_df = pd.DataFrame.from_dict(json.loads(user_json))
     first_cols = ['meaningRating', 'enjoymentRating', 'movieId', 'userId', 'ratingId']
@@ -20,6 +25,12 @@ def json_to_df(movie_json, user_json):
         cols.insert(0, cols.pop(cols.index(col)))
 
     user_ratings_df = user_ratings_df[cols]
+
+    # change the type from string
+    user_ratings_df = user_ratings_df.astype({'meaningRating': 'float64', 'enjoymentRating': 'float64'})
+
+    for i in range(5, len(user_ratings_df.columns)):
+        user_ratings_df[user_ratings_df.columns.tolist()[i]] = user_ratings_df[user_ratings_df.columns.tolist()[i]].astype('int64')
 
     return movie_ratings_df, user_ratings_df
 

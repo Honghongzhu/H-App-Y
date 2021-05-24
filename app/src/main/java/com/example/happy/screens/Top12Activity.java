@@ -85,18 +85,18 @@ public class Top12Activity extends AppCompatActivity {
             // if the user has enough movies to get a recommendation
             if(runThread){
                 // Get the info of every movie excluding the ones already rated
-                List<MovieRatings> movieInfoTable = Utils.executeQuery(
+                List<MovieRatings> movieRatingsTable = Utils.executeQuery(
                         MovieRatings.class,
                         Top12Activity.this,
                         "select",
                         "*",
                         "movie_ratings",
                         "where",
-                        String.format("movie_id not in (select movie_id from user_ratings where user_id=%s", currentUserId)
+                        String.format("movie_id not in (select movie_id from user_ratings where user_id=%s)", currentUserId)
                 );
 
                 String userRatingsJson = new Gson().toJson(currentUserRatings);
-                String movieInfoJson = new Gson().toJson(movieInfoTable);
+                String movieRatingsJson = new Gson().toJson(movieRatingsTable);
 
                 // Now we call the python script that will return a string with ordered movie ids
                 // We create a new thread because otherwise the app "isn't responding" but actually
@@ -113,11 +113,11 @@ public class Top12Activity extends AppCompatActivity {
                         Python py = Python.getInstance();
                         PyObject pyObj = py.getModule("recommendation");
 
-                        PyObject obj = pyObj.callAttr("get_user_recommendations", movieInfoJson, userRatingsJson);
+                        PyObject obj = pyObj.callAttr("get_user_recommendations", movieRatingsJson, userRatingsJson);
 
                         String recomOutput = obj.toString();
                         String recomIds = "(" + recomOutput.split("]")[0].substring(2) + ")";
-
+                        String recomScores = recomOutput.split("]")[1].substring(2);
 
                         // Get the info of every movie
                         try {
@@ -145,6 +145,7 @@ public class Top12Activity extends AppCompatActivity {
                         Top12Activity.this.runOnUiThread(
                                 new Runnable() {
                                     public void run() {
+                                        Toast.makeText(Top12Activity.this, recomScores, Toast.LENGTH_LONG).show();
                                         loadingIcon.setVisibility(View.GONE);
                                         mAdapter.notifyDataSetChanged();
                                     }});
