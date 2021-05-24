@@ -47,7 +47,7 @@ public class SearchActivity extends AppCompatActivity {
                     MovieInfo.class,
                     SearchActivity.this,
                     "select",
-                    "*",
+                    "movie_id, primary_title, start_year, poster_url",
                     "movie_info",
                     "",
                     ""
