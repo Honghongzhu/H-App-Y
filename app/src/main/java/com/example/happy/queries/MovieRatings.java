@@ -2,35 +2,12 @@ package com.example.happy.queries;
 
 public class MovieRatings {
 
-    private String movieId;
-    private String votesEnjoyment;
-    private String averageEnjoyment;
-    private String votesMeaning;
-    private String averageMeaning;
-    private String creativity;
-    private String curiosity;
-    private String judgement;
-    private String loveOfLearning;
-    private String perspective;
-    private String bravery;
-    private String honesty;
-    private String zest;
-    private String perseverance;
-    private String love;
-    private String kindness;
-    private String socialIntelligence;
-    private String teamwork;
-    private String fairness;
-    private String leadership;
-    private String forgiveness;
-    private String humility;
-    private String prudence;
-    private String selfRegulation;
-    private String appreciationBeautyExcellence;
-    private String gratitude;
-    private String hope;
-    private String humor;
-    private String spirituality;
+
+    private String movieId, votesEnjoyment, averageEnjoyment, votesMeaning, averageMeaning, 
+            creativity, curiosity, judgement, loveOfLearning, perspective, bravery, honesty,
+            zest, perseverance, love, kindness, socialIntelligence, teamwork, fairness, leadership, 
+            forgiveness, humility, prudence, selfRegulation, appreciationBeautyExcellence, 
+            gratitude, hope, humor, spirituality;
 
     public String getMovieId() {
         return movieId;
