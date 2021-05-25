@@ -52,8 +52,8 @@ public class SearchActivity extends AppCompatActivity {
                     "select",
                     "movie_id, primary_title, start_year, poster_url",
                     "movie_info",
-                    "",
-                    ""
+                    "order by",
+                    "start_year desc"
             );
 
             allSavedMovies = Utils.executeQuery(

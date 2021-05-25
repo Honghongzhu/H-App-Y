@@ -19,6 +19,7 @@ import android.widget.Toast;
 import com.example.happy.R;
 import com.example.happy.queries.MovieInfo;
 import com.example.happy.queries.MovieRatings;
+import com.example.happy.queries.UserRatings;
 import com.example.happy.queries.Utils;
 import com.example.happy.screens.HistoryActivity;
 import com.example.happy.screens.RateActivity;
@@ -32,7 +33,7 @@ import java.util.concurrent.ExecutionException;
 public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.MovieViewHolder> {
 
     private List<MovieInfo> mMovieList;
-    private List<MovieRatings> mMovieRating;
+    private List<UserRatings> UserRatingList;
     private final LayoutInflater inflater;
     private Boolean isSaved = false;
     private String selectedMovieId = "";
@@ -58,9 +59,9 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.MovieVie
         }
     }
 
-    public HistoryAdapter(Context context, LinkedList<MovieInfo> mMovieList, LinkedList<MovieRatings> mMovieRating, int currentUserId){
+    public HistoryAdapter(Context context, LinkedList<MovieInfo> mMovieList, LinkedList<UserRatings> UserRatingList, int currentUserId){
         inflater = LayoutInflater.from(context);
-        this.mMovieRating = mMovieRating;
+        this.UserRatingList = UserRatingList;
         this.mMovieList = mMovieList;
         this.currentUserId = currentUserId;
         this.context = context;
@@ -77,13 +78,13 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.MovieVie
     public void onBindViewHolder(@NonNull final HistoryAdapter.MovieViewHolder holder, int position) {
 
         final MovieInfo movieAtPosition = mMovieList.get(position);
-        final MovieRatings movieRatingAtPosition = mMovieRating.get(position);
+        final UserRatings movieRatingAtPosition = UserRatingList.get(position);
 
         String imgURL = movieAtPosition.getPosterUrl();
         Picasso.get().load(imgURL).into(holder.movieImage);
         holder.movieText.setText(movieAtPosition.getPrimaryTitle() + " (" + movieAtPosition.getStartYear() + ")");
-        holder.enjoyRate.setRating(Float.parseFloat(movieRatingAtPosition.getAverageEnjoyment()));
-        holder.meaningRate.setRating(Float.parseFloat(movieRatingAtPosition.getAverageMeaning()));
+        holder.enjoyRate.setRating(Float.parseFloat(movieRatingAtPosition.getEnjoymentRating()));
+        holder.meaningRate.setRating(Float.parseFloat(movieRatingAtPosition.getMeaningRating()));
 
     }
 

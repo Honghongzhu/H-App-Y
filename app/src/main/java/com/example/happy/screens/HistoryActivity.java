@@ -1,26 +1,22 @@
 package com.example.happy.screens;
 
 import android.os.Build;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.Toast;
 
 import com.example.happy.R;
 import com.example.happy.adapters.HistoryAdapter;
-import com.example.happy.adapters.MovieAdapter;
 import com.example.happy.queries.MovieInfo;
 import com.example.happy.queries.MovieRatings;
-import com.example.happy.queries.NoResult;
-import com.example.happy.queries.SavedMovies;
 import com.example.happy.queries.UserRatings;
 import com.example.happy.queries.Utils;
 
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -297,36 +293,19 @@ public class HistoryActivity extends AppCompatActivity {
                     "*",
                     "user_ratings",
                     "where",
-                    String.format("user_id=%s", currentUserId)
+                    String.format("user_id=%s order by rating_id desc", currentUserId)
             );
 
-            //if not empty
-            if (!userRatingsTable.toString().equals("[]")) {
-                ArrayList<String> movieRatingsId = new ArrayList<>();
-                for (UserRatings userRating: userRatingsTable){
-                    movieRatingsId.add("'" + userRating.getMovieId() + "'");
-                }
-
-                movieRatingsTable = Utils.executeQuery(
-                        MovieRatings.class,
-                        HistoryActivity.this,
-                        "select",
-                        "*",
-                        "movie_ratings",
-                        "where",
-                        String.format("movie_id in (%s)", String.join(", ", movieRatingsId))
-                );
-
-                movieInfoTable = Utils.executeQuery(
-                    MovieInfo.class,
-                    HistoryActivity.this,
-                    "select",
-                    "*",
-                    "movie_info",
-                    "where",
-                    String.format("movie_id in (%s)", String.join(", ", movieRatingsId))
-                );
-            }
+            movieInfoTable = Utils.executeQuery(
+                MovieInfo.class,
+                HistoryActivity.this,
+                "select",
+                "*",
+                "movie_info",
+                "join",
+                String.format("user_ratings on movie_info.movie_id = user_ratings.movie_id " +
+                        "where user_ratings.user_id=%s order by user_ratings.rating_id desc", currentUserId)
+            );
 
         } catch (ExecutionException e) {
             Toast.makeText(HistoryActivity.this, e.toString(), Toast.LENGTH_LONG).show();
@@ -335,9 +314,9 @@ public class HistoryActivity extends AppCompatActivity {
         }
 
         LinkedList<MovieInfo> moviesInfoRated = new LinkedList<>(movieInfoTable);
-        LinkedList<MovieRatings> moviesRatingsRated = new LinkedList<>(movieRatingsTable);
+        LinkedList<UserRatings> userRatedMovies = new LinkedList<>(userRatingsTable);
         RecyclerView recyclerView = findViewById(R.id.rv_history);
-        HistoryAdapter hAdapter = new HistoryAdapter(this, moviesInfoRated, moviesRatingsRated, currentUserId);
+        HistoryAdapter hAdapter = new HistoryAdapter(this, moviesInfoRated, userRatedMovies, currentUserId);
         recyclerView.setAdapter(hAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 

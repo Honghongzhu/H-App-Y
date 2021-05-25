@@ -1,11 +1,9 @@
 package com.example.happy.screens;
 
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -15,32 +13,28 @@ import com.chaquo.python.PyObject;
 import com.chaquo.python.Python;
 import com.chaquo.python.android.AndroidPlatform;
 import com.example.happy.R;
-import com.example.happy.adapters.MovieAdapter;
-import com.example.happy.adapters.RankAdapter;
-import com.example.happy.data.Movie;
-import com.example.happy.data.MovieDatabase;
+import com.example.happy.adapters.Top12Adapter;
 import com.example.happy.queries.MovieInfo;
 import com.example.happy.queries.MovieRatings;
-import com.example.happy.queries.NoResult;
 import com.example.happy.queries.SavedMovies;
 import com.example.happy.queries.UserRatings;
-import com.example.happy.queries.Users;
 import com.example.happy.queries.Utils;
 import com.google.gson.Gson;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 
 public class Top12Activity extends AppCompatActivity {
 
-    private LinkedList<MovieInfo> movieList = new LinkedList<>();
-    private LinkedList<SavedMovies> savedList = new LinkedList<>();
-    private RecyclerView recyclerView;
-    private MovieAdapter mAdapter;
+    private final LinkedList<MovieInfo> movieList = new LinkedList<>();
+    private final LinkedList<SavedMovies> savedList = new LinkedList<>();
+    private Top12Adapter mAdapter;
     volatile List<MovieInfo> movieRecommendations = new ArrayList<>();
     volatile List<SavedMovies> savedRecommendations = new ArrayList<>();
+    volatile List<String> recommendationScores = new ArrayList<>();
     private int currentUserId = -1;
 
     @Override
@@ -58,11 +52,11 @@ public class Top12Activity extends AppCompatActivity {
         }
 
         // Get a handle to the RecyclerView
-        recyclerView = findViewById(R.id.rv_top12);
+        RecyclerView recyclerView = findViewById(R.id.rv_top12);
         // Create an adapter and supply the data to be displayed
-        mAdapter = new MovieAdapter(this, movieList, savedList, currentUserId);
+        mAdapter = new Top12Adapter(this, movieList, savedList, currentUserId, recommendationScores);
 
-        TextView textview = (TextView)findViewById(R.id.notEnoughMoviesTextView);
+        TextView textview = findViewById(R.id.notEnoughMoviesTextView);
         textview.setVisibility(View.GONE);
 
         try {
@@ -103,70 +97,69 @@ public class Top12Activity extends AppCompatActivity {
                 // Now we call the python script that will return a string with ordered movie ids
                 // We create a new thread because otherwise the app "isn't responding" but actually
                 // it is just taking long.
-                Thread executeScript = new Thread(new Runnable() {
-                    public void run() {
+                Thread executeScript = new Thread(() -> {
 
-                        // start python
-                        if (!Python.isStarted()) {
-                            Python.start(new AndroidPlatform(Top12Activity.this));
-                        }
+                    // start python
+                    if (!Python.isStarted()) {
+                        Python.start(new AndroidPlatform(Top12Activity.this));
+                    }
 
-                        // create new python instance
-                        Python py = Python.getInstance();
-                        PyObject pyObj = py.getModule("recommendation");
+                    // create new python instance
+                    Python py = Python.getInstance();
+                    PyObject pyObj = py.getModule("recommendation");
 
-                        PyObject obj = pyObj.callAttr("get_user_recommendations", movieRatingsJson, userRatingsJson);
+                    PyObject obj = pyObj.callAttr("get_user_recommendations", movieRatingsJson, userRatingsJson);
 
-                        String recomOutput = obj.toString();
-                        String recomIds = "(" + recomOutput.split("]")[0].substring(2) + ")";
-                        String recomScores = recomOutput.split("]")[1].substring(2);
+                    String recomOutput = obj.toString();
+                    String recomIds = "(" + recomOutput.split("]")[0].substring(2) + ")";
+                    String recomScores = recomOutput.split("]")[1].substring(3);
 
-                        // Get the info of every movie
-                        try {
-                            movieRecommendations = Utils.executeQuery(
-                                    MovieInfo.class,
-                                    Top12Activity.this,
-                                    "select",
-                                    "*",
-                                    "movie_info",
-                                    "where",
-                                    String.format("movie_id in %s", recomIds)
-                            );
+                    recommendationScores.addAll(Arrays.asList(recomScores.split(",")));
 
-                            savedRecommendations = Utils.executeQuery(
-                                    SavedMovies.class,
-                                    Top12Activity.this,
-                                    "select",
-                                    "*",
-                                    "saved_movies",
-                                    "where",
-                                    String.format("user_id=%s", currentUserId)
-                            );
+                    // Get the info of every movie
+                    try {
+                        movieRecommendations = Utils.executeQuery(
+                                MovieInfo.class,
+                                Top12Activity.this,
+                                "select",
+                                "*",
+                                "movie_info",
+                                "where",
+                                String.format("movie_id in %s", recomIds)
+                        );
 
-                        } catch (ExecutionException e) {
-                            e.printStackTrace();
-                        } catch (InterruptedException e) {
-                            e.printStackTrace();
-                        }
+                        savedRecommendations = Utils.executeQuery(
+                                SavedMovies.class,
+                                Top12Activity.this,
+                                "select",
+                                "*",
+                                "saved_movies",
+                                "where",
+                                String.format("user_id=%s", currentUserId)
+                        );
 
-                        if (movieRecommendations != null) {
-                            for (MovieInfo movie : movieRecommendations){
-                                movieList.add(movie);
-                                for (SavedMovies saved : savedRecommendations){
-                                    if(saved.getMovieId().equals(movie.getMovieId())){
-                                        savedList.add(saved);
-                                    }
+                    } catch (ExecutionException e) {
+                        e.printStackTrace();
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+
+                    if (movieRecommendations != null) {
+                        for (MovieInfo movie : movieRecommendations){
+                            movieList.add(movie);
+                            for (SavedMovies saved : savedRecommendations){
+                                if(saved.getMovieId().equals(movie.getMovieId())){
+                                    savedList.add(saved);
                                 }
                             }
                         }
-
-                        Top12Activity.this.runOnUiThread(
-                                new Runnable() {
-                                    public void run() {
-                                        loadingIcon.setVisibility(View.GONE);
-                                        mAdapter.notifyDataSetChanged();
-                                    }});
                     }
+
+                    Top12Activity.this.runOnUiThread(
+                            () -> {
+                                loadingIcon.setVisibility(View.GONE);
+                                mAdapter.notifyDataSetChanged();
+                            });
                 });
 
                 executeScript.start();
