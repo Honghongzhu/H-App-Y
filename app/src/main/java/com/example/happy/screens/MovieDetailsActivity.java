@@ -72,7 +72,7 @@ public class MovieDetailsActivity extends AppCompatActivity {
         Picasso.get().load(imgURL).into(poster);
         titleOriginal.setText(movieInfo.get(0).getOriginalTitle());
         year.setText(movieInfo.get(0).getStartYear());
-        duration.setText(movieInfo.get(0).getRuntime());
+        duration.setText(movieInfo.get(0).getRuntime() + " min");
         genre.setText(movieInfo.get(0).getGenres());
 
         // Query ratings from the corresponding movieID
