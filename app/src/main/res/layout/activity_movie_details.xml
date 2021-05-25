@@ -34,6 +34,27 @@
             />
 
         <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Primary title: "
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@id/detailPoster"
+            app:layout_constraintTop_toBottomOf="@id/detailName" />
+
+        <TextView
+            android:id="@+id/detailTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@id/titleTextView"
+            app:layout_constraintTop_toBottomOf="@id/detailName" />
+
+        <TextView
             android:id="@+id/yearTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -42,7 +63,7 @@
             android:textColor="@color/white"
             android:textSize="20sp"
             app:layout_constraintStart_toEndOf="@id/detailPoster"
-            app:layout_constraintTop_toBottomOf="@id/detailName" />
+            app:layout_constraintTop_toBottomOf="@id/detailTitle" />
 
         <TextView
             android:id="@+id/detailYear"
@@ -52,7 +73,7 @@
             android:textColor="@color/white"
             android:textSize="20sp"
             app:layout_constraintStart_toEndOf="@id/yearTextView"
-            app:layout_constraintTop_toBottomOf="@id/detailName" />
+            app:layout_constraintTop_toBottomOf="@id/detailTitle" />
 
         <TextView
             android:id="@+id/durationTextView"
@@ -211,6 +232,26 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/meaningTextView"/>
+
+        <Button
+            android:id="@+id/detailSaveButton"
+            android:layout_width="135dp"
+            android:layout_height="75dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/save_button_dark_fixedsize"
+            app:layout_constraintTop_toBottomOf="@id/detailMeaning"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/detailRateButton"/>
+
+        <Button
+            android:id="@+id/detailRateButton"
+            android:layout_width="135dp"
+            android:layout_height="75dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/rate_button"
+            app:layout_constraintTop_toBottomOf="@id/detailMeaning"
+            app:layout_constraintStart_toEndOf="@id/detailSaveButton"
+            app:layout_constraintEnd_toEndOf="parent"/>
 
 
 
