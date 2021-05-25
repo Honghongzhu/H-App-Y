@@ -499,7 +499,6 @@ public class RateCSActivity extends AppCompatActivity {
                     "where",
                     String.format("user_id=%s", currentUserId)
             );
-
             //if not empty
             if (!savedByUserTable.toString().equals("[]")) {
                 ArrayList<String> savedMovieId = new ArrayList<>();
@@ -527,8 +526,8 @@ public class RateCSActivity extends AppCompatActivity {
             Toast.makeText(RateCSActivity.this, e.toString(), Toast.LENGTH_LONG).show();
         }
 
-
         Intent intent = new Intent(this, HistoryActivity.class);
+        intent.putExtra("CURRENT_USER_ID", currentUserId);
         startActivity(intent);
     }
 

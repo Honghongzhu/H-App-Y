@@ -39,6 +39,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:isIndicator="false"
             app:layout_constraintTop_toBottomOf="@id/enjoyableText"
             app:layout_constraintBottom_toTopOf="@id/meaningfulText"/>
 
@@ -77,6 +78,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:isIndicator="false"
             app:layout_constraintTop_toBottomOf="@id/meaningfulText"
             app:layout_constraintBottom_toBottomOf="parent"/>
 

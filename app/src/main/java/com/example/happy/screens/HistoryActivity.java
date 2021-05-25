@@ -306,7 +306,7 @@ public class HistoryActivity extends AppCompatActivity {
                 for (UserRatings userRating: userRatingsTable){
                     movieRatingsId.add("'" + userRating.getMovieId() + "'");
                 }
-                
+
                 movieRatingsTable = Utils.executeQuery(
                         MovieRatings.class,
                         HistoryActivity.this,
