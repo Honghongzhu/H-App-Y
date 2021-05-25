@@ -35,7 +35,7 @@
 
         <RatingBar
             android:id="@+id/enjoyableRating"
-            android:theme="@style/RatingBar"
+            android:theme="@style/EnjoyRatingBar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -73,7 +73,7 @@
 
         <RatingBar
             android:id="@+id/meaningfulRating"
-            android:theme="@style/RatingBar"
+            android:theme="@style/MeaningRatingBar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"

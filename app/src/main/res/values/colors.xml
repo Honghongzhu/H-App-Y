@@ -16,5 +16,7 @@
     <color name="purpprim">#ab47bc</color>
     <color name="tealdark">#00766c</color>
     <color name="tealprim">#26a69a</color>
-    <color name="lightgrey">#A6ADAD</color>
+    <color name="lightGray">#D3D3D3</color>
+    <color name="duskYellow">#ffc922</color>
+    <color name="niceBlue">#47beed</color>
 </resources>

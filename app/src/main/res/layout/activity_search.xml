@@ -12,7 +12,7 @@
         android:id="@+id/searchBar"
         android:layout_width="370dp"
         android:layout_height="wrap_content"
-        android:textColorHint="@color/lightgrey"
+        android:textColorHint="@color/lightGray"
         android:textColor="@color/white"
         android:hint="@string/search_input"
         android:inputType="text"

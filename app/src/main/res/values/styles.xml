@@ -7,10 +7,13 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
-    <style name="RatingBar" parent="Theme.AppCompat">
-        <item name="colorControlNormal">@color/colorAccent</item>
-        <item name="colorControlActivated">@color/colorAccent</item>
+    <style name="EnjoyRatingBar" parent="android:style/Widget.Material.Light.RatingBar.Small">
+        <item name="android:progressTint">@color/duskYellow</item>
+        <item name="android:progressBackgroundTint">@color/lightGray</item>
     </style>
-
+    <style name="MeaningRatingBar" parent="android:style/Widget.Material.Light.RatingBar.Small">
+        <item name="android:progressTint">@color/niceBlue</item>
+        <item name="android:progressBackgroundTint">@color/lightGray</item>
+    </style>
 
 </resources>
