@@ -18,6 +18,7 @@ import com.example.happy.queries.MovieInfo;
 import com.example.happy.queries.NoResult;
 import com.example.happy.queries.SavedMovies;
 import com.example.happy.queries.Utils;
+import com.example.happy.screens.MovieDetailsActivity;
 import com.example.happy.screens.RateActivity;
 import com.example.happy.screens.RateCSActivity;
 import com.squareup.picasso.Picasso;
@@ -42,9 +43,11 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
         public final ImageView saveImage;
         public final Button rateButton;
         final MovieAdapter adapter;
+        public View itemView;
 
         public MovieViewHolder(View view, MovieAdapter adapter){
             super(view);
+            itemView = view;
             movieImage = view.findViewById(R.id.moviePhoto);
             movieText = view.findViewById(R.id.movieName);
             saveImage = view.findViewById(R.id.movieSave);
@@ -156,6 +159,17 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
 
             }
             isSaved = !isSaved;
+        });
+
+        holder.itemView.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Context context = v.getContext();
+                Intent intent = new Intent(context, MovieDetailsActivity.class);
+                intent.putExtra("MOVIE_ID", movieAtPosition.getMovieId());
+                context.startActivity(intent);
+            }
+
         });
     }
 
