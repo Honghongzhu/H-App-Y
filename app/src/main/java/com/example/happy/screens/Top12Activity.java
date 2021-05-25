@@ -22,6 +22,7 @@ import com.example.happy.data.MovieDatabase;
 import com.example.happy.queries.MovieInfo;
 import com.example.happy.queries.MovieRatings;
 import com.example.happy.queries.NoResult;
+import com.example.happy.queries.SavedMovies;
 import com.example.happy.queries.UserRatings;
 import com.example.happy.queries.Users;
 import com.example.happy.queries.Utils;
@@ -35,9 +36,11 @@ import java.util.concurrent.ExecutionException;
 public class Top12Activity extends AppCompatActivity {
 
     private LinkedList<MovieInfo> movieList = new LinkedList<>();
+    private LinkedList<SavedMovies> savedList = new LinkedList<>();
     private RecyclerView recyclerView;
     private MovieAdapter mAdapter;
     volatile List<MovieInfo> movieRecommendations = new ArrayList<>();
+    volatile List<SavedMovies> savedRecommendations = new ArrayList<>();
     private int currentUserId = -1;
 
     @Override
@@ -57,7 +60,7 @@ public class Top12Activity extends AppCompatActivity {
         // Get a handle to the RecyclerView
         recyclerView = findViewById(R.id.rv_top12);
         // Create an adapter and supply the data to be displayed
-        mAdapter = new MovieAdapter(this, movieList, currentUserId);
+        mAdapter = new MovieAdapter(this, movieList, savedList, currentUserId);
 
         TextView textview = (TextView)findViewById(R.id.notEnoughMoviesTextView);
         textview.setVisibility(View.GONE);
@@ -129,6 +132,17 @@ public class Top12Activity extends AppCompatActivity {
                                     "where",
                                     String.format("movie_id in %s", recomIds)
                             );
+
+                            savedRecommendations = Utils.executeQuery(
+                                    SavedMovies.class,
+                                    Top12Activity.this,
+                                    "select",
+                                    "*",
+                                    "saved_movies",
+                                    "where",
+                                    String.format("user_id=%s", currentUserId)
+                            );
+
                         } catch (ExecutionException e) {
                             e.printStackTrace();
                         } catch (InterruptedException e) {
@@ -138,6 +152,11 @@ public class Top12Activity extends AppCompatActivity {
                         if (movieRecommendations != null) {
                             for (MovieInfo movie : movieRecommendations){
                                 movieList.add(movie);
+                                for (SavedMovies saved : savedRecommendations){
+                                    if(saved.getMovieId().equals(movie.getMovieId())){
+                                        savedList.add(saved);
+                                    }
+                                }
                             }
                         }
 

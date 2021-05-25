@@ -9,6 +9,7 @@ import android.widget.Toast;
 import com.example.happy.R;
 import com.example.happy.adapters.MovieAdapter;
 import com.example.happy.queries.MovieInfo;
+import com.example.happy.queries.SavedMovies;
 import com.example.happy.queries.Utils;
 
 import java.util.LinkedList;
@@ -17,6 +18,7 @@ import java.util.concurrent.ExecutionException;
 
 public class SavedActivity extends AppCompatActivity {
     private List<MovieInfo> allSaved;
+    private List<SavedMovies> savedByUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,18 +44,26 @@ public class SavedActivity extends AppCompatActivity {
                     String.format("saved_movies ON saved_movies.movie_id = movie_info.movie_id WHERE user_id = %s", currentUserId)
             );
 
-            // check for the right columns, do we need to change this?
+            savedByUser = Utils.executeQuery(
+                    SavedMovies.class,
+                    SavedActivity.this,
+                    "select",
+                    "*",
+                    "saved_movies",
+                    "where",
+                    String.format("user_id = %s", currentUserId)
+            );
 
-           // Toast.makeText(SavedActivity.this, allSaved.get(0).getMovieId(), Toast.LENGTH_LONG).show();
         } catch (ExecutionException e) {
             Toast.makeText(SavedActivity.this, e.toString(), Toast.LENGTH_LONG).show();
         } catch (InterruptedException e) {
             Toast.makeText(SavedActivity.this, e.toString(), Toast.LENGTH_LONG).show();
         }
 
+        LinkedList<SavedMovies> savedList = new LinkedList<>(savedByUser);
         LinkedList<MovieInfo> moviesSaved = new LinkedList<>(allSaved);
         RecyclerView mRecyclerView = findViewById(R.id.rv_saved);
-        MovieAdapter mAdapter = new MovieAdapter(this, moviesSaved, currentUserId);
+        MovieAdapter mAdapter = new MovieAdapter(this, moviesSaved, savedList, currentUserId);
         mRecyclerView.setAdapter(mAdapter);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
