@@ -20,7 +20,6 @@ import com.example.happy.queries.SavedMovies;
 import com.example.happy.queries.Utils;
 import com.example.happy.screens.MovieDetailsActivity;
 import com.example.happy.screens.RateActivity;
-import com.example.happy.screens.RateCSActivity;
 import com.squareup.picasso.Picasso;
 
 import java.util.LinkedList;
@@ -28,7 +27,6 @@ import java.util.List;
 import java.util.concurrent.ExecutionException;
 
 public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHolder> {
-
     private final List<SavedMovies> savedMovieList;
     private final List<MovieInfo> mMovieList;
     private final LayoutInflater inflater;
