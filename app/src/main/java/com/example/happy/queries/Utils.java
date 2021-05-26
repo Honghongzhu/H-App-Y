@@ -16,6 +16,8 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
@@ -142,6 +144,77 @@ public class Utils {
         return futureCall.get(); // Here the thread will be blocked until it gets the result
     }
 
+    public static ArrayList<String> getIconFilenameFromUserRatings(UserRatings userRating){
 
+        String characterStrengths = "creativity," +
+                "curiosity, judgement, love_of_learning, perspective, bravery, honesty, zest," +
+                "perseverance, love, kindness, social_intelligence, teamwork, fairness, leadership," +
+                "forgiveness, humility, prudence, self_regulation, appreciation_beauty_excellence," +
+                "gratitude, hope, humor, spirituality";
+
+        String [] cSValues = userRating.getAll();
+        String [] cSNames = characterStrengths.split(",");
+        ArrayList<String> iconFilenames = new ArrayList<>();
+
+        for (int i=0; i < cSValues.length; i++){
+            if (Integer.parseInt(cSValues[i]) > 0){
+                iconFilenames.add(cSNames[i] + ".png");
+            }
+        }
+        return iconFilenames;
+    }
+
+    public static ArrayList<String> getIconFilenameFromMovieRatings(MovieRatings movieRatings){
+
+        String characterStrengths = "creativity," +
+                "curiosity, judgement, love_of_learning, perspective, bravery, honesty, zest," +
+                "perseverance, love, kindness, social_intelligence, teamwork, fairness, leadership," +
+                "forgiveness, humility, prudence, self_regulation, appreciation_beauty_excellence," +
+                "gratitude, hope, humor, spirituality";
+
+        String [] cSValues = movieRatings.getAll();
+        String [] cSNames = characterStrengths.split(",");
+        ArrayList<String> iconFilenames = new ArrayList<>();
+
+        // this takes the character strength, sorts them by their values but returns the indexes
+        // so that we can later get the names
+        ArrayIndexComparator comparator = new ArrayIndexComparator(cSValues);
+        Integer[] indexes = comparator.createIndexArray();
+        Arrays.sort(indexes, comparator);
+
+        for (int idx: indexes){
+            iconFilenames.add(cSNames[idx] + ".png");
+        }
+
+        return iconFilenames;
+    }
+
+
+    public static class ArrayIndexComparator implements Comparator<Integer>
+    {
+        private final String[] array;
+
+        public ArrayIndexComparator(String[] array)
+        {
+            this.array = array;
+        }
+
+        public Integer[] createIndexArray()
+        {
+            Integer[] indexes = new Integer[array.length];
+            for (int i = 0; i < array.length; i++)
+            {
+                indexes[i] = i; // Autoboxing
+            }
+            return indexes;
+        }
+
+        @Override
+        public int compare(Integer index1, Integer index2)
+        {
+            // Autounbox from Integer to int to use as array indexes
+            return array[index1].compareTo(array[index2]);
+        }
+    }
 
 }

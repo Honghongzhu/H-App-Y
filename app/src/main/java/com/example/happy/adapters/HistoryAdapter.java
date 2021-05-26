@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.media.Image;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -43,18 +44,24 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.MovieVie
     public class MovieViewHolder extends RecyclerView.ViewHolder{
         public final ImageView movieImage;
         public final TextView movieText;
-        public final ImageView saveImage;
         public final RatingBar enjoyRate;
         public final RatingBar meaningRate;
+        public final ImageView imageCS1;
+        public final ImageView imageCS2;
+        public final ImageView imageCS3;
+        public final ImageView imageCS4;
         final HistoryAdapter adapter;
 
         public MovieViewHolder(View view, HistoryAdapter adapter){
             super(view);
-            movieImage = view.findViewById(R.id.moviePhoto);
-            movieText = view.findViewById(R.id.movieName);
-            saveImage = view.findViewById(R.id.movieSave);
-            enjoyRate = view.findViewById(R.id.enjoy_rating);
-            meaningRate = view.findViewById(R.id.meaningful_rating);
+            movieImage = view.findViewById(R.id.historyMoviePhoto);
+            movieText = view.findViewById(R.id.historyMovieName);
+            enjoyRate = view.findViewById(R.id.historyEnjoyRating);
+            meaningRate = view.findViewById(R.id.historyMeaningfulRating);
+            imageCS1 = view.findViewById(R.id.historyCS1);
+            imageCS2 = view.findViewById(R.id.historyCS2);
+            imageCS3 = view.findViewById(R.id.historyCS3);
+            imageCS4 = view.findViewById(R.id.historyCS4);
             this.adapter = adapter;
         }
     }
@@ -85,6 +92,14 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.MovieVie
         holder.movieText.setText(movieAtPosition.getPrimaryTitle() + " (" + movieAtPosition.getStartYear() + ")");
         holder.enjoyRate.setRating(Float.parseFloat(movieRatingAtPosition.getEnjoymentRating()));
         holder.meaningRate.setRating(Float.parseFloat(movieRatingAtPosition.getMeaningRating()));
+
+        String [] allCS = movieRatingAtPosition.getAll();
+        String [] cSNames = characterStrengths.split(",");
+
+
+
+        holder.imageCS1.setImageResource();
+
 
     }
 

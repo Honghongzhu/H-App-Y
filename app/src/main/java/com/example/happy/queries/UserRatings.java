@@ -32,6 +32,16 @@ public class UserRatings {
     private String humor;
     private String spirituality;
 
+    public String[] getAll() {
+        return new String[] {
+                getCreativity(), getCuriosity(), getJudgement(), getLoveOfLearning(),
+                getPerspective(), getBravery(), getHonesty(), getZest(), getPerseverance(),
+                getLove(), getKindness(), getSocialIntelligence(), getTeamwork(), getFairness(),
+                getLeadership(), getForgiveness(), getHumility(), getPrudence(), getSelfRegulation(),
+                getAppreciationBeautyExcellence(), getGratitude(), getHope(), getHumor(), getSpirituality()
+        };
+    }
+
     public String getRatingId() {
         return ratingId;
     }

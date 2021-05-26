@@ -8,6 +8,16 @@ public class MovieRatings {
             forgiveness, humility, prudence, selfRegulation, appreciationBeautyExcellence, 
             gratitude, hope, humor, spirituality;
 
+    public String[] getAll() {
+        return new String[] {
+                getCreativity(), getCuriosity(), getJudgement(), getLoveOfLearning(),
+                getPerspective(), getBravery(), getHonesty(), getZest(), getPerseverance(),
+                getLove(), getKindness(), getSocialIntelligence(), getTeamwork(), getFairness(),
+                getLeadership(), getForgiveness(), getHumility(), getPrudence(), getSelfRegulation(),
+                getAppreciationBeautyExcellence(), getGratitude(), getHope(), getHumor(), getSpirituality()
+        };
+    }
+
     public String getMovieId() {
         return movieId;
     }
