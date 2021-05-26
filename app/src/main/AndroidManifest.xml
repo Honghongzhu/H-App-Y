@@ -43,6 +43,8 @@
         <activity android:name=".screens.InfoCSActivity"
             android:label="Info"
             android:parentActivityName=".screens.RecommendationCSActivity"></activity>
+        <activity android:name=".screens.MovieDetailsActivity"
+            android:label="Movie Information"></activity>
     </application>
 
 </manifest>

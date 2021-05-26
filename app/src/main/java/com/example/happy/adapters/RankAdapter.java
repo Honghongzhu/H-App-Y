@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import com.example.happy.R;
 import com.example.happy.queries.MovieInfo;
+import com.example.happy.screens.MovieDetailsActivity;
 import com.example.happy.screens.RateActivity;
 import com.squareup.picasso.Picasso;
 
@@ -34,9 +35,11 @@ public class RankAdapter extends RecyclerView.Adapter<RankAdapter.RankViewHolder
         public final ImageView saveImage;
         public final Button rateButton;
         final RankAdapter adapter;
+        public View itemView;
 
         public RankViewHolder(View view, RankAdapter adapter){
             super(view);
+            itemView = view;
             movieRank = view.findViewById(R.id.rank);
             movieImage = view.findViewById(R.id.rankedMoviePhoto);
             movieText = view.findViewById(R.id.rankedMovieName);
@@ -44,6 +47,7 @@ public class RankAdapter extends RecyclerView.Adapter<RankAdapter.RankViewHolder
             rateButton = view.findViewById(R.id.rankedButtonRate);
             this.adapter = adapter;
         }
+
     }
 
     public RankAdapter(Context context, LinkedList<MovieInfo> mMovieList, int currentUserId){
@@ -64,8 +68,10 @@ public class RankAdapter extends RecyclerView.Adapter<RankAdapter.RankViewHolder
     public void onBindViewHolder(@NonNull final RankAdapter.RankViewHolder holder, int position) {
         final MovieInfo movieAtPosition = mMovieList.get(position);
         holder.movieRank.setText(String.valueOf(position+1));
+
         String imgURL = movieAtPosition.getPosterUrl();
         Picasso.get().load(imgURL).into(holder.movieImage);
+
         holder.movieText.setText(movieAtPosition.getPrimaryTitle() + " (" + movieAtPosition.getStartYear() + ")");
         holder.rateButton.setOnClickListener(v -> {
             selectedMovieId = movieAtPosition.getMovieId();
@@ -90,6 +96,18 @@ public class RankAdapter extends RecyclerView.Adapter<RankAdapter.RankViewHolder
 //                isSaved = !isSaved;
 //            }
 //        });
+
+        holder.itemView.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Context context = v.getContext();
+                Intent intent = new Intent(context, MovieDetailsActivity.class);
+                intent.putExtra("MOVIE_ID", movieAtPosition.getMovieId());
+                context.startActivity(intent);
+            }
+
+        });
+
     }
 
     @Override
