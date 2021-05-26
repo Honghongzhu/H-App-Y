@@ -41,7 +41,8 @@ public class SavedActivity extends AppCompatActivity {
                     "*",
                     "movie_info",
                     "INNER JOIN",
-                    String.format("saved_movies ON saved_movies.movie_id = movie_info.movie_id WHERE user_id = %s", currentUserId)
+                    String.format("saved_movies ON saved_movies.movie_id = movie_info.movie_id " +
+                            "WHERE user_id = %s ORDER BY saved_movies.saved_id DESC", currentUserId)
             );
 
             savedByUser = Utils.executeQuery(
@@ -51,7 +52,7 @@ public class SavedActivity extends AppCompatActivity {
                     "*",
                     "saved_movies",
                     "where",
-                    String.format("user_id = %s", currentUserId)
+                    String.format("user_id = %s ORDER BY saved_id DESC", currentUserId)
             );
 
         } catch (ExecutionException e) {

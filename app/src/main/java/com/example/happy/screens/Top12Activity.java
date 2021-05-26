@@ -80,7 +80,7 @@ public class Top12Activity extends AppCompatActivity {
 
             // if the user has enough movies to get a recommendation
             if(runThread){
-                // Get the info of every movie excluding the ones already rated
+                // Get the info of every movie excluding the ones already rated and the ones without CS scores
                 List<MovieRatings> movieRatingsTable = Utils.executeQuery(
                         MovieRatings.class,
                         Top12Activity.this,
@@ -88,7 +88,8 @@ public class Top12Activity extends AppCompatActivity {
                         "*",
                         "movie_ratings",
                         "where",
-                        String.format("movie_id not in (select movie_id from user_ratings where user_id=%s)", currentUserId)
+                        String.format("movie_id not in (select movie_id from user_ratings where user_id=%s)" +
+                                "and votes_meaning>0", currentUserId)
                 );
 
                 String userRatingsJson = new Gson().toJson(currentUserRatings);

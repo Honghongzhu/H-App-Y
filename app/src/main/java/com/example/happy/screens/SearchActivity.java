@@ -58,29 +58,30 @@ public class SearchActivity extends AppCompatActivity {
                     allMovies = Utils.executeQuery(
                             MovieInfo.class,
                             SearchActivity.this,
-                            "select",
+                            "SELECT",
                             "movie_id, primary_title, start_year, poster_url",
                             "movie_info",
-                            "where",
-                            String.format("primary_title like '%%%s%%'",
+                            "WHERE",
+                            String.format("primary_title LIKE '%%%s%%' ORDER BY start_year DESC",
                                     search)
                     );
 
                     allSavedMovies = Utils.executeQuery(
                             SavedMovies.class,
                             SearchActivity.this,
-                            "select",
+                            "SELECT",
                             "*",
                             "saved_movies",
-                            "join",
-                            String.format("movie_info on saved_movies.movie_id = movie_info.movie_id " +
-                                    "where saved_movies.user_id=%s and movie_info.primary_title like '%%%s%%'",
+                            "JOIN",
+                            String.format("movie_info ON saved_movies.movie_id = movie_info.movie_id " +
+                                    "WHERE saved_movies.user_id=%s AND movie_info.primary_title LIKE '%%%s%%'" +
+                                    "ORDER BY movie_info.start_year DESC",
                                     currentUserId, search)
                     );
 
                     // if no result
                     if (allMovies.toString().equals("[]")){
-                        Toast toast = Toast.makeText(this, "No movie found with title: \"\"" + search, Toast.LENGTH_SHORT);
+                        Toast toast = Toast.makeText(this, "No movie found with title: \"" + search + "\"", Toast.LENGTH_SHORT);
                         toast.setGravity(Gravity.CENTER, 0, 0);
                         toast.show();
                     } else{
