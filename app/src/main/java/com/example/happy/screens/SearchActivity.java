@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.Gravity;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -94,6 +95,11 @@ public class SearchActivity extends AppCompatActivity {
                         foundSavedMovies.add(allSavedMovies.get(idx));
                     }
                 }
+            }
+            if(foundMovies.isEmpty()){
+                Toast toast = Toast.makeText(this, "No movie found for: " + search, Toast.LENGTH_SHORT);
+                toast.setGravity(Gravity.CENTER, 0, 0);
+                toast.show();
             }
             mAdapter = new MovieAdapter(v.getContext(), foundMovies, foundSavedMovies, currentUserId);
             mRecyclerView.setAdapter(mAdapter);
