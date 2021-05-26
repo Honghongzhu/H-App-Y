@@ -68,9 +68,4 @@ public class SavedActivity extends AppCompatActivity {
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
     }
-
-//    public void launchRateActivity(View view) {
-//        Intent intent = new Intent(this, RateActivity.class);
-//        startActivity(intent);
-//    }
 }

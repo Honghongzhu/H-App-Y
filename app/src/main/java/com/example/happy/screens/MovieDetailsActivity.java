@@ -15,6 +15,7 @@ import android.widget.Toast;
 import com.example.happy.R;
 import com.example.happy.queries.MovieInfo;
 import com.example.happy.queries.MovieRatings;
+import com.example.happy.queries.SavedMovies;
 import com.example.happy.queries.Utils;
 import com.squareup.picasso.Picasso;
 
@@ -58,7 +59,7 @@ public class MovieDetailsActivity extends AppCompatActivity {
         // Retrieve movieID
         String movieID = getIntent().getStringExtra("MOVIE_ID");
 
-        // Query all information from the corresponding movieID
+        // Query all information and ratings from the corresponding movieID
         try {
             movieInfo = Utils.executeQuery(
                     MovieInfo.class,
@@ -66,6 +67,15 @@ public class MovieDetailsActivity extends AppCompatActivity {
                     "select",
                     "*",
                     "movie_info",
+                    "WHERE",
+                    String.format("movie_id='%s'", movieID)
+            );
+            movieRating = Utils.executeQuery(
+                    MovieRatings.class,
+                    MovieDetailsActivity.this,
+                    "select",
+                    "average_enjoyment, average_meaning",
+                    "movie_ratings",
                     "WHERE",
                     String.format("movie_id='%s'", movieID)
             );
@@ -83,25 +93,6 @@ public class MovieDetailsActivity extends AppCompatActivity {
         year.setText(movieInfo.get(0).getStartYear());
         duration.setText(movieInfo.get(0).getRuntime() + " min");
         genre.setText(movieInfo.get(0).getGenres());
-
-        // Query ratings from the corresponding movieID
-        try {
-            movieRating = Utils.executeQuery(
-                    MovieRatings.class,
-                    MovieDetailsActivity.this,
-                    "select",
-                    "average_enjoyment, average_meaning",
-                    "movie_ratings",
-                    "WHERE",
-                    String.format("movie_id='%s'", movieID)
-            );
-        } catch (ExecutionException e) {
-            Toast.makeText(MovieDetailsActivity.this, e.toString(), Toast.LENGTH_LONG).show();
-        } catch (InterruptedException e) {
-            Toast.makeText(MovieDetailsActivity.this, e.toString(), Toast.LENGTH_LONG).show();
-        }
-
-        // Fill in placeholders
         enjoyful.setRating(Float.parseFloat(movieRating.get(0).getAverageEnjoyment()));
         meaningful.setRating(Float.parseFloat(movieRating.get(0).getAverageMeaning()));
 

@@ -100,10 +100,4 @@ public class SearchActivity extends AppCompatActivity {
             mRecyclerView.setLayoutManager(new LinearLayoutManager(v.getContext()));
         });
     }
-
-//    public void launchRateActivity(View view) {
-//        Intent intent = new Intent(this, RateActivity.class);
-//        intent.putExtra("CURRENT_USER_ID", currentUserId);
-//        startActivity(intent);
-//    }
 }
