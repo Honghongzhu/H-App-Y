@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.Gravity;
 import android.widget.Button;
 import android.widget.EditText;
@@ -45,62 +46,59 @@ public class SearchActivity extends AppCompatActivity {
         searchText = findViewById(R.id.searchBar);
         searchButton = findViewById(R.id.searchButton);
 
-        // Query all movies
-        try {
-            allMovies = Utils.executeQuery(
-                    MovieInfo.class,
-                    SearchActivity.this,
-                    "select",
-                    "movie_id, primary_title, start_year, poster_url",
-                    "movie_info",
-                    "order by",
-                    "start_year desc"
-            );
-
-            allSavedMovies = Utils.executeQuery(
-                    SavedMovies.class,
-                    SearchActivity.this,
-                    "select",
-                    "*",
-                    "saved_movies",
-                    "where",
-                    String.format("user_id=%s", currentUserId)
-            );
-
-        } catch (ExecutionException e) {
-            Toast.makeText(SearchActivity.this, e.toString(), Toast.LENGTH_LONG).show();
-        } catch (InterruptedException e) {
-            Toast.makeText(SearchActivity.this, e.toString(), Toast.LENGTH_LONG).show();
-        }
-
         // After clicking on search button, it will go through all movies and compare the user input with the primary_title
         searchButton.setOnClickListener(v -> {
-            foundMovies = new LinkedList<>();
-            foundSavedMovies = new LinkedList<>();
+
+            Utils.hideKeyboard(this);
+
             search = searchText.getText().toString();
 
-            for (MovieInfo movie : allMovies){
-                if(movie.getPrimaryTitle().toLowerCase().contains(search.toLowerCase())){
-                    foundMovies.add(movie);
-                    // if the movie is saved
-                    int idx = -1;
-                    for (SavedMovies saved : allSavedMovies){
-                        if (saved.getMovieId().equals(movie.getMovieId())){
-                            idx = allSavedMovies.indexOf(saved);
-                            break;
-                        }
+            if(search != null && !search.trim().isEmpty()){
+                try {
+                    allMovies = Utils.executeQuery(
+                            MovieInfo.class,
+                            SearchActivity.this,
+                            "select",
+                            "movie_id, primary_title, start_year, poster_url",
+                            "movie_info",
+                            "where",
+                            String.format("primary_title like '%%%s%%'",
+                                    search)
+                    );
+
+                    allSavedMovies = Utils.executeQuery(
+                            SavedMovies.class,
+                            SearchActivity.this,
+                            "select",
+                            "*",
+                            "saved_movies",
+                            "join",
+                            String.format("movie_info on saved_movies.movie_id = movie_info.movie_id " +
+                                    "where saved_movies.user_id=%s and movie_info.primary_title like '%%%s%%'",
+                                    currentUserId, search)
+                    );
+
+                    // if no result
+                    if (allMovies.toString().equals("[]")){
+                        Toast toast = Toast.makeText(this, "No movie found with title: \"\"" + search, Toast.LENGTH_SHORT);
+                        toast.setGravity(Gravity.CENTER, 0, 0);
+                        toast.show();
+                    } else{
+                        foundMovies = new LinkedList<>(allMovies);
+                        foundSavedMovies = new LinkedList<>(allSavedMovies);
                     }
-                    // if the saved movie was found among the searched
-                    if(idx != -1){
-                        foundSavedMovies.add(allSavedMovies.get(idx));
-                    }
+
+                } catch (ExecutionException e) {
+                    Toast.makeText(SearchActivity.this, e.toString(), Toast.LENGTH_LONG).show();
+                } catch (InterruptedException e) {
+                    Toast.makeText(SearchActivity.this, e.toString(), Toast.LENGTH_LONG).show();
                 }
+            } else {
+                Toast toast = Toast.makeText(this, "Please write something before searching" + search, Toast.LENGTH_SHORT);
+                foundMovies = new LinkedList<>();
+                foundSavedMovies = new LinkedList<>();
             }
-            if(foundMovies.isEmpty()){
-                Toast toast = Toast.makeText(this, "No movie found for: " + search, Toast.LENGTH_SHORT);
-                toast.setGravity(Gravity.CENTER, 0, 0);
-                toast.show();
-            }
+
             mAdapter = new MovieAdapter(v.getContext(), foundMovies, foundSavedMovies, currentUserId);
             mRecyclerView.setAdapter(mAdapter);
             mRecyclerView.setLayoutManager(new LinearLayoutManager(v.getContext()));
