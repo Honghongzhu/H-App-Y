@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.content.res.Resources;
 import android.media.Image;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -27,6 +28,7 @@ import com.example.happy.screens.RateActivity;
 import com.example.happy.screens.SavedActivity;
 import com.squareup.picasso.Picasso;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
@@ -93,14 +95,28 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.MovieVie
         holder.enjoyRate.setRating(Float.parseFloat(movieRatingAtPosition.getEnjoymentRating()));
         holder.meaningRate.setRating(Float.parseFloat(movieRatingAtPosition.getMeaningRating()));
 
-        String [] allCS = movieRatingAtPosition.getAll();
-        String [] cSNames = characterStrengths.split(",");
+        ArrayList<String> characterStrengths = Utils.getCSFromUserRatings(movieRatingAtPosition);
 
+        Toast.makeText(holder.adapter.context, String.valueOf(Resources.getSystem().getIdentifier("creativity.png", "drawable", holder.adapter.context.getPackageName())), Toast.LENGTH_LONG).show();
 
-
-        holder.imageCS1.setImageResource();
-
-
+        switch(characterStrengths.size()){
+            case 1:
+                holder.imageCS1.setImageResource(Utils.getCSResourceId(characterStrengths.get(0)));
+                break;
+            case 2:
+                holder.imageCS1.setImageResource(Utils.getCSResourceId(characterStrengths.get(0)));
+                holder.imageCS2.setImageResource(Utils.getCSResourceId(characterStrengths.get(1)));
+                break;
+            case 3:
+                holder.imageCS1.setImageResource(Utils.getCSResourceId(characterStrengths.get(0)));
+                holder.imageCS2.setImageResource(Utils.getCSResourceId(characterStrengths.get(1)));
+                holder.imageCS3.setImageResource(Utils.getCSResourceId(characterStrengths.get(2)));
+            case 4:
+                holder.imageCS1.setImageResource(Utils.getCSResourceId(characterStrengths.get(0)));
+                holder.imageCS2.setImageResource(Utils.getCSResourceId(characterStrengths.get(1)));
+                holder.imageCS3.setImageResource(Utils.getCSResourceId(characterStrengths.get(2)));
+                holder.imageCS4.setImageResource(Utils.getCSResourceId(characterStrengths.get(3)));
+        }
     }
 
     @Override

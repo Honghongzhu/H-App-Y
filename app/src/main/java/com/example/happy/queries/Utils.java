@@ -1,16 +1,20 @@
 package com.example.happy.queries;
 
 import android.app.Activity;
+import android.content.Context;
+import android.content.res.Resources;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
 import android.widget.Toast;
 
+import com.example.happy.R;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
+import java.lang.reflect.Field;
 import java.lang.reflect.Type;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
@@ -144,7 +148,7 @@ public class Utils {
         return futureCall.get(); // Here the thread will be blocked until it gets the result
     }
 
-    public static ArrayList<String> getIconFilenameFromUserRatings(UserRatings userRating){
+    public static ArrayList<String> getCSFromUserRatings(UserRatings userRating){
 
         String characterStrengths = "creativity," +
                 "curiosity, judgement, love_of_learning, perspective, bravery, honesty, zest," +
@@ -154,17 +158,17 @@ public class Utils {
 
         String [] cSValues = userRating.getAll();
         String [] cSNames = characterStrengths.split(",");
-        ArrayList<String> iconFilenames = new ArrayList<>();
+        ArrayList<String> cs = new ArrayList<>();
 
         for (int i=0; i < cSValues.length; i++){
             if (Integer.parseInt(cSValues[i]) > 0){
-                iconFilenames.add(cSNames[i] + ".png");
+                cs.add(cSNames[i]);
             }
         }
-        return iconFilenames;
+        return cs;
     }
 
-    public static ArrayList<String> getIconFilenameFromMovieRatings(MovieRatings movieRatings){
+    public static ArrayList<String> getOrderedCSFromMovieRatings(MovieRatings movieRatings){
 
         String characterStrengths = "creativity," +
                 "curiosity, judgement, love_of_learning, perspective, bravery, honesty, zest," +
@@ -174,7 +178,7 @@ public class Utils {
 
         String [] cSValues = movieRatings.getAll();
         String [] cSNames = characterStrengths.split(",");
-        ArrayList<String> iconFilenames = new ArrayList<>();
+        ArrayList<String> orderedCS = new ArrayList<>();
 
         // this takes the character strength, sorts them by their values but returns the indexes
         // so that we can later get the names
@@ -183,10 +187,10 @@ public class Utils {
         Arrays.sort(indexes, comparator);
 
         for (int idx: indexes){
-            iconFilenames.add(cSNames[idx] + ".png");
+            orderedCS.add("@drawable/" + cSNames[idx] + ".png");
         }
 
-        return iconFilenames;
+        return orderedCS;
     }
 
 
@@ -217,4 +221,65 @@ public class Utils {
         }
     }
 
+    public static int getCSResourceId(String cs) {
+        String characterStrengths = "creativity," +
+                "curiosity, judgement, love_of_learning, perspective, bravery, honesty, zest," +
+                "perseverance, love, kindness, social_intelligence, teamwork, fairness, leadership," +
+                "forgiveness, humility, prudence, self_regulation, appreciation_beauty_excellence," +
+                "gratitude, hope, humor, spirituality";
+
+        String[] chStrs = characterStrengths.split(",");
+        int resourceId = 0;
+
+        if (cs.equals(chStrs[0])){
+            resourceId = R.drawable.creativity;
+        }else if (cs.equals(chStrs[1])) {
+            resourceId = R.drawable.curiosity;
+        }else if (cs.equals(chStrs[2])) {
+            resourceId = R.drawable.judgement;
+        }else if (cs.equals(chStrs[3])) {
+            resourceId = R.drawable.love_of_learning;
+        }else if (cs.equals(chStrs[4])) {
+            resourceId = R.drawable.perspective;
+        }else if (cs.equals(chStrs[5])) {
+            resourceId = R.drawable.bravery;
+        }else if (cs.equals(chStrs[6])) {
+            resourceId = R.drawable.honesty;
+        }else if (cs.equals(chStrs[7])) {
+            resourceId = R.drawable.zest;
+        }else if (cs.equals(chStrs[8])) {
+            resourceId = R.drawable.perseverance;
+        }else if (cs.equals(chStrs[9])) {
+            resourceId = R.drawable.love;
+        }else if (cs.equals(chStrs[10])) {
+            resourceId = R.drawable.kindness;
+        }else if (cs.equals(chStrs[11])) {
+            resourceId = R.drawable.social_intelligence;
+        }else if (cs.equals(chStrs[12])) {
+            resourceId = R.drawable.teamwork;
+        }else if (cs.equals(chStrs[13])) {
+            resourceId = R.drawable.fairness;
+        }else if (cs.equals(chStrs[14])) {
+            resourceId = R.drawable.leadership;
+        }else if (cs.equals(chStrs[15])) {
+            resourceId = R.drawable.forgiveness;
+        }else if (cs.equals(chStrs[16])) {
+            resourceId = R.drawable.humility;
+        }else if (cs.equals(chStrs[17])) {
+            resourceId = R.drawable.prudence;
+        }else if (cs.equals(chStrs[18])) {
+            resourceId = R.drawable.self_regulation;
+        }else if (cs.equals(chStrs[19])) {
+            resourceId = R.drawable.appreciation_of_beauty_and_excellence_;
+        }else if (cs.equals(chStrs[20])) {
+            resourceId = R.drawable.gratitude;
+        }else if (cs.equals(chStrs[21])) {
+            resourceId = R.drawable.hope;
+        }else if (cs.equals(chStrs[22])) {
+            resourceId = R.drawable.humor;
+        }else if (cs.equals(chStrs[23])) {
+            resourceId = R.drawable.spirituality;
+        }
+        return resourceId;
+    }
 }
