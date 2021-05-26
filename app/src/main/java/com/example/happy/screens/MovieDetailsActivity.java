@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
@@ -23,14 +24,20 @@ import java.util.concurrent.ExecutionException;
 public class MovieDetailsActivity extends AppCompatActivity {
     private List<MovieInfo> movieInfo;
     private List<MovieRatings> movieRating;
+    private int currentUserId = -1;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_movie_details);
 
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            currentUserId = extras.getInt("CURRENT_USER_ID", -1);
+        }
         // Show back button in actionbar
         ActionBar actionBar = getSupportActionBar();
+        assert actionBar != null;
         actionBar.setDisplayHomeAsUpEnabled(true);
 
         TextView titlePrimary = findViewById(R.id.detailName);
@@ -45,6 +52,8 @@ public class MovieDetailsActivity extends AppCompatActivity {
         ImageView cs4 = findViewById(R.id.cs4);
         RatingBar enjoyful = findViewById(R.id.detailEnjoy);
         RatingBar meaningful = findViewById(R.id.detailMeaning);
+        Button save = findViewById(R.id.detailSaveButton);
+        Button rate = findViewById(R.id.detailRateButton);
 
         // Retrieve movieID
         String movieID = getIntent().getStringExtra("MOVIE_ID");
@@ -95,6 +104,14 @@ public class MovieDetailsActivity extends AppCompatActivity {
         // Fill in placeholders
         enjoyful.setRating(Float.parseFloat(movieRating.get(0).getAverageEnjoyment()));
         meaningful.setRating(Float.parseFloat(movieRating.get(0).getAverageMeaning()));
+
+        // Rate button functionality
+        rate.setOnClickListener(v -> {
+            Intent intent = new Intent(this, RateActivity.class);
+            intent.putExtra("SELECTED_MOVIE_ID", movieInfo.get(0).getMovieId());
+            intent.putExtra("CURRENT_USER_ID", currentUserId);
+            startActivity(intent);
+        });
     }
 
     // Make sure to go to previous screen when back button is clicked
