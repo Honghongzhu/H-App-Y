@@ -97,8 +97,6 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.MovieVie
 
         ArrayList<String> characterStrengths = Utils.getCSFromUserRatings(movieRatingAtPosition);
 
-        Toast.makeText(holder.adapter.context, String.valueOf(Resources.getSystem().getIdentifier("creativity.png", "drawable", holder.adapter.context.getPackageName())), Toast.LENGTH_LONG).show();
-
         switch(characterStrengths.size()){
             case 1:
                 holder.imageCS1.setImageResource(Utils.getCSResourceId(characterStrengths.get(0)));
@@ -111,11 +109,13 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.MovieVie
                 holder.imageCS1.setImageResource(Utils.getCSResourceId(characterStrengths.get(0)));
                 holder.imageCS2.setImageResource(Utils.getCSResourceId(characterStrengths.get(1)));
                 holder.imageCS3.setImageResource(Utils.getCSResourceId(characterStrengths.get(2)));
+                break;
             case 4:
                 holder.imageCS1.setImageResource(Utils.getCSResourceId(characterStrengths.get(0)));
                 holder.imageCS2.setImageResource(Utils.getCSResourceId(characterStrengths.get(1)));
                 holder.imageCS3.setImageResource(Utils.getCSResourceId(characterStrengths.get(2)));
                 holder.imageCS4.setImageResource(Utils.getCSResourceId(characterStrengths.get(3)));
+                break;
         }
     }
 

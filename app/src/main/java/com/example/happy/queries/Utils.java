@@ -95,19 +95,17 @@ class Result <currentClass> implements Callable<List<currentClass>> {
                     response.append(responseLine.trim());
                 }
 
+                String responseToConvert = response.toString().replace("\"\"", "\"");
+
                 GsonBuilder gb = new GsonBuilder();
                 Type listType = TypeToken.getParameterized(ArrayList.class, classType).getType();
-                //Type listType = new TypeToken<ArrayList<currentClass>>(){}.getType();
-                info = gb.create().fromJson(response.toString(), listType);
+                info = gb.create().fromJson(responseToConvert, listType);
 
             }
 
         } catch(final Exception e) {
             currentActivity.runOnUiThread(
-                    new Runnable() {
-                        public void run() {
-                            Toast.makeText(currentActivity, e.toString(), Toast.LENGTH_LONG).show();
-                        }});
+                    () -> Toast.makeText(currentActivity, e.toString(), Toast.LENGTH_LONG).show());
         }
         // return of the call function
         return info;
