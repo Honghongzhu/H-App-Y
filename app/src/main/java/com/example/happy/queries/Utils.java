@@ -198,7 +198,7 @@ public class Utils {
         Arrays.sort(indexes, comparator);
 
         for (int idx: indexes){
-            orderedCS.add("@drawable/" + cSNames[idx] + ".png");
+            orderedCS.add(cSNames[idx]);
         }
 
         return orderedCS;
