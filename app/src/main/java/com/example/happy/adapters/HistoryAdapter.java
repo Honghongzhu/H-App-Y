@@ -24,6 +24,7 @@ import com.example.happy.queries.MovieRatings;
 import com.example.happy.queries.UserRatings;
 import com.example.happy.queries.Utils;
 import com.example.happy.screens.HistoryActivity;
+import com.example.happy.screens.MovieDetailsActivity;
 import com.example.happy.screens.RateActivity;
 import com.example.happy.screens.SavedActivity;
 import com.squareup.picasso.Picasso;
@@ -53,9 +54,11 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.MovieVie
         public final ImageView imageCS3;
         public final ImageView imageCS4;
         final HistoryAdapter adapter;
+        public View itemView;
 
         public MovieViewHolder(View view, HistoryAdapter adapter){
             super(view);
+            itemView = view;
             movieImage = view.findViewById(R.id.historyMoviePhoto);
             movieText = view.findViewById(R.id.historyMovieName);
             enjoyRate = view.findViewById(R.id.historyEnjoyRating);
@@ -117,6 +120,17 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.MovieVie
                 holder.imageCS4.setImageResource(Utils.getCSResourceId(characterStrengths.get(3)));
                 break;
         }
+
+        holder.itemView.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Context context = v.getContext();
+                Intent intent = new Intent(context, MovieDetailsActivity.class);
+                intent.putExtra("MOVIE_ID", movieAtPosition.getMovieId());
+                context.startActivity(intent);
+            }
+
+        });
     }
 
     @Override
