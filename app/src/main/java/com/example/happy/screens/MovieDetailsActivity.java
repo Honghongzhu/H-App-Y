@@ -19,6 +19,7 @@ import com.example.happy.queries.SavedMovies;
 import com.example.happy.queries.Utils;
 import com.squareup.picasso.Picasso;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 
@@ -74,7 +75,7 @@ public class MovieDetailsActivity extends AppCompatActivity {
                     MovieRatings.class,
                     MovieDetailsActivity.this,
                     "select",
-                    "average_enjoyment, average_meaning",
+                    "*",
                     "movie_ratings",
                     "WHERE",
                     String.format("movie_id='%s'", movieID)
@@ -84,6 +85,7 @@ public class MovieDetailsActivity extends AppCompatActivity {
         } catch (InterruptedException e) {
             Toast.makeText(MovieDetailsActivity.this, e.toString(), Toast.LENGTH_LONG).show();
         }
+
 
         // Fill all placeholders
         titlePrimary.setText(movieInfo.get(0).getPrimaryTitle());
@@ -95,6 +97,31 @@ public class MovieDetailsActivity extends AppCompatActivity {
         genre.setText(movieInfo.get(0).getGenres());
         enjoyful.setRating(Float.parseFloat(movieRating.get(0).getAverageEnjoyment()));
         meaningful.setRating(Float.parseFloat(movieRating.get(0).getAverageMeaning()));
+
+        ArrayList<String> orderedCS = Utils.getOrderedCSFromMovieRatings(movieRating.get(0));
+
+        switch(orderedCS.size()){
+            case 0:
+                break;
+            case 1:
+                cs1.setImageResource(Utils.getCSResourceId(orderedCS.get(0)));
+                break;
+            case 2:
+                cs1.setImageResource(Utils.getCSResourceId(orderedCS.get(0)));
+                cs2.setImageResource(Utils.getCSResourceId(orderedCS.get(1)));
+                break;
+            case 3:
+                cs1.setImageResource(Utils.getCSResourceId(orderedCS.get(0)));
+                cs2.setImageResource(Utils.getCSResourceId(orderedCS.get(1)));
+                cs3.setImageResource(Utils.getCSResourceId(orderedCS.get(2)));
+                break;
+            default:
+                cs1.setImageResource(Utils.getCSResourceId(orderedCS.get(0)));
+                cs2.setImageResource(Utils.getCSResourceId(orderedCS.get(1)));
+                cs3.setImageResource(Utils.getCSResourceId(orderedCS.get(2)));
+                cs4.setImageResource(Utils.getCSResourceId(orderedCS.get(3)));
+                break;
+        }
 
         // Rate button functionality
         rate.setOnClickListener(v -> {
