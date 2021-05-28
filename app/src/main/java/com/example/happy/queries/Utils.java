@@ -198,7 +198,9 @@ public class Utils {
         Arrays.sort(indexes, comparator);
 
         for (int idx: indexes){
-            orderedCS.add(cSNames[idx]);
+            if(Integer.parseInt(cSValues[idx]) > 0) {
+                orderedCS.add(cSNames[idx]);
+            }
         }
 
         return orderedCS;
@@ -228,7 +230,7 @@ public class Utils {
         public int compare(Integer index1, Integer index2)
         {
             // Autounbox from Integer to int to use as array indexes
-            return array[index1].compareTo(array[index2]);
+            return array[index2].compareTo(array[index1]);
         }
     }
 
