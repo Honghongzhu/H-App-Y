@@ -23,12 +23,18 @@ public class RecommendationCSActivity extends AppCompatActivity {
     private ArrayList<String> chosenCS = new ArrayList<>();
     private final int maxNrCS = 4;
     private int countCS = 0;
+    int currentUserId = -1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recommendation_cs);
         countCS = 0; // Reset count
+
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            currentUserId = extras.getInt("CURRENT_USER_ID", -1);
+        }
 
         // Create onClickListeners for the buttons to change background
         setUpButton(R.id.buttonAppreciation, "appreciation_beauty_excellence", R.drawable.appreciation_light, R.drawable.appreciation_dark);
@@ -90,6 +96,7 @@ public class RecommendationCSActivity extends AppCompatActivity {
     public void launchRecommendationActivity(View view) {
         Intent intent = new Intent(this, RecommendationActivity.class);
         intent.putExtra("chosenCS", chosenCS);
+        intent.putExtra("CURRENT_USER_ID", currentUserId);
         startActivity(intent);
     }
 

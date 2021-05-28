@@ -57,8 +57,10 @@ public class RecommendationActivity extends AppCompatActivity {
                     "select",
                     String.format("movie_id, average_enjoyment, average_meaning, %s, SUM(%s) AS COUNTVOTES, %s AS COUNTCS", listCS, listSumCS, listCountCS.toString()),
                     "movie_ratings",
-                    "GROUP BY",
-                    "movie_id HAVING COUNTVOTES>0 ORDER BY COUNTCS DESC, COUNTVOTES DESC, average_meaning DESC, average_enjoyment DESC"
+                    "WHERE",
+                    String.format("movie_id NOT IN (SELECT movie_id FROM user_ratings WHERE user_id=%s)" +
+                            "GROUP BY movie_id HAVING COUNTVOTES>0 ORDER BY " +
+                            "COUNTCS DESC, COUNTVOTES DESC, average_meaning DESC, average_enjoyment DESC", currentUserId)
             );
         } catch (ExecutionException e) {
             Toast.makeText(RecommendationActivity.this, e.toString(), Toast.LENGTH_LONG).show();

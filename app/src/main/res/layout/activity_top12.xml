@@ -49,11 +49,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:text="Don't worry, we're getting your recommendations..."
+                android:text="Please be patient, we're doing crazy math to get your recommendations..."
                 android:gravity="center"
                 android:layout_marginBottom="40dp"
                 android:textSize="25sp"
-                android:textColor="@color/colorAccent"/>
+                android:textColor="@color/white"/>
 
             <ProgressBar
                 android:layout_width="wrap_content"
