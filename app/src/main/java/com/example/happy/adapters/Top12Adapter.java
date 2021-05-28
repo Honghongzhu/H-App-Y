@@ -18,6 +18,7 @@ import com.example.happy.queries.MovieInfo;
 import com.example.happy.queries.NoResult;
 import com.example.happy.queries.SavedMovies;
 import com.example.happy.queries.Utils;
+import com.example.happy.screens.MovieDetailsActivity;
 import com.example.happy.screens.RateActivity;
 import com.squareup.picasso.Picasso;
 
@@ -26,7 +27,6 @@ import java.util.List;
 import java.util.concurrent.ExecutionException;
 
 public class Top12Adapter extends RecyclerView.Adapter<Top12Adapter.Top12ViewHolder> {
-
     private final List<SavedMovies> savedMovieList;
     private final List<MovieInfo> mMovieList;
     private final List<String> recommendationScores;
@@ -36,15 +36,19 @@ public class Top12Adapter extends RecyclerView.Adapter<Top12Adapter.Top12ViewHol
     private final Context context;
 
     public static class Top12ViewHolder extends RecyclerView.ViewHolder{
+        public final TextView movieRank;
         public final ImageView movieImage;
         public final TextView movieText;
         public final ImageView saveImage;
         public final Button rateButton;
         public final TextView similarityScore;
         final Top12Adapter adapter;
+        public View itemView;
 
         public Top12ViewHolder(View view, Top12Adapter adapter){
             super(view);
+            itemView = view;
+            movieRank = view.findViewById(R.id.rank_top12);
             movieImage = view.findViewById(R.id.top12MoviePhoto);
             movieText = view.findViewById(R.id.top12MovieName);
             saveImage = view.findViewById(R.id.top12MovieSave);
@@ -72,8 +76,8 @@ public class Top12Adapter extends RecyclerView.Adapter<Top12Adapter.Top12ViewHol
 
     @Override
     public void onBindViewHolder(@NonNull final Top12Adapter.Top12ViewHolder holder, int position) {
-
         final MovieInfo movieAtPosition = mMovieList.get(position);
+        holder.movieRank.setText(String.valueOf(position+1));
 
         int idx = -1;
         //iterate over the movies to find the saved one
@@ -162,6 +166,16 @@ public class Top12Adapter extends RecyclerView.Adapter<Top12Adapter.Top12ViewHol
 
             }
             isSaved = !isSaved;
+        });
+
+        holder.itemView.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Context context = v.getContext();
+                Intent intent = new Intent(context, MovieDetailsActivity.class);
+                intent.putExtra("MOVIE_ID", movieAtPosition.getMovieId());
+                context.startActivity(intent);
+            }
         });
     }
 

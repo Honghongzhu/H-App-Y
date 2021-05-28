@@ -47,7 +47,6 @@ public class RankAdapter extends RecyclerView.Adapter<RankAdapter.RankViewHolder
             rateButton = view.findViewById(R.id.rankedButtonRate);
             this.adapter = adapter;
         }
-
     }
 
     public RankAdapter(Context context, LinkedList<MovieInfo> mMovieList, int currentUserId){
@@ -105,7 +104,6 @@ public class RankAdapter extends RecyclerView.Adapter<RankAdapter.RankViewHolder
                 intent.putExtra("MOVIE_ID", movieAtPosition.getMovieId());
                 context.startActivity(intent);
             }
-
         });
 
     }
