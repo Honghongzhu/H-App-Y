@@ -46,10 +46,11 @@
 
             <TextView
                 android:id="@+id/top12SimilarityScore"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="bottom"
                 android:textColor="@color/similarityGreen"
-                android:textSize="15sp"/>
+                android:textSize="15sp" />
         </LinearLayout>
     </LinearLayout>
 
