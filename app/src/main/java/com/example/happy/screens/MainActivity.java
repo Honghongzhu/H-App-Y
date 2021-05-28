@@ -1,7 +1,9 @@
 package com.example.happy.screens;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.provider.Settings;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -23,55 +25,74 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
 
-        String androidId = Settings.Secure.getString(getContentResolver(),
-                Settings.Secure.ANDROID_ID);
+        // if no internet connection then show message and close the app
+        if(!Utils.connectedInternet(MainActivity.this)){
+            new AlertDialog.Builder(MainActivity.this)
+                    .setTitle("Check internet connection")
+                    .setMessage("No active internet connection was detected." +
+                            " Please enable an internet connection to use Meaningful Movies")
 
-        try {
-            // check if the android id is already in the table
-            List<Users> usersTable = Utils.executeQuery(
-                    Users.class,
-                    MainActivity.this,
-                    "select",
-                    "*",
-                    "users",
-                    "where",
-                    String.format("android_id=\'%s\'", androidId)
-            );
+                    // Specifying a listener allows you to take an action before dismissing the dialog.
+                    // The dialog is automatically dismissed when a dialog button is clicked.
+                    .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            finish();
+                        }
+                    })
+                    // A null listener allows the button to dismiss the dialog and take no further action.
+                    .setIcon(android.R.drawable.ic_dialog_alert)
+                    .show();
+        } else {
+            String androidId = Settings.Secure.getString(getContentResolver(),
+                    Settings.Secure.ANDROID_ID);
 
-            // if it isn't, add it
-            if (usersTable.toString().equals("[]")) {
-                List<NoResult> insertResult = Utils.executeQuery(
-                        NoResult.class,
+            try {
+                // check if the android id is already in the table
+                List<Users> usersTable = Utils.executeQuery(
+                        Users.class,
                         MainActivity.this,
-                        "insert",
-                        "(android_id)",
+                        "select",
+                        "*",
                         "users",
-                        "values",
-                        String.format("(\'%s\')", androidId)
+                        "where",
+                        String.format("android_id=\'%s\'", androidId)
                 );
+
+                // if it isn't, add it
+                if (usersTable.toString().equals("[]")) {
+                    List<NoResult> insertResult = Utils.executeQuery(
+                            NoResult.class,
+                            MainActivity.this,
+                            "insert",
+                            "(android_id)",
+                            "users",
+                            "values",
+                            String.format("(\'%s\')", androidId)
+                    );
+                }
+
+                // Regardless of the case, get the ID
+                usersTable = Utils.executeQuery(
+                        Users.class,
+                        MainActivity.this,
+                        "select",
+                        "*",
+                        "users",
+                        "where",
+                        String.format("android_id=\'%s\'", androidId)
+                );
+
+                currentUserId = Integer.parseInt(usersTable.get(0).getUserId());
+
+            } catch (ExecutionException e) {
+                Toast.makeText(MainActivity.this, e.toString(), Toast.LENGTH_LONG).show();
+            } catch (InterruptedException e) {
+                Toast.makeText(MainActivity.this, e.toString(), Toast.LENGTH_LONG).show();
             }
-
-            // Regardless of the case, get the ID
-            usersTable = Utils.executeQuery(
-                    Users.class,
-                    MainActivity.this,
-                    "select",
-                    "*",
-                    "users",
-                    "where",
-                    String.format("android_id=\'%s\'", androidId)
-            );
-
-            currentUserId = Integer.parseInt(usersTable.get(0).getUserId());
-
-        } catch (ExecutionException e) {
-            Toast.makeText(MainActivity.this, e.toString(), Toast.LENGTH_LONG).show();
-        } catch (InterruptedException e) {
-            Toast.makeText(MainActivity.this, e.toString(), Toast.LENGTH_LONG).show();
         }
-
     }
 
     public void launchRecommendationCSActivity(View view) {
