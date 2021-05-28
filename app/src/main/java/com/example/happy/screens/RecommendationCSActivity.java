@@ -8,18 +8,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
-
 import com.example.happy.R;
-import com.example.happy.queries.MovieInfo;
-import com.example.happy.queries.MovieRatings;
-
 import java.util.ArrayList;
-import java.util.List;
 
 public class RecommendationCSActivity extends AppCompatActivity {
 
-    private List<MovieInfo> allMovieInfo;
-    private List<MovieRatings> allMovieRatings;
     private ArrayList<String> chosenCS = new ArrayList<>();
     private final int maxNrCS = 4;
     private int countCS = 0;

@@ -63,12 +63,15 @@ public class RateCSActivity extends AppCompatActivity {
     String movieToRate = "";
 
     ArrayList<String> pickedCS = new ArrayList<>();
+    private final int maxNrCS = 4;
+    private int countCS = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_rate_cs);
+        countCS = 0; // Reset count
+
         appreciation = findViewById(R.id.buttonAppreciation);
         bravery = findViewById(R.id.buttonBravery);
         creativity = findViewById(R.id.buttonCreativity);
@@ -104,47 +107,82 @@ public class RateCSActivity extends AppCompatActivity {
 
         appreciation.setOnClickListener(view -> {
             if(appreciationClicked == 1){
+                countCS--;
                 appreciation.setBackgroundResource(R.drawable.appreciation_dark);
                 appreciationClicked = 0;
             }else {
-                appreciation.setBackgroundResource(R.drawable.appreciation_light);
-                appreciationClicked = 1;
+                if(countCS < maxNrCS) {
+                    countCS++;
+                    appreciation.setBackgroundResource(R.drawable.appreciation_light);
+                    appreciationClicked = 1;
+                }
+                else {
+                    Toast.makeText(RateCSActivity.this, "You've reached the maximum of 4 character strengths", Toast.LENGTH_LONG).show();
+                }
             }
         });
         bravery.setOnClickListener(view -> {
             if(braveryClicked == 1){
+                countCS--;
                 bravery.setBackgroundResource(R.drawable.bravery_dark);
                 braveryClicked = 0;
             }else {
-                bravery.setBackgroundResource(R.drawable.bravery_light);
-                braveryClicked = 1;
+                if(countCS < maxNrCS) {
+                    countCS++;
+                    bravery.setBackgroundResource(R.drawable.bravery_light);
+                    braveryClicked = 1;
+                }
+                else {
+                    Toast.makeText(RateCSActivity.this, "You've reached the maximum of 4 character strengths", Toast.LENGTH_LONG).show();
+                }
             }
         });
         creativity.setOnClickListener(view -> {
             if(creativityClicked == 1){
+                countCS--;
                 creativity.setBackgroundResource(R.drawable.creativity_dark);
                 creativityClicked = 0;
             }else {
-                creativity.setBackgroundResource(R.drawable.creativity_light);
-                creativityClicked = 1;
+                if(countCS < maxNrCS) {
+                    countCS++;
+                    creativity.setBackgroundResource(R.drawable.creativity_light);
+                    creativityClicked = 1;
+                }
+                else {
+                    Toast.makeText(RateCSActivity.this, "You've reached the maximum of 4 character strengths", Toast.LENGTH_LONG).show();
+                }
             }
         });
         curiosity.setOnClickListener(view -> {
             if(curiosityClicked == 1){
+                countCS--;
                 curiosity.setBackgroundResource(R.drawable.curiosity_dark);
                 curiosityClicked = 0;
             }else {
-                curiosity.setBackgroundResource(R.drawable.curiosity_light);
-                curiosityClicked = 1;
+                if(countCS < maxNrCS) {
+                    countCS++;
+                    curiosity.setBackgroundResource(R.drawable.curiosity_light);
+                    curiosityClicked = 1;
+                }
+                else {
+                    Toast.makeText(RateCSActivity.this, "You've reached the maximum of 4 character strengths", Toast.LENGTH_LONG).show();
+                }
             }
         });
         fairness.setOnClickListener(view -> {
             if(fairnessClicked == 1){
+                countCS--;
                 fairness.setBackgroundResource(R.drawable.fairness_dark);
                 fairnessClicked = 0;
             }else {
-                fairness.setBackgroundResource(R.drawable.fairness_light);
-                fairnessClicked = 1;
+                if(countCS < maxNrCS) {
+                    countCS++;
+                    fairness.setBackgroundResource(R.drawable.fairness_light);
+                    fairnessClicked = 1;
+                }
+                else {
+                    Toast.makeText(RateCSActivity.this, "You've reached the maximum of 4 character strengths", Toast.LENGTH_LONG).show();
+                }
             }
         });
         forgiveness.setOnClickListener(view -> {
@@ -316,6 +354,35 @@ public class RateCSActivity extends AppCompatActivity {
             }else {
                 zest.setBackgroundResource(R.drawable.zest_light);
                 zestClicked = 1;
+            }
+        });
+
+    }
+
+    // Helper function to change the background of the buttons
+    public void setUpButton(int id, String csName, int light, int dark, int clicked) {
+        Button buttonCS = findViewById(id);
+        buttonCS.setOnClickListener(new View.OnClickListener() {
+            int check=1;
+            @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+            @Override
+            public void onClick(View view) {
+                if(check==1){ // Add CS
+                    if(countCS < maxNrCS) {
+                        pickedCS.add(csName);
+                        countCS++;
+                        buttonCS.setBackgroundResource(light);
+                        check = 0;
+                    }
+                    else {
+                        Toast.makeText(RateCSActivity.this, "You've reached the maximum of 4 character strengths", Toast.LENGTH_LONG).show();
+                    }
+                }else { // Remove CS
+                    pickedCS.remove(csName);
+                    countCS--;
+                    buttonCS.setBackgroundResource(dark);
+                    check=1;
+                }
             }
         });
     }
@@ -518,7 +585,6 @@ public class RateCSActivity extends AppCompatActivity {
                     );
                 }
             }
-
 
         } catch (ExecutionException e) {
             Toast.makeText(RateCSActivity.this, e.toString(), Toast.LENGTH_LONG).show();
