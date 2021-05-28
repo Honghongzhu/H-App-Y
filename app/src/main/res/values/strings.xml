@@ -23,7 +23,7 @@
     <string name="rate_meaningful">How meaningful was the movie for you?</string>
     <string name="saved">Movies saved for later:</string>
     <string name="history">History</string>
-    <string name="rate_cs">Choose 3 character strengths that you encountered:</string>
+    <string name="rate_cs">Choose 4 character strengths that you encountered:</string>
     <string name="results">Results for</string>
     <string name="next">Next</string>
     <string name="confirm">Confirm</string>

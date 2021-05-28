@@ -63,6 +63,8 @@ public class RateCSActivity extends AppCompatActivity {
     String movieToRate = "";
 
     ArrayList<String> pickedCS = new ArrayList<>();
+    private final int maxNrCS = 4;
+    private int countCS = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -104,218 +106,386 @@ public class RateCSActivity extends AppCompatActivity {
 
         appreciation.setOnClickListener(view -> {
             if(appreciationClicked == 1){
+                countCS--;
                 appreciation.setBackgroundResource(R.drawable.appreciation_dark);
                 appreciationClicked = 0;
             }else {
-                appreciation.setBackgroundResource(R.drawable.appreciation_light);
-                appreciationClicked = 1;
+                if(countCS < maxNrCS) {
+                    countCS++;
+                    appreciation.setBackgroundResource(R.drawable.appreciation_light);
+                    appreciationClicked = 1;
+                }
+                else {
+                    Toast.makeText(RateCSActivity.this, "You've reached the maximum of 4 character strengths", Toast.LENGTH_LONG).show();
+                }
             }
         });
         bravery.setOnClickListener(view -> {
             if(braveryClicked == 1){
+                countCS--;
                 bravery.setBackgroundResource(R.drawable.bravery_dark);
                 braveryClicked = 0;
             }else {
-                bravery.setBackgroundResource(R.drawable.bravery_light);
-                braveryClicked = 1;
+                if(countCS < maxNrCS) {
+                    countCS++;
+                    bravery.setBackgroundResource(R.drawable.bravery_light);
+                    braveryClicked = 1;
+                }
+                else {
+                    Toast.makeText(RateCSActivity.this, "You've reached the maximum of 4 character strengths", Toast.LENGTH_LONG).show();
+                }
             }
         });
         creativity.setOnClickListener(view -> {
             if(creativityClicked == 1){
+                countCS--;
                 creativity.setBackgroundResource(R.drawable.creativity_dark);
                 creativityClicked = 0;
             }else {
-                creativity.setBackgroundResource(R.drawable.creativity_light);
-                creativityClicked = 1;
+                if(countCS < maxNrCS) {
+                    countCS++;
+                    creativity.setBackgroundResource(R.drawable.creativity_light);
+                    creativityClicked = 1;
+                }
+                else {
+                    Toast.makeText(RateCSActivity.this, "You've reached the maximum of 4 character strengths", Toast.LENGTH_LONG).show();
+                }
             }
         });
         curiosity.setOnClickListener(view -> {
             if(curiosityClicked == 1){
+                countCS--;
                 curiosity.setBackgroundResource(R.drawable.curiosity_dark);
                 curiosityClicked = 0;
             }else {
-                curiosity.setBackgroundResource(R.drawable.curiosity_light);
-                curiosityClicked = 1;
+                if(countCS < maxNrCS) {
+                    countCS++;
+                    curiosity.setBackgroundResource(R.drawable.curiosity_light);
+                    curiosityClicked = 1;
+                }
+                else {
+                    Toast.makeText(RateCSActivity.this, "You've reached the maximum of 4 character strengths", Toast.LENGTH_LONG).show();
+                }
             }
         });
         fairness.setOnClickListener(view -> {
             if(fairnessClicked == 1){
+                countCS--;
                 fairness.setBackgroundResource(R.drawable.fairness_dark);
                 fairnessClicked = 0;
             }else {
-                fairness.setBackgroundResource(R.drawable.fairness_light);
-                fairnessClicked = 1;
+                if(countCS < maxNrCS) {
+                    countCS++;
+                    fairness.setBackgroundResource(R.drawable.fairness_light);
+                    fairnessClicked = 1;
+                }
+                else {
+                    Toast.makeText(RateCSActivity.this, "You've reached the maximum of 4 character strengths", Toast.LENGTH_LONG).show();
+                }
             }
         });
         forgiveness.setOnClickListener(view -> {
             if(forgivenessClicked == 1){
+                countCS--;
                 forgiveness.setBackgroundResource(R.drawable.forgiveness_dark);
                 forgivenessClicked = 0;
             }else {
-                forgiveness.setBackgroundResource(R.drawable.forgiveness_light);
-                forgivenessClicked = 1;
+                if(countCS < maxNrCS) {
+                    countCS++;
+                    forgiveness.setBackgroundResource(R.drawable.forgiveness_light);
+                    forgivenessClicked = 1;
+                }
+                else {
+                    Toast.makeText(RateCSActivity.this, "You've reached the maximum of 4 character strengths", Toast.LENGTH_LONG).show();
+                }
             }
         });
         gratitude.setOnClickListener(view -> {
             if(gratitudeClicked == 1){
+                countCS--;
                 gratitude.setBackgroundResource(R.drawable.gratitude_dark);
                 gratitudeClicked = 0;
             }else {
-                gratitude.setBackgroundResource(R.drawable.gratitude_light);
-                gratitudeClicked = 1;
+                if(countCS < maxNrCS) {
+                    countCS++;
+                    gratitude.setBackgroundResource(R.drawable.gratitude_light);
+                    gratitudeClicked = 1;
+                }
+                else {
+                    Toast.makeText(RateCSActivity.this, "You've reached the maximum of 4 character strengths", Toast.LENGTH_LONG).show();
+                }
             }
         });
         honesty.setOnClickListener(view -> {
             if(honestyClicked == 1){
+                countCS--;
                 honesty.setBackgroundResource(R.drawable.honesty_dark);
                 honestyClicked = 0;
             }else {
-                honesty.setBackgroundResource(R.drawable.honesty_light);
-                honestyClicked = 1;
+                if(countCS < maxNrCS) {
+                    countCS++;
+                    honesty.setBackgroundResource(R.drawable.honesty_light);
+                    honestyClicked = 1;
+                }
+                else {
+                    Toast.makeText(RateCSActivity.this, "You've reached the maximum of 4 character strengths", Toast.LENGTH_LONG).show();
+                }
             }
         });
         hope.setOnClickListener(view -> {
             if(hopeClicked == 1){
+                countCS--;
                 hope.setBackgroundResource(R.drawable.hope_dark);
                 hopeClicked = 0;
             }else {
-                hope.setBackgroundResource(R.drawable.hope_light);
-                hopeClicked = 1;
+                if(countCS < maxNrCS) {
+                    countCS++;
+                    hope.setBackgroundResource(R.drawable.hope_light);
+                    hopeClicked = 1;
+                }
+                else {
+                    Toast.makeText(RateCSActivity.this, "You've reached the maximum of 4 character strengths", Toast.LENGTH_LONG).show();
+                }
             }
         });
         humility.setOnClickListener(view -> {
             if(humilityClicked == 1){
+                countCS--;
                 humility.setBackgroundResource(R.drawable.humility_dark);
                 humilityClicked = 0;
             }else {
-                humility.setBackgroundResource(R.drawable.humility_light);
-                humilityClicked = 1;
+                if(countCS < maxNrCS) {
+                    countCS++;
+                    humility.setBackgroundResource(R.drawable.humility_light);
+                    humilityClicked = 1;
+                }
+                else {
+                    Toast.makeText(RateCSActivity.this, "You've reached the maximum of 4 character strengths", Toast.LENGTH_LONG).show();
+                }
             }
         });
         humor.setOnClickListener(view -> {
             if(humorClicked == 1){
+                countCS--;
                 humor.setBackgroundResource(R.drawable.humor_dark);
                 humorClicked = 0;
             }else {
-                humor.setBackgroundResource(R.drawable.humor_light);
-                humorClicked = 1;
+                if(countCS < maxNrCS) {
+                    countCS++;
+                    humor.setBackgroundResource(R.drawable.humor_light);
+                    humorClicked = 1;
+                }
+                else {
+                    Toast.makeText(RateCSActivity.this, "You've reached the maximum of 4 character strengths", Toast.LENGTH_LONG).show();
+                }
             }
         });
         judgement.setOnClickListener(view -> {
             if(judgementClicked == 1){
+                countCS--;
                 judgement.setBackgroundResource(R.drawable.judgement_dark);
                 judgementClicked = 0;
             }else {
-                judgement.setBackgroundResource(R.drawable.judgement_light);
-                judgementClicked = 1;
+                if(countCS < maxNrCS) {
+                    countCS++;
+                    judgement.setBackgroundResource(R.drawable.judgement_light);
+                    judgementClicked = 1;
+                }
+                else {
+                    Toast.makeText(RateCSActivity.this, "You've reached the maximum of 4 character strengths", Toast.LENGTH_LONG).show();
+                }
             }
         });
         kindness.setOnClickListener(view -> {
             if(kindnessClicked == 1){
+                countCS--;
                 kindness.setBackgroundResource(R.drawable.kindness_dark);
                 kindnessClicked = 0;
             }else {
-                kindness.setBackgroundResource(R.drawable.kindness_light);
-                kindnessClicked = 1;
+                if(countCS < maxNrCS) {
+                    countCS++;
+                    kindness.setBackgroundResource(R.drawable.kindness_light);
+                    kindnessClicked = 1;
+                }
+                else {
+                    Toast.makeText(RateCSActivity.this, "You've reached the maximum of 4 character strengths", Toast.LENGTH_LONG).show();
+                }
             }
         });
         leadership.setOnClickListener(view -> {
             if(leadershipClicked == 1){
+                countCS--;
                 leadership.setBackgroundResource(R.drawable.leadership_dark);
                 leadershipClicked = 0;
             }else {
-                leadership.setBackgroundResource(R.drawable.leadership_light);
-                leadershipClicked = 1;
+                if(countCS < maxNrCS) {
+                    countCS++;
+                    leadership.setBackgroundResource(R.drawable.leadership_light);
+                    leadershipClicked = 1;
+                }
+                else {
+                    Toast.makeText(RateCSActivity.this, "You've reached the maximum of 4 character strengths", Toast.LENGTH_LONG).show();
+                }
             }
         });
         love.setOnClickListener(view -> {
             if(loveClicked == 1){
+                countCS--;
                 love.setBackgroundResource(R.drawable.love_dark);
                 loveClicked = 0;
             }else {
-                love.setBackgroundResource(R.drawable.love_light);
-                loveClicked = 1;
+                if(countCS < maxNrCS) {
+                    countCS++;
+                    love.setBackgroundResource(R.drawable.love_light);
+                    loveClicked = 1;
+                }
+                else {
+                    Toast.makeText(RateCSActivity.this, "You've reached the maximum of 4 character strengths", Toast.LENGTH_LONG).show();
+                }
             }
         });
         learning.setOnClickListener(view -> {
             if(learningClicked == 1){
+                countCS--;
                 learning.setBackgroundResource(R.drawable.lol_dark);
                 learningClicked = 0;
             }else {
-                learning.setBackgroundResource(R.drawable.lol_light);
-                learningClicked = 1;
+                if(countCS < maxNrCS) {
+                    countCS++;
+                    learning.setBackgroundResource(R.drawable.lol_light);
+                    learningClicked = 1;
+                }
+                else {
+                    Toast.makeText(RateCSActivity.this, "You've reached the maximum of 4 character strengths", Toast.LENGTH_LONG).show();
+                }
             }
         });
         perseverance.setOnClickListener(view -> {
             if(perseveranceClicked == 1){
+                countCS--;
                 perseverance.setBackgroundResource(R.drawable.perseverance_dark);
                 perseveranceClicked = 0;
             }else {
-                perseverance.setBackgroundResource(R.drawable.perseverance_light);
-                perseveranceClicked = 1;
+                if(countCS < maxNrCS) {
+                    countCS++;
+                    perseverance.setBackgroundResource(R.drawable.perseverance_light);
+                    perseveranceClicked = 1;
+                }
+                else {
+                    Toast.makeText(RateCSActivity.this, "You've reached the maximum of 4 character strengths", Toast.LENGTH_LONG).show();
+                }
             }
         });
         perspective.setOnClickListener(view -> {
             if(perspectiveClicked == 1){
+                countCS--;
                 perspective.setBackgroundResource(R.drawable.perspective_dark);
                 perspectiveClicked = 0;
             }else {
-                perspective.setBackgroundResource(R.drawable.perspective_light);
-                perspectiveClicked = 1;
+                if(countCS < maxNrCS) {
+                    countCS++;
+                    perspective.setBackgroundResource(R.drawable.perspective_light);
+                    perspectiveClicked = 1;
+                }
+                else {
+                    Toast.makeText(RateCSActivity.this, "You've reached the maximum of 4 character strengths", Toast.LENGTH_LONG).show();
+                }
             }
         });
         prudence.setOnClickListener(view -> {
             if(prudenceClicked == 1){
+                countCS--;
                 prudence.setBackgroundResource(R.drawable.prudence_dark);
                 prudenceClicked = 0;
             }else {
-                prudence.setBackgroundResource(R.drawable.prudence_light);
-                prudenceClicked = 1;
+                if(countCS < maxNrCS) {
+                    countCS++;
+                    prudence.setBackgroundResource(R.drawable.prudence_light);
+                    prudenceClicked = 1;
+                }
+                else {
+                    Toast.makeText(RateCSActivity.this, "You've reached the maximum of 4 character strengths", Toast.LENGTH_LONG).show();
+                }
             }
         });
         selfRegulation.setOnClickListener(view -> {
             if(selfRegulationClicked == 1){
+                countCS--;
                 selfRegulation.setBackgroundResource(R.drawable.self_dark);
                 selfRegulationClicked = 0;
             }else {
-                selfRegulation.setBackgroundResource(R.drawable.self_light);
-                selfRegulationClicked = 1;
+                if(countCS < maxNrCS) {
+                    countCS++;
+                    selfRegulation.setBackgroundResource(R.drawable.self_light);
+                    selfRegulationClicked = 1;
+                }
+                else {
+                    Toast.makeText(RateCSActivity.this, "You've reached the maximum of 4 character strengths", Toast.LENGTH_LONG).show();
+                }
             }
         });
         socialIntelligence.setOnClickListener(view -> {
             if(socialIntelligenceClicked == 1){
+                countCS--;
                 socialIntelligence.setBackgroundResource(R.drawable.social_dark);
                 socialIntelligenceClicked = 0;
             }else {
-                socialIntelligence.setBackgroundResource(R.drawable.social_light);
-                socialIntelligenceClicked = 1;
+                if(countCS < maxNrCS) {
+                    countCS++;
+                    socialIntelligence.setBackgroundResource(R.drawable.social_light);
+                    socialIntelligenceClicked = 1;
+                }
+                else {
+                    Toast.makeText(RateCSActivity.this, "You've reached the maximum of 4 character strengths", Toast.LENGTH_LONG).show();
+                }
             }
         });
         spirituality.setOnClickListener(view -> {
             if(spiritualityClicked == 1){
+                countCS--;
                 spirituality.setBackgroundResource(R.drawable.spirituality_dark);
                 spiritualityClicked = 0;
             }else {
-                spirituality.setBackgroundResource(R.drawable.spirituality_light);
-                spiritualityClicked = 1;
+                if(countCS < maxNrCS) {
+                    countCS++;
+                    spirituality.setBackgroundResource(R.drawable.spirituality_light);
+                    spiritualityClicked = 1;
+                }
+                else {
+                    Toast.makeText(RateCSActivity.this, "You've reached the maximum of 4 character strengths", Toast.LENGTH_LONG).show();
+                }
             }
         });
         teamwork.setOnClickListener(view -> {
             if(teamworkClicked == 1){
+                countCS--;
                 teamwork.setBackgroundResource(R.drawable.teamwork_dark);
                 teamworkClicked = 0;
             }else {
-                teamwork.setBackgroundResource(R.drawable.teamwork_light);
-                teamworkClicked = 1;
+                if(countCS < maxNrCS) {
+                    countCS++;
+                    teamwork.setBackgroundResource(R.drawable.teamwork_light);
+                    teamworkClicked = 1;
+                }
+                else {
+                    Toast.makeText(RateCSActivity.this, "You've reached the maximum of 4 character strengths", Toast.LENGTH_LONG).show();
+                }
             }
         });
         zest.setOnClickListener(view -> {
             if(zestClicked == 1){
+                countCS--;
                 zest.setBackgroundResource(R.drawable.zest_dark);
                 zestClicked = 0;
             }else {
-                zest.setBackgroundResource(R.drawable.zest_light);
-                zestClicked = 1;
+                if(countCS < maxNrCS) {
+                    countCS++;
+                    zest.setBackgroundResource(R.drawable.zest_light);
+                    zestClicked = 1;
+                }
+                else {
+                    Toast.makeText(RateCSActivity.this, "You've reached the maximum of 4 character strengths", Toast.LENGTH_LONG).show();
+                }
             }
         });
     }
