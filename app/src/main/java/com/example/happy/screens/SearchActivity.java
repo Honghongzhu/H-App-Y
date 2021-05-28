@@ -82,9 +82,9 @@ public class SearchActivity extends AppCompatActivity {
 
                     // if no result
                     if (allMovies.toString().equals("[]")){
-                        Toast toast = Toast.makeText(SearchActivity.this, "No movie found with title: \"" + search + "\"", Toast.LENGTH_SHORT);
-                        toast.setGravity(Gravity.CENTER, 0, 0);
-                        toast.show();
+                        Toast emptyToast = Toast.makeText(SearchActivity.this, "No movie found with title: \"" + search + "\"", Toast.LENGTH_SHORT);
+                        emptyToast.setGravity(Gravity.CENTER, 0, 0);
+                        emptyToast.show();
                     } else{
                         foundMovies = new LinkedList<>(allMovies);
                         foundSavedMovies = new LinkedList<>(allSavedMovies);
@@ -96,7 +96,9 @@ public class SearchActivity extends AppCompatActivity {
                     Toast.makeText(SearchActivity.this, e.toString(), Toast.LENGTH_LONG).show();
                 }
             } else {
-                Toast toast = Toast.makeText(SearchActivity.this, "Please write something before searching", Toast.LENGTH_SHORT);
+                Toast noSearchToast = Toast.makeText(SearchActivity.this, "Please write something before searching", Toast.LENGTH_SHORT);
+                noSearchToast.setGravity(Gravity.CENTER, 0, 0);
+                noSearchToast.show();
                 foundMovies = new LinkedList<>();
                 foundSavedMovies = new LinkedList<>();
             }
