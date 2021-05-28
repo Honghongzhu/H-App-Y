@@ -20,9 +20,7 @@
             android:id="@+id/moviePhoto"
             android:layout_width="83dp"
             android:layout_height="108dp"
-            android:layout_margin="5dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:layout_margin="5dp"/>
 
         <TextView
             android:id="@+id/movieName"
@@ -32,11 +30,7 @@
             android:gravity="center_vertical"
             android:textColor="@color/white"
             android:textSize="20sp"
-            app:layout_constrainedWidth="true"
-            app:layout_constraintBottom_toBottomOf="@id/moviePhotoName"
-            app:layout_constraintEnd_toEndOf="@id/moviePhotoName"
-            app:layout_constraintStart_toEndOf="@id/moviePhoto"
-            app:layout_constraintTop_toTopOf="@id/moviePhotoName" />
+            app:layout_constrainedWidth="true"/>
     </LinearLayout>
 
     <LinearLayout
@@ -52,29 +46,21 @@
         app:layout_constraintStart_toEndOf="@id/moviePhotoName"
         app:layout_constraintTop_toTopOf="@id/moviePhotoName">
 
-        <Button
-            android:id="@+id/buttonRate"
-            android:layout_width="90dp"
-            android:layout_height="45dp"
-            android:layout_gravity="center"
-            android:layout_margin="5dp"
-            android:background="@drawable/rate_button"
-            app:layout_constraintBottom_toBottomOf="@id/moviePhotoName"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/rankedMovieSave"
-            app:layout_constraintTop_toTopOf="@id/moviePhotoName" />
-
         <ImageView
             android:id="@+id/movieSave"
             android:layout_width="90dp"
             android:layout_height="45dp"
             android:layout_gravity="center"
             android:layout_margin="5dp"
-            android:background="@drawable/save_button_dark_fixedsize"
-            app:layout_constraintBottom_toBottomOf="@id/moviePhotoName"
-            app:layout_constraintEnd_toStartOf="@id/buttonRate"
-            app:layout_constraintStart_toEndOf="@id/moviePhotoName"
-            app:layout_constraintTop_toTopOf="@id/moviePhotoName" />
+            android:background="@drawable/save_button_dark_fixedsize" />
+
+        <Button
+            android:id="@+id/buttonRate"
+            android:layout_width="90dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:background="@drawable/rate_button" />
     </LinearLayout>
 
     <View
