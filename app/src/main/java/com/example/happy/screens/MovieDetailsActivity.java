@@ -99,7 +99,11 @@ public class MovieDetailsActivity extends AppCompatActivity {
         // Fill all placeholders
         titlePrimary.setText(thisMovieInfo.getPrimaryTitle());
         String imgURL = thisMovieInfo.getPosterUrl();
-        Picasso.get().load(imgURL).into(poster);
+        if (!imgURL.equals("Unknown")){
+            Picasso.get().load(imgURL).into(poster);
+        } else {
+            poster.setImageResource(R.drawable.no_poster);
+        }
         titleOriginal.setText(thisMovieInfo.getOriginalTitle());
         year.setText(thisMovieInfo.getStartYear());
         duration.setText(thisMovieInfo.getRuntime() + " min");
