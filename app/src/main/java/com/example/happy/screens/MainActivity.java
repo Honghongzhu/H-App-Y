@@ -1,12 +1,20 @@
 package com.example.happy.screens;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.Build;
+import android.os.Handler;
+import android.os.Looper;
+import android.os.Message;
 import android.provider.Settings;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.InputType;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.happy.R;
@@ -21,6 +29,7 @@ import java.util.concurrent.ExecutionException;
 public class MainActivity extends AppCompatActivity {
 
     private int currentUserId;
+    private String dialogValue;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
             new AlertDialog.Builder(MainActivity.this)
                     .setTitle("Check internet connection")
                     .setMessage("No active internet connection was detected." +
-                            " Please enable an internet connection to use Meaningful Movies")
+                            " Please enable an internet connection to use Meaningful Movies.")
 
                     // Specifying a listener allows you to take an action before dismissing the dialog.
                     // The dialog is automatically dismissed when a dialog button is clicked.
@@ -61,29 +70,76 @@ public class MainActivity extends AppCompatActivity {
                         String.format("android_id=\'%s\'", androidId)
                 );
 
-                // if it isn't, add it
+
+                // if it isn't, ask for alias and insert in DB
                 if (usersTable.toString().equals("[]")) {
+
+                    final Handler handler = new Handler() {
+                        @Override
+                        public void handleMessage(Message mesg)
+                        {
+                            throw new RuntimeException();
+                        }
+                    };
+
+                    EditText input = new EditText(this);
+                    input.setInputType(InputType.TYPE_CLASS_TEXT);
+
+                    AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                    builder.setView(input);
+                    builder.setTitle("Enter alias");
+                    builder.setMessage("Please enter an alias so that we know who you are :) " +
+                            "Write it down somewhere and don't forget it, because we will ask" +
+                            " for it again in the final questionnaire!\n\n" +
+                            "Please don't include symbols, spaces or special characters and " +
+                            "make sure the text field is not empty!");
+                    builder.setPositiveButton("Confirm", (dialog, id) -> {
+                        dialogValue = input.getText().toString();
+                        handler.sendMessage(handler.obtainMessage());
+                    });
+                    builder.show();
+                    try{
+                        Looper.loop();
+                    }
+                    catch(RuntimeException e){ //don't print this as it'll always show
+                    }
+
+                    dialogValue = dialogValue.replace(" ", "_");
+                    dialogValue = dialogValue.replace("%", "");
+                    dialogValue = dialogValue.replace(";", "");
+                    dialogValue = dialogValue.replace("#", "");
+
                     List<NoResult> insertResult = Utils.executeQuery(
                             NoResult.class,
                             MainActivity.this,
                             "insert",
-                            "(android_id)",
+                            "(android_id, alias)",
                             "users",
                             "values",
-                            String.format("(\'%s\')", androidId)
+                            String.format("(\'%s\', \'%s\')", androidId, dialogValue)
+                    );
+
+                    usersTable = Utils.executeQuery(
+                            Users.class,
+                            MainActivity.this,
+                            "select",
+                            "*",
+                            "users",
+                            "where",
+                            String.format("android_id=\'%s\'", androidId)
+                    );
+
+                } else {
+                    usersTable = Utils.executeQuery(
+                            Users.class,
+                            MainActivity.this,
+                            "select",
+                            "*",
+                            "users",
+                            "where",
+                            String.format("android_id=\'%s\'", androidId)
                     );
                 }
-
-                // Regardless of the case, get the ID
-                usersTable = Utils.executeQuery(
-                        Users.class,
-                        MainActivity.this,
-                        "select",
-                        "*",
-                        "users",
-                        "where",
-                        String.format("android_id=\'%s\'", androidId)
-                );
 
                 currentUserId = Integer.parseInt(usersTable.get(0).getUserId());
 
