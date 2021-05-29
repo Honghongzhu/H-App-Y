@@ -9,9 +9,7 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="326dp">
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -21,7 +19,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="5dp">
+                android:layout_margin="5dp"
+                android:gravity="center">
 
                 <ImageView
                     android:id="@+id/appreciation_image"
@@ -43,10 +42,12 @@
                     tools:layout_editor_absoluteY="5dp" />
             </LinearLayout>
 
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="5dp">
+                android:layout_margin="5dp"
+                android:gravity="center">
 
                 <ImageView
                     android:id="@+id/bravery_image"
@@ -71,7 +72,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="5dp">
+                android:layout_margin="5dp"
+                android:gravity="center">
 
                 <ImageView
                     android:id="@+id/creativity_image"
@@ -96,7 +98,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="5dp">
+                android:layout_margin="5dp"
+                android:gravity="center">
 
                 <ImageView
                     android:id="@+id/curiosity_image"
@@ -121,7 +124,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="5dp">
+                android:layout_margin="5dp"
+                android:gravity="center">
 
                 <ImageView
                     android:id="@+id/fairness_image"
@@ -146,7 +150,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="5dp">
+                android:layout_margin="5dp"
+                android:gravity="center">
 
                 <ImageView
                     android:id="@+id/forgiveness_image"
@@ -171,7 +176,9 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="5dp">
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:gravity="center">
 
                 <ImageView
                     android:id="@+id/gratitude_image"
@@ -196,7 +203,9 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="5dp">
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:gravity="center">
 
                 <ImageView
                     android:id="@+id/honesty_image"
@@ -221,7 +230,9 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="5dp">
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:gravity="center">
 
                 <ImageView
                     android:id="@+id/hope_image"
@@ -246,7 +257,9 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="5dp">
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:gravity="center">
 
                 <ImageView
                     android:id="@+id/humility_image"
@@ -271,7 +284,9 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="5dp">
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:gravity="center">
 
                 <ImageView
                     android:id="@+id/humor_image"
@@ -296,7 +311,9 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="5dp">
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:gravity="center">
 
                 <ImageView
                     android:id="@+id/judgement_image"
@@ -321,7 +338,9 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="5dp">
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:gravity="center">
 
                 <ImageView
                     android:id="@+id/kindness_image"
@@ -346,7 +365,9 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="5dp">
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:gravity="center">
 
                 <ImageView
                     android:id="@+id/leadership_image"
@@ -371,7 +392,9 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="5dp">
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:gravity="center">
 
                 <ImageView
                     android:id="@+id/love_image"
@@ -396,7 +419,9 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="5dp">
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:gravity="center">
 
                 <ImageView
                     android:id="@+id/learning_image"
@@ -421,7 +446,9 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="5dp">
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:gravity="center">
 
                 <ImageView
                     android:id="@+id/perseverance_image"
@@ -446,7 +473,9 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="5dp">
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:gravity="center">
 
                 <ImageView
                     android:id="@+id/perspective_image"
@@ -471,7 +500,9 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="5dp">
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:gravity="center">
 
                 <ImageView
                     android:id="@+id/prudence_image"
@@ -496,7 +527,9 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="5dp">
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:gravity="center">
 
                 <ImageView
                     android:id="@+id/self_regulation_image"
@@ -521,7 +554,9 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="5dp">
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:gravity="center">
 
                 <ImageView
                     android:id="@+id/social_intelligence_image"
@@ -546,7 +581,9 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="5dp">
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:gravity="center">
 
                 <ImageView
                     android:id="@+id/spirituality_image"
@@ -571,7 +608,9 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="5dp">
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:gravity="center">
 
                 <ImageView
                     android:id="@+id/teamwork_image"
@@ -596,7 +635,9 @@
             <LinearLayout
                 android:layout_width="375dp"
                 android:layout_height="150dp"
-                android:layout_margin="5dp">
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:gravity="center">
 
                 <ImageView
                     android:id="@+id/zest_image"

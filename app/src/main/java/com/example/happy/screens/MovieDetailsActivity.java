@@ -214,6 +214,10 @@ public class MovieDetailsActivity extends AppCompatActivity {
             isSaved = !isSaved;
         });
 
+        movieRating.get(0).getAll(); // idk if this is what I want
+        //switch in historyadapteer
+
+
         // Rate button functionality
         rate.setOnClickListener(v -> {
             Intent intent = new Intent(this, RateActivity.class);

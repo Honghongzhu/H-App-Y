@@ -40,7 +40,7 @@
                         android:id="@+id/buttonInfo"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="@color/colorPrimaryDark"
+                        android:background="@drawable/rounded_button"
                         android:onClick="launchInfoCSActivity"
                         android:text="@string/info"
                         android:textColor="@color/white"
@@ -498,7 +498,7 @@
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="135dp"
+                        android:layout_height="175dp"
                         android:orientation="horizontal"
                         android:layout_marginBottom="5dp"
                         >
@@ -578,7 +578,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:background="@color/colorPrimaryDark"
+        android:background="@drawable/rounded_button"
         android:onClick="launchRecommendationActivity"
         android:text="@string/confirm"
         android:textColor="@color/white"
