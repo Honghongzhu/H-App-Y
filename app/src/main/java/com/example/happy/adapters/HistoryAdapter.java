@@ -93,7 +93,12 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.MovieVie
         final UserRatings movieRatingAtPosition = UserRatingList.get(position);
 
         String imgURL = movieAtPosition.getPosterUrl();
-        Picasso.get().load(imgURL).into(holder.movieImage);
+        if (!imgURL.equals("Unknown")){
+            Picasso.get().load(imgURL).into(holder.movieImage);
+        } else {
+            holder.movieImage.setImageResource(R.drawable.no_poster);
+        }
+
         holder.movieText.setText(movieAtPosition.getPrimaryTitle() + " (" + movieAtPosition.getStartYear() + ")");
         holder.enjoyRate.setRating(Float.parseFloat(movieRatingAtPosition.getEnjoymentRating()));
         holder.meaningRate.setRating(Float.parseFloat(movieRatingAtPosition.getMeaningRating()));

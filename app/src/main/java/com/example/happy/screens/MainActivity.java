@@ -76,6 +76,7 @@ public class MainActivity extends AppCompatActivity {
 
                     EditText input = new EditText(this);
                     input.setInputType(InputType.TYPE_CLASS_TEXT);
+                    input.setHint("movieenthusiast123");
 
                     AlertDialog.Builder builder = new AlertDialog.Builder(this);
                     builder.setView(input);

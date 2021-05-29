@@ -92,7 +92,13 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
         }
 
         String imgURL = movieAtPosition.getPosterUrl();
-        Picasso.get().load(imgURL).into(holder.movieImage);
+        if (!imgURL.equals("Unknown")){
+            Picasso.get().load(imgURL).into(holder.movieImage);
+        } else {
+            holder.movieImage.setImageResource(R.drawable.no_poster);
+        }
+
+
 
         holder.movieText.setText(movieAtPosition.getPrimaryTitle() + " (" + movieAtPosition.getStartYear() + ")");
         holder.rateButton.setOnClickListener(v -> {

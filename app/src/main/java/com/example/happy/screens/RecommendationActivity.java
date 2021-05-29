@@ -15,6 +15,7 @@ import com.example.happy.adapters.MovieAdapter;
 import com.example.happy.adapters.RankAdapter;
 import com.example.happy.queries.MovieInfo;
 import com.example.happy.queries.MovieRatings;
+import com.example.happy.queries.SavedMovies;
 import com.example.happy.queries.Utils;
 
 import java.util.ArrayList;
@@ -25,6 +26,7 @@ import java.util.stream.Collectors;
 
 public class RecommendationActivity extends AppCompatActivity {
 
+    private List<SavedMovies> savedByUser;
     private List<MovieRatings> resultMovieRatings;
     private List<MovieInfo> allMovieInfo;
     private int currentUserId = -1;
@@ -92,23 +94,30 @@ public class RecommendationActivity extends AppCompatActivity {
                     "WHERE movie_id in",
                     String.format("(%s) ORDER BY FIELD(movie_id, %s)", movieIDs.toString(), movieIDs.toString())
             );
+
+            savedByUser = Utils.executeQuery(
+                    SavedMovies.class,
+                    RecommendationActivity.this,
+                    "select",
+                    "*",
+                    "saved_movies",
+                    "where",
+                    String.format("user_id=%s", currentUserId)
+            );
+
         } catch (ExecutionException e) {
             Toast.makeText(RecommendationActivity.this, e.toString(), Toast.LENGTH_LONG).show();
         } catch (InterruptedException e) {
             Toast.makeText(RecommendationActivity.this, e.toString(), Toast.LENGTH_LONG).show();
         }
 
-        LinkedList<MovieInfo> moviesSaved = new LinkedList<>(allMovieInfo);
+        LinkedList<MovieInfo> allMoviesInfo = new LinkedList<>(allMovieInfo);
+        LinkedList<SavedMovies> allSavedMovies = new LinkedList<>(savedByUser);
 
         RecyclerView recyclerView = findViewById(R.id.rv_recommendation);
-        RankAdapter adapter = new RankAdapter(this, moviesSaved, currentUserId);
+        RankAdapter adapter = new RankAdapter(this, allMoviesInfo, allSavedMovies, currentUserId);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-    }
-
-    public void launchRateActivity(View view) {
-        Intent intent = new Intent(this, RateActivity.class);
-        startActivity(intent);
     }
 }

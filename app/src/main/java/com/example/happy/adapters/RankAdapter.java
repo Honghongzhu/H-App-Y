@@ -1,5 +1,6 @@
 package com.example.happy.adapters;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
@@ -10,20 +11,26 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.happy.R;
 import com.example.happy.queries.MovieInfo;
+import com.example.happy.queries.NoResult;
+import com.example.happy.queries.SavedMovies;
+import com.example.happy.queries.Utils;
 import com.example.happy.screens.MovieDetailsActivity;
 import com.example.happy.screens.RateActivity;
 import com.squareup.picasso.Picasso;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.concurrent.ExecutionException;
 
 public class RankAdapter extends RecyclerView.Adapter<RankAdapter.RankViewHolder> {
     private final List<MovieInfo> mMovieList;
+    private final List<SavedMovies> savedMovieList;
     private final LayoutInflater inflater;
-    private final Boolean isSaved = false;
+    private Boolean isSaved = false;
     private String selectedMovieId = "";
     private int currentUserId = -1;
     private final Context context;
@@ -49,10 +56,11 @@ public class RankAdapter extends RecyclerView.Adapter<RankAdapter.RankViewHolder
         }
     }
 
-    public RankAdapter(Context context, LinkedList<MovieInfo> mMovieList, int currentUserId){
+    public RankAdapter(Context context, LinkedList<MovieInfo> mMovieList, LinkedList<SavedMovies> savedMovieList, int currentUserId){
         inflater = LayoutInflater.from(context);
         this.mMovieList = mMovieList;
         this.currentUserId = currentUserId;
+        this.savedMovieList = savedMovieList;
         this.context = context;
     }
 
@@ -68,8 +76,29 @@ public class RankAdapter extends RecyclerView.Adapter<RankAdapter.RankViewHolder
         final MovieInfo movieAtPosition = mMovieList.get(position);
         holder.movieRank.setText(String.valueOf(position+1));
 
+        int idx = -1;
+
+        //iterate over the movies to find the saved one
+        for (SavedMovies saved : savedMovieList){
+            if (saved.getMovieId().equals(movieAtPosition.getMovieId())){
+                idx = savedMovieList.indexOf(saved);
+                break;
+            }
+        }
+
+        SavedMovies savedAtPosition = null;
+
+        // if the index was found
+        if (idx != -1){
+            savedAtPosition  = savedMovieList.get(idx);
+        }
+
         String imgURL = movieAtPosition.getPosterUrl();
-        Picasso.get().load(imgURL).into(holder.movieImage);
+        if (!imgURL.equals("Unknown")){
+            Picasso.get().load(imgURL).into(holder.movieImage);
+        } else {
+            holder.movieImage.setImageResource(R.drawable.no_poster);
+        }
 
         holder.movieText.setText(movieAtPosition.getPrimaryTitle() + " (" + movieAtPosition.getStartYear() + ")");
         holder.rateButton.setOnClickListener(v -> {
@@ -80,21 +109,62 @@ public class RankAdapter extends RecyclerView.Adapter<RankAdapter.RankViewHolder
             context.startActivity(intent);
         });
 
-//        holder.saveImage.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                if (isSaved){//it was saved and by clicking it is deleted from saved
-//                    holder.saveImage.setBackgroundResource(R.drawable.save_button_dark_fixedsize);
-//                    // TODO: update database
-//                    movieAtPosition.setSaved(false);
-//                }else{ //it was not saved and by clicking it became saved
-//                    holder.saveImage.setBackgroundResource(R.drawable.save_button_light_fixedsize);
-//                    // TODO: update database
-//                    movieAtPosition.setSaved(true);
-//                }
-//                isSaved = !isSaved;
-//            }
-//        });
+        if (savedAtPosition != null && Integer.parseInt(savedAtPosition.getUserId()) == currentUserId){
+            isSaved = true;
+            holder.saveImage.setBackgroundResource(R.drawable.save_button_light_fixedsize);
+        }
+
+        holder.saveImage.setOnClickListener(v -> {
+            // if the movie is saved and therefore clicked to be unsaved
+            if (isSaved){
+
+                try {
+                    List<NoResult> deleteResult = Utils.executeQuery(
+                            NoResult.class,
+                            (Activity) holder.adapter.context,
+                            "delete",
+                            "",
+                            "saved_movies",
+                            "where",
+                            String.format("movie_id='%s' and user_id=%s", movieAtPosition.getMovieId(), currentUserId)
+                    );
+
+                    if (!deleteResult.toString().equals("[]")){
+                        holder.saveImage.setBackgroundResource(R.drawable.save_button_dark_fixedsize);
+                    }
+
+                } catch (ExecutionException e) {
+                    Toast.makeText((Activity) holder.adapter.context, e.toString(), Toast.LENGTH_LONG).show();
+                } catch (InterruptedException e) {
+                    Toast.makeText((Activity) holder.adapter.context, e.toString(), Toast.LENGTH_LONG).show();
+                }
+
+            }else{
+
+                try {
+                    List<NoResult> insertResult = Utils.executeQuery(
+                            NoResult.class,
+                            (Activity) holder.adapter.context,
+                            "insert",
+                            "(user_id, movie_id)",
+                            "saved_movies",
+                            "values",
+                            String.format("(%s, '%s')", currentUserId, movieAtPosition.getMovieId())
+                    );
+
+                    if (!insertResult.toString().equals("[]")){
+                        holder.saveImage.setBackgroundResource(R.drawable.save_button_light_fixedsize);
+                    }
+
+                } catch (ExecutionException e) {
+                    Toast.makeText((Activity) holder.adapter.context, e.toString(), Toast.LENGTH_LONG).show();
+                } catch (InterruptedException e) {
+                    Toast.makeText((Activity) holder.adapter.context, e.toString(), Toast.LENGTH_LONG).show();
+                }
+
+            }
+            isSaved = !isSaved;
+        });
 
         holder.itemView.setOnClickListener(new View.OnClickListener(){
             @Override
