@@ -108,6 +108,8 @@ public class MainActivity extends AppCompatActivity {
                     dialogValue = dialogValue.replace("%", "");
                     dialogValue = dialogValue.replace(";", "");
                     dialogValue = dialogValue.replace("#", "");
+                    dialogValue = dialogValue.replace("\"", "");
+                    dialogValue = dialogValue.replace("'", "");
 
                     List<NoResult> insertResult = Utils.executeQuery(
                             NoResult.class,
