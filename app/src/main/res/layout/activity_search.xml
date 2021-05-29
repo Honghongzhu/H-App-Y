@@ -8,56 +8,44 @@
     android:layout_height="match_parent"
     tools:context=".screens.SearchActivity">
 
-    <EditText
-        android:id="@+id/searchBar"
-        android:layout_width="370dp"
+    <LinearLayout
+        android:id="@+id/layoutSearch"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColorHint="@color/lightGray"
-        android:textColor="@color/white"
-        android:hint="@string/search_input"
-        android:inputType="text"
-        android:textSize="25sp"
-        android:backgroundTint="@color/white"
+        android:orientation="horizontal"
+        android:layout_margin="10dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent">
 
-    <Button
-        android:id="@+id/searchButton"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:background="@drawable/ic_search"
-        app:layout_constraintStart_toEndOf="@id/searchBar"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/rv_search"/>
+        <EditText
+            android:id="@+id/searchBar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/lightGray"
+            android:textColor="@color/white"
+            android:hint="@string/search_input"
+            android:inputType="text"
+            android:textSize="25sp"
+            android:backgroundTint="@color/white"
+            android:layout_weight="0.9"/>
+
+        <Button
+            android:id="@+id/searchButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/ic_search"
+            android:gravity="center"/>
+    </LinearLayout>
+
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rv_search"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:scrollbars="vertical"
-        app:layout_constraintTop_toBottomOf="@id/searchBar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutSearch"
         app:layout_constraintStart_toStartOf="parent">
     </android.support.v7.widget.RecyclerView>
 
 </android.support.constraint.ConstraintLayout>
-
-<!--
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/colorback"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".SearchActivity">
-
-
-    <ListView
-        android:id="@+id/search_output"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-    </ListView>
-
-</LinearLayout>
--->
