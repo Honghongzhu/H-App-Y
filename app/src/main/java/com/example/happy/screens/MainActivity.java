@@ -43,15 +43,7 @@ public class MainActivity extends AppCompatActivity {
                     .setTitle("Check internet connection")
                     .setMessage("No active internet connection was detected." +
                             " Please enable an internet connection to use Meaningful Movies.")
-
-                    // Specifying a listener allows you to take an action before dismissing the dialog.
-                    // The dialog is automatically dismissed when a dialog button is clicked.
-                    .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int which) {
-                            finish();
-                        }
-                    })
-                    // A null listener allows the button to dismiss the dialog and take no further action.
+                    .setPositiveButton(android.R.string.ok, (dialog, which) -> finish())
                     .setIcon(android.R.drawable.ic_dialog_alert)
                     .show();
         } else {

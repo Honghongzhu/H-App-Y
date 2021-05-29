@@ -174,6 +174,7 @@ public class Top12Adapter extends RecyclerView.Adapter<Top12Adapter.Top12ViewHol
                 Context context = v.getContext();
                 Intent intent = new Intent(context, MovieDetailsActivity.class);
                 intent.putExtra("MOVIE_ID", movieAtPosition.getMovieId());
+                intent.putExtra("CURRENT_USER_ID", currentUserId);
                 context.startActivity(intent);
             }
         });
