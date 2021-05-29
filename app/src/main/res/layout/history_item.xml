@@ -1,51 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/colorback"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <LinearLayout
-        android:id="@+id/historyMoviePhotoName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+    android:id="@+id/historyMoviePhotoName"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    app:layout_constrainedWidth="true"
+    app:layout_constraintEnd_toStartOf="@id/ratings_panel"
+    app:layout_constraintHorizontal_chainStyle="spread_inside"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/historyMoviePhoto"
             android:layout_width="83dp"
             android:layout_height="108dp"
-            android:layout_margin="10dp"
-            android:contentDescription="TODO"
-            app:layout_constraintEnd_toStartOf="@id/movieName"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:layout_margin="5dp"/>
 
         <LinearLayout
-            android:layout_width="200dp"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_marginRight="10dp"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/historyMovieName"
-                android:layout_width="match_parent"
-                android:layout_height="65dp"
-                android:layout_marginTop="10dp"
-                android:gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
                 android:textColor="@color/white"
-                android:textSize="20dp"
-                app:layout_constraintBottom_toBottomOf="@id/moviePhoto"
-                app:layout_constraintStart_toEndOf="@id/moviePhoto"
-                app:layout_constraintTop_toTopOf="@id/moviePhoto" />
+                android:textSize="17sp"
+                app:layout_constrainedWidth="true"/>
 
             <LinearLayout
                 android:id="@+id/historyCSImages"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="5dp"
                 android:orientation="horizontal"
                 app:layout_constraintTop_toBottomOf="@id/historyMovieName"
                 android:weightSum="4">
@@ -53,95 +48,91 @@
                 <ImageView
                     android:id="@+id/historyCS1"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
+                    android:layout_weight="0.9"
                     android:layout_height="match_parent" />
 
                 <ImageView
                     android:id="@+id/historyCS2"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
+                    android:layout_weight="0.9"
                     android:layout_height="match_parent" />
 
                 <ImageView
                     android:id="@+id/historyCS3"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
+                    android:layout_weight="0.9"
                     android:layout_height="match_parent" />
 
                 <ImageView
                     android:id="@+id/historyCS4"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
+                    android:layout_weight="0.9"
                     android:layout_height="match_parent" />
             </LinearLayout>
+
         </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/ratings_panel"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:weightSum="2">
-
-            <LinearLayout
-                android:id="@+id/enjoy_panel"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@id/movieName"
-                app:layout_constraintTop_toBottomOf="parent">
-
-                <TextView
-                    android:id="@+id/enjoy_title"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:layout_marginBottom="12dp"
-                    android:text="Enjoyful"
-                    android:textColor="@color/white" />
-
-                <RatingBar
-                    android:id="@+id/historyEnjoyRating"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:numStars="5"
-                    style="@style/EnjoyRatingBar"
-                    />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/meaning_panel"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:layout_marginBottom="10dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@id/movieName"
-                app:layout_constraintTop_toBottomOf="parent">
-
-                <TextView
-                    android:id="@+id/meaningful_title"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:layout_marginBottom="12dp"
-                    android:text="Meaningful"
-                    android:textColor="@color/white" />
-
-                <RatingBar
-                    android:id="@+id/historyMeaningfulRating"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    style="@style/MeaningRatingBar"
-                    android:numStars="5" />
-
-            </LinearLayout>
-        </LinearLayout>
     </LinearLayout>
-</RelativeLayout>
+
+    <LinearLayout
+    android:id="@+id/ratings_panel"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="5dp"
+    android:orientation="vertical"
+    app:layout_constrainedWidth="true"
+    app:layout_constraintBottom_toBottomOf="@id/historyMoviePhotoName"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toEndOf="@id/historyMoviePhotoName"
+    app:layout_constraintTop_toTopOf="@id/historyMoviePhotoName">
+
+        <TextView
+            android:id="@+id/enjoy_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginBottom="12dp"
+            android:text="Enjoyful"
+            android:textColor="@color/white" />
+
+        <RatingBar
+            android:id="@+id/historyEnjoyRating"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="12dp"
+            android:numStars="5"
+            style="@style/EnjoyRatingBar"
+            />
+
+        <TextView
+            android:id="@+id/meaningful_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginBottom="12dp"
+            android:text="Meaningful"
+            android:textColor="@color/white" />
+
+        <RatingBar
+            android:id="@+id/historyMeaningfulRating"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            style="@style/MeaningRatingBar"
+            android:numStars="5" />
+    </LinearLayout>
+
+    <View
+    android:id="@+id/view3"
+    android:layout_width="match_parent"
+    android:layout_height="3dp"
+    android:layout_margin="10dp"
+    android:background="@color/colorPrimary"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/historyMoviePhotoName" />
+
+</android.support.constraint.ConstraintLayout>
 
