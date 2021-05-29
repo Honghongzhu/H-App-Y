@@ -94,10 +94,14 @@ public class RecommendationCSActivity extends AppCompatActivity {
     }
 
     public void launchRecommendationActivity(View view) {
-        Intent intent = new Intent(this, RecommendationActivity.class);
-        intent.putExtra("chosenCS", chosenCS);
-        intent.putExtra("CURRENT_USER_ID", currentUserId);
-        startActivity(intent);
+        if(countCS==0) {
+            Toast.makeText(this, "Please choose at least 1 character strength", Toast.LENGTH_LONG).show();
+        }else {
+            Intent intent = new Intent(this, RecommendationActivity.class);
+            intent.putExtra("chosenCS", chosenCS);
+            intent.putExtra("CURRENT_USER_ID", currentUserId);
+            startActivity(intent);
+        }
     }
 
     public void launchInfoCSActivity(View view) {

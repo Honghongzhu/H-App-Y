@@ -564,141 +564,145 @@ public class RateCSActivity extends AppCompatActivity {
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     public void launchHistoryActivity(View view) {
+        if(countCS==0) {
+            Toast.makeText(this, "Please choose at least 1 character strength", Toast.LENGTH_LONG).show();
+        }else {
 
-        String columns = "(user_id, movie_id, enjoyment_rating, meaning_rating, creativity," +
-                "curiosity, judgement, love_of_learning, perspective, bravery, honesty, zest," +
-                "perseverance, love, kindness, social_intelligence, teamwork, fairness, leadership," +
-                "forgiveness, humility, prudence, self_regulation, appreciation_beauty_excellence," +
-                "gratitude, hope, humor, spirituality)";
+            String columns = "(user_id, movie_id, enjoyment_rating, meaning_rating, creativity," +
+                    "curiosity, judgement, love_of_learning, perspective, bravery, honesty, zest," +
+                    "perseverance, love, kindness, social_intelligence, teamwork, fairness, leadership," +
+                    "forgiveness, humility, prudence, self_regulation, appreciation_beauty_excellence," +
+                    "gratitude, hope, humor, spirituality)";
 
-        String unformatted = "(" + new String(new char[27]).replace("\0", "'%s', ") +
-                "'%s')";
+            String unformatted = "(" + new String(new char[27]).replace("\0", "'%s', ") +
+                    "'%s')";
 
-        try {
+            try {
 
-            // first get the data to update in movie_ratings
-            List<MovieRatings> currentMovieRatingsTable = Utils.executeQuery(
-                    MovieRatings.class,
-                    RateCSActivity.this,
-                    "select",
-                    "*",
-                    "movie_ratings",
-                    "where",
-                    String.format("movie_id='%s'", movieToRate)
-            );
+                // first get the data to update in movie_ratings
+                List<MovieRatings> currentMovieRatingsTable = Utils.executeQuery(
+                        MovieRatings.class,
+                        RateCSActivity.this,
+                        "select",
+                        "*",
+                        "movie_ratings",
+                        "where",
+                        String.format("movie_id='%s'", movieToRate)
+                );
 
-            //update the average and votes for enjoyment and meaningfulness
-            MovieRatings currentMovieRating = currentMovieRatingsTable.get(0);
-            int oldVotesEnjoyment = Integer.parseInt(currentMovieRating.getVotesEnjoyment());
-            int oldVotesMeaning = Integer.parseInt(currentMovieRating.getVotesMeaning());
-            float oldAverageEnjoyment = Float.parseFloat(currentMovieRating.getAverageEnjoyment());
-            float oldAverageMeaning = Float.parseFloat(currentMovieRating.getAverageMeaning());
+                //update the average and votes for enjoyment and meaningfulness
+                MovieRatings currentMovieRating = currentMovieRatingsTable.get(0);
+                int oldVotesEnjoyment = Integer.parseInt(currentMovieRating.getVotesEnjoyment());
+                int oldVotesMeaning = Integer.parseInt(currentMovieRating.getVotesMeaning());
+                float oldAverageEnjoyment = Float.parseFloat(currentMovieRating.getAverageEnjoyment());
+                float oldAverageMeaning = Float.parseFloat(currentMovieRating.getAverageMeaning());
 
-            int newVotesEnjoyment = oldVotesEnjoyment + 1;
-            float newAverageEnjoyment = (oldAverageEnjoyment * oldVotesEnjoyment + enjoyRating)/newVotesEnjoyment;
+                int newVotesEnjoyment = oldVotesEnjoyment + 1;
+                float newAverageEnjoyment = (oldAverageEnjoyment * oldVotesEnjoyment + enjoyRating) / newVotesEnjoyment;
 
-            int newVotesMeaning = oldVotesMeaning + 1;
-            float newAverageMeaning = (oldAverageMeaning * oldVotesMeaning + meaningRating)/newVotesMeaning;
+                int newVotesMeaning = oldVotesMeaning + 1;
+                float newAverageMeaning = (oldAverageMeaning * oldVotesMeaning + meaningRating) / newVotesMeaning;
 
-            // need to save same order as variable characterStrengths
-            pickedCS = getColumns(creativityClicked, curiosityClicked, judgementClicked, learningClicked, perspectiveClicked, braveryClicked, honestyClicked, zestClicked, perseveranceClicked, loveClicked, kindnessClicked, socialIntelligenceClicked, teamworkClicked, fairnessClicked, leadershipClicked, forgivenessClicked, humilityClicked, prudenceClicked, selfRegulationClicked, appreciationClicked, gratitudeClicked, hopeClicked, humorClicked, spiritualityClicked);
+                // need to save same order as variable characterStrengths
+                pickedCS = getColumns(creativityClicked, curiosityClicked, judgementClicked, learningClicked, perspectiveClicked, braveryClicked, honestyClicked, zestClicked, perseveranceClicked, loveClicked, kindnessClicked, socialIntelligenceClicked, teamworkClicked, fairnessClicked, leadershipClicked, forgivenessClicked, humilityClicked, prudenceClicked, selfRegulationClicked, appreciationClicked, gratitudeClicked, hopeClicked, humorClicked, spiritualityClicked);
 
-            String valuesToAdd = getValues(currentMovieRating, pickedCS);
+                String valuesToAdd = getValues(currentMovieRating, pickedCS);
 
-            //update statement
-            List<NoResult> updateResult = Utils.executeQuery(
-                    NoResult.class,
-                    RateCSActivity.this,
-                    "update",
-                    String.format("votes_enjoyment=%s, average_enjoyment=%s, votes_meaning=%s, average_meaning=%s, %s",
-                            newVotesEnjoyment,
-                            newAverageEnjoyment,
-                            newVotesMeaning,
-                            newAverageMeaning,
-                            valuesToAdd),
-                    "movie_ratings",
-                    "where",
-                    String.format("movie_id='%s'", movieToRate)
-            );
+                //update statement
+                List<NoResult> updateResult = Utils.executeQuery(
+                        NoResult.class,
+                        RateCSActivity.this,
+                        "update",
+                        String.format("votes_enjoyment=%s, average_enjoyment=%s, votes_meaning=%s, average_meaning=%s, %s",
+                                newVotesEnjoyment,
+                                newAverageEnjoyment,
+                                newVotesMeaning,
+                                newAverageMeaning,
+                                valuesToAdd),
+                        "movie_ratings",
+                        "where",
+                        String.format("movie_id='%s'", movieToRate)
+                );
 
-            List<NoResult> insertResult = Utils.executeQuery(
-                    NoResult.class,
-                    RateCSActivity.this,
-                    "insert",
-                    columns,
-                    "user_ratings",
-                    "values",
-                    String.format(unformatted,
-                            currentUserId,
-                            movieToRate,
-                            enjoyRating,
-                            meaningRating,
-                            creativityClicked,
-                            curiosityClicked,
-                            judgementClicked,
-                            learningClicked,
-                            perspectiveClicked,
-                            braveryClicked,
-                            honestyClicked,
-                            zestClicked,
-                            perseveranceClicked,
-                            loveClicked,
-                            kindnessClicked,
-                            socialIntelligenceClicked,
-                            teamworkClicked,
-                            fairnessClicked,
-                            leadershipClicked,
-                            forgivenessClicked,
-                            humilityClicked,
-                            prudenceClicked,
-                            selfRegulationClicked,
-                            appreciationClicked,
-                            gratitudeClicked,
-                            hopeClicked,
-                            humorClicked,
-                            spiritualityClicked)
-            );
+                List<NoResult> insertResult = Utils.executeQuery(
+                        NoResult.class,
+                        RateCSActivity.this,
+                        "insert",
+                        columns,
+                        "user_ratings",
+                        "values",
+                        String.format(unformatted,
+                                currentUserId,
+                                movieToRate,
+                                enjoyRating,
+                                meaningRating,
+                                creativityClicked,
+                                curiosityClicked,
+                                judgementClicked,
+                                learningClicked,
+                                perspectiveClicked,
+                                braveryClicked,
+                                honestyClicked,
+                                zestClicked,
+                                perseveranceClicked,
+                                loveClicked,
+                                kindnessClicked,
+                                socialIntelligenceClicked,
+                                teamworkClicked,
+                                fairnessClicked,
+                                leadershipClicked,
+                                forgivenessClicked,
+                                humilityClicked,
+                                prudenceClicked,
+                                selfRegulationClicked,
+                                appreciationClicked,
+                                gratitudeClicked,
+                                hopeClicked,
+                                humorClicked,
+                                spiritualityClicked)
+                );
 
-            //remove from saved when rated
-            List<SavedMovies> savedByUserTable = Utils.executeQuery(
-                    SavedMovies.class,
-                    RateCSActivity.this,
-                    "select",
-                    "*",
-                    "saved_movies",
-                    "where",
-                    String.format("user_id=%s", currentUserId)
-            );
-            //if not empty
-            if (!savedByUserTable.toString().equals("[]")) {
-                ArrayList<String> savedMovieId = new ArrayList<>();
-                for (SavedMovies savedMovie: savedByUserTable){
-                    savedMovieId.add(savedMovie.getMovieId());
+                //remove from saved when rated
+                List<SavedMovies> savedByUserTable = Utils.executeQuery(
+                        SavedMovies.class,
+                        RateCSActivity.this,
+                        "select",
+                        "*",
+                        "saved_movies",
+                        "where",
+                        String.format("user_id=%s", currentUserId)
+                );
+                //if not empty
+                if (!savedByUserTable.toString().equals("[]")) {
+                    ArrayList<String> savedMovieId = new ArrayList<>();
+                    for (SavedMovies savedMovie : savedByUserTable) {
+                        savedMovieId.add(savedMovie.getMovieId());
+                    }
+                    // if the movie to rate is in the saved table
+                    if (savedMovieId.contains(movieToRate)) {
+                        List<NoResult> deleteResult = Utils.executeQuery(
+                                NoResult.class,
+                                RateCSActivity.this,
+                                "delete",
+                                "",
+                                "saved_movies",
+                                "where",
+                                String.format("movie_id='%s' and user_id=%s", movieToRate, currentUserId)
+                        );
+                    }
                 }
-                // if the movie to rate is in the saved table
-                if(savedMovieId.contains(movieToRate)){
-                    List<NoResult> deleteResult = Utils.executeQuery(
-                            NoResult.class,
-                            RateCSActivity.this,
-                            "delete",
-                            "",
-                            "saved_movies",
-                            "where",
-                            String.format("movie_id='%s' and user_id=%s", movieToRate, currentUserId)
-                    );
-                }
+
+
+            } catch (ExecutionException e) {
+                Toast.makeText(RateCSActivity.this, e.toString(), Toast.LENGTH_LONG).show();
+            } catch (InterruptedException e) {
+                Toast.makeText(RateCSActivity.this, e.toString(), Toast.LENGTH_LONG).show();
             }
 
-
-        } catch (ExecutionException e) {
-            Toast.makeText(RateCSActivity.this, e.toString(), Toast.LENGTH_LONG).show();
-        } catch (InterruptedException e) {
-            Toast.makeText(RateCSActivity.this, e.toString(), Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(this, HistoryActivity.class);
+            intent.putExtra("CURRENT_USER_ID", currentUserId);
+            startActivity(intent);
         }
-
-        Intent intent = new Intent(this, HistoryActivity.class);
-        intent.putExtra("CURRENT_USER_ID", currentUserId);
-        startActivity(intent);
     }
 
     public void launchInfoCSActivity(View view) {
