@@ -48,6 +48,8 @@ public class MovieDetailsActivity extends AppCompatActivity {
         TextView year = findViewById(R.id.detailYear);
         TextView duration = findViewById(R.id.detailDuration);
         TextView genre = findViewById(R.id.detailGenre);
+        TextView averageEnjoyment = findViewById(R.id.enjoyTextView);
+        TextView averageMeaningful = findViewById(R.id.meaningTextView);
         ImageView cs1 = findViewById(R.id.cs1);
         ImageView cs2 = findViewById(R.id.cs2);
         ImageView cs3 = findViewById(R.id.cs3);
@@ -86,17 +88,22 @@ public class MovieDetailsActivity extends AppCompatActivity {
             Toast.makeText(MovieDetailsActivity.this, e.toString(), Toast.LENGTH_LONG).show();
         }
 
+        MovieInfo thisMovieInfo = movieInfo.get(0);
+        MovieRatings thisMovieRatings = movieRating.get(0);
 
         // Fill all placeholders
-        titlePrimary.setText(movieInfo.get(0).getPrimaryTitle());
-        String imgURL = movieInfo.get(0).getPosterUrl();
+        titlePrimary.setText(thisMovieInfo.getPrimaryTitle());
+        String imgURL = thisMovieInfo.getPosterUrl();
         Picasso.get().load(imgURL).into(poster);
-        titleOriginal.setText(movieInfo.get(0).getOriginalTitle());
-        year.setText(movieInfo.get(0).getStartYear());
-        duration.setText(movieInfo.get(0).getRuntime() + " min");
-        genre.setText(movieInfo.get(0).getGenres());
-        enjoyful.setRating(Float.parseFloat(movieRating.get(0).getAverageEnjoyment()));
-        meaningful.setRating(Float.parseFloat(movieRating.get(0).getAverageMeaning()));
+        titleOriginal.setText(thisMovieInfo.getOriginalTitle());
+        year.setText(thisMovieInfo.getStartYear());
+        duration.setText(thisMovieInfo.getRuntime() + " min");
+        genre.setText(thisMovieInfo.getGenres());
+
+        enjoyful.setRating(Float.parseFloat(thisMovieRatings.getAverageEnjoyment()));
+        meaningful.setRating(Float.parseFloat(thisMovieRatings.getAverageMeaning()));
+        averageEnjoyment.setText("Average enjoyment (" + thisMovieRatings.getVotesEnjoyment() + " ratings) :");
+        averageMeaningful.setText("Average meaningfulness (" + thisMovieRatings.getVotesMeaning() + " ratings) :");
 
         ArrayList<String> orderedCS = Utils.getOrderedCSFromMovieRatings(movieRating.get(0));
 

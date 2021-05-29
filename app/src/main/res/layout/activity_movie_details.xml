@@ -63,8 +63,9 @@
 
             <TextView
                 android:id="@+id/detailTitle"
-                android:layout_width="wrap_content"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:gravity="right"
                 android:layout_margin="5dp"
                 android:textColor="@color/white"
                 android:textSize="20sp"
@@ -79,7 +80,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
-                android:text="Year: "
+                android:text="Year:"
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 app:layout_constraintStart_toEndOf="@id/detailPoster"
@@ -87,9 +88,10 @@
 
             <TextView
                 android:id="@+id/detailYear"
-                android:layout_width="wrap_content"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
+                android:gravity="right"
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 android:textStyle="italic"
@@ -109,8 +111,9 @@
 
             <TextView
                 android:id="@+id/detailDuration"
-                android:layout_width="wrap_content"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:gravity="right"
                 android:layout_margin="5dp"
                 android:textColor="@color/white"
                 android:textSize="20sp"
@@ -124,7 +127,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
-                android:text="Genre:"
+                android:text="Genre(s):"
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 app:layout_constraintStart_toEndOf="@id/detailPoster"
@@ -132,8 +135,9 @@
 
             <TextView
                 android:id="@+id/detailGenre"
-                android:layout_width="wrap_content"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:gravity="right"
                 android:layout_margin="5dp"
                 android:textColor="@color/white"
                 android:textSize="20sp"
@@ -177,7 +181,7 @@
             android:gravity="center"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:text="Character strengths:"
+            android:text="Top character strengths:"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/ratingTextView"
             />
@@ -188,26 +192,31 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_margin="10dp"
+            android:weightSum="4"
             app:layout_constraintTop_toBottomOf="@id/csTextView"
             >
             <ImageView
                 android:id="@+id/cs1"
-                android:layout_width="100dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="100dp"
                 />
             <ImageView
                 android:id="@+id/cs2"
-                android:layout_width="100dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="100dp"
                 />
             <ImageView
                 android:id="@+id/cs3"
-                android:layout_width="100dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="100dp"
                 />
             <ImageView
                 android:id="@+id/cs4"
-                android:layout_width="100dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="100dp"
                 />
         </LinearLayout>
@@ -220,7 +229,7 @@
             android:gravity="center"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:text="Average enjoyful:"
+            android:text="Average enjoyment:"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/csImages"
             />
@@ -244,7 +253,7 @@
             android:gravity="center"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:text="Average meaningful:"
+            android:text="Average meaningfulness:"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/detailEnjoy"
             />
@@ -262,8 +271,8 @@
 
         <Button
             android:id="@+id/detailSaveButton"
-            android:layout_width="150dp"
-            android:layout_height="75dp"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
             android:layout_margin="10dp"
             android:background="@drawable/save_button_dark_fixedsize"
             app:layout_constraintTop_toBottomOf="@id/detailMeaning"
@@ -272,8 +281,8 @@
 
         <Button
             android:id="@+id/detailRateButton"
-            android:layout_width="150dp"
-            android:layout_height="75dp"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
             android:layout_margin="10dp"
             android:background="@drawable/rate_button"
             app:layout_constraintTop_toBottomOf="@id/detailMeaning"
