@@ -43,8 +43,7 @@
             android:label="History"
             android:parentActivityName=".screens.MainActivity"></activity>
         <activity android:name=".screens.InfoCSActivity"
-            android:label="Info"
-            android:parentActivityName=".screens.RecommendationCSActivity"></activity>
+            android:label="Info"></activity>
         <activity android:name=".screens.MovieDetailsActivity"
             android:label="Movie Information"></activity>
     </application>
