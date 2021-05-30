@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
 
                     EditText input = new EditText(this);
                     input.setInputType(InputType.TYPE_CLASS_TEXT);
-                    input.setHint("movieenthusiast123");
+                    input.setHint("Enter your alias here");
 
                     AlertDialog.Builder builder = new AlertDialog.Builder(this);
                     builder.setView(input);
