@@ -57,6 +57,16 @@
                             android:layout_marginBottom="20dp"
                             android:background="@drawable/history_complete"
                             android:onClick="launchHistoryActivity" />
+                        <TextView
+                            android:id="@+id/mainAliasText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="15dp"
+                            android:text="Logged in as "
+                            android:textColor="@color/white"
+                            android:layout_marginLeft="30dp"
+                            />
+
                 </LinearLayout>
         </android.support.v4.widget.NestedScrollView>
 

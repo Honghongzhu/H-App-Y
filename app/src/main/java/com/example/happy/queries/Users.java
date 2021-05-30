@@ -4,6 +4,7 @@ public class Users {
 
     private String userId;
     private String androidId;
+    private String alias;
 
     public String getUserId() {
         return userId;
@@ -13,8 +14,13 @@ public class Users {
         return androidId;
     }
 
-    public Users(String userId, String androidId) {
+    public String getAlias() {
+        return alias;
+    }
+
+    public Users(String userId, String androidId, String alias) {
         this.userId = userId;
         this.androidId = androidId;
+        this.alias = alias;
     }
 }

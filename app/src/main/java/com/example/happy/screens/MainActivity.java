@@ -15,6 +15,7 @@ import android.os.Bundle;
 import android.text.InputType;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.happy.R;
@@ -36,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
+        TextView aliasView = findViewById(R.id.mainAliasText);
 
         // if no internet connection then show message and close the app
         if(!Utils.connectedInternet(MainActivity.this)){
@@ -137,6 +139,8 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 currentUserId = Integer.parseInt(usersTable.get(0).getUserId());
+
+                aliasView.setText("Logged in as " + usersTable.get(0).getAlias());
 
             } catch (ExecutionException e) {
                 Toast.makeText(MainActivity.this, e.toString(), Toast.LENGTH_LONG).show();

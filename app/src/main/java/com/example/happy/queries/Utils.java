@@ -62,7 +62,7 @@ class Result <currentClass> implements Callable<List<currentClass>> {
         try{
             URL url = null;
             try {
-                url = new URL("http://elara.science.ru.nl/MeaningfulMovies3.4/query");
+                url = new URL("http://elara.science.ru.nl/MeaningfulMovies4.0/query");
             } catch (MalformedURLException e) {
                 e.printStackTrace();
             }
