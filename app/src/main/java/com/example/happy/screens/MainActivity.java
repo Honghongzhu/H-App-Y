@@ -83,9 +83,7 @@ public class MainActivity extends AppCompatActivity {
                     AlertDialog.Builder builder = new AlertDialog.Builder(this);
                     builder.setView(input);
                     builder.setTitle("Enter alias");
-                    builder.setMessage("Please enter an alias so that we know who you are :) " +
-                            "Write it down somewhere and don't forget it, because we will ask" +
-                            " for it again in the final questionnaire!\n\n" +
+                    builder.setMessage("Please enter an alias so that we know who you are :)\n\n" +
                             "Please don't include symbols, spaces or special characters and " +
                             "make sure the text field is not empty!");
                     builder.setPositiveButton("Confirm", (dialog, id) -> {
