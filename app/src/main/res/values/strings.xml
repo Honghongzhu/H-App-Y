@@ -6,24 +6,14 @@
     <string name="button_saved">Saved for later</string>
     <string name="button_search">Search for a movie</string>
     <string name="rate">Rate</string>
-    <string name="movie1">Movie1</string>
-    <string name="movie2">Movie2</string>
-    <string name="movie3">Movie3</string>
-    <string name="movie4">Movie4</string>
-    <string name="movie5">Movie5</string>
-    <string name="movie6">Movie6</string>
-    <string name="movie7">Movie7</string>
-    <string name="movie8">Movie8</string>
-    <string name="movie9">Movie9</string>
-    <string name="movie10">Movie10</string>
-    <string name="character_strength">Choose up to 4 character strengths:</string>
-    <string name="recommendation">Based on your chosen strengths, we recommend the following movies:</string>
+    <string name="character_strength">Choose up to 4 character strengths</string>
+    <string name="recommendation">Based on your chosen strengths, we recommend the following movies</string>
     <string name="rate_movie">Rate the movie</string>
     <string name="rate_enjoyable">How enjoyable was the movie for you?</string>
     <string name="rate_meaningful">How meaningful was the movie for you?</string>
-    <string name="saved">Movies saved for later:</string>
+    <string name="saved">Movies saved for later</string>
     <string name="history">History</string>
-    <string name="rate_cs">Choose 4 character strengths that you encountered:</string>
+    <string name="rate_cs">Choose 4 character strengths that you encountered</string>
     <string name="results">Results for</string>
     <string name="next">Next</string>
     <string name="confirm">Confirm</string>
@@ -54,7 +44,6 @@
     <string name="spirituality">I feel spiritual and believe in a sense of purpose or meaning in my life; and I see my place in the grand scheme of the universe and find meaning in everyday life.</string>
     <string name="teamwork">I am a helpful and contributing group and team member, and feel responsible for helping the team reach its goals.</string>
     <string name="zest">I feel vital and full of energy, I approach life feeling activated and enthusiastic.</string>
-    <string name="ok">\"OK\"</string>
 
 
 </resources>

@@ -1,637 +1,627 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/colorback"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".screens.RateCSActivity">
+
+    <LinearLayout
+        android:id="@+id/textCSrate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/rateCSText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center_horizontal"
+            android:text="@string/rate_cs"
+            android:textColor="@color/white"
+            android:textSize="22sp" />
+
+        <Button
+            android:id="@+id/buttonInfo"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background = "@drawable/rounded_button"
+            android:onClick="launchInfoCSActivity"
+            android:text="@string/info"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+    </LinearLayout>
+
     <ScrollView
         android:id="@+id/cs_scroll_view"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true">
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintStart_toEndOf="@id/textCSrate"
+        app:layout_constraintTop_toBottomOf="@id/textCSrate"
+        app:layout_constraintEnd_toStartOf="@id/buttonConfirmLayout"
+        app:layout_constraintBottom_toTopOf="@id/buttonConfirmLayout">
         <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:orientation="vertical">
-            <RelativeLayout
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent">
+            android:id="@+id/cs_grid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal">
 
-                    <TextView
-                        android:id="@+id/rateCSText"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:gravity="center_horizontal"
-                        android:text="@string/rate_cs"
-                        android:textColor="@color/white"
-                        android:textSize="22sp" />
+                <android.support.v7.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1">
 
-                    <Button
-                        android:id="@+id/buttonInfo"
-                        style="@style/Widget.AppCompat.Button"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background = "@drawable/rounded_button"
-                        android:onClick="launchInfoCSActivity"
-                        android:text="@string/info"
-                        android:textColor="@color/white"
-                        android:textSize="15sp" />
-
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/cs_grid"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="1dp"
-                    android:layout_marginTop="125dp"
-                    android:layout_marginRight="1dp"
-                    android:orientation="vertical">
-
-                    <LinearLayout
+                    <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="135dp"
-                        android:layout_marginBottom="5dp"
-                        android:orientation="horizontal">
+                        android:layout_height="match_parent"
+                        android:background="@color/colorback">
 
-                        <android.support.v7.widget.CardView
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:layout_weight="1">
+                        <Button
+                            android:id="@+id/buttonAppreciation"
+                            android:layout_width="134.5dp"
+                            android:layout_height="130dp"
+                            android:background="@drawable/appreciation_dark" />
+                    </RelativeLayout>
 
-                            <RelativeLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:background="@color/colorback">
+                </android.support.v7.widget.CardView>
 
-                                <Button
-                                    android:id="@+id/buttonAppreciation"
-                                    android:layout_width="134.5dp"
-                                    android:layout_height="130dp"
-                                    android:background="@drawable/appreciation_dark" />
-                            </RelativeLayout>
+                <android.support.v7.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1">
 
-                        </android.support.v7.widget.CardView>
-
-                        <android.support.v7.widget.CardView
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:layout_weight="1">
-
-                            <RelativeLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:background="@color/colorback">
-
-                                <Button
-                                    android:id="@+id/buttonBravery"
-                                    android:layout_width="134.5dp"
-                                    android:layout_height="130dp"
-                                    android:background="@drawable/bravery_dark" />
-
-                            </RelativeLayout>
-
-                        </android.support.v7.widget.CardView>
-
-                        <android.support.v7.widget.CardView
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:layout_weight="1">
-
-                            <RelativeLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:background="@color/colorback">
-
-                                <Button
-                                    android:id="@+id/buttonCreativity"
-                                    android:layout_width="134.5dp"
-                                    android:layout_height="130dp"
-                                    android:background="@drawable/creativity_dark" />
-                            </RelativeLayout>
-
-                        </android.support.v7.widget.CardView>
-
-                    </LinearLayout>
-
-                    <LinearLayout
+                    <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="135dp"
-                        android:layout_marginBottom="5dp"
-                        android:orientation="horizontal">
+                        android:layout_height="match_parent"
+                        android:background="@color/colorback">
 
-                        <android.support.v7.widget.CardView
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:layout_weight="1">
+                        <Button
+                            android:id="@+id/buttonBravery"
+                            android:layout_width="134.5dp"
+                            android:layout_height="130dp"
+                            android:background="@drawable/bravery_dark" />
 
-                            <RelativeLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:background="@color/colorback">
+                    </RelativeLayout>
 
-                                <Button
-                                    android:id="@+id/buttonCuriosity"
-                                    android:layout_width="134.5dp"
-                                    android:layout_height="130dp"
-                                    android:background="@drawable/curiosity_dark" />
-                            </RelativeLayout>
+                </android.support.v7.widget.CardView>
 
-                        </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1">
 
-                        <android.support.v7.widget.CardView
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:layout_weight="1">
-
-                            <RelativeLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:background="@color/colorback">
-
-                                <Button
-                                    android:id="@+id/buttonFairness"
-                                    android:layout_width="134.5dp"
-                                    android:layout_height="130dp"
-                                    android:background="@drawable/fairness_dark" />
-                            </RelativeLayout>
-
-                        </android.support.v7.widget.CardView>
-
-                        <android.support.v7.widget.CardView
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:layout_weight="1">
-
-                            <RelativeLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:background="@color/colorback">
-
-                                <Button
-                                    android:id="@+id/buttonForgiveness"
-                                    android:layout_width="134.5dp"
-                                    android:layout_height="130dp"
-                                    android:background="@drawable/forgiveness_dark" />
-                            </RelativeLayout>
-
-                        </android.support.v7.widget.CardView>
-
-                    </LinearLayout>
-
-                    <LinearLayout
+                    <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="135dp"
-                        android:layout_marginBottom="5dp"
-                        android:orientation="horizontal">
+                        android:layout_height="match_parent"
+                        android:background="@color/colorback">
 
-                        <android.support.v7.widget.CardView
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:layout_weight="1">
+                        <Button
+                            android:id="@+id/buttonCreativity"
+                            android:layout_width="134.5dp"
+                            android:layout_height="130dp"
+                            android:background="@drawable/creativity_dark" />
+                    </RelativeLayout>
 
-                            <RelativeLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:background="@color/colorback">
+                </android.support.v7.widget.CardView>
 
-                                <Button
-                                    android:id="@+id/buttonGratitude"
-                                    android:layout_width="134.5dp"
-                                    android:layout_height="130dp"
-                                    android:background="@drawable/gratitude_dark" />
-                            </RelativeLayout>
+            </LinearLayout>
 
-                        </android.support.v7.widget.CardView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="135dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal">
 
-                        <android.support.v7.widget.CardView
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:layout_weight="1">
+                <android.support.v7.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1">
 
-                            <RelativeLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:background="@color/colorback">
-
-                                <Button
-                                    android:id="@+id/buttonHonesty"
-                                    android:layout_width="134.5dp"
-                                    android:layout_height="130dp"
-                                    android:background="@drawable/honesty_dark" />
-                            </RelativeLayout>
-
-                        </android.support.v7.widget.CardView>
-
-                        <android.support.v7.widget.CardView
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:layout_weight="1">
-
-                            <RelativeLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:background="@color/colorback">
-
-                                <Button
-                                    android:id="@+id/buttonHope"
-                                    android:layout_width="134.5dp"
-                                    android:layout_height="130dp"
-                                    android:background="@drawable/hope_dark" />
-                            </RelativeLayout>
-
-                        </android.support.v7.widget.CardView>
-
-                    </LinearLayout>
-
-                    <LinearLayout
+                    <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="135dp"
-                        android:layout_marginBottom="5dp"
-                        android:orientation="horizontal">
+                        android:layout_height="match_parent"
+                        android:background="@color/colorback">
 
-                        <android.support.v7.widget.CardView
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:layout_weight="1">
+                        <Button
+                            android:id="@+id/buttonCuriosity"
+                            android:layout_width="134.5dp"
+                            android:layout_height="130dp"
+                            android:background="@drawable/curiosity_dark" />
+                    </RelativeLayout>
 
-                            <RelativeLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:background="@color/colorback">
+                </android.support.v7.widget.CardView>
 
-                                <Button
-                                    android:id="@+id/buttonHumility"
-                                    android:layout_width="134.5dp"
-                                    android:layout_height="130dp"
-                                    android:background="@drawable/humility_dark" />
-                            </RelativeLayout>
+                <android.support.v7.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1">
 
-                        </android.support.v7.widget.CardView>
-
-                        <android.support.v7.widget.CardView
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:layout_weight="1">
-
-                            <RelativeLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:background="@color/colorback">
-
-                                <Button
-                                    android:id="@+id/buttonHumor"
-                                    android:layout_width="134.5dp"
-                                    android:layout_height="130dp"
-                                    android:background="@drawable/humor_dark" />
-                            </RelativeLayout>
-
-                        </android.support.v7.widget.CardView>
-
-                        <android.support.v7.widget.CardView
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:layout_weight="1">
-
-                            <RelativeLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:background="@color/colorback">
-
-                                <Button
-                                    android:id="@+id/buttonJudgement"
-                                    android:layout_width="134.5dp"
-                                    android:layout_height="130dp"
-                                    android:background="@drawable/judgement_dark" />
-                            </RelativeLayout>
-
-                        </android.support.v7.widget.CardView>
-
-                    </LinearLayout>
-
-                    <LinearLayout
+                    <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="135dp"
-                        android:layout_marginBottom="5dp"
-                        android:orientation="horizontal">
+                        android:layout_height="match_parent"
+                        android:background="@color/colorback">
 
-                        <android.support.v7.widget.CardView
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:layout_weight="1">
+                        <Button
+                            android:id="@+id/buttonFairness"
+                            android:layout_width="134.5dp"
+                            android:layout_height="130dp"
+                            android:background="@drawable/fairness_dark" />
+                    </RelativeLayout>
 
-                            <RelativeLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:background="@color/colorback">
+                </android.support.v7.widget.CardView>
 
-                                <Button
-                                    android:id="@+id/buttonKindness"
-                                    android:layout_width="134.5dp"
-                                    android:layout_height="130dp"
-                                    android:background="@drawable/kindness_dark" />
-                            </RelativeLayout>
+                <android.support.v7.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1">
 
-                        </android.support.v7.widget.CardView>
-
-                        <android.support.v7.widget.CardView
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:layout_weight="1">
-
-                            <RelativeLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:background="@color/colorback">
-
-                                <Button
-                                    android:id="@+id/buttonLeadership"
-                                    android:layout_width="134.5dp"
-                                    android:layout_height="130dp"
-                                    android:background="@drawable/leadership_dark" />
-                            </RelativeLayout>
-
-                        </android.support.v7.widget.CardView>
-
-                        <android.support.v7.widget.CardView
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:layout_weight="1">
-
-                            <RelativeLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:background="@color/colorback">
-
-                                <Button
-                                    android:id="@+id/buttonLove"
-                                    android:layout_width="134.5dp"
-                                    android:layout_height="130dp"
-                                    android:background="@drawable/love_dark" />
-                            </RelativeLayout>
-
-                        </android.support.v7.widget.CardView>
-
-                    </LinearLayout>
-
-                    <LinearLayout
+                    <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="135dp"
-                        android:layout_marginBottom="5dp"
-                        android:orientation="horizontal">
+                        android:layout_height="match_parent"
+                        android:background="@color/colorback">
 
-                        <android.support.v7.widget.CardView
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:layout_weight="1">
+                        <Button
+                            android:id="@+id/buttonForgiveness"
+                            android:layout_width="134.5dp"
+                            android:layout_height="130dp"
+                            android:background="@drawable/forgiveness_dark" />
+                    </RelativeLayout>
 
-                            <RelativeLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:background="@color/colorback">
+                </android.support.v7.widget.CardView>
 
-                                <Button
-                                    android:id="@+id/buttonLearning"
-                                    android:layout_width="134.5dp"
-                                    android:layout_height="130dp"
-                                    android:background="@drawable/lol_dark" />
-                            </RelativeLayout>
+            </LinearLayout>
 
-                        </android.support.v7.widget.CardView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="135dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal">
 
-                        <android.support.v7.widget.CardView
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:layout_weight="1">
+                <android.support.v7.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1">
 
-                            <RelativeLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:background="@color/colorback">
-
-                                <Button
-                                    android:id="@+id/buttonPerseverance"
-                                    android:layout_width="134.5dp"
-                                    android:layout_height="130dp"
-                                    android:background="@drawable/perseverance_dark" />
-                            </RelativeLayout>
-
-                        </android.support.v7.widget.CardView>
-
-                        <android.support.v7.widget.CardView
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:layout_weight="1">
-
-                            <RelativeLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:background="@color/colorback">
-
-                                <Button
-                                    android:id="@+id/buttonPerspective"
-                                    android:layout_width="134.5dp"
-                                    android:layout_height="130dp"
-                                    android:background="@drawable/perspective_dark" />
-                            </RelativeLayout>
-
-                        </android.support.v7.widget.CardView>
-
-                    </LinearLayout>
-
-                    <LinearLayout
+                    <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="135dp"
-                        android:layout_marginBottom="5dp"
-                        android:orientation="horizontal">
+                        android:layout_height="match_parent"
+                        android:background="@color/colorback">
 
-                        <android.support.v7.widget.CardView
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:layout_weight="1">
+                        <Button
+                            android:id="@+id/buttonGratitude"
+                            android:layout_width="134.5dp"
+                            android:layout_height="130dp"
+                            android:background="@drawable/gratitude_dark" />
+                    </RelativeLayout>
 
-                            <RelativeLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:background="@color/colorback">
+                </android.support.v7.widget.CardView>
 
-                                <Button
-                                    android:id="@+id/buttonPrudence"
-                                    android:layout_width="134.5dp"
-                                    android:layout_height="130dp"
-                                    android:background="@drawable/prudence_dark" />
-                            </RelativeLayout>
+                <android.support.v7.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1">
 
-                        </android.support.v7.widget.CardView>
-
-                        <android.support.v7.widget.CardView
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:layout_weight="1">
-
-                            <RelativeLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:background="@color/colorback">
-
-                                <Button
-                                    android:id="@+id/buttonSelfRegulation"
-                                    android:layout_width="134.5dp"
-                                    android:layout_height="130dp"
-                                    android:background="@drawable/self_dark" />
-                            </RelativeLayout>
-
-                        </android.support.v7.widget.CardView>
-
-                        <android.support.v7.widget.CardView
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:layout_weight="1">
-
-                            <RelativeLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:background="@color/colorback">
-
-                                <Button
-                                    android:id="@+id/buttonSocialIntelligence"
-                                    android:layout_width="134.5dp"
-                                    android:layout_height="130dp"
-                                    android:background="@drawable/social_dark" />
-                            </RelativeLayout>
-
-                        </android.support.v7.widget.CardView>
-
-                    </LinearLayout>
-
-                    <LinearLayout
+                    <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="175dp"
-                        android:layout_marginBottom="5dp"
-                        android:orientation="horizontal">
+                        android:layout_height="match_parent"
+                        android:background="@color/colorback">
 
-                        <android.support.v7.widget.CardView
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:layout_weight="1">
+                        <Button
+                            android:id="@+id/buttonHonesty"
+                            android:layout_width="134.5dp"
+                            android:layout_height="130dp"
+                            android:background="@drawable/honesty_dark" />
+                    </RelativeLayout>
 
-                            <RelativeLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:background="@color/colorback">
+                </android.support.v7.widget.CardView>
 
-                                <Button
-                                    android:id="@+id/buttonSpirituality"
-                                    android:layout_width="134.5dp"
-                                    android:layout_height="130dp"
-                                    android:background="@drawable/spirituality_dark" />
-                            </RelativeLayout>
+                <android.support.v7.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1">
 
-                        </android.support.v7.widget.CardView>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorback">
 
-                        <android.support.v7.widget.CardView
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:layout_weight="1">
+                        <Button
+                            android:id="@+id/buttonHope"
+                            android:layout_width="134.5dp"
+                            android:layout_height="130dp"
+                            android:background="@drawable/hope_dark" />
+                    </RelativeLayout>
 
-                            <RelativeLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:background="@color/colorback">
+                </android.support.v7.widget.CardView>
 
-                                <Button
-                                    android:id="@+id/buttonTeamwork"
-                                    android:layout_width="134.5dp"
-                                    android:layout_height="130dp"
-                                    android:background="@drawable/teamwork_dark" />
-                            </RelativeLayout>
+            </LinearLayout>
 
-                        </android.support.v7.widget.CardView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="135dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal">
 
-                        <android.support.v7.widget.CardView
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:layout_weight="1">
+                <android.support.v7.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1">
 
-                            <RelativeLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:background="@color/colorback">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorback">
 
-                                <Button
-                                    android:id="@+id/buttonZest"
-                                    android:layout_width="134.5dp"
-                                    android:layout_height="130dp"
-                                    android:background="@drawable/zest_dark" />
-                            </RelativeLayout>
+                        <Button
+                            android:id="@+id/buttonHumility"
+                            android:layout_width="134.5dp"
+                            android:layout_height="130dp"
+                            android:background="@drawable/humility_dark" />
+                    </RelativeLayout>
 
-                        </android.support.v7.widget.CardView>
+                </android.support.v7.widget.CardView>
 
-                    </LinearLayout>
+                <android.support.v7.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1">
 
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/cs_grid"
-                    android:orientation="vertical"
-                    android:gravity="center">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorback">
 
+                        <Button
+                            android:id="@+id/buttonHumor"
+                            android:layout_width="134.5dp"
+                            android:layout_height="130dp"
+                            android:background="@drawable/humor_dark" />
+                    </RelativeLayout>
 
-                </LinearLayout>
-            </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorback">
+
+                        <Button
+                            android:id="@+id/buttonJudgement"
+                            android:layout_width="134.5dp"
+                            android:layout_height="130dp"
+                            android:background="@drawable/judgement_dark" />
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="135dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorback">
+
+                        <Button
+                            android:id="@+id/buttonKindness"
+                            android:layout_width="134.5dp"
+                            android:layout_height="130dp"
+                            android:background="@drawable/kindness_dark" />
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorback">
+
+                        <Button
+                            android:id="@+id/buttonLeadership"
+                            android:layout_width="134.5dp"
+                            android:layout_height="130dp"
+                            android:background="@drawable/leadership_dark" />
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorback">
+
+                        <Button
+                            android:id="@+id/buttonLove"
+                            android:layout_width="134.5dp"
+                            android:layout_height="130dp"
+                            android:background="@drawable/love_dark" />
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="135dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorback">
+
+                        <Button
+                            android:id="@+id/buttonLearning"
+                            android:layout_width="134.5dp"
+                            android:layout_height="130dp"
+                            android:background="@drawable/lol_dark" />
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorback">
+
+                        <Button
+                            android:id="@+id/buttonPerseverance"
+                            android:layout_width="134.5dp"
+                            android:layout_height="130dp"
+                            android:background="@drawable/perseverance_dark" />
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorback">
+
+                        <Button
+                            android:id="@+id/buttonPerspective"
+                            android:layout_width="134.5dp"
+                            android:layout_height="130dp"
+                            android:background="@drawable/perspective_dark" />
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="135dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorback">
+
+                        <Button
+                            android:id="@+id/buttonPrudence"
+                            android:layout_width="134.5dp"
+                            android:layout_height="130dp"
+                            android:background="@drawable/prudence_dark" />
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorback">
+
+                        <Button
+                            android:id="@+id/buttonSelfRegulation"
+                            android:layout_width="134.5dp"
+                            android:layout_height="130dp"
+                            android:background="@drawable/self_dark" />
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorback">
+
+                        <Button
+                            android:id="@+id/buttonSocialIntelligence"
+                            android:layout_width="134.5dp"
+                            android:layout_height="130dp"
+                            android:background="@drawable/social_dark" />
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="175dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorback">
+
+                        <Button
+                            android:id="@+id/buttonSpirituality"
+                            android:layout_width="134.5dp"
+                            android:layout_height="130dp"
+                            android:background="@drawable/spirituality_dark" />
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorback">
+
+                        <Button
+                            android:id="@+id/buttonTeamwork"
+                            android:layout_width="134.5dp"
+                            android:layout_height="130dp"
+                            android:background="@drawable/teamwork_dark" />
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorback">
+
+                        <Button
+                            android:id="@+id/buttonZest"
+                            android:layout_width="134.5dp"
+                            android:layout_height="130dp"
+                            android:background="@drawable/zest_dark" />
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 
-    <Button
-        android:id="@+id/buttonConfirm"
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:id="@+id/buttonConfirmLayout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
-        android:background="@drawable/rounded_button"
-        android:keepScreenOn="false"
-        android:onClick="launchHistoryActivity"
-        android:text="@string/confirm"
-        android:textColor="@color/white"
-        android:textSize="15sp" />
+        <Button
+            android:id="@+id/buttonConfirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/rounded_button"
+            android:keepScreenOn="false"
+            android:onClick="launchHistoryActivity"
+            android:text="@string/confirm"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
 
 
-</RelativeLayout>
 
 
